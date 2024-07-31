@@ -117,9 +117,11 @@ if ! shopt -oq posix; then
 fi
 
 # homebrew
+export HOMEBREW_NO_ENV_HINTS=true
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # oh-my-posh
+export OMP_CONFIG="$HOME/.config/oh-my-posh/bubba.omp.json"
 eval "$(oh-my-posh init bash --config "$OMP_CONFIG")"
 
 # zoxide & fzf
@@ -135,5 +137,3 @@ if [ -e $HOME/.bash_functions ]; then
 	source $HOME/.bash_functions
 fi
 
-# Load Chances
-exec bash
