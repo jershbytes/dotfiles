@@ -2,15 +2,27 @@
 
 install_on_fedora() {
     sudo dnf install -y ansible
+    if [ $? -ne 0 ]; then
+        echo "Failed to install Ansible on Fedora"
+        exit 1
+    fi
 }
 
 install_on_ubuntu() {
     sudo apt-get update
     sudo apt-get install -y ansible
+    if [ $? -ne 0 ]; then
+        echo "Failed to install Ansible on Ubuntu"
+        exit 1
+    fi
 }
 
 install_on_mac() {
     brew install ansible
+    if [ $? -ne 0 ]; then
+        echo "Failed to install Ansible on macOS"
+        exit 1
+    fi
 }
 
 OS="$(uname -s)"
@@ -34,7 +46,18 @@ case "${OS}" in
         ;;
 esac
 
+# Install Ansible Galaxy Plugin
+ansible-galaxy collection install community.general
+if [ $? -ne 0 ]; then
+    echo "Failed to install Ansible Galaxy collection"
+    exit 1
+fi
 
+# Run the playbook
 ansible-playbook ~/.bootstrap/setup.yml --ask-become-pass
+if [ $? -ne 0 ]; then
+    echo "Failed to run the Ansible playbook"
+    exit 1
+fi
 
 echo "Ansible installation complete."
