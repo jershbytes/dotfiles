@@ -53,11 +53,4 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Run the playbook
-ansible-playbook ~/.bootstrap/setup.yml --ask-become-pass
-if [ $? -ne 0 ]; then
-    echo "Failed to run the Ansible playbook"
-    exit 1
-fi
-
 echo "Ansible installation complete."
