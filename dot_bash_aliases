@@ -1,0 +1,23 @@
+# Terminal Management
+alias c="clear"                           # Clear the terminal
+alias cd="z"                              # Change directory (using z)
+alias lt='ls --human-readable --size -1 -S --classify'  # List files with human-readable sizes, sorted by size, and classified
+alias ll='ls -alF'                        # Show all files in long format with file types and indicators
+alias la='ls -A'                          # Show almost all files (hidden files but not `.` and `..`)
+alias l='ls -CF'                          # Show files in columns with file types
+
+# File Operations
+alias sc="grep ^[^#] $1"                  # Strip comments from file
+alias cpv='rsync -ah --info=progress2'    # Copy files with rsync, showing progress
+alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" # Create terraform file structure.
+
+# Development Tools
+alias tf="terraform"                      # Terraform alias
+alias vim="nvim"                          # Set vim to open neovim
+alias view='nvim -R'                      # Set vim to open in ro.
+
+# Tree Display
+alias tree='tree --dirsfirst -F'          # Display tree with directories first and trailing slashes
+
+# History Search
+alias gh='history|grep'                   # Search history with grep
