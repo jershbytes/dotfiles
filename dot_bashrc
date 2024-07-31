@@ -140,5 +140,5 @@ fi
 # speak wisdom to me all mighty cow
 fortune | cowsay | lolcat
 
-# Ansible Changes
-export PATH="$HOME/.local/bin:$PATH"
+# Chezmoi Changes
+export EDITOR="code --wait"

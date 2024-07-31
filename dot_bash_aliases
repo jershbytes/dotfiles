@@ -15,6 +15,7 @@ alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" #
 alias tf="terraform"                      # Terraform alias
 alias vim="nvim"                          # Set vim to open neovim
 alias view='nvim -R'                      # Set vim to open in ro.
+alias chez="chezmoi"                      # Shorten chezmoi name.
 
 # Tree Display
 alias tree='tree --dirsfirst -F'          # Display tree with directories first and trailing slashes
