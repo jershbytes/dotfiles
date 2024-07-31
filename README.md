@@ -4,7 +4,7 @@
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
   </a>
 </p>
-<p align="center">My personal dotfiles (Windows + Linux + WSL)</p>
+<p align="center">My personal dotfiles for linux </p>
 
 This repo contains the configuration to set up my machines. This is using [Chezmoi](https://chezmoi.io), the dotfile manager to set up the installation.
 
