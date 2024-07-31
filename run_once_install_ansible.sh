@@ -1,6 +1,6 @@
 #!/bin/bash
 
-install_on_fedora() {
+install_on_dnf() {
     sudo dnf install -y ansible
     if [ $? -ne 0 ]; then
         echo "Failed to install Ansible on Fedora"
@@ -8,7 +8,7 @@ install_on_fedora() {
     fi
 }
 
-install_on_ubuntu() {
+install_on_deb() {
     sudo apt-get update
     sudo apt-get install -y ansible
     if [ $? -ne 0 ]; then
@@ -29,11 +29,11 @@ OS="$(uname -s)"
 case "${OS}" in
     Linux*)
         if [ -f /etc/fedora-release ]; then
-            install_on_fedora
+            install_on_dnf
         elif [ -f /etc/lsb-release ]; then
-            install_on_ubuntu
+            install_on_deb
         elif [ -f /etc/rocky-release ]; then
-            install_on_fedora
+            install_on_dnf
         else
             echo "Unsupported Linux distribution"
             exit 1
