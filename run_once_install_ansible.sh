@@ -32,6 +32,8 @@ case "${OS}" in
             install_on_fedora
         elif [ -f /etc/lsb-release ]; then
             install_on_ubuntu
+        elif [ -f /etc/rocky-release ]; then
+            install_on_fedora
         else
             echo "Unsupported Linux distribution"
             exit 1
