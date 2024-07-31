@@ -26,3 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Chezmoi Changes
+export EDITOR="code --wait"
+
+# homebrew
+export HOMEBREW_NO_ENV_HINTS=true
+
+# oh-my-posh
+export OMP_CONFIG="$HOME/.config/oh-my-posh/bubba.omp.json"
