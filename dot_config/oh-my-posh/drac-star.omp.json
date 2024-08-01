@@ -65,7 +65,7 @@
         {
           "foreground": "#f8f8f2",
           "style": "plain",
-          "template": "{{ .User }}@{{ .Host }} {{ .Time }} ",
+          "template": "{{ .Username }}@{{ .Hostname }} {{ .Time }} ",
           "type": "text"
         }
       ],
