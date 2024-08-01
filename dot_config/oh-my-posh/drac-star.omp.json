@@ -5,12 +5,13 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#ff79c6", 
+          "foreground": "#ff79c6",
+          "style": "plain",
           "template": "root <#f8f8f2>in</> ",
           "type": "root"
         },
         {
-          "foreground": "#8be9fd", 
+          "foreground": "#8be9fd",
           "properties": {
             "style": "folder"
           },
@@ -19,7 +20,7 @@
           "type": "path"
         },
         {
-          "foreground": "#bd93f9", 
+          "foreground": "#bd93f9",
           "properties": {
             "fetch_status": true
           },
@@ -28,6 +29,7 @@
           "type": "git"
         },
         {
+          "foreground": "#50fa7b",
           "properties": {
             "fetch_version": true
           },
@@ -36,16 +38,10 @@
           "type": "node"
         },
         {
-          "foreground": "#ff5555", 
+          "foreground": "#ff5555",
           "style": "plain",
           "template": "x ",
           "type": "status"
-        },
-        {
-          "foreground": "#f8f8f2", 
-          "style": "plain",
-          "template": "{{ .User }}@{{ .Host }} {{ .Time }} ",
-          "type": "user"
         }
       ],
       "type": "prompt"
@@ -55,8 +51,21 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#ffb86c", 
+          "foreground": "#ffb86c",
+          "style": "plain",
           "template": "\u279c ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#f8f8f2",
+          "style": "plain",
+          "template": "{{ .User }}@{{ .Host }} {{ .Time }} ",
           "type": "text"
         }
       ],
