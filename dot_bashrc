@@ -124,7 +124,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export OMP_CONFIG="$HOME/.config/oh-my-posh/drac-star.omp.json"
 export PS1_USER=$(whoami)
 export PS1_HOST=$(hostname)
-export PS1_TIME=$(date +"%H:%M:%S")
 eval "$(oh-my-posh init bash --config "$OMP_CONFIG")"
 
 

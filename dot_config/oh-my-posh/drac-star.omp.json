@@ -51,7 +51,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#ffb86c",
+          "foreground": "#ffb86c",  
           "style": "plain",
           "template": "\u279c ",
           "type": "text"
@@ -63,9 +63,9 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#f8f8f2",
+          "foreground": "#ffb86c",  
           "style": "plain",
-          "template": "{{ env \"PS1_USER\" }}@{{ env \"PS1_HOST\" }} {{ env \"PS1_TIME\" }} ",
+          "template": "{{ env \"PS1_USER\" }}@{{ env \"PS1_HOST\" }}",
           "type": "text"
         }
       ],
