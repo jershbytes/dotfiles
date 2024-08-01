@@ -23,6 +23,25 @@
       when:
         - not homebrew_check.stat.exists
         - install_homebrew_if_missing
+    
+    - name: Ensuring kitty is Installed
+      stat:
+        path: /usr/bin/kiity
+        register: kitty_check
+    
+    - name: Fail If kitty Is Not Installed and install_kitty_if_missing Is False
+      fail:
+        msg: Kitty is missing...Install from https://sw.kovidgoyal.net/kitty/
+      when:
+        - not kitty_check.stat.exists
+        - not install_kitty_if_missing
+      
+    - name: Installing Kitty
+      shell: curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+      when:
+        - not kitty_check.stat.exists
+        - not install_kitty_if_missing
+
 
   tasks:
     - name: Get my user
@@ -32,7 +51,6 @@
     - name: Install packages
       ansible.builtin.dnf:
         name:
-          - kitty
           - unrar
           - "@Development Tools"
           - "@C Development Tools and Libraries"
@@ -52,6 +70,7 @@
           - cowsay
           - yazi
       state: present
+    
     - name: Install Flatpak packages
       community.general.flatpak:
         name:
