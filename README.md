@@ -14,5 +14,5 @@ This automated setup is currently only configured for Fedora machines.
 
 ```shell
 export GITHUB_USERNAME=ColoredBytes
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --ssh git@github.com:$GITHUB_USERNAME
 ```
