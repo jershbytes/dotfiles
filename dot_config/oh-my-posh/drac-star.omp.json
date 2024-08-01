@@ -63,7 +63,7 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#ffb86c",
+          "foreground": "#50fa7b",
           "style": "plain",
           "template": "{{ env \"PS1_USER\" }}@{{ env \"PS1_HOST\" }} ",
           "type": "text"
