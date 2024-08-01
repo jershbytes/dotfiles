@@ -4,11 +4,14 @@
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
   </a>
 </p>
-<p align="center">My personal dotfiles for linux </p>
+<p align="center">
+  > Managed with <a href="https://chezmoi.io">chezmoi 🤖</a>
+</p>
 
-This repo contains the configuration to set up my machines. This is using [Chezmoi](https://chezmoi.io), the dotfile manager to set up the installation.
 
-This automated setup is currently only configured for Fedora machines.
+This repo contains the configuration to set up my machines. This is using **Chezmoi**, the dotfile manager to set up the installation.
+
+This automated setup is currently only configured for Linux machines.
 
 ## How to run
 
