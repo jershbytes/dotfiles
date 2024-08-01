@@ -1,9 +1,9 @@
 <p align="center">
   <img src=".resources/images/dotfiles.png" alt="Header" width="100" height="100"><br>
   <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"><br>
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a><br> 
     > Managed with <a href="https://chezmoi.io">chezmoi 🤖</a>
-  </a>
+ 
 </p>
 
 
