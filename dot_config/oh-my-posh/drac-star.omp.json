@@ -65,7 +65,7 @@
         {
           "foreground": "#f8f8f2",
           "style": "plain",
-          "template": "{{ .User }}@{{ .Host }} {{ .Time }} ",
+          "template": "{{ env \"PS1_USER\" }}@{{ env \"PS1_HOST\" }} {{ env \"PS1_TIME\" }} ",
           "type": "text"
         }
       ],
