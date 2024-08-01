@@ -28,6 +28,15 @@
     - name: Get my user
       ansible.builtin.set_fact:
         remote_regular_user: "{{ ansible_env.SUDO_USER or ansible_user_id }}"
+    
+    - name: Install packages
+      ansible.builtin.dnf:
+        name:
+          - kitty
+          - unrar
+          - "@Development Tools"
+          - "@C Development Tools and Libraries"
+        state: present
 
     - name: Install Brew packages
       community.general.homebrew:
@@ -41,7 +50,16 @@
           - lolcat
           - fortune
           - cowsay
+          - yazi
       state: present
+    - name: Install Flatpak packages
+      community.general.flatpak:
+        name:
+          - tv.plex.PlexDesktop
+          - dev.aunetx.deezer
+          - com.bitwarden.desktop
+          - com.discordapp.Discord
+          - org.kde.haruna
 
     - name: Install DNF plugins core
       ansible.builtin.dnf:
