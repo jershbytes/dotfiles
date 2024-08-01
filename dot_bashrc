@@ -128,6 +128,10 @@ eval "$(oh-my-posh init bash --config "$OMP_CONFIG")"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 
+# Chezmoi Changes
+export EDITOR="code --wait"
+
+
 # load .bash_aliases and .bash_functions
 if [ -e $HOME/.bash_aliases ]; then
 	source $HOME/.bash_aliases
