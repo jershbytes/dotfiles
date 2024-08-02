@@ -75,6 +75,17 @@
         name: terraform
         state: present
 
+    - name: Install Flatpak
+      ansible.builtin.dnf:
+        name: flatpak
+        state: present
+
+    - name: Add Flathub repository
+      ansible.builtin.shell: |
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+      args:
+        creates: /var/lib/flatpak/repo/flathub
+
 - name: Non-Privileged Setup
   hosts: localhost
   vars:
