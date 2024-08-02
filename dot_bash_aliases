@@ -22,3 +22,9 @@ alias tree='tree --dirsfirst -F'          # Display tree with directories first 
 
 # History Search
 alias gh='history|grep'                   # Search history with grep
+
+# Brew Commands
+alias bi="brew install"                   # short form to install brew apps
+
+# Chezmoi Commands
+alias csync="chezmoi update;chezmoi apply"
