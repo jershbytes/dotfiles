@@ -32,6 +32,7 @@
           - cowsay
           - yazi
         state: present
+      become: false
 
     - name: Install Flatpak packages
       community.general.flatpak:
@@ -41,6 +42,7 @@
           - com.bitwarden.desktop
           - com.discordapp.Discord
           - org.kde.haruna
+        become: false
 
     - name: Install DNF plugins core
       ansible.builtin.dnf:
