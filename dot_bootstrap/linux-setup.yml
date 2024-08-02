@@ -6,31 +6,29 @@
   gather_facts: true
 
   pre_tasks:
-    
     - name: Ensuring kitty is Installed
       stat:
-        path: /usr/bin/kiity
+        path: /usr/bin/kitty
         register: kitty_check
-    
+
     - name: Fail If kitty Is Not Installed and install_kitty_if_missing Is False
       fail:
         msg: Kitty is missing...Install from https://sw.kovidgoyal.net/kitty/
       when:
         - not kitty_check.stat.exists
         - not install_kitty_if_missing
-      
+
     - name: Installing Kitty
       shell: curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
       when:
         - not kitty_check.stat.exists
-        - not install_kitty_if_missing
-
+        - install_kitty_if_missing
 
   tasks:
     - name: Get my user
       ansible.builtin.set_fact:
         remote_regular_user: "{{ ansible_env.SUDO_USER or ansible_user_id }}"
-    
+
     - name: Install packages
       ansible.builtin.dnf:
         name:
@@ -52,8 +50,8 @@
           - fortune
           - cowsay
           - yazi
-      state: present
-    
+        state: present
+
     - name: Install Flatpak packages
       community.general.flatpak:
         name:
