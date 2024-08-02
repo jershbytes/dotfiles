@@ -55,4 +55,27 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# Install Apps via OS detection.
+OS="$(uname -s)"
+case "${OS}" in
+    Linux*)
+        if [ -f /etc/fedora-release ]; then
+            ansible-playbook ~/.bootstrap/linux-setup.yml --ask-become-pass
+        elif [ -f /etc/rocky-release ]; then
+            ansible-playbook ~/.bootstrap/linux-setup.yml --ask-become-pass
+        else
+            echo "Unsupported Linux distribution"
+            exit 1
+        fi
+        ;;
+    Darwin*)
+        ansible-playbook ~/.bootstrap/mac-setup.yml --ask-become-pass
+        ;;
+    *)
+        echo "Unsupported operating system: ${OS}"
+        exit 1
+        ;;
+esac
+
 echo "Ansible installation complete."
+
