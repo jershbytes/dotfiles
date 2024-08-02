@@ -1,0 +1,53 @@
+---
+- name: Mac Setup
+  hosts: localhost
+  become: false
+  connection: localhost
+  gather_facts: false
+  tasks:
+    - name: Ensure Homebrew is installed
+      ansible.builtin.shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      args:
+        creates: /usr/local/bin/brew
+      changed_when: false
+
+
+    - name: Add HashiCorp tap to Homebrew
+      community.general.homebrew_tap:
+        name: hashicorp/tap
+        state: present
+
+    - name: Install Brew packages
+      community.general.homebrew:
+        name:
+          - ripgrep
+          - fd
+          - zig
+          - neovim
+          - lazygit
+          - oh-my-posh
+          - lolcat
+          - fortune
+          - cowsay
+          - yazi
+          - fzf
+          - zoxide
+          - neovide
+          - docker
+          - git
+          - jq
+          - wget
+          - curl
+          - hugo
+          - hashicorp/tap/terraform
+        state: present
+
+    - name: Install casks
+      community.general.homebrew_cask:
+        name:
+          - firefox
+          - deezer
+          - discord
+          - plex
+          - visual-studio-code
+        state: present
