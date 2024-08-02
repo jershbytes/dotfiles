@@ -69,7 +69,7 @@ case "${OS}" in
         fi
         ;;
     Darwin*)
-        ansible-playbook ~/.bootstrap/mac-setup.yml --ask-become-pass
+        ansible-playbook ~/.bootstrap/mac-setup.yml
         ;;
     *)
         echo "Unsupported operating system: ${OS}"
