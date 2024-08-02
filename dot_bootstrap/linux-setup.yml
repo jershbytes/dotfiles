@@ -110,6 +110,7 @@
           - yazi
           - fzf
           - zoxide
+          - neovide
         state: present
 
     - name: Install Flatpak packages
