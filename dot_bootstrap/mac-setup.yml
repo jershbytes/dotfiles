@@ -11,7 +11,6 @@
         creates: /usr/local/bin/brew
       changed_when: false
 
-
     - name: Add HashiCorp tap to Homebrew
       community.general.homebrew_tap:
         name: hashicorp/tap
