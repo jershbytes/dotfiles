@@ -1,4 +1,3 @@
----
 - name: Privileged Setup
   hosts: localhost
   become: true
@@ -74,7 +73,6 @@
         name: terraform
         state: present
 
----
 - name: Non-Privileged Setup
   hosts: localhost
   become: false
