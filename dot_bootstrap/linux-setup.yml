@@ -5,25 +5,6 @@
   connection: local
   gather_facts: true
 
-  pre_tasks:
-    - name: Ensuring kitty is Installed
-      stat:
-        path: /usr/bin/kitty
-        register: kitty_check
-
-    - name: Fail If kitty Is Not Installed and install_kitty_if_missing Is False
-      fail:
-        msg: Kitty is missing...Install from https://sw.kovidgoyal.net/kitty/
-      when:
-        - not kitty_check.stat.exists
-        - not install_kitty_if_missing
-
-    - name: Installing Kitty
-      shell: curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-      when:
-        - not kitty_check.stat.exists
-        - install_kitty_if_missing
-
   tasks:
     - name: Get my user
       ansible.builtin.set_fact:
