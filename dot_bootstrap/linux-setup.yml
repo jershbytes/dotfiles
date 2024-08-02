@@ -1,5 +1,7 @@
 - name: Privileged Setup
   hosts: localhost
+  vars:
+    remote_regular_user: jershops
   become: true
   connection: local
   gather_facts: true
@@ -75,6 +77,8 @@
 
 - name: Non-Privileged Setup
   hosts: localhost
+  vars:
+    remote_regular_user: jershops
   become: false
   connection: local
   gather_facts: true
