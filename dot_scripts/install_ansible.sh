@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 install_on_dnf() {
     sudo dnf install -y ansible

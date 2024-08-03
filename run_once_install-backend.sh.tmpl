@@ -1,7 +1,7 @@
 {{ if eq .chezmoi.os "linux" -}}
-bash install_homebrew.sh
-bash install_ansible.sh
+bash dot_scripts/install_homebrew.sh
+bash dot_scripts/install_ansible.sh
 {{ else if eq .chezmoi.os "darwin" -}}
-bash install_homebrew.sh
-bash install_ansible.sh
+bash dot_scripts/install_homebrew.sh
+bash dot_scripts/install_ansible.sh
 {{ end -}}
