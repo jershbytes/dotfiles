@@ -1,9 +1,0 @@
-{{ if eq .chezmoi.os "linux" }}
-#!/usr/bin/env bash
-bash dot_scripts/install_homebrew.sh
-bash dot_scripts/install_ansible.sh
-{{ else if eq .chezmoi.os "darwin" }}
-#!/usr/bin/env zsh
-bash dot_scripts/install_homebrew.sh
-bash dot_scripts/install_ansible.sh
-{{ end }}
