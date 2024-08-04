@@ -5,10 +5,10 @@ alias lt='ls --human-readable --size -1 -S --classify'  # List files with human-
 alias ll='ls -alF'                        # Show all files in long format with file types and indicators
 alias la='ls -A'                          # Show almost all files (hidden files but not `.` and `..`)
 alias l='ls -CF'                          # Show files in columns with file types
-alias ssh='kitten ssh'
+alias ssh='kitten ssh'                    # SSH with Cats
+alias bye-='shutdown -h now'
 
 # File Operations
-alias sc="grep ^[^#] $1"                  # Strip comments from file
 alias cpv='rsync -ah --info=progress2'    # Copy files with rsync, showing progress
 alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" # Create terraform file structure.
 
