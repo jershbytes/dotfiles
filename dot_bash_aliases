@@ -6,7 +6,7 @@ alias ll='ls -alF'                        # Show all files in long format with f
 alias la='ls -A'                          # Show almost all files (hidden files but not `.` and `..`)
 alias l='ls -CF'                          # Show files in columns with file types
 alias ssh='kitten ssh'                    # SSH with Cats
-alias bye-='shutdown -h now'
+alias bye='shutdown -h now'
 
 # File Operations
 alias cpv='rsync -ah --info=progress2'    # Copy files with rsync, showing progress
