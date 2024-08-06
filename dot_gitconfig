@@ -6,22 +6,25 @@
   	path = .gitconfig-github
 
 [alias]
-    s = status
-    a  = add
-    ac = commit -am
-    cl = clone
-    co = checkout
-    pl = pull
-    ph = push
-    cob = checkout -b
-    com = commit -m
+	s = status
+	a  = add
+	ac = commit -am
+	cl = clone
+	co = checkout
+	pl = pull
+	ph = push
+	cob = checkout -b
+	com = commit -m
 
 [core]
-    eol = lf
-    autocrlf = input
+	eol = lf
+	autocrlf = input
 
 [init]
 	defaultBranch = main
+
+[web]
+	browser = firefox
 
 
 
