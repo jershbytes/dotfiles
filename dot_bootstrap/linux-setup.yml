@@ -3,7 +3,7 @@
   vars:
     remote_regular_user: jershops
   become: true
-  connection: local
+  connection: localhost
   gather_facts: true
 
   tasks:
@@ -91,7 +91,7 @@
   vars:
     remote_regular_user: jershops
   become: false
-  connection: local
+  connection: localhost
   gather_facts: true
 
   tasks:
