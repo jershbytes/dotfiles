@@ -20,5 +20,8 @@
     eol = lf
     autocrlf = input
 
+[init]
+	defaultBranch = main
+
 
 
