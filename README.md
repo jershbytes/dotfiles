@@ -11,9 +11,9 @@ This repo contains the configuration to set up my machines. This is using **Chez
 
 This automated setup is currently only configured for Linux machines.
 
-## How to run
+## 🏃How to run
 
 ```shell
 export GITHUB_USERNAME=ColoredBytes
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --ssh git@github.com:$GITHUB_USERNAME/dotfiles.git
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
 ```
