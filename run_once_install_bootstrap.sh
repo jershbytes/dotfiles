@@ -10,8 +10,14 @@ install_ansible_on_mac() {
     brew install ansible
 }
 
-# Function to install Homebrew
-install_homebrew() {
+# Function to install Homebrew on Fedroa
+install_homebrew_on_fedora() {
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+# Function to install Homebrew on macOS
+install_homebrew_on_macOS() {
+    xcode-select --install
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
@@ -32,7 +38,7 @@ case "${OS}" in
             # Install Homebrew if not present
             if ! command_exists brew; then
                 echo "Installing Homebrew..."
-                install_homebrew
+                install_homebrew_on_fedora
             else
                 echo "Homebrew is already installed"
             fi
@@ -55,7 +61,7 @@ case "${OS}" in
         # Install Homebrew if not present
         if ! command_exists brew; then
             echo "Installing Homebrew..."
-            install_homebrew
+            install_homebrew_on_macOS
         else
             echo "Homebrew is already installed"
         fi
