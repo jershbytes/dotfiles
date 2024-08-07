@@ -17,3 +17,11 @@ This automated setup is currently only configured for **Fedora** and **MacOS**.
 export GITHUB_USERNAME=ColoredBytes
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
 ```
+
+> [!NOTE]
+> Since macOS does not have git or curl installed on a fresh install. I have made a bootstrap script for it.
+> ```zsh
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/coloredbytes/dotfiles/main/dot_bootstrap/mac_bootstrap.sh)"
+> ```
+
+
