@@ -143,3 +143,6 @@ if [ -e $HOME/.bash_functions ]; then
 	source $HOME/.bash_functions
 fi
 
+# mkdocs path
+export PATH=$PATH:/home/jershops/.local/bin
+
