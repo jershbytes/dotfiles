@@ -29,3 +29,7 @@ alias bi="brew install"                   # short form to install brew apps
 
 # Chezmoi Commands
 alias csync="chezmoi update;chezmoi apply"
+
+# MkDocs Commands
+alias mks="mkdocs serve"
+
