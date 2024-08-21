@@ -4,6 +4,7 @@ alias cd="z"                              # Change directory (using z)
 alias lt='ls --human-readable --size -1 -S --classify'  # List files with human-readable sizes, sorted by size, and classified
 alias ll='ls -alF'                        # Show all files in long format with file types and indicators
 alias la='ls -A'                          # Show almost all files (hidden files but not `.` and `..`)
+alias ls='ls -l'                          # Show ls in list form instead of regular.
 alias l='ls -CF'                          # Show files in columns with file types
 alias ssh='kitten ssh'                    # SSH with Cats
 alias bye='shutdown -h now'
