@@ -2,7 +2,7 @@
 blocks:
   - alignment: left
     segments:
-      - foreground: "#F8F8F2"  # Dracula Foreground
+      - foreground: "#FFB86C"  # Dracula Foreground
         style: plain
         template: "{{ .UserName }} on {{ .HostName }} "
         type: session
@@ -53,7 +53,7 @@ blocks:
             staged:
               foreground: "#FF79C6"  # Dracula Pink for staged
             conflicting:
-              foreground: "#FF5555"  # Dracula Red for conflicting
+              foreground: "#FF5555"  # Dracula Red for conflictingc
             ahead:
               foreground: "#BD93F9"  # Dracula Purple for ahead
             behind:
