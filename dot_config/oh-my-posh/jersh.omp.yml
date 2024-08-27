@@ -2,6 +2,14 @@
 blocks:
   - alignment: left
     segments:
+      - type: os
+        style: plain
+        template: " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+        background: transparent
+        foreground: "#ffffff"
+        text: ""
+        duration: 0s
+        namelength: 0
       - foreground: "#FFB86C"  # Dracula Foreground
         style: plain
         template: "{{ .UserName }} on {{ .HostName }} "
@@ -34,10 +42,7 @@ blocks:
         properties:
           fetch_status: true
         style: plain
-        template: "<#F8F8F2>in</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{
-          end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if
-          and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if
-          .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+        template: " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} "
         type: git
       - foreground: "#F8F8F2"  # Dracula Foreground
         style: plain
