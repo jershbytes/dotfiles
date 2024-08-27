@@ -2,7 +2,7 @@
 blocks:
   - alignment: left
     segments:
-      - foreground: "#F8F8F2"  # Dracula Foreground
+      - foreground: "#FFB86C"  # Dracula Foreground
         style: plain
         template: "{{ .UserName }} on {{ .HostName }} "
         type: session
