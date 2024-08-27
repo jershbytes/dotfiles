@@ -11,7 +11,7 @@ blocks:
         template: " "
         type: root
     type: prompt
-  
+
   - alignment: right
     segments:
       - foreground: "#BD93F9"  # Dracula Purple
@@ -21,7 +21,7 @@ blocks:
         style: plain
         type: time
     type: prompt
-  
+
   - alignment: left
     newline: true
     segments:
@@ -31,7 +31,11 @@ blocks:
         style: plain
         template: "{{ .Folder }} "
         type: path
-      - foreground: "#FF5555"  # Dracula Red
+      - foreground: "#F8F8F2"  # Dracula Foreground for text
+        style: plain
+        template: "~ "
+        type: text
+      - foreground: "#FF5555"  # Default Dracula Red for git
         properties:
           fetch_status: true
         style: plain
@@ -40,10 +44,22 @@ blocks:
           and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if
           .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
         type: git
-      - foreground: "#F8F8F2"  # Dracula Foreground
-        style: plain
-        template: "~ "
-        type: text
+    properties:
+          status:
+            clean:
+              foreground: "#50FA7B"  # Dracula Green for clean status
+            modified:
+              foreground: "#FFB86C"  # Dracula Orange for modified
+            staged:
+              foreground: "#FF79C6"  # Dracula Pink for staged
+            conflicting:
+              foreground: "#FF5555"  # Dracula Red for conflicting
+            ahead:
+              foreground: "#BD93F9"  # Dracula Purple for ahead
+            behind:
+              foreground: "#FFB86C"  # Dracula Orange for behind
+            diverged:
+              foreground: "#FF5555"  # Dracula Red for diverged
     type: prompt
 
 final_space: true
