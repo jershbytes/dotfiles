@@ -11,7 +11,6 @@ blocks:
         template: " "
         type: root
     type: prompt
-
   - alignment: right
     segments:
       - foreground: "#BD93F9"  # Dracula Purple
