@@ -1,0 +1,50 @@
+# $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+blocks:
+  - alignment: left
+    segments:
+      - foreground: "#F8F8F2"  # Dracula Foreground
+        style: plain
+        template: "{{ .UserName }} on {{ .HostName }} "
+        type: session
+      - foreground: "#FF79C6"  # Dracula Pink
+        style: plain
+        template: " "
+        type: root
+    type: prompt
+  
+  - alignment: right
+    segments:
+      - foreground: "#BD93F9"  # Dracula Purple
+        template: " {{ .CurrentDate | date .Format }} "
+        properties:
+          time_format: 15:04:05
+        style: plain
+        type: time
+    type: prompt
+  
+  - alignment: left
+    newline: true
+    segments:
+      - foreground: "#8BE9FD"  # Dracula Cyan
+        properties:
+          style: folder
+        style: plain
+        template: "{{ .Folder }} "
+        type: path
+      - foreground: "#FF5555"  # Dracula Red
+        properties:
+          fetch_status: true
+        style: plain
+        template: "<#F8F8F2>in</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{
+          end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if
+          and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if
+          .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+        type: git
+      - foreground: "#F8F8F2"  # Dracula Foreground
+        style: plain
+        template: "~ "
+        type: text
+    type: prompt
+
+final_space: true
+version: 2
