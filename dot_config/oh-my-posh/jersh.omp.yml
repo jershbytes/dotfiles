@@ -2,7 +2,7 @@
 blocks:
   - alignment: left
     segments:
-      - foreground: "#FFB86C"  # Dracula Foreground
+      - foreground: "#F8F8F2"  # Dracula Foreground
         style: plain
         template: "{{ .UserName }} on {{ .HostName }} "
         type: session
@@ -17,7 +17,7 @@ blocks:
       - foreground: "#BD93F9"  # Dracula Purple
         template: " {{ .CurrentDate | date .Format }} "
         properties:
-          time_format: 15:04:05
+          time_format: "%T"
         style: plain
         type: time
     type: prompt
@@ -31,11 +31,7 @@ blocks:
         style: plain
         template: "{{ .Folder }} "
         type: path
-      - foreground: "#F8F8F2"  # Dracula Foreground for text
-        style: plain
-        template: "~ "
-        type: text
-      - foreground: "#FF5555"  # Default Dracula Red for git
+      - foreground: "#FF5555"  # Dracula Red
         properties:
           fetch_status: true
         style: plain
@@ -44,22 +40,10 @@ blocks:
           and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if
           .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
         type: git
-    properties:
-          status:
-            clean:
-              foreground: "#50FA7B"  # Dracula Green for clean status
-            modified:
-              foreground: "#FFB86C"  # Dracula Orange for modified
-            staged:
-              foreground: "#FF79C6"  # Dracula Pink for staged
-            conflicting:
-              foreground: "#FF5555"  # Dracula Red for conflictingc
-            ahead:
-              foreground: "#BD93F9"  # Dracula Purple for ahead
-            behind:
-              foreground: "#FFB86C"  # Dracula Orange for behind
-            diverged:
-              foreground: "#FF5555"  # Dracula Red for diverged
+      - foreground: "#F8F8F2"  # Dracula Foreground
+        style: plain
+        template: "~ "
+        type: text
     type: prompt
 
 final_space: true
