@@ -1,4 +1,4 @@
-$schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+# $schema: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 blocks:
   - alignment: left
     segments:
@@ -10,6 +10,20 @@ blocks:
         style: plain
         template: " "
         type: root
+    type: prompt
+  - alignment: right
+    segments:
+      - foreground: "#BD93F9"  # Dracula Purple
+        template: " {{ .CurrentDate | date .Format }} "
+        properties:
+          time_format: "%T"
+        style: plain
+        type: time
+    type: prompt
+
+  - alignment: left
+    newline: true
+    segments:
       - foreground: "#8BE9FD"  # Dracula Cyan
         properties:
           style: folder
@@ -31,15 +45,5 @@ blocks:
         type: text
     type: prompt
 
-  - alignment: right
-    segments:
-      - foreground: "#BD93F9"  # Dracula Purple
-        template: " {{ .CurrentDate | date .Format }} "
-        properties:
-          time_format: 15:04:05
-        style: plain
-        type: time
-    type: prompt
-
-
+final_space: true
 version: 2
