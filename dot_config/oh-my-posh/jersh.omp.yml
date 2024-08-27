@@ -16,7 +16,7 @@ blocks:
       - foreground: "#BD93F9"  # Dracula Purple
         template: " {{ .CurrentDate | date .Format }} "
         properties:
-          time_format: Kitchen
+          time_format: 3:04PM
         style: plain
         type: time
     type: prompt
