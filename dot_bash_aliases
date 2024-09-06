@@ -34,3 +34,6 @@ alias csync="chezmoi update;chezmoi apply"
 # MkDocs Commands
 alias mks="mkdocs serve"
 
+# Hugo Aliases
+alias hcn="hugo server -N --noHTTPCache"
+alias hi="hugo new site"
