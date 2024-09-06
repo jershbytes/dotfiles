@@ -1,11 +1,10 @@
-[includeIf "gitdir:~/code/github/"]
+[includeIf "gitdir:~/Projects/"]
   	path = .gitconfig-github
-[includeIf "gitdir:~/code/gitea/"]
-  	path = .gitconfig-gitea
 [includeIf "gitdir:~/.local/share/chezmoi/"]
   	path = .gitconfig-github
 
 [alias]
+	i = init
 	s = status
 	a  = add
 	ac = commit -am
