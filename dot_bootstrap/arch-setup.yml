@@ -40,9 +40,6 @@
         name:
           - vscodium-bin
           - terraform-bin
-          - neovim-git
-          - goxlr-utility
-          - goxlr-utility-ui
         state: present
         update_cache: true
     
