@@ -10,6 +10,12 @@ install_ansible_on_mac() {
     brew install ansible
 }
 
+# Function to install Ansible on Arch
+install_ansible_on_arch(){
+  sudo pacman -S ansible
+
+}
+
 # Function to install Homebrew on Fedroa
 install_homebrew_on_fedora() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -19,6 +25,12 @@ install_homebrew_on_fedora() {
 install_homebrew_on_macOS() {
     xcode-select --install
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+# Function to install Homebrew on Arch
+install_homebrew_on_arch() {
+sudo pacman -S base-devel procps-ng curl file git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
 # Function to check if a command exists
@@ -52,9 +64,34 @@ case "${OS}" in
             fi
 
             ansible-playbook ~/.bootstrap/linux-setup.yml --ask-become-pass
+
+        elif [ -f /etc/arch-release ]; then
+            sudo pacman -Syu
+
+            # Install Homebrew if not present
+            if ! command_exists brew; then
+                echo "Installing Homebrew..."
+                install_homebrew_on_arch
+            else
+                echo "Homebrew is already installed"
+            fi
+
+            # Install Ansible if not present
+            if ! command_exists ansible; then
+                echo "Installing Ansible..."
+                install_ansible_on_arch
+            else
+                echo "Ansible is already installed"
+            fi
+
+            ansible-playbook ~/.bootstrap/arch-setup.yml --ask-become-pass
+
         else
             echo "Unsupported Linux distribution"
             exit 1
+        fi
+
+  exit 1
         fi
         ;;
     Darwin*)
