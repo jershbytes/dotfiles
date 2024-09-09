@@ -23,6 +23,17 @@
         mode: 0644
         validate: 'visudo -cf %s'
 
+   
+
+- name: Non-Privileged Setup
+  hosts: localhost
+  vars:
+    remote_regular_user: "{{ ansible_user }}"
+  become: false
+  connection: localhost
+  gather_facts: true
+
+  tasks:
     - name: Install packages from AUR
       kewlfft.aur.aur:
         name:
@@ -34,16 +45,7 @@
           - goxlr-utility-ui
         state: present
         update_cache: true
-
-- name: Non-Privileged Setup
-  hosts: localhost
-  vars:
-    remote_regular_user: "{{ ansible_user }}"
-  become: false
-  connection: localhost
-  gather_facts: true
-
-  tasks:
+    
     - name: Install Brew packages
       community.general.homebrew:
         name:
