@@ -41,7 +41,6 @@
           - vscodium-bin
           - terraform-bin
           - neovim-git
-          - docker-git
           - goxlr-utility
           - goxlr-utility-ui
         state: present
