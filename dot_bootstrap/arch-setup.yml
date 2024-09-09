@@ -36,6 +36,7 @@
   tasks:
     - name: Install packages from AUR
       kewlfft.aur.aur:
+        use: yay
         name:
           - vscodium-bin
           - terraform-bin
