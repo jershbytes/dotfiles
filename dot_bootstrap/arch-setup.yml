@@ -10,7 +10,6 @@
     - name: Install packages from AUR
       community.general.pacman:
         name: 
-          - vesktop-bin
           - vscodium-bin 
           - terraform-bin
           - neovim-git
