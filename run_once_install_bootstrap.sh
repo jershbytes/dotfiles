@@ -11,12 +11,11 @@ install_ansible_on_mac() {
 }
 
 # Function to install Ansible on Arch
-install_ansible_on_arch(){
-  sudo pacman -S ansible
-
+install_ansible_on_arch() {
+    sudo pacman -S ansible
 }
 
-# Function to install Homebrew on Fedroa
+# Function to install Homebrew on Fedora
 install_homebrew_on_fedora() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
@@ -29,8 +28,8 @@ install_homebrew_on_macOS() {
 
 # Function to install Homebrew on Arch
 install_homebrew_on_arch() {
-sudo pacman -S base-devel procps-ng curl file git
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    sudo pacman -S base-devel procps-ng curl file git
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
 # Function to check if a command exists
@@ -89,9 +88,6 @@ case "${OS}" in
         else
             echo "Unsupported Linux distribution"
             exit 1
-        fi
-
-  exit 1
         fi
         ;;
     Darwin*)
