@@ -10,13 +10,13 @@
     - name: Install package foo from repo
       community.general.pacman:
         name: 
-          - vesktop
-          - vscodium 
-          - terraform
-          - kitty
-          - neovim
-          - docker
+          - vesktop-bin
+          - vscodium-bin 
+          - terraform-bin
+          - neovim-git
+          - docker-git
           - goxlr-utility
+          - goxlr-utility-ui
         state: present
         executable: yay
         extra_args: --builddir /var/cache/yay
