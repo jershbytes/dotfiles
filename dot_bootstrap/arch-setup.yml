@@ -6,11 +6,27 @@
   connection: localhost
   gather_facts: true
 
-  tasks: 
+  tasks:
+    - name: Create the `aur_builder` user
+      become: yes
+      ansible.builtin.user:
+        name: aur_builder
+        create_home: yes
+        group: wheel
+
+    - name: Allow the `aur_builder` user to run `sudo pacman` without a password
+      become: yes
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/11-install-aur_builder
+        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        create: yes
+        mode: 0644
+        validate: 'visudo -cf %s'
+
     - name: Install packages from AUR
-      community.general.pacman:
-        name: 
-          - vscodium-bin 
+      kewlfft.aur.aur:
+        name:
+          - vscodium-bin
           - terraform-bin
           - neovim-git
           - docker-git
@@ -55,4 +71,3 @@
           - dev.vencord.Vesktop
           - org.kde.haruna
         state: present
-
