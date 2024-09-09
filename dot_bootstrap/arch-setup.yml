@@ -17,9 +17,7 @@
           - goxlr-utility
           - goxlr-utility-ui
         state: present
-        executable: yay
-        extra_args: --noconfirm --builddir /var/cache/yay
-
+        update_cache: true
 
 - name: Non-Privileged Setup
   hosts: localhost
