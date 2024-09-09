@@ -7,7 +7,7 @@
   gather_facts: true
 
   tasks: 
-    - name: Install package foo from repo
+    - name: Install packages from AUR
       community.general.pacman:
         name: 
           - vesktop-bin
