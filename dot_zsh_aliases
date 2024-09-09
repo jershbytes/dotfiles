@@ -1,0 +1,39 @@
+# Terminal Management
+alias c="clear"                           # Clear the terminal
+alias cd="z"                              # Change directory (using z)
+alias lt='ls --human-readable --size -1 -S --classify'  # List files with human-readable sizes, sorted by size, and classified
+alias ll='ls -alF'                        # Show all files in long format with file types and indicators
+alias la='ls -A'                          # Show almost all files (hidden files but not `.` and `..`)
+alias ls='ls -l'                          # Show ls in list form instead of regular.
+alias l='ls -CF'                          # Show files in columns with file types
+alias ssh='kitten ssh'                    # SSH with Cats
+alias bye='shutdown -h now'
+
+# File Operations
+alias cpv='rsync -ah --info=progress2'    # Copy files with rsync, showing progress
+alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" # Create terraform file structure.
+
+# Development Tools
+alias tf="terraform"                      # Terraform alias
+alias vim="neovide"                          # Set vim to open neovim
+alias view='neovide -R'                      # Set vim to open in ro.
+alias chez="chezmoi"                      # Shorten chezmoi name.
+
+# Tree Display
+alias tree='tree --dirsfirst -F'          # Display tree with directories first and trailing slashes
+
+# History Search
+alias gh='history|grep'                   # Search history with grep
+
+# Brew Commands
+alias bi="brew install"                   # short form to install brew apps
+
+# Chezmoi Commands
+alias csync="chezmoi update;chezmoi apply"
+
+# MkDocs Commands
+alias mks="mkdocs serve"
+
+# Hugo Aliases
+alias hcn="hugo server -N --noHTTPCache"
+alias hi="hugo new site"
