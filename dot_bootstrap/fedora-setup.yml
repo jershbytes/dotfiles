@@ -26,11 +26,6 @@
         gpgcheck: true
         enabled: true
 
-    - name: Install VS Code
-      ansible.builtin.dnf:
-        name: code
-        state: present
-
     - name: Add Docker repo
       ansible.builtin.yum_repository:
         name: docker
@@ -40,14 +35,27 @@
         gpgcheck: true
         enabled: true
 
-    - name: Install Docker
+    - name: Add Hashicorp Repo
+      ansible.builtin.yum_repository:
+        name: hashicorp
+        description: Hashicorp repo
+        baseurl: https://rpm.releases.hashicorp.com/fedora/$releasever/$basearch/stable
+        gpgkey: https://rpm.releases.hashicorp.com/gpg
+        gpgcheck: true
+        enabled: true
+
+    - name: Install packages with DNF
       ansible.builtin.dnf:
         name:
+          - code
           - docker-ce
           - docker-ce-cli
           - containerd.io
           - docker-buildx-plugin
           - docker-compose-plugin
+          - terraform
+          - flatpak
+          - kitty
         state: present
 
     - name: Add Docker group
@@ -60,25 +68,6 @@
         name: "{{ remote_regular_user }}"
         groups: docker
         append: true
-
-    - name: Add Hashicorp Repo
-      ansible.builtin.yum_repository:
-        name: hashicorp
-        description: Hashicorp repo
-        baseurl: https://rpm.releases.hashicorp.com/fedora/$releasever/$basearch/stable
-        gpgkey: https://rpm.releases.hashicorp.com/gpg
-        gpgcheck: true
-        enabled: true
-
-    - name: Install Terraform
-      ansible.builtin.dnf:
-        name: terraform
-        state: present
-
-    - name: Install Flatpak
-      ansible.builtin.dnf:
-        name: flatpak
-        state: present
 
     - name: Add Flathub repository
       ansible.builtin.shell: |
@@ -121,3 +110,4 @@
           - com.bitwarden.desktop
           - dev.vencord.Vesktop
           - org.kde.haruna
+        state: present
