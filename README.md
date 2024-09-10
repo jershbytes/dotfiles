@@ -14,7 +14,7 @@ This automated setup is currently only configured for **Fedora** and **MacOS**.
 ## 🏃How to run
 
 ```shell
-export GITHUB_USERNAME=ColoredBytes
+export GITHUB_USERNAME=coloredbytes
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
 ```
 
