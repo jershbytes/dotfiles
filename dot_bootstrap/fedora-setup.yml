@@ -1,7 +1,7 @@
 - name: Privileged Setup
   hosts: localhost
   vars:
-    remote_regular_user: "{{ ansible_user }}"
+    remote_regular_user: rossjm
   become: true
   connection: localhost
   gather_facts: true
