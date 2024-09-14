@@ -6,7 +6,7 @@ alias ll='ls -alF'                        # Show all files in long format with f
 alias la='ls -A'                          # Show almost all files (hidden files but not `.` and `..`)
 alias ls='ls -l'                          # Show ls in list form instead of regular.
 alias l='ls -CF'                          # Show files in columns with file types
-alias ssh='kitten ssh'                    # SSH with Cats
+alias s="kitty +kitten ssh"                  # SSH with Cats
 alias bye='shutdown -h now'
 
 # File Operations
