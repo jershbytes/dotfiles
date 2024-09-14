@@ -1,9 +1,22 @@
 {{ if eq .chezmoi.os "linux" -}}
-#!/bin/bash
-sudo dnf install -y ansible
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    #!/bin/bash
+
+    if [ -f /etc/debian_version ]; then
+        # Debian/Ubuntu
+        sudo apt update
+        sudo apt install -y ansible
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    elif [ -f /etc/redhat-release ]; then
+        # Red Hat-based systems (Fedora, CentOS, RHEL)
+        sudo dnf install -y ansible
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+        echo "Unsupported Linux distribution"
+    fi
+
 {{ else if eq .chezmoi.os "darwin" -}}
-#!/bin/bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install ansible
+    #!/bin/bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    brew install ansible
+
 {{ end -}}
