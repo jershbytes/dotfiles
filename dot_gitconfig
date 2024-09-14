@@ -24,3 +24,6 @@
 
 [web]
 	browser = firefox
+
+[program]
+  pgp = /usr/bin/gpg
