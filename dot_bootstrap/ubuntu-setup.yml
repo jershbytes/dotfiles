@@ -84,3 +84,40 @@
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
       args:
         creates: /var/lib/flatpak/repo/flathub
+
+- name: Non-Privileged Setup
+  hosts: localhost
+  vars:
+    remote_regular_user: jershops
+  become: false
+  connection: localhost
+  gather_facts: true
+
+  tasks:
+    - name: Install Brew packages
+      community.general.homebrew:
+        name:
+          - ripgrep
+          - fd
+          - zig
+          - neovim
+          - lazygit
+          - oh-my-posh
+          - lolcat
+          - fortune
+          - cowsay
+          - yazi
+          - fzf
+          - zoxide
+          - neovide
+        state: present
+
+    - name: Install Flatpak packages
+      community.general.flatpak:
+        name:
+          - tv.plex.PlexDesktop
+          - dev.aunetx.deezer
+          - com.bitwarden.desktop
+          - dev.vencord.Vesktop
+          - org.kde.haruna
+        state: present
