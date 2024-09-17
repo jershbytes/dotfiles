@@ -142,5 +142,5 @@ if [ -e $HOME/.bash_functions ]; then
 fi
 
 # mkdocs path
-export PATH=$PATH:/home/jershops/.local/bin
+export PATH="$PATH:$HOME/.local/bin"
 
