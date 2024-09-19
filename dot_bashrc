@@ -121,7 +121,7 @@ export HOMEBREW_NO_ENV_HINTS=true
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # oh-my-posh
-export OMP_CONFIG="$HOME/.config/oh-my-posh/jersh.omp.json"
+export OMP_CONFIG="$HOME/.config/oh-my-posh/dracula-bubba.omp.json"
 eval "$(oh-my-posh init bash --config "$OMP_CONFIG")"
 
 
