@@ -59,17 +59,6 @@
           - kitty
         state: present
 
-    - name: Add Docker group
-      ansible.builtin.group:
-        name: docker
-        state: present
-
-    - name: Add user to docker group
-      ansible.builtin.user:
-        name: "{{ remote_regular_user }}"
-        groups: docker
-        append: true
-
     - name: Add Flathub repository
       ansible.builtin.shell: |
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
