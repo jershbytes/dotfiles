@@ -1,7 +1,7 @@
 - name: Privileged Setup
   hosts: localhost
   vars:
-    remote_regular_user: rossjm
+    remote_regular_user: jershbytes
   become: true
   connection: localhost
   gather_facts: true
