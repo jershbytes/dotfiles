@@ -28,19 +28,6 @@
         state: present
         filename: vscode
 
-
-
-    - name: Import Hashicorp GPG key
-      ansible.builtin.apt_key:
-        url: https://rpm.releases.hashicorp.com/gpg
-        state: present
-
-    - name: Add Hashicorp Repo
-      ansible.builtin.apt_repository:
-        repo: deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main
-        state: present
-        filename: hashicorp
-
     - name: Update APT cache
       ansible.builtin.apt:
         update_cache: yes
@@ -49,12 +36,6 @@
       ansible.builtin.apt:
         name:
           - code
-          - docker-ce
-          - docker-ce-cli
-          - containerd.io
-          - docker-buildx-plugin
-          - docker-compose-plugin
-          - terraform
           - flatpak
           - kitty
         state: present
