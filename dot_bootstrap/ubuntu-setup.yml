@@ -28,16 +28,7 @@
         state: present
         filename: vscode
 
-    - name: Import Docker GPG key
-      ansible.builtin.apt_key:
-        url: https://download.docker.com/linux/ubuntu/gpg
-        state: present
 
-    - name: Add Docker repo
-      ansible.builtin.apt_repository:
-        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
-        state: present
-        filename: docker
 
     - name: Import Hashicorp GPG key
       ansible.builtin.apt_key:
