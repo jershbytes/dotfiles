@@ -1,43 +1,44 @@
-# Terminal Management
-alias c="clear"                           # Clear the terminal
-alias cd="z"                              # Change directory (using z)
-alias lt='ls --human-readable --size -1 -S --classify'  # List files with human-readable sizes, sorted by size, and classified
-alias ll='ls -alF'                        # Show all files in long format with file types and indicators
-alias la='ls -A'                          # Show almost all files (hidden files but not `.` and `..`)
-alias ls='ls -l'                          # Show ls in list form instead of regular.
-alias l='ls -CF'                          # Show files in columns with file types
-alias s="kitty +kitten ssh"                  # SSH with Cats
-alias bye='shutdown -h now'
+# Terminal Management Aliases
+alias c="clear"                           # Quickly clear the terminal screen
+alias cd="z"                              # Jump to directories using z (tracking frequently used paths)
+alias lt='ls --human-readable --size -1 -S --classify'  # List files by size (largest first) with human-readable sizes and file types
+alias ll='ls -alF'                        # List all files (including hidden) in long format with indicators for file types
+alias la='ls -A'                          # Show all files except `.` and `..` (almost all)
+alias ls='ls -l'                          # Display files in detailed list format by default
+alias l='ls -CF'                          # List files in columns and append file type indicators
+alias s="kitty +kitten ssh"               # SSH into a remote machine using Kitty terminal features
+alias bye='shutdown -h now'               # Shut down the machine (if you know, you know)
+alias ff='fastfetch'                      # Run fastfetch (a system information tool)
+alias genpass='openssl rand -base64 18'   # Generate a random password using OpenSSL
 
-# File Operations
-alias cpv='rsync -ah --info=progress2'    # Copy files with rsync, showing progress
-alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" # Create terraform file structure.
-alias sai="sudo apt install"
-alias sar="sudo apt remove"               # Make it easier to remove.
-alias saar="sudo apt autoremove"          # Cleanup apt.
+# File Operations Aliases
+alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress info (human-readable)
+alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" # Create a standard Terraform file structure
+alias sai="sudo apt install"              # Shortcut for installing packages with apt
+alias sar="sudo apt remove"               # Shortcut for removing packages with apt
+alias saar="sudo apt autoremove"          # Shortcut for cleaning up unused packages with apt
 
+# Development Tools Aliases
+alias tf="terraform"                      # Shortcut for Terraform commands
+alias vim="neovide"                       # Open Neovim GUI (Neovide) instead of Vim
+alias view='neovide -R'                   # Open Neovide in read-only mode
+alias chez="chezmoi"                      # Shortcut for Chezmoi configuration management
 
-# Development Tools
-alias tf="terraform"                      # Terraform alias
-alias vim="neovide"                          # Set vim to open neovim
-alias view='neovide -R'                      # Set vim to open in ro.
-alias chez="chezmoi"                      # Shorten chezmoi name.
+# Directory Tree Display Alias
+alias tree='tree --dirsfirst -F'          # Display directory tree with directories listed first and trailing slashes
 
-# Tree Display
-alias tree='tree --dirsfirst -F'          # Display tree with directories first and trailing slashes
+# Command History Search Alias
+alias gh='history|grep'                   # Search command history with grep
 
-# History Search
-alias gh='history|grep'                   # Search history with grep
+# Homebrew Aliases
+alias bi="brew install"                   # Shortcut to install packages with Homebrew
 
-# Brew Commands
-alias bi="brew install"                   # short form to install brew apps
-
-# Chezmoi Commands
-alias csync="chezmoi update;chezmoi apply"
+# Chezmoi Sync Aliases
+alias csync="chezmoi update;chezmoi apply"  # Update and apply Chezmoi configuration
 
 # MkDocs Commands
-alias mks="mkdocs serve"
+alias mks="mkdocs serve"                  # Serve MkDocs documentation locally
 
 # Hugo Aliases
-alias hcn="hugo server -N --noHTTPCache"
-alias hi="hugo new site"
+alias hcn="hugo server -N --noHTTPCache"  # Run Hugo server with no HTTP caching
+alias hi="hugo new site"                  # Create a new Hugo site
