@@ -32,6 +32,7 @@ alias gh='history|grep'                   # Search command history with grep
 
 # Homebrew Aliases
 alias bi="brew install"                   # Shortcut to install packages with Homebrew
+alias brewup='brew update && brew upgrade && brew cleanup' # Alias to update Homebrew, upgrade all packages, and clean up old versions
 
 # Chezmoi Sync Aliases
 alias csync="chezmoi update;chezmoi apply"  # Update and apply Chezmoi configuration
