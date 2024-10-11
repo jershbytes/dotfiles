@@ -1,4 +1,4 @@
-[includeIf "gitdir:~/Github/"]
+[includeIf "gitdir:~/Git/Github/"]
   	path = .gitconfig-github
 [includeIf "gitdir:~/.local/share/chezmoi/"]
   	path = .gitconfig-github
