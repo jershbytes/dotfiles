@@ -23,6 +23,7 @@ alias tf="terraform"                      # Shortcut for Terraform commands
 alias vim="neovide"                       # Open Neovim GUI (Neovide) instead of Vim
 alias view='neovide -R'                   # Open Neovide in read-only mode
 alias chez="chezmoi"                      # Shortcut for Chezmoi configuration management
+alias npm="pnpm"                          # Shortcut for nodeJS package manager
 
 # Directory Tree Display Alias
 alias tree='tree --dirsfirst -F'          # Display directory tree with directories listed first and trailing slashes
