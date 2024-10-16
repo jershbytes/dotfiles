@@ -14,7 +14,7 @@ This automated setup is currently only configured for **Fedora** and **MacOS**.
 
 ```shell
 export GITHUB_USERNAME=JershBytes
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
 ```
 
 > [!NOTE]
