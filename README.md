@@ -2,7 +2,7 @@
   <img src=".resources/images/dotfiles.png" alt="Header" width="100" height="100"><br>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-gren.svg" alt="License: MIT"></a><br> 
-    <i> Managed with <a href="https://chezmoi.io"> chezmoi </a></i>
+    <i> Managed with <a href="https://chezmoi.io"> chezmoi </a></i> 🚀
  </p>
 
 
