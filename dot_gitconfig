@@ -1,7 +1,15 @@
 [includeIf "gitdir:~/Git/Github/"]
   	path = .gitconfig-github
+
 [includeIf "gitdir:~/.local/share/chezmoi/"]
   	path = .gitconfig-github
+
+[includeIf "gitdir:~/Git/Gitlab/"]
+  	path = .gitconfig-gitlab
+
+[includeIf "gitdir:~/Git/Gitea/"]
+  	path = .gitconfig-gitea
+
 
 [alias]
 	i = init
