@@ -194,10 +194,17 @@ terminal:
   font: JetBrainsMono Nerd Font Mono
   cursor: underline
   customColorSchemes: []
+  ligatures: true
+  copyOnSelect: true
+  frontend: xterm
+  bell: visual
+  pasteOnMiddleClick: true
 ssh: {}
 clickableLinks: {}
 accessibility: {}
-appearance: {}
+appearance:
+  flexTabs: true
+  vibrancy: true
 hacks: {}
 providerBlacklist: []
 commandBlacklist: []
@@ -207,3 +214,12 @@ profileDefaults:
 enableWelcomeTab: false
 pluginBlacklist: []
 profileBlacklist: []
+backgroundPlugin:
+  backgroundPath: /home/jershbytes/Pictures/memes/ZeroTwo.gif
+  backgrounds: []
+  backgroundFullscreenType: contain
+  backgroundOpacity: '100'
+  backgroundEnabled: true
+  backgroundShowType: float
+  backgroundFloatY: 20
+  backgroundDropShadowEnabled: true
