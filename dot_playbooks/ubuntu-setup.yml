@@ -50,6 +50,10 @@
         state: present
         filename: hashicorp
 
+    - name: Install Tabby package repo
+      ansible.builtin.shell: |
+        curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | sudo bash
+
     - name: Update APT cache
       ansible.builtin.apt:
         update_cache: yes
@@ -66,6 +70,7 @@
           - terraform
           - flatpak
           - kitty
+          - tabby-terminal
         state: present
 
     - name: Add Docker group
@@ -84,6 +89,10 @@
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
       args:
         creates: /var/lib/flatpak/repo/flathub
+
+    - name: Install Tabby package repo
+      ansible.builtin.shell: |
+        curl -s https://packagecloud.io/install/repositories/eugeny/tabby/script.deb.sh | sudo bash
 
 - name: Non-Privileged Setup
   hosts: localhost
