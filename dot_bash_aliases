@@ -6,7 +6,7 @@ alias ll='ls -alF --color=auto'                        # List all files (includi
 alias la='ls -A --color=auto'                          # Show all files except `.` and `..` (almost all)
 alias ls='ls -l --color=auto'                          # Display files in detailed list format by default
 alias l='ls -CF --color=auto'                          # List files in columns and append file type indicators
-alias s="kitty +kitten ssh"               # SSH into a remote machine using Kitty terminal features
+alias s="ssh"               # SSH into a remote machine using Kitty terminal features
 alias bye='shutdown -h now'               # Shut down the machine (if you know, you know)
 alias ff='fastfetch'                      # Run fastfetch (a system information tool)
 alias genpass='openssl rand -base64 18'   # Generate a random password using OpenSSL
