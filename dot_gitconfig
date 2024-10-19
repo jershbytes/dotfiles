@@ -1,13 +1,13 @@
-[includeIf "gitdir:~/Git/Github/"]
+[includeIf "gitdir:~/Code/Github/"]
   	path = .gitconfig-github
 
 [includeIf "gitdir:~/.local/share/chezmoi/"]
   	path = .gitconfig-github
 
-[includeIf "gitdir:~/Git/Gitlab/"]
+[includeIf "gitdir:~/Code/Gitlab/"]
   	path = .gitconfig-gitlab
 
-[includeIf "gitdir:~/Git/Gitea/"]
+[includeIf "gitdir:~/Code/Gitea/"]
   	path = .gitconfig-gitea
 
 
