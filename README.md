@@ -8,7 +8,7 @@
 
 This repo contains the configuration to set up my machines. This is using **Chezmoi**, the dotfile manager to set up the installation.
 
-This automated setup is currently only configured for **Fedora** and **MacOS**.
+This automated setup is currently only configured for `Fedora, Ubuntu and MacOS`.
 
 ## 🏃How to run
 
