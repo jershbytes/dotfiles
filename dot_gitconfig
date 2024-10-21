@@ -20,8 +20,8 @@
 	co = checkout
 	pl = pull
 	ph = push
+    so = remote set-url origin
 	cob = checkout -b
-	com = commit -m
 
 [core]
 	eol = lf
