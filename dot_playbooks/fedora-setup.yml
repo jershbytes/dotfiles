@@ -55,7 +55,6 @@
           - docker-compose-plugin
           - terraform
           - flatpak
-          - kitty
         state: present
 
     - name: Add Docker group
@@ -110,4 +109,5 @@
           - com.bitwarden.desktop
           - dev.vencord.Vesktop
           - org.kde.haruna
+          - org.wezfurlong.wezterm
         state: present
