@@ -14,9 +14,9 @@ alias genpass='openssl rand -base64 18'   # Generate a random password using Ope
 # File Operations Aliases
 alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress info (human-readable)
 alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" # Create a standard Terraform file structure
-alias sai="sudo apt install"              # Shortcut for installing packages with apt
-alias sar="sudo apt remove"               # Shortcut for removing packages with apt
-alias saar="sudo apt autoremove"          # Shortcut for cleaning up unused packages with apt
+alias sdi="sudo dnf install"              # Shortcut for installing packages with dnf
+alias sdr="sudo dnf remove"               # Shortcut for removing packages with dnf
+alias sdar="sudo dnf autoremove"          # Shortcut for cleaning up unused packages with dnf
 
 # Development Tools Aliases
 alias tf="terraform"                      # Shortcut for Terraform commands
