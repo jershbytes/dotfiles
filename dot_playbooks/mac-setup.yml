@@ -4,6 +4,7 @@
   become: false
   connection: localhost
   gather_facts: false
+  
   tasks:
     - name: Ensure Homebrew is installed
       ansible.builtin.shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -15,29 +16,40 @@
       community.general.homebrew_tap:
         name: hashicorp/tap
         state: present
-
-    - name: Install Brew packages
+    
+    - name: Install Neovim & Tools
       community.general.homebrew:
         name:
           - ripgrep
           - fd
           - zig
-          - neovim
+          - fzf
+          - zoxide
           - lazygit
+          - neovim
+          - neovide
+        state: present
+
+    - name: Install Terminal Tools
+      community.general.homebrew:
+        name:
           - oh-my-posh
           - lolcat
           - fortune
           - cowsay
           - yazi
-          - fzf
-          - zoxide
-          - neovide
+        state: present
+    
+    - name: Install Dev Tools
+      community.general.homebrew:
+        name:
           - docker
           - git
           - jq
           - wget
           - curl
           - hugo
+          - node
           - hashicorp/tap/terraform
         state: present
 

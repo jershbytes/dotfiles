@@ -1,11 +1,11 @@
 - name: Privileged Setup
   hosts: localhost
   vars:
-    remote_regular_user: rossjm
+    remote_regular_user: jershbytes
   become: true
-  connection: localhost
   gather_facts: true
 
+  # Repo Adding 
   tasks:
     - name: Install DNF plugins core
       ansible.builtin.dnf:
@@ -43,7 +43,20 @@
         gpgkey: https://rpm.releases.hashicorp.com/gpg
         gpgcheck: true
         enabled: true
+    
+    - name: Add NodeSource repository (latest Node.js)
+      ansible.builtin.command:
+        cmd: curl -sL https://rpm.nodesource.com/setup_current.x | bash -
+        creates: /etc/yum.repos.d/nodesource.repo
+      args:
+        warn: false
+    
+    - name: Download WezTerm RPM
+      ansible.builtin.get_url:
+        url: https://github.com/wez/wezterm/releases/download/20240203-110809-5046fc22/wezterm-20240203_110809_5046fc22-1.fedora39.x86_64.rpm
+        dest: /tmp/wezterm.rpm
 
+# Install Apps 
     - name: Install packages with DNF
       ansible.builtin.dnf:
         name:
@@ -55,7 +68,26 @@
           - docker-compose-plugin
           - terraform
           - flatpak
+          - gcc-c++
+          - make
+          - curl
+          - nodejs
         state: present
+    
+    - name: Install WezTerm RPM
+      ansible.builtin.dnf:
+        name: /tmp/wezterm.rpm
+        state: present
+
+    - name: Clean up downloaded RPM
+      ansible.builtin.file:
+        path: /tmp/wezterm.rpm
+        state: absent
+    
+    - name: Install pnpm globally
+      ansible.builtin.npm:
+        name: pnpm
+        global: true
 
     - name: Add Docker group
       ansible.builtin.group:
@@ -77,28 +109,28 @@
 - name: Non-Privileged Setup
   hosts: localhost
   vars:
-    remote_regular_user: jershops
+    remote_regular_user: jershbytes
   become: false
   connection: localhost
-  gather_facts: true
-
+  
   tasks:
     - name: Install Brew packages
       community.general.homebrew:
         name:
+          - oh-my-posh
+          - yazi
+          - neovim
+          - neovide
           - ripgrep
           - fd
           - zig
-          - neovim
           - lazygit
-          - oh-my-posh
+          - fzf
+          - zoxide
+          - hugo
           - lolcat
           - fortune
           - cowsay
-          - yazi
-          - fzf
-          - zoxide
-          - neovide
         state: present
 
     - name: Install Flatpak packages
@@ -109,5 +141,4 @@
           - com.bitwarden.desktop
           - dev.vencord.Vesktop
           - org.kde.haruna
-          - org.wezfurlong.wezterm
         state: present
