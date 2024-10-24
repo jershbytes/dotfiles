@@ -44,11 +44,6 @@
         gpgcheck: true
         enabled: true
     
-    - name: Add NodeSource repository (latest Node.js)
-      ansible.builtin.command:
-        cmd: curl -sL https://rpm.nodesource.com/setup_current.x | bash -
-        creates: /etc/yum.repos.d/nodesource.repo
-    
     - name: Download WezTerm RPM
       ansible.builtin.get_url:
         url: https://github.com/wez/wezterm/releases/download/20240203-110809-5046fc22/wezterm-20240203_110809_5046fc22-1.fedora39.x86_64.rpm
@@ -69,7 +64,6 @@
           - gcc-c++
           - make
           - curl
-          - nodejs
         state: present
     
     - name: Install WezTerm RPM
