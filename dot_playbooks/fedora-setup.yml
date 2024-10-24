@@ -70,6 +70,8 @@
       ansible.builtin.dnf:
         name: /tmp/wezterm.rpm
         state: present
+        disable_gpg_check: true
+
 
     - name: Clean up downloaded RPM
       ansible.builtin.file:
