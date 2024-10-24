@@ -72,17 +72,11 @@
         state: present
         disable_gpg_check: true
 
-
     - name: Clean up downloaded RPM
       ansible.builtin.file:
         path: /tmp/wezterm.rpm
         state: absent
     
-    - name: Install pnpm globally
-      ansible.builtin.npm:
-        name: pnpm
-        global: true
-
     - name: Add Docker group
       ansible.builtin.group:
         name: docker
