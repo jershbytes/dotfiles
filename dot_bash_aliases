@@ -45,3 +45,4 @@ alias mks="mkdocs serve"                  # Serve MkDocs documentation locally
 # Hugo Aliases
 alias hcn="hugo server -N --noHTTPCache"  # Run Hugo server with no HTTP caching
 alias hi="hugo new site"                  # Create a new Hugo site
+alias gsui='git submodule update --init'  # Update Git submodules
