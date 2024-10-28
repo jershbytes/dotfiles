@@ -6,7 +6,12 @@ local act = wezterm.action
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
+
+-- Color Scheme
 config.color_scheme = "Dracula"
+
+-- Font
+config.font = wezterm.font 'JetBrains Mono'
 
 config.enable_tab_bar = false
 
