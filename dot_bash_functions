@@ -1,9 +1,0 @@
-function mcd {
-    # This function creates a directory (with parent directories as needed) and then changes into it.
-    mkdir -pv "$1" && cd "$1" || exit
-}
-
-function hg {
-    # This function searches your command history for the string provided as an argument.
-    history | grep "$1"
-}
