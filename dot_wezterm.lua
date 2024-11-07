@@ -15,8 +15,7 @@ config.font = wezterm.font 'JetBrains Mono'
 
 config.enable_tab_bar = false
 
-config.window_background_opacity = 0.75
-config.macos_window_background_blur = 10
+config.window_background_opacity = 0.9
 
 -- Mouse bindings
 config.mouse_bindings = {
