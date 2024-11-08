@@ -2,8 +2,8 @@
 
 add_newline = false
 command_timeout = 1000
-format = """$os$username$hostname$kubernetes$directory"""
-right_format = "$git_branch$git_status"
+format = "$os$directory$git_branch$git_status"
+right_format = "$shell$hostname$time"
 
 # Drop ugly default prompt characters
 [character]
@@ -71,6 +71,19 @@ modified = '[󰛿 modified=${count}](yellow) '
 staged = '[󰐗 staged=${count}](green) '
 renamed = '[󱍸 renamed=${count}](yellow) '
 deleted = '[󰍶 deleted=${count}](red) '
+
+[time]
+disabled = false
+format = '[$time]($style) '
+time_format = '%r'
+utc_time_offset = '-5'
+use_12hr = true
+
+[shell]
+zsh_indicator = "zsh"
+unknown_indicator = 'mystery shell'
+style = 'cyan bold'
+disabled = false
 
 # Shows kubernetes context and namespace
 [kubernetes]
