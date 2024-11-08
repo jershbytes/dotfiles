@@ -1,20 +1,17 @@
 [includeIf "gitdir:~/Code/Github/"]
-  	path = .gitconfig-github
+	path = ~/.git/gitconfig-github
 
 [includeIf "gitdir:~/.local/share/chezmoi/"]
-  	path = .gitconfig-github
+	path = ~/.git/gitconfig-github
 
 [includeIf "gitdir:~/Code/Gitlab/"]
-  	path = .gitconfig-gitlab
-
-[includeIf "gitdir:~/Code/Gitea/"]
-  	path = .gitconfig-gitea
-
+	path = ~/.git/gitconfig-gitlab
 
 [alias]
 	i = init
 	s = status
 	a  = add
+	c  = commit
 	ac = commit -am
 	cl = clone
 	co = checkout
@@ -26,6 +23,7 @@
 [core]
 	eol = lf
 	autocrlf = input
+	editor = code --wait
 
 [init]
 	defaultBranch = main
@@ -34,4 +32,7 @@
 	browser = firefox
 
 [program]
-  pgp = /usr/bin/gpg
+	pgp = /usr/bin/gpg
+
+[commit]
+	template = ~/.gitmessage
