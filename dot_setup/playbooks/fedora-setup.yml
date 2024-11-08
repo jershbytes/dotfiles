@@ -123,6 +123,7 @@
           - lolcat
           - fortune
           - cowsay
+          - starship
         state: present
 
     - name: Install Flatpak packages
