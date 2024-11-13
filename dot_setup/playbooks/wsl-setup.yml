@@ -1,4 +1,3 @@
-
 ### Add Repositories ###
 - name: Add Repositories
   hosts: localhost
@@ -12,26 +11,12 @@
       ansible.builtin.dnf:
         name: dnf-plugins-core
         state: present
-    
-    - name: Install yum-utils packages
-      ansible.builtin.dnf:
-        name: yum-utils
-        state: present
 
-    - name: Add Docker repo
-      ansible.builtin.yum_repository:
-        name: docker-ce
-        description: "Docker CE Repository"
-        baseurl: https://download.docker.com/linux/centos/docker-ce.repo
-        enabled: yes
-        gpgcheck: yes
-        gpgkey: https://download.docker.com/linux/centos/gpg
-    
     - name: Add Hashicorp Repo
       ansible.builtin.yum_repository:
         name: hashicorp
-        description: "HashiCorp Stable - RHEL"
-        baseurl: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+        description: Hashicorp repo
+        baseurl: https://rpm.releases.hashicorp.com/fedora/$releasever/$basearch/stable
         gpgkey: https://rpm.releases.hashicorp.com/gpg
         gpgcheck: true
         enabled: true
@@ -47,24 +32,12 @@
     - name: Install packages with DNF
       ansible.builtin.dnf:
         name:
-          - terraform
           - gcc-c++
           - make
           - curl
           - fping
           - zsh
         state: present
-
-    - name: Add Docker group
-      ansible.builtin.group:
-        name: docker
-        state: present
-
-    - name: Add user to docker group
-      ansible.builtin.user:
-        name: "{{ remote_regular_user }}"
-        groups: docker
-        append: true
 
 - name: Hombrew Application Install
   hosts: localhost
