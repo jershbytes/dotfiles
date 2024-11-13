@@ -16,7 +16,7 @@
       ansible.builtin.yum_repository:
         name: hashicorp
         description: Hashicorp repo
-        baseurl: https://rpm.releases.hashicorp.com/fedora/$releasever/$basearch/stable
+        baseurl: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
         gpgkey: https://rpm.releases.hashicorp.com/gpg
         gpgcheck: true
         enabled: true
@@ -37,6 +37,7 @@
           - curl
           - fping
           - zsh
+          - terraform
         state: present
 
 - name: Hombrew Application Install
@@ -63,5 +64,4 @@
           - fortune
           - cowsay
           - starship
-          - chezmoi
         state: present
