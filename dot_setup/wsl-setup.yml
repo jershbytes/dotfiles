@@ -14,23 +14,6 @@
         name: dnf-plugins-core
         state: present
 
-    - name: Add Visual Studio Code Repo
-      ansible.builtin.yum_repository:
-        name: vscode
-        description: Visual Studio Code
-        baseurl: https://packages.microsoft.com/yumrepos/vscode
-        gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-        gpgcheck: true
-        enabled: true
-
-    - name: Add Docker repo
-      ansible.builtin.yum_repository:
-        name: docker
-        description: Docker repo
-        baseurl: "https://download.docker.com/linux/fedora/{{ ansible_distribution_major_version }}/{{ ansible_architecture }}/stable"
-        gpgkey: "https://download.docker.com/linux/fedora/gpg"
-        gpgcheck: true
-        enabled: true
 
     - name: Add Hashicorp Repo
       ansible.builtin.yum_repository:
