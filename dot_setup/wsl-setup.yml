@@ -1,0 +1,104 @@
+- name: WSL Automated Setup
+
+### Add Repositories ###
+- name: Add Repositories
+  hosts: localhost
+  vars:
+    remote_regular_user: "{{ ansible_user }}"
+  become: true
+  gather_facts: true
+  tasks:
+    
+    - name: Install DNF plugins core
+      ansible.builtin.dnf:
+        name: dnf-plugins-core
+        state: present
+
+    - name: Add Visual Studio Code Repo
+      ansible.builtin.yum_repository:
+        name: vscode
+        description: Visual Studio Code
+        baseurl: https://packages.microsoft.com/yumrepos/vscode
+        gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+        gpgcheck: true
+        enabled: true
+
+    - name: Add Docker repo
+      ansible.builtin.yum_repository:
+        name: docker
+        description: Docker repo
+        baseurl: "https://download.docker.com/linux/fedora/{{ ansible_distribution_major_version }}/{{ ansible_architecture }}/stable"
+        gpgkey: "https://download.docker.com/linux/fedora/gpg"
+        gpgcheck: true
+        enabled: true
+
+    - name: Add Hashicorp Repo
+      ansible.builtin.yum_repository:
+        name: hashicorp
+        description: Hashicorp repo
+        baseurl: https://rpm.releases.hashicorp.com/fedora/$releasever/$basearch/stable
+        gpgkey: https://rpm.releases.hashicorp.com/gpg
+        gpgcheck: true
+        enabled: true
+
+- name: Install DNF Applications
+  hosts: localhost
+  vars:
+    remote_regular_user: "{{ ansible_user }}"
+  become: true
+  gather_facts: true
+  tasks:
+    
+    - name: Install packages with DNF
+      ansible.builtin.dnf:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+          - docker-buildx-plugin
+          - docker-compose-plugin
+          - terraform
+          - gcc-c++
+          - make
+          - curl
+          - fping
+          - zsh
+        state: present
+
+    - name: Add Docker group
+      ansible.builtin.group:
+        name: docker
+        state: present
+
+    - name: Add user to docker group
+      ansible.builtin.user:
+        name: "{{ remote_regular_user }}"
+        groups: docker
+        append: true
+
+- name: Hombrew Application Install
+  hosts: localhost
+  vars:
+    remote_regular_user: "{{ ansible_user }}"
+  become: false
+  connection: localhost
+
+  tasks:
+    - name: Install Brew packages
+      community.general.homebrew:
+        name:
+          - neovim
+          - neovide
+          - ripgrep
+          - fd
+          - zig
+          - lazygit
+          - fzf
+          - zoxide
+          - hugo
+          - lolcat
+          - fortune
+          - cowsay
+          - starship
+          - chezmoi
+        state: present
