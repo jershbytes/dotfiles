@@ -76,6 +76,15 @@ zsh-autosuggestions
 
 source $ZSH/oh-my-zsh.sh
 
+# load .zsh_aliases and .zsh_functions
+if [ -e $HOME/.zsh_aliases ]; then
+	source $HOME/.zsh_aliases
+fi
+
+if [ -e $HOME/.zsh_functions ]; then
+	source $HOME/.zsh_functions
+fi
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -105,40 +114,24 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# homebrew
+### PATHS ### 
+export PATH="$PATH:$HOME/.local/bin" # MkDocs
+export PATH="/home/linuxbrew/.linuxbrew/opt/node@20/bin:$PATH" # NodeJS
+
+### APP CONFIGS
 export HOMEBREW_NO_ENV_HINTS=true
+export EDITOR="code --wait" # Chezmoi Changes
+
+
+# homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # starship
 eval "$(starship init zsh)"
 
-
 # zoxide & fzf
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
-
-# Chezmoi Changes
-export EDITOR="code --wait"
-
-# load .zsh_aliases and .zsh_functions
-if [ -e $HOME/.zsh_aliases ]; then
-	source $HOME/.zsh_aliases
-fi
-
-if [ -e $HOME/.zsh_functions ]; then
-	source $HOME/.zsh_functions
-fi
-
-# mkdocs path
-export PATH="$PATH:$HOME/.local/bin"
-
-# pnpm
-export PNPM_HOME="/home/jershbytes/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 
 # Zsh Plugins
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
