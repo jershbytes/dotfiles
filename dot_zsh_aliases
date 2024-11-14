@@ -20,7 +20,7 @@ alias sdar="sudo dnf autoremove"          # Shortcut for cleaning up unused pack
 
 # Development Tools Aliases
 alias tf="terraform"                      # Shortcut for Terraform commands
-alias vim="neovide"                       # Open Neovim GUI (Neovide) instead of Vim
+alias vim="nvim"                       # Open Neovim GUI (Neovide) instead of Vim
 alias view='neovide -R'                   # Open Neovide in read-only mode
 alias chez="chezmoi"                      # Shortcut for Chezmoi configuration management
 alias npm="pnpm"                          # Shortcut for nodeJS package manager

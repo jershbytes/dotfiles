@@ -12,7 +12,7 @@
 	s = status
 	a  = add
 	c  = commit
-	ac = commit -am
+	ac = commit -S -am
 	cl = clone
 	co = checkout
 	pl = pull
@@ -23,7 +23,7 @@
 [core]
 	eol = lf
 	autocrlf = input
-	editor = code --wait
+	editor = nvim
 
 [init]
 	defaultBranch = main

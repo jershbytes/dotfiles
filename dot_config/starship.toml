@@ -13,15 +13,16 @@ error_symbol = ''
 # ---
 
 [os]
-format = '[$symbol](bold white) '   
+format = '[$symbol](bold white)'
 disabled = false
 
 [os.symbols]
 Windows = ' '
+Macos = '󰀵'
 Arch = '󰣇'
 Ubuntu = ''
-Macos = '󰀵'
 Fedora = " "
+AlmaLinux = "💠 "
 
 # ---y
 
