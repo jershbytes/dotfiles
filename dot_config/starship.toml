@@ -2,7 +2,7 @@
 
 add_newline = false
 command_timeout = 1000
-format = "$os$directory$git_branch$git_status"
+format = "$os$directory$git_branch$git_status "
 right_format = "$shell$hostname$time"
 
 # Drop ugly default prompt characters
