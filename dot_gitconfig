@@ -1,11 +1,11 @@
 [includeIf "gitdir:~/Code/Github/"]
-	path = ~/.git/gitconfig-github
+	path = ~/.gitconfig-github
 
 [includeIf "gitdir:~/.local/share/chezmoi/"]
-	path = ~/.git/gitconfig-github
+	path = ~/.gitconfig-github
 
-[includeIf "gitdir:~/Code/Gitlab/"]
-	path = ~/.git/gitconfig-gitlab
+[includeIf "gitdir:~/Code/Forgejo/"]
+	path = ~/.gitconfig-forgejo
 
 [alias]
 	i = init
@@ -30,9 +30,6 @@
 
 [web]
 	browser = firefox
-
-[program]
-	pgp = /usr/bin/gpg
 
 [commit]
 	template = ~/.gitmessage
