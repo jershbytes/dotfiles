@@ -16,10 +16,6 @@
         wget -O - https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
         echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/hashicorp.list
         apt update && apt install -y terraform
-    
-    - name: Add Docker
-      shell: |
-        curl -fsSL https://get.docker.com -o get-docker.sh
 
 ### Install APT Applications ###
 - name: Install APT Applications
@@ -38,12 +34,6 @@
           - fping
           - zsh
         state: present
-
-    - name: Add user to the Docker group
-      user:
-        name: "{{ remote_regular_user }}"
-        groups: docker
-        append: yes
 
     - name: Install Oh My Zsh
       shell: |
