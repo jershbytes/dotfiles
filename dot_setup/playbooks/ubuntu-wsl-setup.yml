@@ -50,7 +50,6 @@
           - hugo
           - lolcat
           - fortune
-          - cowsay
           - starship
           - docker
           - terraform
