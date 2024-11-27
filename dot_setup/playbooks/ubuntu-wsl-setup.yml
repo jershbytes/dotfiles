@@ -1,0 +1,84 @@
+### Add Repositories ###
+- name: Add Repositories
+  hosts: localhost
+  vars:
+    remote_regular_user: "{{ ansible_user }}"
+  become: true
+  gather_facts: true
+  tasks:
+    
+    - name: Install APT transport
+      apt:
+        name: apt-transport-https
+        state: present
+
+    - name: Add Hashicorp Repo
+      apt_repository:
+        repo: "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+        state: present
+        update_cache: yes
+
+    - name: Add Docker repository
+      apt_repository:
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+        state: present
+        update_cache: yes
+
+    - name: Add Docker's official GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+- name: Install APT Applications
+  hosts: localhost
+  vars:
+    remote_regular_user: "{{ ansible_user }}"
+  become: true
+  gather_facts: true
+  tasks:
+    
+    - name: Install packages with APT
+      apt:
+        name:
+          - g++
+          - make
+          - curl
+          - fping
+          - zsh
+          - terraform
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+        state: present
+
+    - name: Add user to the Docker group
+      user:
+        name: "{{ remote_regular_user }}"
+        groups: docker
+        append: yes
+
+- name: Homebrew Application Install
+  hosts: localhost
+  vars:
+    remote_regular_user: "{{ ansible_user }}"
+  become: false
+  connection: localhost
+
+  tasks:
+    - name: Install Brew packages
+      community.general.homebrew:
+        name:
+          - neovim
+          - neovide
+          - ripgrep
+          - fd
+          - zig
+          - lazygit
+          - fzf
+          - zoxide
+          - hugo
+          - lolcat
+          - fortune
+          - cowsay
+          - starship
+        state: present
