@@ -53,7 +53,7 @@
 - name: Homebrew Application Install
   hosts: localhost
   vars:
-    remote_regular_user: "{{ ansible_user }}"
+    remote_regular_user: "{{ remote_regular_user }}"
   become: false
   connection: localhost
   tasks:
