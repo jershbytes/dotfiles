@@ -57,6 +57,10 @@
         groups: docker
         append: yes
 
+    - name: Install Oh My Zsh
+      shell: |
+        sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+
 - name: Homebrew Application Install
   hosts: localhost
   vars:
