@@ -6,26 +6,22 @@
   become: true
   gather_facts: true
   tasks:
-    
     - name: Install APT transport
       apt:
         name: apt-transport-https
         state: present
 
     - name: Install Terraform using HashiCorp repository
-          shell: |
-            wget -O - https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
-            echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/hashicorp.list
-            apt update && apt install -y terraform
-          args:
-            creates: "/usr/bin/terraform"
-
-    - name: Add Docker 
+      shell: |
+        wget -O - https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/hashicorp.list
+        apt update && apt install -y terraform
+    
+    - name: Add Docker
       shell: |
         curl -fsSL https://get.docker.com -o get-docker.sh
-      args:
-        creates: "/usr/bin/docker"
 
+### Install APT Applications ###
 - name: Install APT Applications
   hosts: localhost
   vars:
@@ -33,7 +29,6 @@
   become: true
   gather_facts: true
   tasks:
-    
     - name: Install packages with APT
       apt:
         name:
@@ -54,13 +49,13 @@
       shell: |
         sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
+### Homebrew Application Install ###
 - name: Homebrew Application Install
   hosts: localhost
   vars:
     remote_regular_user: "{{ ansible_user }}"
   become: false
   connection: localhost
-
   tasks:
     - name: Install Brew packages
       community.general.homebrew:
