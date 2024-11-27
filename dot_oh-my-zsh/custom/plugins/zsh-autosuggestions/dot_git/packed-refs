@@ -1,5 +1,5 @@
 # pack-refs with: peeled fully-peeled sorted 
-11d17e7fea9fba8067f992b3d95e884c20a4069c refs/remotes/origin/develop
+f8907cf32b1aefc6868c4f0d1fb77286d1a0f9b3 refs/remotes/origin/develop
 b27277e7ff0f877f3189211ccd57da9ebec5e743 refs/remotes/origin/experiments/strategies-by-pattern
 767d55eba0355d9ef9270df3ca257a936cf0eac5 refs/remotes/origin/features/background-initialization
 36dae44064a7bf088fb1dec74c8463d5b6f3d3c8 refs/remotes/origin/features/hist-words-suggestions
@@ -11,7 +11,7 @@ b27277e7ff0f877f3189211ccd57da9ebec5e743 refs/remotes/origin/experiments/strateg
 4ccfdb2435ea4b82983bf22bb2913c0773992cce refs/remotes/origin/fixes/partial-accept-duplicate-word
 3391962a155d3b092221772a2151cf21201767e8 refs/remotes/origin/fixes/romkatv-async-fixes
 9fb96753069b919deaaacb6f659be2339dfeb4d2 refs/remotes/origin/fixes/slow_bracketed_paste_magic
-c3d4e576c9c86eac62884bd47c01f6faed043fc5 refs/remotes/origin/master
+0e810e5afa27acbd074398eefbe28d13005dbc15 refs/remotes/origin/master
 20c0ea841bafa78d8fb75c767e780248bfdf11a4 refs/remotes/origin/no-server
 5f13490bae58bc42045b2a19fc3e446df75417a5 refs/tags/0.0.1
 7dc9e0f92631d03d289bdcf67530c84e72b18aa3 refs/tags/pre-v0.1.0
@@ -52,3 +52,4 @@ c80605595c209e4ee60c3d121ab159ebc6d66547 refs/tags/v0.6.2
 146020d9b28c70a5edd93d19bbef9c5cb05d4b62 refs/tags/v0.6.3
 ae315ded4dba10685dbbafbfa2ff3c1aefeb490d refs/tags/v0.6.4
 a411ef3e0992d4839f0732ebeb9823024afaaaa8 refs/tags/v0.7.0
+e52ee8ca55bcc56a17c828767a3f98f22a68d4eb refs/tags/v0.7.1
