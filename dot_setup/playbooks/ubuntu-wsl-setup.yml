@@ -14,13 +14,13 @@
 
     - name: Add Hashicorp Repo
       apt_repository:
-        repo: "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+        repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_facts['lsb']['codename'] }} main"
         state: present
         update_cache: yes
 
     - name: Add Docker repository
       apt_repository:
-        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_facts['lsb']['codename'] }} stable"
         state: present
         update_cache: yes
 
