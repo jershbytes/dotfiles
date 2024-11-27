@@ -1,10 +1,10 @@
-[includeIf "gitdir:~/Code/Github/"]
+[includeIf "gitdir:~/code/github/"]
 	path = ~/.gitconfig-github
 
 [includeIf "gitdir:~/.local/share/chezmoi/"]
 	path = ~/.gitconfig-github
 
-[includeIf "gitdir:~/Code/Forgejo/"]
+[includeIf "gitdir:~/code/forgejo/"]
 	path = ~/.gitconfig-forgejo
 
 [alias]
