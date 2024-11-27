@@ -12,13 +12,6 @@
         name: apt-transport-https
         state: present
 
-    - name: Add Hashicorp Repo
-      apt_repository:
-        repo: "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-        state: present
-        update_cache: yes
-        codename: "{{ ansible_distribution_release }}"
-
     - name: Add Docker repository
       apt_repository:
         repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
