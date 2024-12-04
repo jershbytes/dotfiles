@@ -21,10 +21,8 @@ function toggle_touchpad {
     TOUCHPAD_ID=$(xinput --list | grep -i "touchpad" | awk '{print $6}' | sed 's/id=//')
 
     if [ -n "$MOUSE_CONNECTED" ]; then
-        xinput disable "$TOUCHPAD_ID"
-        echo "Touchpad disabled"
+gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
     else
-        xinput enable "$TOUCHPAD_ID"
-        echo "Touchpad enabled"
+gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
     fi
 }
