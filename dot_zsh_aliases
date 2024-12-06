@@ -18,7 +18,7 @@ alias sdr="sudo dnf remove"               # Shortcut for removing packages with 
 alias sdar="sudo dnf autoremove"          # Shortcut for cleaning up unused packages with dnf
 
 # Development Tools Aliases
-alias tf="terraform"                      # Shortcut for Terraform commands
+alias tf="tofu"                      # Shortcut for Terraform commands
 alias vim="nvim"                       # Open Neovim GUI (Neovide) instead of Vim
 alias chez="chezmoi"                      # Shortcut for Chezmoi configuration management
 alias ap="ansible-playbook"               # Shorten Ansible Playbook Command
