@@ -2,8 +2,9 @@
 - name: Configure WSL environment and create update script
   hosts: localhost
   become: true
+  vars:
+    remote_regular_user: jershbytes
   tasks:
-
     - name: Create update script file
       ansible.builtin.copy:
         dest: /usr/local/bin/update
@@ -51,3 +52,26 @@
               community.windows
               ansible.windows
             creates: ~/.ansible/collections/ansible_collections
+  ### Homebrew Application Install ###
+- name: Homebrew Application Install
+  hosts: localhost
+  vars:
+    remote_regular_user: "{{ remote_regular_user }}"
+  become: false
+  connection: localhost
+  tasks:
+    - name: Install Brew packages
+      community.general.homebrew:
+        name:
+          - neovim
+          - ripgrep
+          - fd
+          - zig
+          - lazygit
+          - fzf
+          - zoxide
+          - hugo
+          - lolcat
+          - fortune
+          - starship
+        state: present
