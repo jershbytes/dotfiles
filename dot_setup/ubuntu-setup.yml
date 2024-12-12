@@ -1,0 +1,53 @@
+---
+- name: Configure WSL environment and create update script
+  hosts: localhost
+  become: true
+  tasks:
+
+    - name: Create update script file
+      ansible.builtin.copy:
+        dest: /usr/local/bin/update
+        content: |
+          sudo apt update
+          sudo apt upgrade
+        mode: '0755'
+
+    - name: Install necessary packages and Ansible Galaxy collections
+      hosts: localhost
+      become: true
+      tasks:
+        - name: Update APT package cache
+          ansible.builtin.apt:
+            update_cache: true
+
+        - name: Install required packages
+          ansible.builtin.apt:
+            name:
+              - podman
+              - podman-docker
+              - software-properties-common
+              - sshpass
+              - python3-full
+              - python3-requests
+              - python3-pip
+              - whois
+              - traceroute
+              - mc
+              - wireshark
+              - terminator
+              - bind9-dnsutils
+              - tree
+              - gnupg2
+              - ansible-lint
+            state: present
+            update_cache: true
+
+        - name: Install Ansible Galaxy collections
+          ansible.builtin.command:
+            cmd: >
+              ansible-galaxy collection install
+              ansible.posix
+              community.general
+              community.windows
+              ansible.windows
+            creates: ~/.ansible/collections/ansible_collections
