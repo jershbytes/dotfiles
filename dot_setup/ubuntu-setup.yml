@@ -24,8 +24,6 @@
         - name: Install required packages
           ansible.builtin.apt:
             name:
-              - podman
-              - podman-docker
               - software-properties-common
               - sshpass
               - python3-full
