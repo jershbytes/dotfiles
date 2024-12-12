@@ -1,5 +1,5 @@
 ---
-- name: Configure WSL environment and create update script
+- name: Configure Debian environment
   hosts: localhost
   become: true
   vars:
@@ -14,8 +14,6 @@
         mode: '0755'
 
     - name: Install necessary packages and Ansible Galaxy collections
-      hosts: localhost
-      become: true
       tasks:
         - name: Update APT package cache
           ansible.builtin.apt:
@@ -50,7 +48,7 @@
               community.windows
               ansible.windows
             creates: ~/.ansible/collections/ansible_collections
-  ### Homebrew Application Install ###
+
 - name: Homebrew Application Install
   hosts: localhost
   vars:
