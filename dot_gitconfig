@@ -33,6 +33,3 @@
 
 [program]
   pgp = /usr/bin/gpg
-
-[commit]
-	template = ~/.gitmessage
