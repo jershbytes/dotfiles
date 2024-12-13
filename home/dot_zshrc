@@ -3,6 +3,7 @@
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+DISABLE_AUTO_UPDATE="true"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -117,9 +118,10 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-### PATHS ### 
+### PATHS ###
 export PATH="$PATH:$HOME/.local/bin" # MkDocs
 PATH="$HOME/bin/ovftool:$PATH" # ovftool
+PATH="$HOME/bin:$PATH" # Chezmoi
 
 ### APP CONFIGS
 export HOMEBREW_NO_ENV_HINTS=true
