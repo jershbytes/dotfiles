@@ -134,6 +134,7 @@ export EDITOR="code --wait" # Chezmoi Changes
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # starship
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 # zoxide & fzf
