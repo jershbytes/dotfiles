@@ -8,6 +8,10 @@ $hostname\
 $directory\
 $git_branch$git_status\
 $python\
+$nodejs\
+$terraform\
+$cmd_duration\
+$line_break\
 $character
 """
 
@@ -24,8 +28,6 @@ disabled = false
 # OS Symbols
 [os.symbols]
 AlmaLinux = " "
-Amazon = " "
-Android = " "
 Arch = " "
 Debian = " "
 Fedora = " "
@@ -33,7 +35,6 @@ Linux = " "
 Macos = " "
 Mint = " "
 Pop = " "
-Ubuntu = " "
 Windows = "󰍲 "
 
 # Shows the Username
@@ -91,20 +92,10 @@ format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 pyenv_version_name = true
 pyenv_prefix = ''
 
-[vagrant]
-disabled = true
-
-[docker_context]
-disabled = true
-
-[helm]
-disabled = true
-
 [nodejs]
-disabled = true
-
-[ruby]
-disabled = true
+format = 'via [🤖 $version](bold green) '
 
 [terraform]
-disabled = true
+format = '[🏎💨 $version$workspace]($style) '
+
+
