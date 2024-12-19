@@ -1,3 +1,6 @@
+# ~/.config/starship/starship.toml
+
+
 add_newline = true
 command_timeout = 2000
 
@@ -17,8 +20,8 @@ $character
 
 # Drop ugly default prompt characters
 [character]
-success_symbol = ""
-error_symbol = ""
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
 
 # Shows OS 
 [os]
