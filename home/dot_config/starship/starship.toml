@@ -121,6 +121,9 @@ unknown_indicator = 'mystery shell'
 style = 'cyan bold'
 disabled = false
 
+[line_break]
+disabled = false
+
 # Shows kubernetes context and namespace
 [kubernetes]
 format = 'via [󱃾 $context\($namespace\)](bold purple) '
