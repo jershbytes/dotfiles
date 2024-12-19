@@ -1,17 +1,81 @@
-# ~/.config/starship.toml
-
-format = "$directory$git_branch$git_status "
-
-right_format = "$shell$hostname$cmd_duration"
-
 add_newline = true
+command_timeout = 2000
+
+format = """$env_var$os // $username // $hostname // $directory // $git_branch$git_status // $python_version
+$character
+"""
 
 # Drop ugly default prompt characters
 [character]
-success_symbol = ''
-error_symbol = ''
+success_symbol = "╰⎯"
+error_symbol = "╰⎯"
+# ╭╴ ╰─
 
+[env_var]
+symbol = "╭╴"
+variable = 'SHELL'
+format = "$symbol"
+disabled = false
 # ---y
+
+# Shows OS 
+[os]
+format = '[$symbol](bold white) '   
+disabled = false
+
+# OS Symbols
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+# Shows the Username
+[username]
+style_user = 'yellow bold'
+style_root = 'black bold'
+format = '[//](black bold) [$user](#2883ff) ' # 2883ff
+disabled = false
+show_always = true
 
 # Shows the hostname
 [hostname]
