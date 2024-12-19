@@ -1,9 +1,19 @@
 # ~/.config/starship.toml
 
-add_newline = false
-command_timeout = 1000
-format = "$os $directory$git_branch$git_status "
-right_format = "$shell$hostname$time"
+format = """
+$os \
+$directory\
+$git_branch\
+$git_status \
+$line_break\
+$character"""
+
+right_format = """
+$shell
+$hostname
+$cmd_duration"""
+
+add_newline = true
 
 # Drop ugly default prompt characters
 [character]
@@ -63,14 +73,6 @@ Windows = "󰍲 "
 
 # ---y
 
-# Shows the username
-[username]
-style_user = 'white bold'
-style_root = 'black bold'
-format = '[$user]($style) '
-disabled = false
-show_always = true
-
 # Shows the hostname
 [hostname]
 ssh_only = false
@@ -117,6 +119,11 @@ time_format = '%r'
 utc_time_offset = '-5'
 use_12hr = true
 
+[cmd_duration]
+min_time = 500
+style = 'fg:gray'
+format = '[$duration]($style)'
+
 [shell]
 zsh_indicator = "zsh"
 unknown_indicator = 'mystery shell'
@@ -129,6 +136,13 @@ format = 'via [󱃾 $context\($namespace\)](bold purple) '
 disabled = false
 
 # ---
+
+[python]
+style = 'teal'
+symbol = ' '
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+pyenv_version_name = true
+pyenv_prefix = ''
 
 [vagrant]
 disabled = true
