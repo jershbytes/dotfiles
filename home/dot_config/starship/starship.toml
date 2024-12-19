@@ -1,6 +1,6 @@
 # ~/.config/starship.toml
 
-format = "$os $directory$git_branch$git_status$line_break$character"
+format = "$os $directory$git_branch$git_status"
 
 right_format = "$shell$hostname$cmd_duration"
 
