@@ -1,7 +1,7 @@
 add_newline = true
 command_timeout = 2000
 
-format = """$env_var$os // $username // $hostname // $directory // $git_branch$git_status // $python_version
+format = """$os // $username // $hostname // $directory // $git_branch$git_status (when_used) // $python_version (when_used)
 $character
 """
 
@@ -11,11 +11,7 @@ success_symbol = "╰⎯"
 error_symbol = "╰⎯"
 # ╭╴ ╰─
 
-[env_var]
-symbol = "╭╴"
-variable = 'SHELL'
-format = "$symbol"
-disabled = false
+
 # ---y
 
 # Shows OS 
@@ -80,7 +76,7 @@ show_always = true
 # Shows the hostname
 [hostname]
 ssh_only = false
-format = 'on [$hostname](bold yellow) '
+format = '[$hostname](bold yellow) '
 disabled = false
 
 # Shows current directory
