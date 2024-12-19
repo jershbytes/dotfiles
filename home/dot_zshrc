@@ -146,4 +146,6 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # Set custom GPG home directory
 export GNUPGHOME="$HOME/.gnupg"
+GPG_TTY=$(tty)
+export GPG_TTY
 

@@ -22,6 +22,7 @@ alias tf="tofu"                      # Shortcut for Terraform commands
 alias vim="nvim"                       # Open Neovim GUI (Neovide) instead of Vim
 alias chez="chezmoi"                      # Shortcut for Chezmoi configuration management
 alias ap="ansible-playbook"               # Shorten Ansible Playbook Command
+alias npm="pnpm"                          # Use pnpm instead of npm
 
 # Directory Tree Display Alias
 alias tree='tree --dirsfirst -F'          # Display directory tree with directories listed first and trailing slashes

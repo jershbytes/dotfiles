@@ -5,15 +5,15 @@ add_newline = true
 command_timeout = 2000
 
 format = """
-$os\ 
+$os\
 $username\
 $hostname\
 $directory\
-$git_branch$git_status\
-$python\
-$nodejs\
-$terraform\
-$cmd_duration\
+$git_branch$git_status \
+$python \
+$nodejs \
+$terraform \
+$cmd_duration \
 $line_break\
 $character
 """
@@ -23,9 +23,9 @@ $character
 success_symbol = '[➜](bold green) '
 error_symbol = '[✗](bold red) '
 
-# Shows OS 
+# Shows OS
 [os]
-format = '[$symbol](bold white) '   
+format = '[$symbol](bold white) '
 disabled = false
 
 # OS Symbols
