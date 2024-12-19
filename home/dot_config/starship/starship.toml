@@ -1,17 +1,8 @@
 # ~/.config/starship.toml
 
-format = """
-$os \
-$directory\
-$git_branch\
-$git_status \
-$line_break\
-$character"""
+format = "$os $directory$git_branch$git_status$line_break$character"
 
-right_format = """
-$shell
-$hostname
-$cmd_duration"""
+right_format = "$shell$hostname$cmd_duration"
 
 add_newline = true
 
