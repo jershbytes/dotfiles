@@ -7,8 +7,6 @@
 [includeIf "gitdir:~/code/forgejo/"]
 	path = ~/.gitconfig-forgejo
 
-[includeIf "gitdir:~/code/gitlab/"]
-	path = ~/.gitconfig-gitlab
 
 [alias]
 	i = init
