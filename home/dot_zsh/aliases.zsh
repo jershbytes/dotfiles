@@ -27,8 +27,6 @@ alias npm="pnpm"                          # Use pnpm instead of npm
 # Directory Tree Display Alias
 alias tree='tree --dirsfirst -F'          # Display directory tree with directories listed first and trailing slashes
 
-# Command History Search Alias
-alias gh='history|grep'                   # Search command history with grep
 
 # Homebrew Aliases
 alias bi="brew install"                   # Shortcut to install packages with Homebrew
