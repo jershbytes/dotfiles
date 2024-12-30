@@ -1,23 +1,14 @@
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
-
-
-# Starship configuration
 format = """
 $os$username$hostname$directory$git_branch$git_status$python$nodejs$terraform$cmd_duration
 $character
 """
 
-command_timeout = 2000
-
-# The default prompt. Equivalent to setting the prompt to "❯ ".
 [character]
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 disabled = false
 
-# Shows OS
+# Shows OS 
 [os]
-format = '[$symbol](bold white) '
+format = '[$symbol](bold white) '   
 disabled = false
 
 # OS Symbols
@@ -92,3 +83,4 @@ format = 'via [🤖 $version](bold green) '
 
 [terraform]
 format = '[🏎💨 $version$workspace]($style) '
+
