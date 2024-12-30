@@ -4,7 +4,7 @@ add_newline = false
 command_timeout = 1000
 
 format = """
-$os$username$hostname$directory$git_branch$git_status
+$os$username$hostname$docker_context$python$nodejs$terraform$directory$git_branch$git_status
 $character
 """
 
@@ -73,7 +73,7 @@ deleted = "✘${count}"
 # ---
 
 [docker_context]
-format = 'via [🐋 $context](blue bold)'
+format = 'via [🐋 $context](blue bold) '
 
 [python]
 symbole = '🐍 '
