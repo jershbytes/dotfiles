@@ -1,17 +1,14 @@
+# Initialize oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 # Disable auto-update for oh-my-zsh
 DISABLE_AUTO_UPDATE="true"
 
-# Default shell theme
-ZSH_THEME="robbyrussell"
-
-# Custom plugins
+# load plugins
 plugins=(git
 zsh-autosuggestions
 nvm
 )
-
-# Initialize oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
 # Load custom aliases and functions
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
@@ -28,3 +25,8 @@ eval "$(zoxide init zsh)"
 
 # load fzf
 eval "$(fzf --zsh)"
+
+# case insensitive completion
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
