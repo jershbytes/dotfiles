@@ -76,7 +76,7 @@ deleted = "✘${count}"
 format = 'via [🐋 $context](blue bold) '
 
 [python]
-symbole = '🐍 '
+symbol = '🐍 '
 pyenv_version_name = true
 
 [nodejs]
