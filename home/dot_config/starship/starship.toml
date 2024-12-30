@@ -3,7 +3,10 @@
 
 
 # Starship configuration
-format = "$os$username$hostname$directory$git_branch$git_status$python$nodejs$terraform$cmd_duration$line_break$character"
+format = """
+$os$username$hostname$directory$git_branch$git_status$python$nodejs$terraform$cmd_duration
+$character
+"""
 
 command_timeout = 2000
 
