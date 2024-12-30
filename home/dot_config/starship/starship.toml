@@ -1,27 +1,12 @@
-# ~/.config/starship/starship.toml
-
-
-add_newline = true
-command_timeout = 2000
-
 format = """
-$os\
-$username\
-$hostname\
-$directory\
-$git_branch$git_status \
-$python \
-$nodejs \
-$terraform \
-$cmd_duration \
-$line_break\
+$os$username$hostname$directory$git_branch$git_status$python$nodejs$terraform$cmd_duration$line_break
 $character
 """
 
-# Drop ugly default prompt characters
+command_timeout = 2000
+
 [character]
-success_symbol = '[➜](bold green) '
-error_symbol = '[✗](bold red) '
+disabled = false
 
 # Shows OS
 [os]
@@ -100,5 +85,3 @@ format = 'via [🤖 $version](bold green) '
 
 [terraform]
 format = '[🏎💨 $version$workspace]($style) '
-
-
