@@ -14,15 +14,3 @@ for x in "$@"; do echo; echo -e "GEO-IP INFO: ($x)\n"$DASH"";
   curl -s ipinfo.io/$x | sed 's/,\"/\n\"/g' | awk -F\" '/[a-z]/ {printf "%8s : %s\n",$2,$4}';
 done; echo
 }
-
-function toggle_touchpad {
-    # This function disables the touchpad when a mouse is connected and enables it when no mouse is connected.
-    MOUSE_CONNECTED=$(xinput --list | grep -i "mouse")
-    TOUCHPAD_ID=$(xinput --list | grep -i "touchpad" | awk '{print $6}' | sed 's/id=//')
-
-    if [ -n "$MOUSE_CONNECTED" ]; then
-gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
-    else
-gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
-    fi
-}

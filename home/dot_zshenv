@@ -1,0 +1,19 @@
+export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="code --wait" # Chezmoi Changes
+export LANG="en_US.UTF-8"
+
+### PATHS ###
+export PATH="$PATH:$HOME/.local/bin" # MkDocs
+PATH="$HOME/bin/ovftool:$PATH" # ovftool
+PATH="$HOME/bin:$PATH" # Chezmoi
+
+### APP CONFIGS
+export HOMEBREW_NO_ENV_HINTS=true
+export STARSHIP_CONFIG=~/.config/starship.toml
+
+# Set custom GPG home directory
+export GNUPGHOME="$HOME/.gnupg"
+
+
+# Zsh Plugins
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
