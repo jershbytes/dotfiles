@@ -21,7 +21,7 @@ brew "wget"
 brew "curl"
 brew "hugo"
 brew "node"
-brew "terraform", tap: "hashicorp/tap"
+brew "terraform"
 
 cask "firefox"
 cask "deezer"
