@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".resources/images/dotfiles.png" alt="Header" width="100" height="100"><br> 
+  <img src=".github/images/dotfiles.png" alt="Header" width="100" height="100"><br> 
     <i>My personal dotfiles for Linux 🚀 </i>
  </p>
 
