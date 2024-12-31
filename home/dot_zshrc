@@ -1,7 +1,7 @@
-# Initialize oh-my-zsh
+# initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Disable auto-update for oh-my-zsh
+# disable auto-update
 DISABLE_AUTO_UPDATE="true"
 
 # load plugins
@@ -9,6 +9,9 @@ plugins=(git
 zsh-autosuggestions
 nvm
 )
+
+# zsh-completions
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # Load custom aliases and functions
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
