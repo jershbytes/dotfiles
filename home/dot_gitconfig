@@ -1,11 +1,11 @@
 [includeIf "gitdir:~/Code/github/"]
-	path = ~/.gitconfig-github
+	path = ~/.git/.gitconfig-github
 
 [includeIf "gitdir:~/.local/share/chezmoi/"]
-	path = ~/.gitconfig-github
+	path = ~/.git/.gitconfig-github
 
-[includeIf "gitdir:~/Code/Forgejo/"]
-	path = ~/.gitconfig-forgejo
+[includeIf "gitdir:~/Code/gitea/"]
+	path = ~/.git/.gitconfig-gitea
 
 
 [alias]
@@ -18,7 +18,7 @@
 	co = checkout
 	pl = pull
 	ph = push
-  so = remote set-url origin
+  	so = remote set-url origin
 	cob = checkout -b
 
 [core]
