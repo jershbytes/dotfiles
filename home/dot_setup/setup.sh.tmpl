@@ -6,12 +6,12 @@
         sudo apt update
         sudo apt install -y ansible
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        sudo apt install zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        sudo apt install zsh 
     elif [ -f /etc/redhat-release ]; then
         # Red Hat-based systems (Fedora, CentOS, RHEL)
         sudo dnf install -y ansible
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        dnf -y install zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        sudo dnf -y install zsh 
     else
         echo "Unsupported Linux distribution"
     fi
