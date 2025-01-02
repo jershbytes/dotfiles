@@ -1,0 +1,30 @@
+name: Update License Year
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *' # Runs at midnight UTC on January 1st each year
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  update-license:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Update License Year
+      run: |
+        CURRENT_YEAR=$(date +'%Y')
+        sed -i "s/20[0-9][0-9]-20[0-9][0-9]/2018-$CURRENT_YEAR/" LICENSE
+        sed -i "s/20[0-9][0-9]/$CURRENT_YEAR/" LICENSE
+
+    - name: Commit and Push Changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add LICENSE
+        git commit -m "Update license year to $CURRENT_YEAR"
+        git push
