@@ -3,6 +3,8 @@
     <i>My personal dotfiles for Linux 🚀 </i>
  </p>
 
+![terminal picture](./.github/images/arch.png)
+
 
 This repo contains the configurations to set up my machines. This is using [**Chezmoi**](https://www.chezmoi.io/), the dotfile manager to set up the installation.
 
@@ -16,11 +18,16 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USER
 ```
 
 > [!NOTE]
-> Since macOS does not have git or curl installed on a fresh install. I have made a bootstrap script for it.
-> ```zsh
-> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JershBytes/dot/main/mac_bootstrap.sh)"
-> ```
 
+<details>
+  <summary> MacOS Exception </summary>
+
+Since macOS does not have git or curl installed on a fresh install. I have made a bootstrap script for it.
+
+ ```zsh
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JershBytes/dot/main/mac_bootstrap.sh)"
+ ```
+</details>
 
 ## ⚖️ LICENSE
 can be found [here](/LICENSE)
