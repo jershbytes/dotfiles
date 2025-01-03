@@ -3,3 +3,11 @@
 # --- Terminal Theme
 background-opacity = 0.8
 theme = Monokai Pro Spectrum
+
+# --- ghostty mods
+font-size = 14
+clipboard-read = allow
+clipboard-paste-protection = false
+window-decoration = false
+shell-integration = zsh
+
