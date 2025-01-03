@@ -4,10 +4,11 @@
 background-opacity = 0.8
 theme = Monokai Pro Spectrum
 
-# --- ghostty mods
+# --- ghostty settings
 font-size = 14
 clipboard-read = allow
-clipboard-paste-protection = false
+clipboard-paste-protection = true
+copy-on-select = true
 gtk-tabs-location =  hidden
 shell-integration = zsh
 
