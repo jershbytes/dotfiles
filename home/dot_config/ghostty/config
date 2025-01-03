@@ -8,6 +8,6 @@ theme = Monokai Pro Spectrum
 font-size = 14
 clipboard-read = allow
 clipboard-paste-protection = false
-gtk-tabs-location =  false
+gtk-tabs-location =  hidden
 shell-integration = zsh
 
