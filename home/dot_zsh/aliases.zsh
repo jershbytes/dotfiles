@@ -13,9 +13,6 @@ alias ff='fastfetch'                      # Run fastfetch (a system information 
 # File Operations Aliases
 alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress info (human-readable)
 alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" # Create a standard Terraform file structure
-alias sdi="sudo dnf install"              # Shortcut for installing packages with dnf
-alias sdr="sudo dnf remove"               # Shortcut for removing packages with dnf
-alias sdar="sudo dnf autoremove"          # Shortcut for cleaning up unused packages with dnf
 
 # Development Tools Aliases
 alias tf="tofu"                      # Shortcut for Terraform commands
