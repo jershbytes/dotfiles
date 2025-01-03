@@ -18,16 +18,17 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USER
 ```
 
 > [!NOTE]
-
+> MacOS Exception
+ 
 <details>
-  <summary> MacOS Exception </summary>
+ <summary> Click Here </summary>
 
-Since macOS does not have git or curl installed on a fresh install. I have made a bootstrap script for it.
+ Since macOS does not have git or curl installed on a fresh install. I have made a bootstrap script for it.
 
- ```zsh
- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JershBytes/dot/main/mac_bootstrap.sh)"
+  ```zsh
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JershBytes/dot/main/mac_bootstrap.sh)"
  ```
-</details>
+ </details>
 
 ## ⚖️ LICENSE
 can be found [here](/LICENSE)
