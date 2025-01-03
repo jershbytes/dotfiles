@@ -2,30 +2,29 @@
 DISABLE_AUTO_UPDATE="true"
 
 # load plugins
-plugins=(git
+plugins=(
+archlinux
+ansible
+chezmoi
+git
 zsh-autosuggestions
 nvm
+starship
+zoxide
 )
-
-# zsh-completions
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # Load custom aliases and functions
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 [[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
-[[ -f ~/.zsh/arch/pacman.zsh ]] && source ~/.zsh/arch/pacman.zsh
 [[ -f ~/.zsh/arch/yay_aliases.zsh ]] && source ~/.zsh/arch/yay_aliases.zsh
+
+# zsh-completions
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # load homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# load starship
-eval "$(starship init zsh)"
-
-# load zoxide
-eval "$(zoxide init zsh)"
-
-# load fzf
+# --- load fzf
 eval "$(fzf --zsh)"
 
 # case insensitive completion
@@ -33,4 +32,4 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # initialize oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
