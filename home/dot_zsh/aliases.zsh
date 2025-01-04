@@ -12,12 +12,10 @@ alias ff='fastfetch'                      # Run fastfetch (a system information 
 
 # File Operations Aliases
 alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress info (human-readable)
-alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" # Create a standard Terraform file structure
+
 
 # Development Tools Aliases                     # Shortcut for Terraform commands
 alias vim="nvim"                       # Open Neovim GUI (Neovide) instead of Vim
-alias chez="chezmoi"                      # Shortcut for Chezmoi configuration management
-alias ap="ansible-playbook"               # Shorten Ansible Playbook Command
 alias npm="pnpm"                          # Use pnpm instead of npm
 
 # Directory Tree Display Alias
