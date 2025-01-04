@@ -5,7 +5,7 @@ background-opacity = 0.8
 theme = Monokai Pro Spectrum
 
 # --- ghostty settings
-font-size = 14
+font-size = 13
 clipboard-read = allow
 clipboard-paste-protection = true
 copy-on-select = true
