@@ -1,35 +1,38 @@
-# disable auto-update
+# --- disable auto-update
 DISABLE_AUTO_UPDATE="true"
 
-# load plugins
+# --- load plugins
 plugins=(
 archlinux
 ansible
+brew
 chezmoi
 git
-zsh-autosuggestions
 nvm
 starship
+sudo
+opentofu
 zoxide
+zsh-autosuggestions
+zsh-interactive-cd
 )
 
-# Load custom aliases and functions
+# --- Load custom aliases and functions
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 [[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
-[[ -f ~/.zsh/arch/yay_aliases.zsh ]] && source ~/.zsh/arch/yay_aliases.zsh
 
 # zsh-completions
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-# load homebrew
+# --- load homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # --- load fzf
 eval "$(fzf --zsh)"
 
-# case insensitive completion
+# --- case insensitive completion
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-# initialize oh-my-zsh
+# --- initialize oh-my-zsh
 source "$ZSH/oh-my-zsh.sh"

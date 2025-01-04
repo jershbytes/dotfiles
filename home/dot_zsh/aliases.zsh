@@ -14,8 +14,7 @@ alias ff='fastfetch'                      # Run fastfetch (a system information 
 alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress info (human-readable)
 alias tfi="touch main.tf variables.tf outputs.tf versions.tf terraform.tfvars" # Create a standard Terraform file structure
 
-# Development Tools Aliases
-alias tf="tofu"                      # Shortcut for Terraform commands
+# Development Tools Aliases                     # Shortcut for Terraform commands
 alias vim="nvim"                       # Open Neovim GUI (Neovide) instead of Vim
 alias chez="chezmoi"                      # Shortcut for Chezmoi configuration management
 alias ap="ansible-playbook"               # Shorten Ansible Playbook Command
@@ -23,11 +22,6 @@ alias npm="pnpm"                          # Use pnpm instead of npm
 
 # Directory Tree Display Alias
 alias tree='tree --dirsfirst -F'          # Display directory tree with directories listed first and trailing slashes
-
-
-# Homebrew Aliases
-alias bi="brew install"                   # Shortcut to install packages with Homebrew
-alias brewup='brew update && brew upgrade && brew cleanup' # Alias to update Homebrew, upgrade all packages, and clean up old versions
 
 # Chezmoi Sync Aliases
 alias csync="chezmoi update;chezmoi apply"  # Update and apply Chezmoi configuration
