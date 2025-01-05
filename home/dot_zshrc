@@ -15,8 +15,6 @@ opentofu
 zoxide
 zsh-autosuggestions
 zsh-interactive-cd
-rvm
-ruby
 )
 
 # --- Load custom aliases and functions
