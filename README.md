@@ -15,18 +15,5 @@ export GITHUB_USERNAME=JershBytes
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dot.git
 ```
 
-> [!NOTE]
-> MacOS Exception
- 
-<details>
- <summary> Click Here </summary>
-
- Since macOS does not have git or curl installed on a fresh install. I have made a bootstrap script for it.
-
-  ```zsh
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JershBytes/dot/main/mac_bootstrap.sh)"
- ```
- </details>
-
 ## ⚖️ LICENSE
 can be found [here](/LICENSE)
