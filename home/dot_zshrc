@@ -8,7 +8,6 @@ ansible
 brew
 chezmoi
 git
-nvm
 starship
 sudo
 opentofu
