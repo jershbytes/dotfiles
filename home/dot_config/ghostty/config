@@ -7,6 +7,4 @@ bold-is-bright = true
 clipboard-paste-protection = false
 copy-on-select = true
 font-size = 13
-gtk-titlebar = true
-shell-integration = zsh
-window-decoration = false
+macos-titlebar-style = hidden
