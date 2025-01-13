@@ -11,6 +11,7 @@ git
 starship
 sudo
 opentofu
+ubuntu
 zoxide
 zsh-autosuggestions
 zsh-interactive-cd
