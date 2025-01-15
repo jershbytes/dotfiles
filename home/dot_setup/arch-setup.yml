@@ -1,0 +1,56 @@
+---
+name: Arch Linux Setup
+hosts: local
+become: true
+vars:
+  - user: "jershbytes"
+
+tasks:
+  - name: Install Ansible Galaxy collections
+    ansible.builtin.command:
+      cmd: >
+        ansible-galaxy collection install
+        ansible.posix
+        community.general
+        creates: ~/.ansible/collections/ansible_collections
+
+  - name: Update package list
+    community.general.pacman:
+      update_cache: true
+      upgrade: true
+
+  - name: Install required packages
+    community.general.pacman:
+      name:
+        - wezterm
+        - tree
+        - gnupg
+        - ansible-lint
+        - chezmoi
+        - neovim
+        - ripgrep
+        - fzf
+        - fd
+        - zig
+        - lazygit
+        - zoxide
+        - hugo
+        - starship
+        - lolcat
+        - bitwarden
+      state: present
+      update_cache: true
+      extra_args: --noconfirm
+
+  - name: Install required AUR packages
+    community.general.yay:
+      name:
+        - plex-desktop
+        - visual-studio-code-bin
+        - deezer
+        - proton-mail
+        - vesktop
+      state: present
+      update_cache: true
+      executable: yay
+      extra_args: --builddir /var/cache/yay
