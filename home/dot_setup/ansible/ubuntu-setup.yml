@@ -34,6 +34,7 @@
           - tree
           - gnupg2
           - ansible-lint
+          - zsh 
         state: present
         update_cache: true
 

@@ -38,6 +38,7 @@ tasks:
         - starship
         - lolcat
         - bitwarden
+        - zsh
       state: present
       update_cache: true
       extra_args: --noconfirm
