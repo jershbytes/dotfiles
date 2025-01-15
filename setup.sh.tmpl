@@ -6,10 +6,12 @@
         sudo apt update
         sudo apt install -y ansible
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ansible-playbook ~/.setup/ansible/ubuntu-setup.yml -K
     elif [ -f /etc/arch-release ]; then
         # Arch Linux
         sudo pacman -Syu --noconfirm ansible
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ansible-playbook ~/.setup/ansible/arch-setup.yml -K
     else
         echo "Unsupported Linux distribution"
     fi
