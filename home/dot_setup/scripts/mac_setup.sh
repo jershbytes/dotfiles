@@ -24,6 +24,3 @@ fi
 
 # Apply the new PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Install Homebrew Apps
-brew bundle --file= ~/.setup/Brewfile
