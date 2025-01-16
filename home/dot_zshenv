@@ -13,3 +13,4 @@ export EDITOR="code --wait" # Chezmoi Changes
 
 # Set custom GPG home directory
 export GNUPGHOME="$HOME/.gnupg"
+export GPG_TTY=$(tty)
