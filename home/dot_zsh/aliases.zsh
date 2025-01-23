@@ -16,7 +16,6 @@ alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress
 
 # Development Tools Aliases                     # Shortcut for Terraform commands
 alias vim="nvim"                       # Open Neovim GUI (Neovide) instead of Vim
-alias npm="pnpm"                          # Use pnpm instead of npm
 
 # Directory Tree Display Alias
 alias tree='tree --dirsfirst -F'          # Display directory tree with directories listed first and trailing slashes
