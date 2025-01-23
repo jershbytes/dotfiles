@@ -1,11 +1,10 @@
 # --- Terminal Theme
 background-opacity = 0.8
-theme = 'Monokai Pro Spectrum'
+theme = Monokai Soda
 
 # --- settings
 clipboard-paste-protection = false
 copy-on-select = true
 bold-is-bright = true
 font-size = 13
-gtk-titlebar = false
 
