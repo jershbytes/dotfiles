@@ -6,8 +6,10 @@ plugins=(
 archlinux
 ansible
 brew
+bun
 chezmoi
 git
+nvm
 starship
 sudo
 opentofu
