@@ -8,6 +8,7 @@ ansible
 brew
 bun
 chezmoi
+fzf
 git
 nvm
 starship
@@ -28,9 +29,6 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # --- load homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# --- load fzf
-eval "$(fzf --zsh)"
 
 # --- case insensitive completion
 autoload -Uz compinit && compinit
