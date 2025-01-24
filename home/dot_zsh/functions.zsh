@@ -3,12 +3,7 @@ function mcd {
     mkdir -pv "$1" && cd "$1" || exit
 }
 
-function hg {
-    # This function searches your command history for the string provided as an argument.
-    history | grep "$1"
-}
-
-ipinfo(){
+ipinfo() {
 DASH="$(for i in {1..29}; do echo -n "-"; done)"
 for x in "$@"; do echo; echo -e "GEO-IP INFO: ($x)\n"$DASH"";
   curl -s ipinfo.io/$x | sed 's/,\"/\n\"/g' | awk -F\" '/[a-z]/ {printf "%8s : %s\n",$2,$4}';

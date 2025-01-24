@@ -3,16 +3,22 @@ DISABLE_AUTO_UPDATE="true"
 
 # --- load plugins
 plugins=(
-archlinux
 ansible
+archlinux
 brew
 bun
 chezmoi
 fzf
+genpass
 git
+gitignore
+gpg-agent
+history
 nvm
+pip
 starship
 sudo
+systemd
 opentofu
 ubuntu
 zoxide
@@ -21,8 +27,9 @@ zsh-interactive-cd
 )
 
 # --- Load custom aliases and functions
-[[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
-[[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
+for file in ~/.zsh/*.zsh; do
+  [ -f "$file" ] && source "$file"
+done
 
 # zsh-completions
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src

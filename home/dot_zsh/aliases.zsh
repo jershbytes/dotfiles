@@ -21,7 +21,7 @@ alias vim="nvim"                       # Open Neovim GUI (Neovide) instead of Vi
 alias tree='tree --dirsfirst -F'          # Display directory tree with directories listed first and trailing slashes
 
 # Chezmoi Sync Aliases
-alias csync="chezmoi update;chezmoi apply"  # Update and apply Chezmoi configuration
+alias csync="chezmoi update && chezmoi apply"  # Update and apply Chezmoi configuration
 
 # MkDocs Commands
 alias mks="mkdocs serve"                  # Serve MkDocs documentation locally
