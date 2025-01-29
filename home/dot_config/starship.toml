@@ -3,10 +3,7 @@
 add_newline = false
 command_timeout = 1000
 
-format = """
-$os$username$hostname$docker_context$python$nodejs$terraform$directory$git_branch$git_status$upstream_url
-$character
-"""
+format = "$os$username$hostname$docker_context$python$nodejs$terraform$directory$git_branch$git_status$upstream_url$character"
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
@@ -25,7 +22,7 @@ Arch = " "
 Macos = " "
 Mint = " "
 
-# ---y
+# ---
 
 # Shows the username
 [username]
