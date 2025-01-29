@@ -4,7 +4,7 @@ add_newline = false
 command_timeout = 1000
 
 format = """
-$os$username$hostname$docker_context$python$nodejs$terraform$directory$git_branch$git_status
+$os$username$hostname$docker_context$python$nodejs$terraform$directory$git_branch$git_status$upstream_url
 $character
 """
 
@@ -84,3 +84,10 @@ format = 'via [🤖 $version](bold green) '
 
 [terraform]
 format = "[🏎💨 $version$workspace]($style) "
+
+[custom.upstream_url]
+description = "Shows the upstream URL of the current git repository"
+command = "git remote get-url upstream 2>/dev/null || echo ''"
+when = "git remote | grep upstream"
+style = "bold white"
+format = "via [Upstream: $output]($style) "
