@@ -8,6 +8,8 @@ archlinux
 brew
 bun
 chezmoi
+docker
+docker-compose
 fzf
 genpass
 git
