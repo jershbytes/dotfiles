@@ -11,7 +11,7 @@ local config = wezterm.config_builder()
 config.color_scheme = 'One Half Black (Gogh)'
 
 -- Font
-config.font = wezterm.font 'JetBrains Mono'
+config.font = wezterm.font 'JetBrainsMono Nerd Font'
 
 config.enable_tab_bar = false
 
