@@ -1,7 +1,6 @@
 ---
 - name: Arch Linux Setup
   hosts: localhost
-  connnection: local
   become: true
   vars:
     user: "jershbytes"
