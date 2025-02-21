@@ -1,5 +1,5 @@
 ---
-name: Arch Linux Setup
+- name: Arch Linux Setup
 hosts: local
 become: true
 vars:
