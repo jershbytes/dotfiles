@@ -3,7 +3,7 @@ name: Arch Linux Setup
 hosts: local
 become: true
 vars:
-  - user: "jershbytes"
+  user: "jershbytes"
 
 tasks:
   - name: Install Ansible Galaxy collections
@@ -12,7 +12,7 @@ tasks:
         ansible-galaxy collection install
         ansible.posix
         community.general
-        creates: ~/.ansible/collections/ansible_collections
+      creates: ~/.ansible/collections/ansible_collections
 
   - name: Update package list
     community.general.pacman:
