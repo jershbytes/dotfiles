@@ -12,7 +12,7 @@
           ansible-galaxy collection install
           ansible.posix
           community.general
-          kewlfft.aur
+          aur.archlinux
         creates: ~/.ansible/collections/ansible_collections
 
     - name: Update package list
@@ -43,15 +43,21 @@
         update_cache: true
         extra_args: --noconfirm
 
-    - name: Install required AUR packages
+
+- name: Install AUR packages
+  hosts: localhost
+  become: true
+  become_user: "{{ user }}"
+  vars:
+    aur_packages:
+      - plex-desktop
+      - legcord
+      - deezer
+      - proton-mail
+      - visual-studio-code-bin
+  tasks:
+    - name: Install AUR packages
       kewlfft.aur.aur:
-        use: yay
-        name:
-          - plex-desktop
-          - visual-studio-code-bin
-          - deezer
-          - proton-mail
-          - legcord
+        name: "{{ item }}"
         state: present
-      become: true
-      become_user: "{{ user }}"
+      loop: "{{ aur_packages }}"
