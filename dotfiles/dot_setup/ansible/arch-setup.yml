@@ -2,8 +2,6 @@
 - name: Arch Linux Setup
   hosts: localhost
   become: true
-  vars:
-    user: "{{ ansible_user_id }}"
 
   tasks:
     - name: Install Ansible Galaxy collections
@@ -47,7 +45,7 @@
 - name: Install AUR packages
   hosts: localhost
   become: true
-  become_user: "{{ user }}"
+  become_user: "{{ ansible_user_id }}"
   vars:
     aur_packages:
       - plex-desktop
