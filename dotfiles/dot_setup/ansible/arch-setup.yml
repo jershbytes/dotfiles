@@ -3,7 +3,7 @@
   hosts: localhost
   become: true
   vars:
-    user: "jershbytes"
+    user: "{{ ansible_user_id }}"
 
   tasks:
     - name: Install Ansible Galaxy collections
@@ -49,8 +49,10 @@
           - visual-studio-code-bin
           - deezer
           - proton-mail
-          - vesktop
+          - legcord
         state: present
         update_cache: true
         executable: yay
         extra_args: --builddir /var/cache/yay
+      become: true
+      become_user: "{{ user }}"
