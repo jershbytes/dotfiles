@@ -43,6 +43,8 @@
         extra_args: --noconfirm
 
     - name: Install required AUR packages
+      become: true
+      become_user: "{{ user }}"
       community.general.pacman:
         name:
           - plex-desktop
@@ -50,9 +52,7 @@
           - deezer
           - proton-mail
           - legcord
+        executable: yay
         state: present
         update_cache: true
-        executable: yay
         extra_args: --builddir /var/cache/yay
-      become: true
-      become_user: "{{ user }}"
