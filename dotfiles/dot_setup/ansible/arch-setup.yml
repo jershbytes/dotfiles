@@ -4,6 +4,20 @@
   become: true
 
   tasks:
+    - name: Create the `aur_builder` user
+      ansible.builtin.user:
+        name: aur_builder
+        create_home: true
+        group: wheel
+
+    - name: Allow the `aur_builder` user to run `sudo pacman` without a password
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/11-install-aur_builder
+        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        create: true
+        mode: "0644"
+        validate: 'visudo -cf %s'
+
     - name: Install Ansible Galaxy collections
       ansible.builtin.command:
         cmd: >
@@ -45,12 +59,11 @@
 - name: Install AUR packages
   hosts: localhost
   become: true
-  become_user: "{{ ansible_user_id }}"
+  become_user: "aur_builder"
   vars:
     aur_packages:
       - plex-desktop
       - legcord
-      - deezer
       - proton-mail
       - visual-studio-code-bin
   tasks:
