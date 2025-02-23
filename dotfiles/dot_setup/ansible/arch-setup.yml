@@ -1,8 +1,7 @@
 ---
-- name: Arch Linux Setup
+- name: Arch Linux System Setup
   hosts: localhost
   become: true
-
   tasks:
     - name: Create the `aur_builder` user
       ansible.builtin.user:
@@ -24,7 +23,6 @@
           ansible-galaxy collection install
           ansible.posix
           community.general
-          aur.archlinux
         creates: ~/.ansible/collections/ansible_collections
 
     - name: Update package list
@@ -32,28 +30,33 @@
         update_cache: true
         upgrade: true
 
-    - name: Install required packages
+- name: Install Pacman packages
+  hosts: localhost
+  become: true
+  vars:
+    pacman_packages:
+      - wezterm
+      - tree
+      - gnupg
+      - ansible-lint
+      - chezmoi
+      - neovim
+      - ripgrep
+      - fzf
+      - fd
+      - zig
+      - lazygit
+      - zoxide
+      - hugo
+      - starship
+      - lolcat
+      - bitwarden
+  tasks:
+    - name: Install Pacman packages
       community.general.pacman:
-        name:
-          - wezterm
-          - tree
-          - gnupg
-          - ansible-lint
-          - chezmoi
-          - neovim
-          - ripgrep
-          - fzf
-          - fd
-          - zig
-          - lazygit
-          - zoxide
-          - hugo
-          - starship
-          - lolcat
-          - bitwarden
+        name: "{{ item }}"
         state: present
-        update_cache: true
-        extra_args: --noconfirm
+      loop: "{{ pacman_packages }}"
 
 
 - name: Install AUR packages
@@ -68,7 +71,8 @@
       - visual-studio-code-bin
   tasks:
     - name: Install AUR packages
-      kewlfft.aur.aur:
+      community.general.pacman:
         name: "{{ item }}"
         state: present
+        executable: yay
       loop: "{{ aur_packages }}"
