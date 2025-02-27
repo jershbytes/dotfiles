@@ -1,6 +1,7 @@
 packages:
+  linux:
   # Official repository packages
-  pacman:
+    pacman:
     - ansible-core
     - ansible
     - ansible-lint
@@ -19,7 +20,7 @@ packages:
     - neovim
 
   # AUR packages
-  aur:
+    aur:
     - legcord
     - plex-desktop
     - proton-mail

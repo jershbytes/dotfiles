@@ -8,7 +8,7 @@ echo "===== Installing/Updating Packages ====="
 
 # Install official packages using pacman
 echo "Installing official packages..."
-sudo pacman -Syu --needed --noconfirm "{{ range .packages.pacman }} {{ . }} {{ end }}"
+sudo pacman -Syu --needed --noconfirm "{{ range .packages.linux.pacman }} {{ . }} {{ end }}"
 
 # Check if we have an AUR helper, if not install paru
 if ! command -v paru &> /dev/null; then
@@ -20,7 +20,7 @@ fi
 
 # Install AUR packages using paru
 echo "Installing AUR packages..."
-paru -Syu --needed --noconfirm "{{ range .packages.aur }} {{ . }} {{ end }}
+paru -Syu --needed --noconfirm "{{ range .packages.linux.aur }} {{ . }} {{ end }}
 {{ end }}"
 
 echo "Package installation complete!"
