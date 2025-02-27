@@ -1,28 +1,16 @@
-packages:
-  linux:
-  # Official repository packages
-  pacman:
-    - ansible-core
-    - ansible
-    - ansible-lint
-    - bitwarden
-    - chezmoi
-    - fzf
-    - fd
-    - gnupg
-    - hugo
-    - wezterm
-    - tree
-    - ripgrep
-    - starship
-    - zoxide
-    - zig
-    - neovim
+pacman:
+  - ansible-core
+  - ansible
+  - ansible-lint
+  - bitwarden
+  - chezmoi
+  - fzf
+  - fd
+  - gnupg
 
-  # AUR packages
-  aur:
-    - legcord
-    - plex-desktop
-    - proton-mail
-    - visual-studio-code-bin
-    - brave-bin
+aur:
+  - legcord
+  - plex-desktop
+  - proton-mail
+  - visual-studio-code-bin
+  - brave-bin
