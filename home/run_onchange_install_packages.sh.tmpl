@@ -1,0 +1,58 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+set -e
+
+# Function to check if a pacman package is installed
+is_pacman_installed() {
+  pacman -Q "$1" &>/dev/null
+}
+
+# Function to check if an AUR package is installed
+is_aur_installed() {
+  pacman -Q "$1" &>/dev/null
+}
+
+# Ensure system is up to date
+echo "Updating system packages..."
+sudo pacman -Syu --noconfirm
+
+# Install official packages from pacman
+echo "Installing official packages..."
+PACMAN_PACKAGES_TO_INSTALL=""
+{{ range .packages.linux.pacman -}}
+if ! is_pacman_installed "{{ . }}"; then
+  PACMAN_PACKAGES_TO_INSTALL+="{{ . }} "
+fi
+{{ end }}
+
+if [ -n "$PACMAN_PACKAGES_TO_INSTALL" ]; then
+  echo "Installing missing packages: $PACMAN_PACKAGES_TO_INSTALL"
+  sudo pacman -S --noconfirm $PACMAN_PACKAGES_TO_INSTALL
+else
+  echo "All official packages already installed."
+fi
+
+# Install paru if not present (AUR helper)
+if ! command -v paru &> /dev/null; then
+    echo "Installing paru..."
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf paru
+fi
+
+# Install AUR packages using paru
+echo "Installing AUR packages..."
+{{ range .packages.linux.aur -}}
+if ! is_aur_installed "{{ . }}"; then
+    echo "Installing {{ . }}..."
+    paru -S --noconfirm {{ . }}
+else
+    echo "{{ . }} is already installed."
+fi
+{{ end }}
+
+echo "Package installation completed!"
+{{ end -}}

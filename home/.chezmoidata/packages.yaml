@@ -1,0 +1,25 @@
+packages:
+  linux:
+    pacman:
+      - ansible-core
+      - ansible
+      - ansible-lint
+      - bitwarden
+      - chezmoi
+      - fzf
+      - fd
+      - gnupg
+      - hugo
+      - wezterm
+      - tree
+      - ripgrep
+      - starship
+      - zoxide
+      - zig
+      - neovim
+      - 7zip
+    aur:
+      - legcord
+      - plex-desktop
+      - proton-mail
+      - visual-studio-code-bin
