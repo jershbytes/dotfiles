@@ -23,3 +23,25 @@ packages:
       - plex-desktop
       - proton-mail
       - visual-studio-code-bin
+  darwin:
+    brews:
+      - ripgrep
+      - fd
+      - zig
+      - fzf
+      - zoxide
+      - neovim
+      - neovide
+      - yazi
+      - docker
+      - git 
+      - jq
+      - wget
+      - curl
+      - hugo
+      - wezterm
+    casks:
+      - firefox
+      - deezer
+      - legcord
+      - visual-studio-code"
