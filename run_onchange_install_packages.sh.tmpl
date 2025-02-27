@@ -1,0 +1,27 @@
+#!/bin/bash
+# {{ include ".chezmoidata/packages.yaml" | sha256sum }}
+# This hash ensures this script runs when packages.yaml changes
+
+set -euo pipefail
+
+echo "===== Installing/Updating Packages ====="
+
+# Install official packages using pacman
+echo "Installing official packages..."
+sudo pacman -Syu --needed --noconfirm {{ range .packages.pacman }} {{ . }} {{ end }}
+
+# Check if we have an AUR helper, if not install paru
+if ! command -v paru &> /dev/null; then
+    echo "Installing paru AUR helper..."
+    git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin
+    (cd /tmp/paru-bin && makepkg -si --noconfirm)
+    rm -rf /tmp/paru-bin
+fi
+
+# Install AUR packages using paru
+echo "Installing AUR packages..."
+{{ if .packages.aur }}
+paru -Syu --needed --noconfirm {{ range .packages.aur }} {{ . }} {{ end }}
+{{ end }}
+
+echo "Package installation complete!"
