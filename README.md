@@ -18,7 +18,7 @@ pacman -S git chezmoi
 export GITHUB_USERNAME=JershBytes
 
 # Initialize chezmoi with the specified repository
-chezmoi init git@github.com:$GITHUB_USERNAME/dot.git
+chezmoi init git@github.com:$GITHUB_USERNAME
 
 # Apply the chezmoi configuration
 chezmoi apply
