@@ -12,7 +12,12 @@ This repo contains the configurations to set up my machines. This is using [**Ch
 
 ```shell
 export GITHUB_USERNAME=JershBytes
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:$GITHUB_USERNAME/dot.git
+
+# Initialize chezmoi with the specified repository
+chezmoi init git@github.com:$GITHUB_USERNAME/dot.git
+
+# Apply the chezmoi configuration
+chezmoi apply
 ```
 
 ## ⚖️ LICENSE
