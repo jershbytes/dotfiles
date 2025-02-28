@@ -13,6 +13,7 @@ packages:
       - wezterm
       - tree
       - ripgrep
+      - rpi-imager
       - starship
       - zoxide
       - zig
