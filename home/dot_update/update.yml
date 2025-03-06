@@ -14,4 +14,4 @@
       become_user: "aur_builder"
       community.general.pacman:
         upgrade: true
-        executable: paru
+        executable: aura
