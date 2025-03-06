@@ -35,8 +35,12 @@ fi
 
 # Install aura not present (AUR helper)
 if ! command -v paru &> /dev/null; then
-    echo "Installing aura"
-    pacman -S aura-bin
+    echo "Installing paru"
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf paru
 fi
 
 # Install AUR packages using paru
