@@ -33,14 +33,10 @@ else
   echo "All official packages already installed."
 fi
 
-# Install paru if not present (AUR helper)
+# Install aura not present (AUR helper)
 if ! command -v paru &> /dev/null; then
-    echo "Installing paru..."
-    git clone https://aur.archlinux.org/paru.git
-    cd paru
-    makepkg -si --noconfirm
-    cd ..
-    rm -rf paru
+    echo "Installing aura"
+    pacman -S aura-bin
 fi
 
 # Install AUR packages using paru
@@ -48,7 +44,7 @@ echo "Installing AUR packages..."
 {{ range .packages.linux.aur -}}
 if ! is_aur_installed "{{ . }}"; then
     echo "Installing {{ . }}..."
-    paru -S --noconfirm {{ . }}
+    aura -S --noconfirm {{ . }}
 else
     echo "{{ . }} is already installed."
 fi
