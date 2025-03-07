@@ -25,7 +25,8 @@ packages:
       - proton-mail
       - visual-studio-code-bin
       - librewolf-bin
-  darwin:
+      - deezer
+  homebew:
     brews:
       - ripgrep
       - fd
