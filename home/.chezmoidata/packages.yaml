@@ -24,6 +24,7 @@ packages:
       - plex-desktop
       - proton-mail
       - visual-studio-code-bin
+      - librewolf 
   darwin:
     brews:
       - ripgrep
