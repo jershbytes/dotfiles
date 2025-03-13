@@ -6,6 +6,7 @@ packages:
       - ansible-lint
       - bitwarden
       - chezmoi
+      - firefox
       - fzf
       - fd
       - gnupg
@@ -24,7 +25,6 @@ packages:
       - plex-desktop
       - proton-mail
       - visual-studio-code-bin
-      - librewolf-bin
       - deezer
   homebew:
     brews:
