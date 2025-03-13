@@ -3,6 +3,6 @@ README.md
 LICENSE
 
 # Dirs
-./vscode
-./resources
-./ansible
+./vscode/
+./resources/
+./ansible/
