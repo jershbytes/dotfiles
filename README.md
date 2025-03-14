@@ -1,6 +1,6 @@
 <p align="center">
   <img src=".github/images/dotfiles.png" alt="Header" width="100" height="100"><br> 
-    <i>My personal dotfiles for Linux 🚀 </i>
+    <i>My personal dotfiles for Linux & MacOS 🚀 </i>
  </p>
 
 ![terminal picture](./.github/images/arch.png)
