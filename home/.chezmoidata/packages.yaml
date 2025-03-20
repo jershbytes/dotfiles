@@ -11,6 +11,7 @@ packages:
       - fd
       - gnupg
       - hugo
+      - keepassxc
       - wezterm
       - tree
       - ripgrep
