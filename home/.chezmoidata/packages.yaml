@@ -24,7 +24,7 @@ packages:
     aur:
       - legcord
       - plex-desktop
-      - proton-mail
+      - proton-mail-bin
       - visual-studio-code-bin
       - deezer
   homebew:
