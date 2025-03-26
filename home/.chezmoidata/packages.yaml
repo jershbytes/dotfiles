@@ -27,7 +27,7 @@ packages:
       - proton-mail-bin
       - visual-studio-code-bin
       - deezer
-      - ulauncherv
+      - ulauncher
   homebew:
     brews:
       - ripgrep
