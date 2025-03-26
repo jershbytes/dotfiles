@@ -12,11 +12,12 @@ packages:
       - gnupg
       - hugo
       - keepassxc
-      - wezterm
-      - tree
+      - opentofu
       - ripgrep
       - rpi-imager
       - starship
+      - tree
+      - wezterm
       - zoxide
       - zig
       - neovim
