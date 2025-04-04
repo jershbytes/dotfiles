@@ -30,6 +30,3 @@ alias mks="mkdocs serve"                  # Serve MkDocs documentation locally
 alias hcn="hugo server -N --noHTTPCache"  # Run Hugo server with no HTTP caching
 alias hi="hugo new site"                  # Create a new Hugo site
 alias gsui='git submodule update --init'  # Update Git submodules
-
-# System Information Aliases
-alias update='aplaybook "$HOME/.update/update.yml" -K'  # Run the update playbook
