@@ -1,11 +1,11 @@
 [includeIf "gitdir:~/Code/github/"]
-	path = ~/.git/.gitconfig-github
+	path = ~/.git/github
 
 [includeIf "gitdir:~/.local/share/chezmoi/"]
-	path = ~/.git/.gitconfig-github
+	path = ~/.git/github
 
 [includeIf "gitdir:~/Code/gitea/"]
-	path = ~/.git/.gitconfig-gitea
+	path = ~/.git/gitea
 
 
 [alias]
@@ -31,6 +31,3 @@
 
 [web]
 	browser = firefox
-
-[program]
-  pgp = /usr/bin/gpg
