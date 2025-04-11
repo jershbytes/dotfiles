@@ -8,6 +8,8 @@ PATH="$HOME/bin/ovftool:$PATH" # ovftool
 ### APP CONFIGS
 export HOMEBREW_NO_ENV_HINTS=true
 export STARSHIP_CONFIG=~/.config/starship.toml
+export EDITOR="code --wait"
+
 
 # Set custom GPG home directory
 export GNUPGHOME="$HOME/.gnupg"
