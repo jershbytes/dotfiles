@@ -3,7 +3,7 @@ export LANG="en_US.UTF-8"
 
 ### PATHS ###
 export PATH="$PATH:$HOME/.local/bin" # MkDocs
-PATH="$HOME/bin/ovftool:$PATH" # ovftool
+export PATH="/usr/bin/ansible-lint"$PATH # Ansible Lint
 
 ### APP CONFIGS
 export HOMEBREW_NO_ENV_HINTS=true
