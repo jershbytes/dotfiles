@@ -23,7 +23,7 @@ packages:
       - neovim
       - 7zip
     aur:
-      - legcord
+      - vesktop-bin
       - plex-desktop
       - proton-mail-bin
       - visual-studio-code-bin
