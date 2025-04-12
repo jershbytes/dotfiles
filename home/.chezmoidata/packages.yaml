@@ -6,6 +6,7 @@ packages:
       - ansible-lint
       - bitwarden
       - chezmoi
+      - exfat-utils
       - firefox
       - fzf
       - fd
