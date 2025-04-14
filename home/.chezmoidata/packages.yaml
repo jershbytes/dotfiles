@@ -28,7 +28,6 @@ packages:
       - proton-mail-bin
       - visual-studio-code-bin
       - deezer
-      - ulauncher
   homebew:
     brews:
       - ripgrep
