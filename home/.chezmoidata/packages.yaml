@@ -6,6 +6,7 @@ packages:
       - ansible-lint
       - bitwarden
       - chezmoi
+      - discord
       - exfat-utils
       - firefox
       - fzf
@@ -24,10 +25,11 @@ packages:
       - neovim
       - 7zip
     aur:
+      - deezer
       - plex-desktop
       - proton-mail-bin
       - visual-studio-code-bin
-      - deezer
+      - vencord
   homebew:
     brews:
       - ripgrep
@@ -48,5 +50,5 @@ packages:
     casks:
       - firefox
       - deezer
-      - legcord
+      - discord
       - visual-studio-code"
