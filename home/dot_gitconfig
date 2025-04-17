@@ -1,10 +1,10 @@
-[includeIf "gitdir:~/Code/github/"]
+[includeIf "gitdir:~/projects/github/"]
 	path = ~/.git/github
 
 [includeIf "gitdir:~/.local/share/chezmoi/"]
 	path = ~/.git/github
 
-[includeIf "gitdir:~/Code/gitea/"]
+[includeIf "gitdir:~/projects/gitea/"]
 	path = ~/.git/gitea
 
 
