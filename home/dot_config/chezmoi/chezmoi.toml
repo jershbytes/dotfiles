@@ -8,4 +8,4 @@ encryption = "age"
     args = ["--wait"]
 [age]
     identity = "~/.config/chezmoi/key.txt"
-    recipient = "AGE-RECIPIENT-FROM-KEY-FILE"
+    recipient = "age1fardqj3tpnxcglqpwx598qqk7d2sl7wv9x0zgcggcltt8vu4fq2slrcp7y"
