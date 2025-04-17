@@ -1,6 +1,7 @@
 packages:
   linux:
     pacman:
+      - age
       - ansible-core
       - ansible
       - ansible-lint
