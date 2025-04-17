@@ -22,6 +22,7 @@ alias tree='tree --dirsfirst -F'          # Display directory tree with director
 
 # Chezmoi Sync Aliases
 alias csync="chezmoi update && chezmoi apply"  # Update and apply Chezmoi configuration
+alias dot="chezmoi edit"                       # Alias for Chezmoi edit command
 
 # MkDocs Commands
 alias mks="mkdocs serve"                  # Serve MkDocs documentation locally
