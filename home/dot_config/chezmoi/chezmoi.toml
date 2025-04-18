@@ -1,11 +1,3 @@
-encryption = "age"
-
 [git]
     autoCommit = true
     autoPush = true
-[edit]
-    command = "code"
-    args = ["--wait"]
-[age]
-    identity = "~/.config/chezmoi/key.txt"
-    recipient = "age1fardqj3tpnxcglqpwx598qqk7d2sl7wv9x0zgcggcltt8vu4fq2slrcp7y"
