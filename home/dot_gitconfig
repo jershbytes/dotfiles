@@ -2,7 +2,7 @@
 	path = ~/.git/github
 
 [includeIf "gitdir:~/.local/share/chezmoi/"]
-	path = ~/.git/github
+	path = ~/.git/gitea
 
 [includeIf "gitdir:~/projects/gitea/"]
 	path = ~/.git/gitea
