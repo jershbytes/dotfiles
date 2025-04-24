@@ -4,9 +4,10 @@ add_newline = false
 command_timeout = 1000
 
 format = """
-$os$username$hostname$docker_context$python$nodejs$terraform$directory$git_branch$git_status
+$os$username$hostname$docker_context$python$nodejs$terraform$directory$git_branch$git_status$custom
 $character
 """
+
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
@@ -84,3 +85,32 @@ format = 'via [🤖 $version](bold green) '
 
 [terraform]
 format = "[🏎💨 $version$workspace]($style) "
+
+
+[custom.git_host]
+when = "git rev-parse --is-inside-work-tree 2>/dev/null"
+command = '''
+remote=$(git remote get-url origin 2>/dev/null)
+if [[ $remote == *github.com* ]]; then
+  icon=""
+  web_url=$(echo "$remote" | sed -E 's|git@github.com:(.*)\.git|https://github.com/\1|; s|https://github.com/(.*)\.git|https://github.com/\1|')
+elif [[ $remote == *gitlab.com* ]]; then
+  icon=""
+  web_url=$(echo "$remote" | sed -E 's|git@gitlab.com:(.*)\.git|https://gitlab.com/\1|; s|https://gitlab.com/(.*)\.git|https://gitlab.com/\1|')
+else
+  icon=""
+  web_url=""
+fi
+
+repo_name=$(basename -s .git "$remote")
+
+if [[ -n "$web_url" ]]; then
+  esc="\033"
+  st="${esc}\\"
+  echo -e "${esc}]8;;$web_url${st}${icon} $repo_name${esc}]8;;${st}"
+else
+  echo "$icon $repo_name"
+fi
+'''
+format = ' from [$output](bold blue) '
+
