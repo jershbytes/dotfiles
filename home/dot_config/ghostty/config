@@ -1,0 +1,13 @@
+# Color Scheme
+theme = dracula
+
+# Font 
+font-family = "JetBrainsMono Nerd Font"
+
+# Opacity
+background-opacity = 0.7
+
+# Extra Configs
+copy-on-select = true
+gtk-tabs-location = hidden
+gtk-tittlebar = true
