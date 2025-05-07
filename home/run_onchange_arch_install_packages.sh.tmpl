@@ -1,9 +1,8 @@
+{{ if eq .osid "linux-cachyos" }}
+
 #!/bin/bash
 
 set -e
-
-{{ if eq .osid "linux-cachyos" }}
-
 
 # Function to check if a pacman package is installed
 is_pacman_installed() {

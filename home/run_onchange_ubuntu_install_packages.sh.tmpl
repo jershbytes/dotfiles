@@ -1,8 +1,7 @@
+{{ if eq .osid "linux-ubuntu" }}
 #!/usr/bin/bash
 
 set -e
-
-{{ if eq .osid "linux-ubuntu" }}
 
 # Function to check if an apt package is installed
 is_apt_installed() {
