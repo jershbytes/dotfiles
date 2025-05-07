@@ -7,11 +7,12 @@ packages:
       - ansible-lint
       - bitwarden
       - chezmoi
-      - discord
+      - duf
       - exfat-utils
       - firefox
       - fzf
       - fd
+      - ghostty
       - gnupg
       - hugo
       - keepassxc
@@ -20,7 +21,6 @@ packages:
       - rpi-imager
       - starship
       - tree
-      - wezterm
       - zoxide
       - zig
       - neovim
@@ -28,9 +28,10 @@ packages:
     aur:
       - deezer
       - plex-desktop
+      - powershell
       - proton-mail-bin
       - visual-studio-code-bin
-      - vencord
+      - vesktop
   homebew:
     brews:
       - ripgrep
@@ -42,7 +43,7 @@ packages:
       - neovide
       - yazi
       - docker
-      - git 
+      - git
       - jq
       - wget
       - curl
@@ -52,4 +53,5 @@ packages:
       - firefox
       - deezer
       - discord
+      - ghostty
       - visual-studio-code"

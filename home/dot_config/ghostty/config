@@ -1,13 +1,13 @@
 # Color Scheme
 theme = dracula
 
-# Font 
+# Font
 font-family = "JetBrainsMono Nerd Font"
 
-# Opacity
+# Transparency
 background-opacity = 0.7
 
-# Extra Configs
+# Terminal Configs
 copy-on-select = true
 gtk-tabs-location = hidden
-gtk-tittlebar = true
+gtk-titlebar = true
