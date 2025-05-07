@@ -2,7 +2,7 @@
 
 set -e
 
-{{- if ne .chezmoi.hostname "WinWoke" }}
+{{- if eq .chezmoi.hostname "WinWoke" }}
 
 # Function to check if an apt package is installed
 is_apt_installed() {
