@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.os "linux" -}}
+{{ if .archlinux -}}
 #!/bin/bash
 
 set -e
@@ -55,4 +55,7 @@ fi
 {{ end }}
 
 echo "Package installation completed!"
+{{ else -}}
+# Ubuntu or other distro logic here
+echo "This is not Arch Linux. Skipping Arch-specific setup."
 {{ end -}}
