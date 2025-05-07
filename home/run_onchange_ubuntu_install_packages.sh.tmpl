@@ -1,35 +1,9 @@
-{{ if eq .osid "linux-ubuntu" }}
-#!/usr/bin/bash
+{{ if eq .osid "linux-ubuntu" -}}
+#!/bin/bash
 
-set -e
-
-# Function to check if an apt package is installed
-is_apt_installed() {
-  dpkg -s "$1" &> /dev/null
-}
-
-# Ensure system is up to date
-echo "Updating system packages..."
-sudo apt update && sudo apt upgrade -y
-
-# Install official packages from apt
-echo "Installing official packages..."
-APT_PACKAGES_TO_INSTALL=""
+sudo apt-get update
+sudo apt-get install -y \
 {{ range .packages.linux.apt -}}
-if ! is_apt_installed "{{ . }}"; then
-  APT_PACKAGES_TO_INSTALL+="{{ . }} "
-fi
-{{ end }}
-
-if [ -n "$APT_PACKAGES_TO_INSTALL" ]; then
-  echo "Installing missing packages: $APT_PACKAGES_TO_INSTALL"
-  sudo apt install -y $APT_PACKAGES_TO_INSTALL
-else
-  echo "All official packages already installed."
-fi
-
-echo "Package installation completed!"
-{{ else -}}
-# Arch logic already handled above
-echo "This is Ubuntu. Skipping Arch-specific setup."
+{{ . | quote }} \
+{{ end -}}
 {{ end -}}

@@ -9,7 +9,7 @@ packages:
       - bat
       - chezmoi
       - duf
-      - exfat-utils
+      - exfatprogs
       - firefox
       - fzf
       - fd
@@ -29,30 +29,30 @@ packages:
     aur:
       - deezer
       - plex-desktop
-      - powershell
+      - powershell-bin
       - proton-mail-bin
       - visual-studio-code-bin
       - vesktop
     apt:
       - bat
-      - curl 
-      - wget 
-      - python3-pip 
-      - python3.13-venv 
-      - dos2unix 
-      - net-tools 
-      - bind9-dnsutils 
-      - tree 
-      - unzip 
-      - bat 
-      - zoxide 
-      - fzf 
-      - ripgrep 
+      - curl
+      - wget
+      - python3-pip
+      - python3.13-venv
+      - dos2unix
+      - net-tools
+      - bind9-dnsutils
+      - tree
+      - unzip
+      - bat
+      - zoxide
+      - fzf
+      - ripgrep
       - silversearcher-ag
-      - fd-find 
-      - cowsay 
-      - fortune 
-      - lolcat 
+      - fd-find
+      - cowsay
+      - fortune
+      - lolcat
       - duf
       - fastfetch
   homebew:
