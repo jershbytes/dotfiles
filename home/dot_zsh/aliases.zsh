@@ -8,6 +8,7 @@ alias l='ls -CF --color=auto'                          # List files in columns a
 alias s="ssh"               # SSH into a remote machine using Kitty terminal features
 alias bye='shutdown -h now'               # Shut down the machine (if you know, you know)
 alias ff='fastfetch'                      # Run fastfetch (a system information tool)
+alias cat="bat"
 
 # File Operations Aliases
 alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress info (human-readable)
