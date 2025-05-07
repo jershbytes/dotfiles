@@ -30,3 +30,7 @@ else
 fi
 
 echo "Package installation completed!"
+{{ else -}}
+# Arch logic already handled above
+echo "This is Ubuntu. Skipping Arch-specific setup."
+{{ end -}}
