@@ -18,6 +18,7 @@ gpg-agent
 history
 nvm
 pip
+ssh-agent
 starship
 sudo
 systemd
