@@ -2,7 +2,8 @@
 
 set -e
 
-{{- if eq .chezmoi.hostname "wokeOS" }}
+{{ if eq .osid "linux-cachyos }}
+
 
 # Function to check if a pacman package is installed
 is_pacman_installed() {
