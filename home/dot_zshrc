@@ -23,6 +23,7 @@ sudo
 systemd
 opentofu
 ubuntu
+web_search
 zoxide
 zsh-autosuggestions
 zsh-interactive-cd
