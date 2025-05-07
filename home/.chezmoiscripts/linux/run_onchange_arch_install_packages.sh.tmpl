@@ -1,4 +1,4 @@
-{{ if and (eq .chezmoi.osRelease.ID "arch") (not .chezmoi.isWSL) }}
+{{ if .chezmoi.osRelease.idLike "arch" -}}
 #!/bin/bash
 
 set -e
