@@ -38,7 +38,6 @@ packages:
       - curl
       - wget
       - python3-pip
-      - python3.13-venv
       - dos2unix
       - net-tools
       - bind9-dnsutils
@@ -51,10 +50,9 @@ packages:
       - silversearcher-ag
       - fd-find
       - cowsay
-      - fortune
+      - fortune-mod
       - lolcat
       - duf
-      - fastfetch
   homebew:
     brews:
       - ripgrep
