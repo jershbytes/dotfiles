@@ -20,7 +20,6 @@ packages:
       - opentofu
       - ripgrep
       - rpi-imager
-      - starship
       - tree
       - zoxide
       - zig
@@ -28,6 +27,7 @@ packages:
       - 7zip
     aur:
       - deezer
+      - oh-my-posh-bin
       - plex-desktop
       - powershell-bin
       - proton-mail-bin
