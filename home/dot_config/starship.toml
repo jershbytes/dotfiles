@@ -4,7 +4,7 @@ add_newline = false
 command_timeout = 1000
 
 format = """
-$os$username$hostname$docker_context$python$nodejs$terraform$directory$git_branch$git_status$custom
+$os$username$hostname$docker_context$python$nodejs$terraform$directory$git_branch$custom$git_status
 $character
 """
 
@@ -17,7 +17,7 @@ error_symbol   = "[✗](bold red) "
 # ---
 
 [os]
-format = '[$symbol](bold white) '   
+format = '[$symbol](bold white) '
 disabled = false
 
 [os.symbols]
@@ -91,26 +91,42 @@ format = "[🏎💨 $version$workspace]($style) "
 when = "git rev-parse --is-inside-work-tree 2>/dev/null"
 command = '''
 remote=$(git remote get-url origin 2>/dev/null)
+
 if [[ $remote == *github.com* ]]; then
   icon=""
-  web_url=$(echo "$remote" | sed -E 's|git@github.com:(.*)\.git|https://github.com/\1|; s|https://github.com/(.*)\.git|https://github.com/\1|')
+  web_url=$(echo "$remote" | sed -E 's|git@github.com:(.*)(\.git)?$|https://github.com/\1|; s|https://github.com/(.*)(\.git)?$|https://github.com/\1|')
+
 elif [[ $remote == *gitlab.com* ]]; then
   icon=""
-  web_url=$(echo "$remote" | sed -E 's|git@gitlab.com:(.*)\.git|https://gitlab.com/\1|; s|https://gitlab.com/(.*)\.git|https://gitlab.com/\1|')
+  web_url=$(echo "$remote" | sed -E 's|git@gitlab.com:(.*)(\.git)?$|https://gitlab.com/\1|; s|https://gitlab.com/(.*)(\.git)?$|https://gitlab.com/\1|')
+
+elif [[ $remote == *dev.azure.com* || $remote == *ssh.dev.azure.com* ]]; then
+  icon="󰠳"
+  # Azure DevOps SSH: git@ssh.dev.azure.com:v3/org/project/repo
+  if [[ $remote == git@ssh.dev.azure.com:* ]]; then
+    web_url=$(echo "$remote" | sed -E 's|git@ssh.dev.azure.com:v3/([^/]+)/([^/]+)/([^ ]+)(\.git)?$|https://dev.azure.com/\1/\2/_git/\3|')
+  else
+    # HTTPS format (already fine)
+    web_url=$(echo "$remote" | sed -E 's|^(https://[^ ]+)(\.git)?$|\1|')
+  fi
+
 else
   icon=""
-  web_url=""
+  web_url=$(echo "$remote" | sed -E '
+    s|git@([^:]+):([^ ]+)(\.git)?$|https://\1/\2|;
+    s|https?://([^/]+)/(.*)(\.git)?$|https://\1/\2|;
+  ')
 fi
 
 repo_name=$(basename -s .git "$remote")
 
-if [[ -n "$web_url" ]]; then
-  esc="\033"
-  st="${esc}\\"
-  echo -e "${esc}]8;;$web_url${st}${icon} $repo_name${esc}]8;;${st}"
-else
-  echo "$icon $repo_name"
-fi
+# OSC 8 hyperlink formatting
+esc="\033"
+st="${esc}\\"
+echo -e "$icon ${esc}]8;;$web_url${st}$repo_name${esc}]8;;${st}"
 '''
-format = ' from [$output](bold blue) '
+format = ' [$output](bold blue) '
+
+
+
 
