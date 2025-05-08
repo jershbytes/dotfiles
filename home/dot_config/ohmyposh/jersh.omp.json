@@ -6,6 +6,13 @@
         "alignment": "left",
         "segments": [
           {
+            "properties": {
+              "cache_duration": "none"
+            },
+            "type": "root",
+            "style": "plain"
+            },
+          {
             "type": "os",
             "style": "plain",
             "template": "{{ if .WSL }}WSL {{ end }}{{.Icon}} " ,
@@ -49,7 +56,7 @@
             "leading_diamond": "<transparent>\ue0b4</>",
             "trailing_diamond": "\ue0b4",
             "template": " {{ url .UpstreamIcon  .UpstreamURL }}<i>{{ url .RepoName .UpstreamURL }}</i><b>{{ .HEAD }}</b>{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#B95E14> \uf046 {{ .Staging.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
-            "foreground": "#D4AAFC",  
+            "foreground": "#D4AAFC",
             "background": "transparent",
             "type": "git",
             "style": "plain"
@@ -66,7 +73,7 @@
             "type": "status"
           }
         ]
-  
+
       },
       {
         "type": "prompt",
@@ -76,7 +83,7 @@
             "properties": {
               "cache_duration": "none",
               "mapped_shell_names": {
-                "zsh": "\udb84\udd83 bash ",
+                "zsh": "\udb84\udd83 zsh ",
                 "pwsh": "\ue683 pwsh "
               }
             },
