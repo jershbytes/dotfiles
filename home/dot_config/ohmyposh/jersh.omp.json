@@ -1,0 +1,154 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            "type": "os",
+            "style": "plain",
+            "template": "{{ if .WSL }}WSL {{ end }}{{.Icon}} " ,
+            "foreground": "#ffffff",
+            "background": "transparent"
+          },
+          {
+            "foreground": "#E36464",
+            "style": "plain",
+            "template": "@{{ .UserName }} ",
+            "type": "session"
+          },
+          {
+            "type": "session",
+            "style": "plain",
+            "template": "on {{ .HostName }}"
+          },
+          {
+            "foreground": "#56B6C2",
+            "properties": {
+              "style": "folder"
+            },
+            "style": "plain",
+            "template": " at {{ .Path }}",
+            "type": "path"
+          },
+          {
+            "properties": {
+              "branch_icon": " \ue725 ",
+              "cache_duration": "none",
+              "cherry_pick_icon": "✓ ",
+              "commit_icon": "\u25b7 ",
+              "fetch_stash_count": true,
+              "fetch_status": true,
+              "fetch_upstream_icon": true,
+              "merge_icon": "\u25f4 ",
+              "no_commits_icon": "[no commits]",
+              "rebase_icon": "\u2c62 ",
+              "tag_icon": "\u25b6 "
+            },
+            "leading_diamond": "<transparent>\ue0b4</>",
+            "trailing_diamond": "\ue0b4",
+            "template": " {{ url .UpstreamIcon  .UpstreamURL }}<i>{{ url .RepoName .UpstreamURL }}</i><b>{{ .HEAD }}</b>{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#B95E14> \uf046 {{ .Staging.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+            "foreground": "#D4AAFC",  
+            "background": "transparent",
+            "type": "git",
+            "style": "plain"
+          },
+          {
+            "type": "executiontime",
+            "style": "plain",
+            "template": " {{ .FormattedMs }}s "
+          },
+          {
+            "foreground": "#DCB977",
+            "style": "plain",
+            "template": " \uf119",
+            "type": "status"
+          }
+        ]
+  
+      },
+      {
+        "type": "prompt",
+        "alignment": "right",
+        "segments": [
+          {
+            "properties": {
+              "cache_duration": "none",
+              "mapped_shell_names": {
+                "zsh": "\udb84\udd83 bash ",
+                "pwsh": "\ue683 pwsh "
+              }
+            },
+            "template": " <b>{{ .Name }}</b>",
+            "foreground": "#43CCEA",
+            "type": "shell",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "cache_duration": "none",
+              "display_default": true,
+              "folder_name_fallback": false,
+              "home_enabled": true
+            },
+            "template": " \ue73c {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+            "foreground": "#b66cff",
+            "type": "python",
+            "style": "plain"
+          },
+          {
+            "properties": {
+              "cache_duration": "none",
+              "time_format": "15:04:05"
+            },
+            "template": " {{ .CurrentDate | date .Format }}",
+            "foreground": "#3EC669",
+            "type": "time",
+            "style": "plain"
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            "properties": {
+              "cache_duration": "none"
+            },
+            "template": " \ue65e {{ .Full }} ",
+            "foreground": "#00ffff",
+            "background": "#000000",
+            "type": "go",
+            "style": "powerline"
+          },
+          {
+            "properties": {
+              "cache_duration": "none"
+            },
+            "template": " \ue77f {{ .Full }} ",
+            "foreground": "#00ffff",
+            "background": "#000000",
+            "type": "dotnet",
+            "style": "powerline"
+          },
+          {
+            "properties": {
+              "always_enabled": true,
+              "cache_duration": "none"
+            },
+            "template": "❯",
+            "foreground": "#ffffff",
+            "type": "status",
+            "style": "plain",
+            "foreground_templates": [
+              "{{ if gt .Code 0 }}#ff0000{{ end }}"
+            ]
+          }
+        ]
+      }
+    ],
+    "final_space": true,
+    "version": 3
+  }
