@@ -13,7 +13,6 @@ packages:
       - firefox
       - fzf
       - fd
-      - ghostty
       - gnupg
       - hugo
       - keepassxc
@@ -25,6 +24,7 @@ packages:
       - zig
       - neovim
       - 7zip
+      - wezterm
     aur:
       - deezer
       - oh-my-posh-bin
