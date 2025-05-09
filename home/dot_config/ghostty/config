@@ -8,6 +8,5 @@ font-family = "JetBrainsMono Nerd Font"
 background-opacity = 0.8
 
 # Terminal Configs
-copy-on-select = "clipboard"
 gtk-tabs-location = "hidden"
-gtk-titlebar = true
+gtk-titlebar = false

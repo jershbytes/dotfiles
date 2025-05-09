@@ -1,0 +1,59 @@
+[user]
+  email = git@rossjm.dev
+  name = jershbytes
+  signingkey = BEC6E5D51F9447B78C3225F0B61046243AE018F4
+
+
+[commit]
+  gpgsign = true
+  template = ~/.config/git/template
+
+
+[program]
+  pgp = /usr/bin/gpg
+
+
+[alias]
+	a = add
+	b = branch
+    c = commit
+    d = diff
+    i = init
+    p = push
+	s = status
+    cl = clone
+	co = checkout
+    pl = pull
+	cob = checkout -b
+
+
+[push]
+    autoSetupRemote = true
+    default = current
+    followTags = true
+
+
+[pull]
+    default = current
+
+
+[status]
+    branch = true
+    showStash = true
+    showUntrackedFiles = all
+
+
+
+[core]
+	eol = lf
+	autocrlf = input
+    whitespace = error
+    preloadindex = true
+
+
+[init]
+        defaultBranch = main
+
+
+[web]
+        browser = firefox
