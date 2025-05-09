@@ -57,7 +57,3 @@
 
 [web]
         browser = firefox
-
-
-[url "git@github.com:jershbytes/"]
-        insteadOf = "ghj:"
