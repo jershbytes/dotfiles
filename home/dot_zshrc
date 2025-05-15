@@ -18,7 +18,6 @@ gpg-agent
 history
 nvm
 pip
-ssh-agent
 sudo
 systemd
 opentofu
