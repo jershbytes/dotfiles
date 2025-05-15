@@ -16,6 +16,7 @@ packages:
       - gnupg
       - hugo
       - keepassxc
+      - obsidian
       - opentofu
       - ripgrep
       - rpi-imager
