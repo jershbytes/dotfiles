@@ -26,7 +26,6 @@ packages:
       - 7zip
       - wezterm
     aur:
-      - deezer
       - oh-my-posh-bin
       - plex-desktop
       - powershell-bin
