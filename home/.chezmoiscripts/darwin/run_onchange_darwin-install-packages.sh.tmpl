@@ -2,10 +2,10 @@
 #!/bin/bash
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
-{{ range .packages.homebrew.brews -}}
+{{ range .packages.darwin.brews -}}
 brew {{ . | quote }}
 {{ end -}}
-{{ range .packages.homebrew.casks -}}
+{{ range .packages.darwin.casks -}}
 cask {{ . | quote }}
 {{ end -}}
 EOF
