@@ -8,7 +8,7 @@ alias l='ls -CF --color=auto'                          # List files in columns a
 alias s="ssh"               # SSH into a remote machine using Kitty terminal features
 alias bye='shutdown -h now'               # Shut down the machine (if you know, you know)
 alias ff='fastfetch'                      # Run fastfetch (a system information tool)
-alias cat="bat"
+alias cat='bat --paging=never'
 
 # File Operations Aliases
 alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress info (human-readable)
@@ -22,7 +22,7 @@ alias tree='tree --dirsfirst -F'          # Display directory tree with director
 
 # Chezmoi Aliases
 alias dot="chezmoi edit"                       # Alias for Chezmoi edit command
-alias dotdrop="chezmoi update && chezmoi apply" 
+alias dotdrop="chezmoi update && chezmoi apply"
 
 # MkDocs Aliases
 alias mks="mkdocs serve"                  # Serve MkDocs documentation locally
