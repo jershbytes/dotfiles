@@ -1,3 +1,4 @@
+#!/bin/bash
 {{ if or (eq .osid "linux-cachyos") (eq .osid "linux-arch") -}}
 
 # Ensure paru is installed
@@ -12,8 +13,11 @@ fi
 # Install packages using pacman
 sudo pacman -S --needed --noconfirm {{ range .packages.linux.pacman -}}
 {{ . | quote }} {{ end }}
-{{ end -}}
 
 # Install packages using paru
 paru -S --needed --noconfirm {{ range .packages.linux.aur -}}
 {{ . | quote }} {{ end }}
+
+{{ else -}}
+# No Arch or CachyOS detected. Skipping package installation.
+{{ end }}
