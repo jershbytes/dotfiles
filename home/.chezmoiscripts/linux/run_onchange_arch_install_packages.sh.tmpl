@@ -1,23 +1,2 @@
 #!/bin/bash
-{{ if or (eq .osid "linux-cachyos") (eq .osid "linux-arch") -}}
-
-# Ensure paru is installed
-if ! command -v paru &> /dev/null; then
-    echo "paru is not installed. Installing paru..."
-    sudo pacman -S --needed --noconfirm base-devel
-    git clone https://aur.archlinux.org/paru.git /tmp/paru
-    (cd /tmp/paru && makepkg -si --noconfirm)
-    rm -rf /tmp/paru
-fi
-
-# Install packages using pacman
-sudo pacman -S --needed --noconfirm {{ range .packages.linux.pacman -}}
-{{ . | quote }} {{ end }}
-
-# Install packages using paru
-paru -S --needed --noconfirm {{ range .packages.linux.aur -}}
-{{ . | quote }} {{ end }}
-
-{{ else -}}
-# No Arch or CachyOS detected. Skipping package installation.
-{{ end }}
+echo "Hello from WSL"
