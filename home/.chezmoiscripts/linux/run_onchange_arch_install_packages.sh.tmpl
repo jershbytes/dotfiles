@@ -1,4 +1,4 @@
-{{ if eq .osid "linux-cachyos" -}}
+{{ if or (eq .osid "linux-cachyos") (eq .osid "archlinux-wsl") -}}
 #!/bin/bash
 
 # Ensure paru is installed
