@@ -17,7 +17,7 @@
 	a = add
 	b = branch
     c = commit
-    ac = "!git add -A && git commit -- $@"
+    ac = '!git add -A && git commit'
     d = diff
     i = init
     ph = push
