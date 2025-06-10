@@ -4,6 +4,20 @@
   signingkey = BEC6E5D51F9447B78C3225F0B61046243AE018F4
 
 
+[alias]
+  i = init
+	s = status
+	a  = add
+	c  = commit
+	ac = commit -am
+	cl = clone
+	co = checkout
+	pl = pull
+	ph = push
+    rso = remote set-url origin
+	cob = checkout -b
+
+
 [commit]
   gpgsign = true
   template = ~/.config/git/template

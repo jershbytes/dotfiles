@@ -12,8 +12,6 @@ docker
 docker-compose
 fzf
 genpass
-git
-gitignore
 gpg-agent
 history
 nvm
