@@ -13,21 +13,6 @@
   pgp = /usr/bin/gpg
 
 
-[alias]
-	a = add
-	b = branch
-    c = commit
-    ac = '!git add -A && git commit'
-    d = diff
-    i = init
-    ph = push
-	s = status
-    cl = clone
-	co = checkout
-    pl = pull
-	cob = checkout -b
-
-
 [push]
     autoSetupRemote = true
     default = current
@@ -42,7 +27,6 @@
     branch = true
     showStash = true
     showUntrackedFiles = all
-
 
 
 [core]
