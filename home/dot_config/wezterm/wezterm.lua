@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- Color Scheme
-config.color_scheme = 'Dracula'
+config.color_scheme = 'Monokai Pro Spectrum'
 
 -- Font
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
