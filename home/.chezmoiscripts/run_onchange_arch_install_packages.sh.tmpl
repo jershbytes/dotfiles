@@ -11,11 +11,11 @@ if ! command -v paru &> /dev/null; then
 fi
 
 # Install packages using pacman
-sudo pacman -S --needed --noconfirm {{ range .packages.linux.pacman -}}
+sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}
 {{ . | quote }} {{ end }}
 
 # Install packages using paru
-paru -S --needed --noconfirm {{ range .packages.linux.aur -}}
+paru -S --needed --noconfirm {{ range .packages.aur -}}
 {{ . | quote }} {{ end }}
 
 {{ else -}}
