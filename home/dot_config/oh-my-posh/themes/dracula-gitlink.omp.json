@@ -35,7 +35,7 @@
             "tag_icon": "\u25b6 "
           },
           "style": "plain",
-          "template": " {{ url .UpstreamIcon .UpstreamURL }}<i>{{ url .RepoName .UpstreamURL }}</i><b>{{ .HEAD }}</b>{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#FFB86C> \uf046 {{ .Staging.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}<#FF5555> \uf044 {{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }}<#F1FA8C> \ueb4b {{ .StashCount }}</>{{ end }} ",
+          "template": "  {{ url .UpstreamIcon .UpstreamURL }}<i>{{ url .RepoName .UpstreamURL }}</i><b>{{ .HEAD }}</b>{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if or (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#FFB86C> \uf046 {{ .Staging.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}<#FF5555> \uf044 {{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }}<#F1FA8C> \ueb4b {{ .StashCount }}</>{{ end }} ",
           "type": "git"
         }
       ],
