@@ -33,6 +33,7 @@ packages:
       - visual-studio-code-bin
       - vesktop
     ubuntu:
+      - ansible-lint
       - age
       - duf
       - tree
