@@ -8,7 +8,7 @@ sudo apt-get install -y {{ range .packages.ubuntu }}
 
 # Install packages using Homebrew on Ubuntu WSL
 if command -v brew >/dev/null 2>&1; then
-    brew install {{ range .packages.ubuntu-brews }}
+    brew install {{ range .packages.ubuntuBrews }}
     {{ . | quote }} {{ end }}
 fi
 

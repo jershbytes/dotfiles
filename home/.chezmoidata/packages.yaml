@@ -38,7 +38,7 @@ packages:
       - tree
       - jq
       - zsh
-    ubuntu-brews:
+    ubuntuBrews:
       - fd
       - fzf
       - hugo
