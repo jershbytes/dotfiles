@@ -5,9 +5,9 @@ export LANG="en_US.UTF-8"     # Language
 export PATH="$PATH:$HOME/.local/bin"        # Add user local bin (e.g., MkDocs)
 export BUN_INSTALL="$HOME/.bun"             # Bun installation path
 export PATH="$BUN_INSTALL/bin:$PATH"        # Add Bun to PATH
+export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/bin/ansible-lint:$PATH"   # Add Ansible Lint to PATH
 
 ### APP CONFIGS ###
-export HOMEBREW_NO_ENV_HINTS=true           # Disable Homebrew environment hints
 export POSH_THEME="$HOME/.config/oh-my-posh/themes/dracula-gitlink.omp.json" # Oh My Posh config
 export EDITOR="code --wait"                 # Set VSCode as default editor
