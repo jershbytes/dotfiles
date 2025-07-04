@@ -1,5 +1,4 @@
 packages:
-  linux:
     pacman:
       - age
       - ansible-core
@@ -33,8 +32,22 @@ packages:
       - proton-mail-bin
       - visual-studio-code-bin
       - vesktop
-    darwin:
-      brews:
+    ubuntu:
+      - age
+      - duf
+      - tree
+      - jq
+      - zsh
+    ubuntu-brews:
+      - fd
+      - fzf
+      - hugo
+      - neovim
+      - oh-my-posh
+      - ripgrep
+      - zig
+      - zoxide
+    brews:
       - ripgrep
       - fd
       - zig
@@ -54,4 +67,4 @@ packages:
       - deezer
       - discord
       - ghostty
-      - visual-studio-code"
+      - visual-studio-code
