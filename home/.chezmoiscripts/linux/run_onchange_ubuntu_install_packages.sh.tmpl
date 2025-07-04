@@ -1,17 +1,15 @@
 #!/bin/bash
-{{ if or (eq .osid "linux-ubuntu") (eq .osid "linux-ubuntu") -}}
+{{ if or (eq .osid "linux-ubuntu") (eq .osid "linux-ubuntu") }}
 
 # Install packages using apt
 sudo apt-get update
-sudo apt-get install -y {{ range .packages.ubuntu -}}
+sudo apt-get install -y {{ range .packages.ubuntu }}
 {{ . | quote }} {{ end }}
 
 # Install packages using Homebrew on Ubuntu WSL
 if command -v brew >/dev/null 2>&1; then
-    brew install {{ range .packages.ubuntu-brews -}}
+    brew install {{ range .packages.ubuntu-brews }}
     {{ . | quote }} {{ end }}
 fi
 
-{{ else -}}
-# No Arch or CachyOS detected. Skipping package installation.
 {{ end }}
