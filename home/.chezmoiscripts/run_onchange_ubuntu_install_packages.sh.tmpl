@@ -3,13 +3,13 @@
 
 # Install packages using apt
 sudo apt-get update
-sudo apt-get install -y {{ range .packages.ubuntu }}
-{{ . | quote }} {{ end }}
+sudo apt-get install -y {{- range .packages.ubuntu }}
+{{ . | quote }} {{- end }}
 
 # Install packages using Homebrew on Ubuntu WSL
 if command -v brew >/dev/null 2>&1; then
-    brew install {{ range .packages.ubuntuBrews }}
-    {{ . | quote }} {{ end }}
+    brew install {{- range .packages.ubuntuBrews }}
+    {{ . | quote }} {{- end }}
 fi
 
 {{ end }}
