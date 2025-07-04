@@ -38,6 +38,7 @@ packages:
       - duf
       - tree
       - jq
+      - nodejs
       - unzip
       - zsh
     ubuntuBrews:
