@@ -37,6 +37,7 @@ packages:
       - duf
       - tree
       - jq
+      - unzip
       - zsh
     ubuntuBrews:
       - fd
