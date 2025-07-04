@@ -22,7 +22,7 @@
           {
             "foreground": "#E36464",
             "style": "plain",
-            "template": "@{{ .UserName }} ",
+            "template": " @{{ .UserName }} ",
             "type": "session"
           },
           {

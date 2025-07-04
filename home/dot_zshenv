@@ -7,5 +7,5 @@ export PATH="/usr/bin/ansible-lint"$PATH # Ansible Lint
 
 ### APP CONFIGS
 export HOMEBREW_NO_ENV_HINTS=true # Disable Homebrew environment hints
-export POSH_THEME="$HOME/.config/ohmyposh/bubba.omp.json" # OhMyPosh config
+export POSH_THEME="$HOME/.config/ohmyposh/jersh.omp.json" # OhMyPosh config
 export EDITOR="code --wait" # VSCode
