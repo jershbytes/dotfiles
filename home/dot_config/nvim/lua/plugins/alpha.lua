@@ -2,6 +2,10 @@ return {
   "goolord/alpha-nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" }, -- optional, for icons
   config = function()
+    vim.cmd.colorscheme "monokai"
+    vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#f92672", bold = true })
+    vim.api.nvim_set_hl(0, "AlphaButtons", { fg = "#a6e22e" })
+    vim.api.nvim_set_hl(0, "AlphaFooter", { fg = "#66d9ef" })
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
 
