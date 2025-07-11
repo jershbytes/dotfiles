@@ -15,6 +15,7 @@ packages:
       - gnupg
       - hugo
       - keepassxc
+      - lazygit
       - obsidian
       - opentofu
       - ripgrep
