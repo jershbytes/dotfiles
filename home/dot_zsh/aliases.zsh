@@ -14,7 +14,8 @@ alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress
 
 
 # Development Tools Aliases                     # Shortcut for Terraform commands
-alias vim="nvim"                       # Open Neovim GUI (Neovide) instead of Vim
+alias vim="nvim"                       
+alias vide="neovide"                   # Open Neovim GUI (Neovide) instead of Vim 
 
 # Directory Tree Display Alias
 alias tree='tree --dirsfirst -F'          # Display directory tree with directories listed first and trailing slashes
@@ -25,8 +26,3 @@ alias dotdrop="chezmoi update && chezmoi apply"
 
 # MkDocs Aliases
 alias mks="mkdocs serve"                  # Serve MkDocs documentation locally
-
-# Hugo Aliases
-alias hcn="hugo server -N --noHTTPCache"  # Run Hugo server with no HTTP caching
-alias hi="hugo new site"                  # Create a new Hugo site
-alias gsui='git submodule update --init'  # Update Git submodules

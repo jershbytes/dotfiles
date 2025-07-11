@@ -13,10 +13,9 @@ packages:
       - fzf
       - fd
       - gnupg
-      - hugo
       - keepassxc
       - lazygit
-      - obsidian
+      - neovide
       - opentofu
       - ripgrep
       - rpi-imager
@@ -65,7 +64,6 @@ packages:
       - jq
       - wget
       - curl
-      - hugo
     casks:
       - firefox
       - deezer
