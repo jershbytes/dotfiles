@@ -40,7 +40,6 @@ packages:
       - fzf
       - fd
       - gnupg
-      - keepassxc
       - lazygit
       - neovide
       - opentofu
