@@ -1,4 +1,5 @@
 packages:
+  arch:
     aur:
       - oh-my-posh-bin
       - plex-desktop
@@ -6,26 +7,6 @@ packages:
       - proton-mail-bin
       - visual-studio-code-bin
       - vesktop
-    brews:
-      - ripgrep
-      - fd
-      - zig
-      - fzf
-      - zoxide
-      - neovim
-      - neovide
-      - yazi
-      - docker
-      - git
-      - jq
-      - wget
-      - curl
-    casks:
-      - firefox
-      - deezer
-      - discord
-      - ghostty
-      - visual-studio-code
     pacman:
       - age
       - ansible-core
@@ -51,7 +32,30 @@ packages:
       - neovim
       - 7zip
       - wezterm
-    ubuntu:
+
+  macos:
+    brews:
+      - ripgrep
+      - fd
+      - zig
+      - fzf
+      - zoxide
+      - neovim
+      - neovide
+      - docker
+      - git
+      - jq
+      - wget
+      - curl
+    casks:
+      - firefox
+      - deezer
+      - discord
+      - ghostty
+      - visual-studio-code
+
+  ubuntu:
+    apt:
       - ansible-lint
       - age
       - duf
@@ -60,7 +64,7 @@ packages:
       - nodejs
       - unzip
       - zsh
-    ubuntuBrews:
+    brews:
       - fd
       - fzf
       - hugo
