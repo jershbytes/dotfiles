@@ -24,6 +24,7 @@ web-search
 zoxide
 zsh-autosuggestions
 zsh-interactive-cd
+starship
 )
 
 # --- Load custom aliases and functions
