@@ -5,64 +5,65 @@ packages:
       - plex-desktop
       - powershell-bin
       - proton-mail-bin
-      - visual-studio-code-bin
       - vesktop
+      - visual-studio-code-bin
     pacman:
+      - 7zip
       - age
-      - ansible-core
       - ansible
+      - ansible-core
       - ansible-lint
-      - bitwarden
       - bat
+      - bitwarden
       - chezmoi
       - duf
       - exfatprogs
+      - fd
       - firefox
       - fzf
-      - fd
       - gnupg
       - lazygit
       - neovide
+      - neovim
       - opentofu
       - ripgrep
       - rpi-imager
       - starship
       - tree
+      - wezterm
       - zoxide
       - zig
-      - neovim
-      - 7zip
-      - wezterm
 
   macos:
     brews:
-      - ripgrep
-      - fd
-      - zig
-      - fzf
-      - zoxide
-      - neovim
-      - neovide
+      - curl
       - docker
+      - fd
+      - fzf
       - git
       - jq
+      - neovide
+      - neovim
+      - ripgrep
+      - starship
       - wget
-      - curl
+      - zig
+      - zoxide
     casks:
-      - firefox
       - deezer
       - discord
+      - firefox
       - ghostty
       - visual-studio-code
 
   ubuntu:
     apt:
-      - ansible-lint
       - age
+      - ansible-lint
       - duf
-      - tree
       - jq
       - nodejs
+      - tree
       - unzip
       - zsh
     brews:
