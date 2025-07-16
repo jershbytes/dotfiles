@@ -15,16 +15,16 @@ genpass
 gpg-agent
 history
 nvm
+opentofu
 pip
+starship
 sudo
 systemd
-opentofu
 ubuntu
 web-search
 zoxide
 zsh-autosuggestions
 zsh-interactive-cd
-starship
 )
 
 # --- Load custom aliases and functions
