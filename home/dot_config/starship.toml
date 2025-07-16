@@ -23,23 +23,23 @@ $line_break\
 $character\
 """
 
-palette = 'flexoki-dark'
+palette = 'monokai-pro-spectrum'
 add_newline = true
 
-[palettes.flexoki-dark]
-foreground = '#d7c9a7'
-background = '#100f0f'
-current_line = '#282726'
-primary = '#282726'
-box = '#45413b'
-blue = '#4c7aaf'
-cyan = '#3e8fb0'
-green = '#879a39'
-orange = '#e2a478'
-pink = '#e67c7c'
-purple = '#aa73c8'
-red = '#d14d41'
-yellow = '#e2b714'
+[palettes.monokai-pro-spectrum]
+foreground = '#fcfcfa'
+background = '#2d2a2e'
+current_line = '#403e41'
+primary = '#403e41'
+box = '#5b595c'
+blue = '#78dce8'
+cyan = '#a9dc76'
+green = '#a9dc76'
+orange = '#fc9867'
+pink = '#ff6188'
+purple = '#ab9df2'
+red = '#ff6188'
+yellow = '#ffd866'
 
 [os]
 format = '(fg:current_line)[](fg:orange)[$symbol ](fg:primary bg:orange)[](fg:orange)'
