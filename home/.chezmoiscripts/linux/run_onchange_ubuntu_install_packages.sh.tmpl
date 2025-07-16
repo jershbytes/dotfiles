@@ -3,7 +3,7 @@
 
 # Install packages using apt
 sudo apt update
-sudo apt install -y{{- range .packages.ubuntu }} {{ . | quote }}{{- end }}
+sudo apt install -y{{- range .packages.ubuntu.apt }} {{ . | quote }}{{- end }}
 
 # Install Homebrew if not installed
 if ! command -v brew >/dev/null 2>&1; then
@@ -16,7 +16,7 @@ fi
 
 # Install packages using Homebrew on Ubuntu WSL
 if command -v brew >/dev/null 2>&1; then
-    brew install{{- range .packages.ubuntuBrews }} {{ . | quote }}{{- end }}
+    brew install{{- range .packages.ubuntu.brews }} {{ . | quote }}{{- end }}
 fi
 
 {{ end }}
