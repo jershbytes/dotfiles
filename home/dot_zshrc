@@ -42,8 +42,5 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-# --- set theme
-eval "$(oh-my-posh init zsh --config "${POSH_THEME}")"
-
 # --- initialize oh-my-zsh
 source "$ZSH/oh-my-zsh.sh"
