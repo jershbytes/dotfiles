@@ -30,6 +30,7 @@ packages:
       - rpi-imager
       - starship
       - tree
+      - uv
       - wezterm
       - zoxide
       - zig
