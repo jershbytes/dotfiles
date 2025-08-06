@@ -1,7 +1,6 @@
 packages:
   arch:
     aur:
-      - oh-my-posh-bin
       - plex-desktop
       - powershell-bin
       - proton-mail-bin
