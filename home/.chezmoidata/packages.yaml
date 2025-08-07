@@ -3,6 +3,7 @@ packages:
     aur:
       - plex-desktop
       - powershell-bin
+      - proton-mail-bin
       - vesktop
       - visual-studio-code-bin
     pacman:
@@ -24,7 +25,6 @@ packages:
       - neovide
       - neovim
       - opentofu
-      - protonmail-bridge
       - ripgrep
       - rpi-imager
       - starship
