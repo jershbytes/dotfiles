@@ -5,24 +5,18 @@ alias ll='ls -alF --color=auto'                        # List all files (includi
 alias la='ls -A --color=auto'                          # Show all files except `.` and `..` (almost all)
 alias ls='ls -l --color=auto'                          # Display files in detailed list format by default
 alias l='ls -CF --color=auto'                          # List files in columns and append file type indicators
-alias s="ssh"               # SSH into a remote machine using Kitty terminal features
 alias bye='shutdown -h now'               # Shut down the machine (if you know, you know)
 alias ff='fastfetch'                      # Run fastfetch (a system information tool)
 
 # File Operations Aliases
 alias cpv='rsync -ah --info=progress2'    # Copy files using rsync with progress info (human-readable)
 
-
 # Development Tools Aliases                     # Shortcut for Terraform commands
-alias vim="nvim"                       
-alias vide="neovide"                   # Open Neovim GUI (Neovide) instead of Vim 
+alias vim="nvim"
 
 # Directory Tree Display Alias
 alias tree='tree --dirsfirst -F'          # Display directory tree with directories listed first and trailing slashes
 
 # Chezmoi Aliases
 alias dot="chezmoi edit"                       # Alias for Chezmoi edit command
-alias dotdrop="chezmoi update && chezmoi apply"
-
-# MkDocs Aliases
-alias mks="mkdocs serve"                  # Serve MkDocs documentation locally
+alias dotdrop="chezmoi update && chezmoi apply"                # Serve MkDocs documentation locally

@@ -21,6 +21,7 @@ packages:
       - firefox
       - fzf
       - gnupg
+      - kvantum
       - lazygit
       - neovide
       - neovim
