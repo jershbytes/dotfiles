@@ -28,6 +28,7 @@ packages:
       - opentofu
       - ripgrep
       - rpi-imager
+      - signal-desktop
       - starship
       - tree
       - uv
