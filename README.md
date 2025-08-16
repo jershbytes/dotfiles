@@ -1,5 +1,4 @@
 <p align="center">
-  <img src=".github/images/dotfiles.png" alt="Header" width="100" height="100"><br>
   <i>Joshua Ross's Dotfiles for Linux & MacOS 🚀</i>
 </p>
 
