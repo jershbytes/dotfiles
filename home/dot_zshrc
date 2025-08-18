@@ -16,7 +16,7 @@ git
 gpg-agent
 history
 nvm
-opentofu
+terraform
 pip
 starship
 sudo

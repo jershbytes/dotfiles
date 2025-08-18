@@ -1,6 +1,7 @@
 packages:
   arch:
     aur:
+      - ov-bin
       - plex-desktop
       - powershell-bin
       - proton-mail-bin
@@ -25,7 +26,7 @@ packages:
       - lazygit
       - neovide
       - neovim
-      - opentofu
+      - terraform
       - ripgrep
       - rpi-imager
       - signal-desktop
