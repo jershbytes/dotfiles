@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- Color Scheme
-config.color_scheme = 'Catppuccin Macchiato (Gogh)'
+config.color_scheme = 'Catppuccin Mocha (Gogh)'
 
 -- Font
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
