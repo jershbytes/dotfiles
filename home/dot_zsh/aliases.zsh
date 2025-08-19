@@ -1,5 +1,5 @@
 # Terminal Management Aliases
-alias cd="z"                              # Jump to directories using z (tracking frequently used paths)
+alias zz="z"                              # Jump to directories using z (tracking frequently used paths)
 alias cat="bat"                            # Use bat instead of cat for syntax highlighting
 alias lt='ls --human-readable --size -1 -S --classify'  # List files by size (largest first) with human-readable sizes and file types
 alias ll='ls -alF --color=auto'                        # List all files (including hidden) in long format with indicators for file types
