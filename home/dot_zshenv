@@ -11,4 +11,4 @@ export PATH="/usr/bin/ansible-lint:$PATH"   # Add Ansible Lint to PATH
 ### APP CONFIGS ###
 export EDITOR="code --wait"                 # Set VSCode as default editor
 export BAT_PAGER="ov -F -H3"                # Use ov for Bat pager
-export WIREGUARD_CONFIG='/etc/wireguard/Homelab_WG-Client-1.conf'
+export WIREGUARD_CONFIG='/etc/wireguard/wg0.conf'
