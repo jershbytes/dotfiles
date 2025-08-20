@@ -1,4 +1,4 @@
-function mcd {
+function mkcd {
     # This function creates a directory (with parent directories as needed) and then changes into it.
     mkdir -pv "$1" && cd "$1" || exit
 }
