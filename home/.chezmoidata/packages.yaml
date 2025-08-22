@@ -1,6 +1,7 @@
 packages:
   arch:
     aur:
+      - librewolf-bin
       - ov-bin
       - plex-desktop
       - powershell-bin
@@ -19,7 +20,6 @@ packages:
       - duf
       - exfatprogs
       - fd
-      - firefox
       - fzf
       - gnupg
       - kvantum
