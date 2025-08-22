@@ -6,6 +6,7 @@ packages:
       - plex-desktop
       - powershell-bin
       - proton-mail-bin
+      - ungoogled-chromium
       - vesktop
       - visual-studio-code-bin
     pacman:
