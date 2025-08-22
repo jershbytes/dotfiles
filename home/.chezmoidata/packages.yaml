@@ -47,6 +47,7 @@ packages:
       - fzf
       - git
       - jq
+      - librewolf
       - neovide
       - neovim
       - ripgrep
@@ -57,6 +58,7 @@ packages:
     casks:
       - deezer
       - discord
-      - firefox
+      - 
       - ghostty
+      - ungoogled-chromium
       - visual-studio-code
