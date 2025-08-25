@@ -1,55 +1,55 @@
 * {
-	font-family: "Hack", monospace;
+    font-family: "Hack", monospace;
 }
 
 window {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 #input {
-	margin: 5px;
-  border: 1px #626880;
-  border-style: solid;
-	border-radius: 10px;
-	background-color: #303446;
-	color: #c6d0f5;
-  outline-color: #303446;
+    margin: 5px;
+    border: 1px #5b595c;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #2d2a2e;
+    color: #fcfcfa;
+    outline-color: #2d2a2e;
 }
 
 #input:focus {
-  box-shadow: rgba(239, 159, 118, 0.4) 0px 0px 0px 2px, rgba(239, 159, 118, 0.65) 0px 4px 6px -1px, rgba(239, 159, 118, 0.08) 0px 1px 0px inset;
+    box-shadow: rgba(255, 216, 102, 0.4) 0px 0px 0px 2px, rgba(255, 216, 102, 0.65) 0px 4px 6px -1px, rgba(255, 216, 102, 0.08) 0px 1px 0px inset;
 }
 
 /* #inner-box { */
-/* 	background-color: #303446; */
+/* 	background-color: #2d2a2e; */
 /* } */
 
 #outer-box {
-	margin: 2px;
-	padding: 10px;
-  border: 1px #626880;
-  border-style: solid;
-  border-radius: 20px;
-	background-color: #303446;
+    margin: 2px;
+    padding: 10px;
+    border: 1px #5b595c;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: #2d2a2e;
 }
 
 #scroll {
-	margin: 5px;
+    margin: 5px;
 }
 
 #text {
-	padding: 4px;
-	color: #c6d0f5;
+    padding: 4px;
+    color: #fcfcfa;
 }
 
 #entry:nth-child(even){
-	background-color: #3C4053;
+    background-color: #403e41;
 }
 
 #entry:selected {
-	background-color: #626880;
+    background-color: #5b595c;
 }
 
 #text:selected {
-	background: transparent;
+    background: transparent;
 }
