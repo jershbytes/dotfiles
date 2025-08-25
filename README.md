@@ -19,3 +19,7 @@ sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply git@gitlab.com:$GITHUB_U
 ```
 ## ⚖️ LICENSE
 can be found [here](/LICENSE)
+
+## :camera: Screenshots 
+
+![Screenshot 1](.github/images/arch.png)
