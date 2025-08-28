@@ -1,90 +1,310 @@
-add_newline = false
-command_timeout = 1000
-
+"$schema" = 'https://starship.rs/config-schema.json'
 format = """
-$character\
-[](fg:white bg:bright-black)\
-[█](fg:bright-black bg:black)\
+[](color_bg)\
+$os\
+[╱ ](fg:color_fg bg:color_bg)\
 $directory\
-[█](fg:bright-black bg:black)\
-[$git_branch\
-$git_state\
-$git_status](bold bg:black fg:white)\
+([╱ ](fg:color_fg bg:color_bg)$git_branch)\
+$git_status\
+[](fg:color_bg)\
 $fill\
-$cmd_duration\
-[](fg:red bg:black)\
-[ ](fg:black bg:red)\
-$username\
-[](fg:green bg:bright-black)\
-[󰌽 ](fg:green bg:black inverted)\
-$hostname\
-$line_break\
-[‎]()"""
+[](fg:color_bg)\
+[ ](bg:color_bg)\
+($status[╱ ](fg:color_fg bg:color_bg))\
+($cmd_duration[╱ ](fg:color_fg bg:color_bg))\
+($direnv[╱ ](fg:color_fg bg:color_bg))\
+($package[╱ ](fg:color_fg bg:color_bg))\
+($c[╱ ](fg:color_fg bg:color_bg))\
+($cpp[╱ ](fg:color_fg bg:color_bg))\
+($cmake[╱ ](fg:color_fg bg:color_bg))\
+($conda[╱ ](fg:color_fg bg:color_bg))\
+($container[╱ ](fg:color_fg bg:color_bg))\
+($docker_context[╱ ](fg:color_fg bg:color_bg))\
+($java[╱ ](fg:color_fg bg:color_bg))\
+($lua[╱ ](fg:color_fg bg:color_bg))\
+($nodejs[╱ ](fg:color_fg bg:color_bg))\
+($python[╱ ](fg:color_fg bg:color_bg))\
+($ruby[╱ ](fg:color_fg bg:color_bg))\
+($rust[╱ ](fg:color_fg bg:color_bg))\
+($username$hostname[╱ ](fg:color_fg bg:color_bg))\
+$time\
+([╱ ](fg:color_fg bg:color_bg)$battery)\
+[](fg:color_bg)
+$character\
+"""
 
-[character]
-format = "$symbol"
-error_symbol = "[█](fg:red bg:black)[ ERROR](fg:red bg:black inverted bold)[](fg:red bg:white)"
-success_symbol = "[█](fg:bright-white bg:black)[ PROMPT](fg:bright-white bg:black inverted bold)[](fg:bright-white bg:white)"
+add_newline = true
+palette = 'dark'
 
-[fill]
-symbol = ' '
-style = 'bg:black'
-
-[package]
-disabled = false
+[palettes.dark]
+color_bg = '236'
+color_fg = '244'
 
 [cmd_duration]
-min_time = 1000
-show_milliseconds = false
-disabled = false
-format="[󰞌 $duration ]($style)"
-style="bold bg:black"
-
-[directory]
-truncation_length = 5
-format = "[󰉋 $path]($style)[$lock_symbol]($lock_style)"
-style = "bold fg:bright-white bg:bright-black"
-read_only = "🔒"
-read_only_style= "bold white"
-
-[username]
-show_always = true
-style_user = "bg:bright-black"
-style_root = "bg:bright-black"
-format = '[ $user ]($style)'
-
-[hostname]
-format = "[ $hostname ]($style)"
-ssh_only = false
-trim_at = ".companyname.com"
-disabled = false
-style = "fg:green bg:bright-black"
-
-[git_commit]
-commit_hash_length = 8
-style = "bold white"
+min_time = 3000
+format = '[$duration  ]($style)'
+style = 'fg:248 bg:color_bg'
 
 [status]
-style = "bg:transparent"
-symbol = "💥 "
-format = '($style)'
+disabled = false
+format = '[$symbol( $common_meaning)( $signal_name)( $signal_number)( $maybe_int) ]($style)'
+style = 'bold fg:160 bg:color_bg'
+success_style = 'bold fg:70 bg:color_bg'
+symbol = '✘'
+map_symbol = false
+pipestatus = true
+pipestatus_format = '[$pipestatus]($style)'
+
+[character]
+success_symbol = '[❯](bold fg:76)'
+error_symbol = '[❯](bold fg:196)'
+vimcmd_symbol = '[❮](bold fg:76)'
+vimcmd_replace_one_symbol = '[▶](bold fg:76)'
+vimcmd_replace_symbol = '[▶](bold fg:76)'
+vimcmd_visual_symbol = '[V](bold fg:76)'
+
+[time]
+disabled = false
+format = '[$time  ]($style)'
+style = 'fg:66 bg:color_bg'
+
+
+[fill]
+symbol = '─'
+style = 'fg:240'
+
+
+[os]
+format = '[ $symbol]($style)'
+style = 'fg:255 bg:color_bg'
 disabled = false
 
+
+[directory]
+format ='[$read_only]($read_only_style)[ ](fg:31 bg:color_bg)[$path ]($style)'
+style = 'fg:39 bg:color_bg'
+read_only_style = 'bold fg:31 bg:color_bg'
+repo_root_format = '[$read_only]($read_only_style)[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path ]($style)'
+before_repo_root_style = 'bold fg:31 bg:color_bg'
+repo_root_style = 'bold fg:39 bg:color_bg'
+read_only = "󰌾 "
+home_symbol = '~'
+truncate_to_repo = false
+fish_style_pwd_dir_length = 2
+
 [git_branch]
-format = " 󰘬 $branch"
-style = "bold fg:bright-black bg:black"
+format = '[$symbol$branch(:$remote_branch) ]($style)'
+symbol = " "
+style = 'bold fg:76 bg:color_bg'
 
 [git_status]
-format = " $conflicted$untracked$modified$staged$renamed$deleted$ahead_behind$stashed"
-style = "cyan"
-conflicted = ""
-untracked = ""
-modified = ""
-staged = ""
-renamed = ""
-deleted = ""
-stashed = "≡"
+format = '([$all_status$ahead_behind]($style))'
+style = 'bold fg:246 bg:color_bg'
+conflicted = '~${count} '
+stashed = '*${count} '
+ahead = '⇡${count} '
+behind = '⇣${count} '
+diverged = '⇠${behind_count} ⇢${ahead_count} '
+untracked = '?${count} '
+modified = '!${count} '
+staged = '+${count} '
+renamed = '»${count} '
+deleted = '✘${count} '
 
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "cyan"
+[direnv]
+format = '[$symbol$loaded/$allowed ]($style)'
+style = 'bold fg:178 bg:color_bg'
+
+[c]
+format = '[$symbol($version(-$name) )]($style)'
+style = 'bold fg:149 bg:color_bg'
+symbol = " "
+
+[cpp]
+format = '[$symbol($version(-$name) )]($style)'
+style = 'bold fg:149 bg:color_bg'
+symbol = " "
+
+[cmake]
+format = '[$symbol($version )]($style)'
+style = 'bold fg:blue bg:color_bg'
+symbol = " "
+
+[conda]
+format = '[$symbol$environment ]($style)'
+style = 'bold fg:green bg:color_bg'
+symbol = " "
+
+[container]
+format = '[$symbol \[$name\] ]($style)'
+style = 'bold dimmed fg:red bg:color_bg'
+
+[docker_context]
+format = '[$symbol$context ]($style)'
+style = 'bold fg:blue bg:color_bg'
+symbol = " "
+
+[username]
+format = '[$user]($style)'
+style_root = 'bold fg:178 bg:color_bg'
+style_user = 'fg:180 bg:color_bg'
+
+[hostname]
+format = '[$ssh_symbol$hostname]($style)'
+style = 'fg:180 bg:color_bg'
+ssh_symbol = '@'
+
+[java]
+format = '[${symbol}(${version} )]($style)'
+style = 'dimmed fg:red bg:color_bg'
+symbol = " "
+
+[lua]
+format = '[$symbol($version )]($style)'
+style = 'bold fg:blue bg:color_bg'
+symbol = " "
+
+[nodejs]
+format = '[$symbol($version )]($style)'
+style = 'bold fg:red bg:color_bg'
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[package]
+format = '[$symbol$version ]($style)'
+style = 'bold fg:200 bg:color_bg'
+symbol = "󰏗 "
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+style = 'bold fg:yellow bg:color_bg'
+symbol = " "
+
+[ruby]
+format = '[$symbol($version )]($style)'
+style = 'bold fg:red bg:color_bg'
+symbol = " "
+
+[rust]
+format = '[$symbol($version )]($style)'
+style = 'bold fg:red bg:color_bg'
+symbol = "󱘗 "
+
+
+[battery]
+format = '[$symbol ]($style)'
+full_symbol = '[󰁹 $percentage](bold fg:70 bg:color_bg)'
+unknown_symbol = '[󰂑 ](bold fg:color_fg bg:color_bg)'
+empty_symbol = '[󰂎 $percentage](bold fg:160 bg:color_bg)'
+
+[[battery.display]]
+threshold = 100
+charging_symbol = '[󰁹 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰁹 $percentage](bold fg:178 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 95
+charging_symbol = '[󰂂 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰂂 $percentage](bold fg:178 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 85
+charging_symbol = '[󰂁 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰂁 $percentage](bold fg:178 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 75
+charging_symbol = '[󰂀 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰂀 $percentage](bold fg:178 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 65
+charging_symbol = '[󰁿 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰁿 $percentage](bold fg:178 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 55
+charging_symbol = '[󰁾 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰁾 $percentage](bold fg:178 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 45
+charging_symbol = '[󰁽 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰁽 $percentage](bold fg:178 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 35
+charging_symbol = '[󰁼 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰁼 $percentage](bold fg:178 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 25
+charging_symbol = '[󰁻 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰁻 $percentage](bold fg:160 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 15
+charging_symbol = '[󰁺 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰁺 $percentage](bold fg:160 bg:color_bg)'
+style = 'bg:color_bg'
+
+[[battery.display]]
+threshold = 5
+charging_symbol = '[󰂎 $percentage](bold fg:70 bg:color_bg)'
+discharging_symbol = '[󰂎 $percentage](bold fg:160 bg:color_bg)'
+style = 'bg:color_bg'
