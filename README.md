@@ -13,11 +13,14 @@ This automated setup is currently only configured for `Arch and MacOS`.
 ## 🏃How to run
 
 ```shell
-export GITHUB_USERNAME=JershBytes
-
+# Instal chezmoi example below
 pacman -S chezmoi
+```
 
-chezmo -- init --apply git@gitlab.com:$GITHUB_USERNAME/dotfiles
+```bash
+export GITHUB_USERNAME=JershBytes
+chezmoi init git@github.com:$GITHUB_USERNAME/dotfiles
+chezmoi apply
 ```
 ## ⚖️ LICENSE
 can be found [here](/LICENSE)
