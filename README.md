@@ -15,7 +15,9 @@ This automated setup is currently only configured for `Arch and MacOS`.
 ```shell
 export GITHUB_USERNAME=JershBytes
 
-sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply git@gitlab.com:$GITHUB_USERNAME/dotfiles
+pacman -S chezmoi
+
+chezmo -- init --apply git@gitlab.com:$GITHUB_USERNAME/dotfiles
 ```
 ## ⚖️ LICENSE
 can be found [here](/LICENSE)
