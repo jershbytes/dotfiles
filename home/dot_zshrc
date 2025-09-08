@@ -21,6 +21,7 @@ pip
 starship
 sudo
 systemd
+ssh-agent
 ubuntu
 web-search
 zoxide
