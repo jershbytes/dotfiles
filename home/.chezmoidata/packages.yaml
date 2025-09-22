@@ -2,6 +2,7 @@ packages:
   arch:
     aur:
       - firefox
+      - lazyssh
       - ov-bin
       - plex-desktop
       - powershell-bin
