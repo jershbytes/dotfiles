@@ -1,6 +1,7 @@
 packages:
   arch:
     aur:
+      - deezer
       - firefox
       - lazyssh
       - ov-bin
