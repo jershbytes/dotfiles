@@ -3,6 +3,7 @@ packages:
     aur:
       - deezer
       - firefox
+      - joplin
       - lazyssh
       - ov-bin
       - plex-desktop
