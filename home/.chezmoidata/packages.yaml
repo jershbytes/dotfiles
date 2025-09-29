@@ -4,7 +4,6 @@ packages:
       - deezer
       - firefox
       - joplin-desktop
-      - lazyssh
       - ov-bin
       - plex-desktop
       - powershell-bin
