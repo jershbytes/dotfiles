@@ -8,6 +8,7 @@ packages:
       - ov-bin
       - plex-desktop
       - powershell-bin
+      - protonmail-bin
       - vesktop
       - visual-studio-code-bin
     pacman:
