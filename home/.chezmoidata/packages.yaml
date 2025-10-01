@@ -20,6 +20,8 @@ packages:
       - bitwarden
       - chezmoi
       - docker
+      - docker-compose
+      - docker-buildx
       - duf
       - exfatprogs
       - fd
