@@ -1,6 +1,7 @@
 packages:
   arch:
     aur:
+      - bun-bin
       - deezer
       - firefox
       - joplin-desktop
