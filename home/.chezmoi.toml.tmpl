@@ -1,6 +1,6 @@
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
-{{-   $osid =  -}}
+{{-   $osid = .chezmoi.osRelease.id -}}
 {{- end -}}
 
 [data]
