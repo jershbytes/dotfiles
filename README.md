@@ -12,15 +12,9 @@ This automated setup is currently only configured for `Arch and MacOS`.
 
 ## 🏃How to run
 
-```shell
-# Instal chezmoi example below
-pacman -S chezmoi
-```
-
 ```bash
 export GITHUB_USERNAME=JershBytes
-chezmoi init git@github.com:$GITHUB_USERNAME/dotfiles
-chezmoi apply
+sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply $GITHUB_USERNAME
 ```
 ## ⚖️ LICENSE
 can be found [here](/LICENSE)
