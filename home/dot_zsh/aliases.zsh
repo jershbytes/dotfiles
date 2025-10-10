@@ -5,7 +5,6 @@ alias dotdrop="chezmoi update && chezmoi apply"                # Serve MkDocs do
 # Alias's to modified commands
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='trash -v'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 10'
