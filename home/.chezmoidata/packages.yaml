@@ -66,3 +66,22 @@ packages:
       - ghostty
       - ungoogled-chromium
       - visual-studio-code
+  linux:
+    brews:
+      - fd
+      - fzf
+      - ripgrep
+      - starship
+      - zig
+      - zoxide
+      - zsh
+      - ansible
+      - opentofu
+      - tree
+      - ansible-lint
+      - gnupg
+      - bat
+      - oven-sh/bun/bun
+
+
+
