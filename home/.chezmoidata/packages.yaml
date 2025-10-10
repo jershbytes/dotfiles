@@ -81,7 +81,5 @@ packages:
       - ansible-lint
       - gnupg
       - bat
-      - oven-sh/bun/bun
-
 
 

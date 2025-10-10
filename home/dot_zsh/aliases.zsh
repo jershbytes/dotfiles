@@ -101,11 +101,3 @@ alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' 
 
 # SHA1
 alias sha1='openssl sha1'
-
-alias clickpaste='sleep 3; xdotool type "$(xclip -o -selection clipboard)"'
-
-alias docker-clean=' \
-  docker container prune -f ; \
-  docker image prune -f ; \
-  docker network prune -f ; \
-  docker volume prune -f '
