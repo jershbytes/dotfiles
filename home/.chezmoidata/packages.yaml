@@ -33,6 +33,7 @@ packages:
       - neovide
       - neovim
       - opentofu
+      - packer
       - ripgrep
       - rpi-imager
       - signal-desktop
