@@ -1,13 +1,10 @@
 #!/bin/bash
 {{ if or (eq .osid "linux-cachyos") (eq .osid "linux-arch") -}}
 
-# Ensure paru is installed
-if ! command -v paru &> /dev/null; then
-    echo "paru is not installed. Installing paru..."
-    sudo pacman -S --needed --noconfirm base-devel
-    git clone https://aur.archlinux.org/paru.git /tmp/paru
-    (cd /tmp/paru && makepkg -si --noconfirm)
-    rm -rf /tmp/paru
+# Ensure yay is installed
+if ! command -v yay &> /dev/null; then
+    echo "yay is not installed. Please install the yay binary before running this script."
+    exit 1
 fi
 
 # Ensure Homebrew is installed
@@ -20,8 +17,8 @@ fi
 sudo pacman -S --needed --noconfirm {{ range .packages.arch.pacman -}}
 {{ . | quote }} {{ end }}
 
-# Install packages using paru
-paru -S --needed --noconfirm {{ range .packages.arch.aur -}}
+# Install packages using yay
+yay -S --needed --noconfirm {{ range .packages.arch.aur -}}
 {{ . | quote }} {{ end }}
 
 {{ else -}}
