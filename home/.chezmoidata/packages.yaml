@@ -25,6 +25,7 @@ packages:
       - docker-buildx
       - duf
       - exfatprogs
+      - extension-manager
       - fd
       - fzf
       - gnupg
