@@ -1,5 +1,5 @@
 #!/bin/bash
-{{ if or (eq .osid "linux-cachyos") (eq .osid "linux-cachyos") -}}
+{{ if or (eq .osid "linux-cachyos") (eq .osid "linux-arch") -}}
 
 # Ensure yay is installed
 if ! command -v yay &> /dev/null; then
