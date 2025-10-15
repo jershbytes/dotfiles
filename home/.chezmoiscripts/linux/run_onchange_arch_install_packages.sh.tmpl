@@ -1,4 +1,6 @@
 {{ if or (eq .osid "linux-cachyos") (eq .osid "linux-arch") -}}
+#!/usr/bin/env zsh
+
 
 # Ensure yay is installed
 if ! command -v yay &> /dev/null; then
