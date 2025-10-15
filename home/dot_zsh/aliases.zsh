@@ -20,6 +20,7 @@ alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=dow
 
 # Change directory aliases
 alias home='cd ~'
+alias zz="z" # zoxide cd
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
