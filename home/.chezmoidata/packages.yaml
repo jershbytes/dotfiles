@@ -41,7 +41,6 @@ packages:
       - tree
       - uv
       - wezterm
-      - wofi
       - zoxide
       - zig
 
