@@ -45,6 +45,21 @@ packages:
       - wezterm
       - zoxide
       - zig
+  linux:
+    brews:
+      - fd
+      - fzf
+      - ripgrep
+      - starship
+      - zig
+      - zoxide
+      - zsh
+      - ansible
+      - opentofu
+      - tree
+      - ansible-lint
+      - gnupg
+      - bat
 
   macos:
     brews:
@@ -68,20 +83,6 @@ packages:
       - ghostty
       - ungoogled-chromium
       - visual-studio-code
-  linux:
-    brews:
-      - fd
-      - fzf
-      - ripgrep
-      - starship
-      - zig
-      - zoxide
-      - zsh
-      - ansible
-      - opentofu
-      - tree
-      - ansible-lint
-      - gnupg
-      - bat
+
 
 
