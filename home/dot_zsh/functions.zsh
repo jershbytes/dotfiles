@@ -57,44 +57,6 @@ cpp() {
     END { print "" }' total_size="$(stat -c '%s' "${1}")" count=0
 }
 
-# Copy and go to the directory
-cpg() {
-	if [ -d "$2" ]; then
-		cp "$1" "$2" && cd "$2"
-	else
-		cp "$1" "$2"
-	fi
-}
-
-# Move and go to the directory
-mvg() {
-	if [ -d "$2" ]; then
-		mv "$1" "$2" && cd "$2"
-	else
-		mv "$1" "$2"
-	fi
-}
-
-# Create and go to the directory
-mkdirg() {
-	mkdir -p "$1"
-	cd "$1"
-}
-
-# Goes up a specified number of directories  (i.e. up 4)
-up() {
-	local d=""
-	limit=$1
-	for ((i = 1; i <= limit; i++)); do
-		d=$d/..
-	done
-	d=$(echo $d | sed 's/^\///')
-	if [ -z "$d" ]; then
-		d=..
-	fi
-	cd $d
-}
-
 # Returns the last 2 fields of the working directory
 pwdtail() {
 	pwd | awk -F/ '{nlast = NF -1;print $nlast"/"$NF}'
@@ -141,7 +103,6 @@ ver() {
 }
 
 # IP address lookup
-alias whatismyip="whatsmyip"
 function whatsmyip () {
     # Internal IP Lookup.
     if command -v ip &> /dev/null; then
@@ -156,6 +117,14 @@ function whatsmyip () {
     echo -n "External IP: "
     curl -4 ifconfig.me
 }
+alias whatismyip="whatsmyip"
+
+ipinfo() {
+DASH="$(for i in {1..29}; do echo -n "-"; done)"
+for x in "$@"; do echo; echo -e "GEO-IP INFO: ($x)\n"$DASH"";
+  curl -s ipinfo.io/$x | sed 's/,\"/\n\"/g' | awk -F\" '/[a-z]/ {printf "%8s : %s\n",$2,$4}';
+done; echo
+}
 
 # Trim leading and trailing spaces (for scripts)
 trim() {
@@ -166,11 +135,6 @@ trim() {
 }
 
 
-ipinfo() {
-DASH="$(for i in {1..29}; do echo -n "-"; done)"
-for x in "$@"; do echo; echo -e "GEO-IP INFO: ($x)\n"$DASH"";
-  curl -s ipinfo.io/$x | sed 's/,\"/\n\"/g' | awk -F\" '/[a-z]/ {printf "%8s : %s\n",$2,$4}';
-done; echo
-}
+
 
 
