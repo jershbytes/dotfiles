@@ -4,6 +4,7 @@ packages:
       - bun-bin
       - deezer
       - firefox
+      - ghostty-git
       - joplin-desktop
       - ov-bin
       - plex-desktop
@@ -28,7 +29,6 @@ packages:
       - extension-manager
       - fd
       - fzf
-      - ghostty
       - gnupg
       - kvantum
       - lazygit
