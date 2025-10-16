@@ -14,6 +14,7 @@ alias apt-get='sudo apt-get'
 alias multitail='multitail --no-repeat -c'
 alias freshclam='sudo freshclam'
 alias vi='nvim'
+alias vim='nvim'
 alias svi='sudo vi'
 alias vis='nvim "+set si"'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
