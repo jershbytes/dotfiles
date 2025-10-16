@@ -1,0 +1,18 @@
+# Theme - Ghostty uses different theme naming
+theme = Dracula
+
+# Font
+font-family = JetBrainsMono Nerd Font
+
+# Window appearance
+window-decoration = false
+background-opacity = 0.8
+
+# Keybindings for tab navigation
+# In Ghostty, keybinds use a different format: trigger = action
+keybind = ctrl+shift+left=goto_tab:-1
+keybind = ctrl+shift+right=goto_tab:1
+
+# Mouse bindings
+# Ctrl+Click to open links (this is actually default behavior in Ghostty)
+# You may not need to configure this explicitly
