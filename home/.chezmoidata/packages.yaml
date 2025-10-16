@@ -28,6 +28,7 @@ packages:
       - extension-manager
       - fd
       - fzf
+      - ghostty
       - gnupg
       - kvantum
       - lazygit
