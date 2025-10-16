@@ -1,7 +1,3 @@
-# Chezmoi Aliases
-alias dot="chezmoi edit"                       # Alias for Chezmoi edit command
-alias dotdrop="chezmoi update && chezmoi apply"                # Serve MkDocs documentation locally
-
 # Alias's to modified commands
 alias cp='cp -i'
 alias mv='mv -i'
@@ -92,4 +88,8 @@ alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' 
 alias sha1='openssl sha1'
 
 # General useful alias's
-alias goodbye='shutdown -h now'
+alias bye="shutdown -h now"
+
+# Chezmoi Aliases
+alias dot="chezmoi edit"                       # Alias for Chezmoi edit command
+alias dotdrop="chezmoi update && chezmoi apply"                # Serve MkDocs documentation locally
