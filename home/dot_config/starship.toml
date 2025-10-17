@@ -1,91 +1,168 @@
-
-add_newline = false
-command_timeout = 1000
+# Pure DevOps-Focused Starship Configuration
+# Inspired by Pure preset with DevOps-specific modules
 
 format = """
-$character\
-[](fg:white bg:bright-black)\
-[█](fg:bright-black bg:black)\
-$directory\
-[█](fg:bright-black bg:black)\
-[$git_branch\
-$git_state\
-$git_status](bold bg:black fg:white)\
-$fill\
-$cmd_duration\
-[](fg:red bg:black)\
-[ ](fg:black bg:red)\
 $username\
-[](fg:green bg:bright-black)\
-[󰌽 ](fg:green bg:black inverted)\
 $hostname\
+$directory\
+$git_branch\
+$git_status\
+$kubernetes\
+$docker_context\
+$terraform\
+$aws\
+$gcloud\
+$azure\
+$nodejs\
+$python\
+$golang\
+$rust\
+$helm\
+$cmd_duration\
 $line_break\
-[\\$ ]()"""
-
-[character]
-format = "$symbol"
-error_symbol = "[█](fg:red bg:black)[ ERROR](fg:red bg:black inverted bold)[](fg:red bg:white)"
-success_symbol = "[█](fg:bright-white bg:black)[ PROMPT](fg:bright-white bg:black inverted bold)[](fg:bright-white bg:white)"
-
-[fill]
-symbol = ' '
-style = 'bg:black'
-
-[package]
-disabled = false
-
-[cmd_duration]
-min_time = 1000
-show_milliseconds = false
-disabled = false
-format="[󰞌 $duration ]($style)"
-style="bold bg:black"
-
-[directory]
-truncation_length = 5
-format = "[󰉋 $path]($style)[$lock_symbol]($lock_style)"
-style = "bold fg:bright-white bg:bright-black"
-read_only = "🔒"
-read_only_style= "bold white"
+$character"""
 
 [username]
+style_user = "blue bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = false
 show_always = true
-style_user = "bg:bright-black"
-style_root = "bg:bright-black"
-format = '[ $user ]($style)'
 
 [hostname]
-format = "[ $hostname ]($style)"
 ssh_only = false
-trim_at = ".companyname.com"
+format = "on [$hostname](bold yellow) "
 disabled = false
-style = "fg:green bg:bright-black"
 
-[git_commit]
-commit_hash_length = 8
-style = "bold white"
-
-[status]
-style = "bg:transparent"
-symbol = "💥 "
-format = '($style)'
-disabled = false
+[directory]
+style = "cyan bold"
+format = "[$path]($style) "
+truncation_length = 0
+truncate_to_repo = true
 
 [git_branch]
-format = " 󰘬 $branch"
-style = "bold fg:bright-black bg:black"
+symbol = "git:"
+style = "bright-black"
+format = "[$symbol$branch]($style) "
 
 [git_status]
-format = " $conflicted$untracked$modified$staged$renamed$deleted$ahead_behind$stashed"
-style = "cyan"
-conflicted = ""
-untracked = ""
-modified = ""
-staged = ""
-renamed = ""
-deleted = ""
-stashed = "≡"
+style = "bright-black"
+format = "[$all_status$ahead_behind]($style)"
+conflicted = "⚡"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = ""
+untracked = "?${count}"
+stashed = "📦"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
 
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "cyan"
+[kubernetes]
+format = "k8s:[$context]($style) "
+style = "bright-blue"
+disabled = false
+
+[docker_context]
+format = "docker:[$context]($style) "
+style = "bright-blue"
+only_with_files = false
+
+[terraform]
+format = "tf:[$workspace]($style) "
+style = "bright-magenta"
+disabled = false
+
+[aws]
+format = "aws:[$profile]($style) "
+style = "bright-yellow"
+symbol = ""
+
+[gcloud]
+format = "gcp:[$project]($style) "
+style = "bright-yellow"
+symbol = ""
+
+[azure]
+format = "az:[$subscription]($style) "
+style = "bright-yellow"
+symbol = ""
+disabled = false
+
+[nodejs]
+format = "node:[$version]($style) "
+style = "bright-green"
+symbol = ""
+
+[python]
+format = "py:[$version]($style) "
+style = "bright-green"
+symbol = ""
+
+[golang]
+format = "go:[$version]($style) "
+style = "bright-green"
+symbol = ""
+
+[rust]
+format = "rust:[$version]($style) "
+style = "bright-green"
+symbol = ""
+
+[helm]
+format = "helm:[$version]($style) "
+style = "bright-blue"
+symbol = ""
+
+[package]
+format = "pkg:[$version]($style) "
+style = "208"
+symbol = ""
+
+[cmd_duration]
+format = "took [$duration]($style) "
+style = "yellow"
+min_time = 2_000
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+# CI/CD Environment Detection
+[env_var.CI]
+variable = "CI"
+format = "ci "
+style = "dimmed"
+
+[env_var.GITHUB_ACTIONS]
+variable = "GITHUB_ACTIONS"
+format = "gh-actions "
+style = "dimmed"
+
+[env_var.JENKINS_URL]
+variable = "JENKINS_URL"
+format = "jenkins "
+style = "dimmed"
+
+# Memory usage (minimal display)
+[memory_usage]
+disabled = false
+threshold = 70
+style = "dimmed red"
+format = "mem:[$ram]($style) "
+
+# Clean up - disable modules we don't need
+[os]
+disabled = true
+
+[battery]
+disabled = true
+
+[time]
+disabled = true
+
+[status]
+disabled = true
