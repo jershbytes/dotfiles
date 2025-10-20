@@ -11,7 +11,7 @@
 --italic-text=always
 
 # Uncomment the following line to disable automatic paging:
---paging=ov
+--paging=auto
 
 # Syntax mappings: map a certain filename pattern to a language.
 #   Example 1: use the C++ syntax for Arduino .ino files
