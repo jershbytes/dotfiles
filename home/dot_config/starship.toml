@@ -1,168 +1,210 @@
-# Pure DevOps-Focused Starship Configuration
-# Inspired by Pure preset with DevOps-specific modules
+# ttyS3's starship config with custom modules
+# repo https://github.com/ttys3/starship-config
+#
+# ~/.config/starship.toml
+# https://starship.rs/config/
 
+# You can change default configuration file location with STARSHIP_CONFIG environment variable
+# for example:
+# export STARSHIP_CONFIG=~/.starship/config.toml
+
+# default logs ~/.cache/starship/session_${STARSHIP_SESSION_KEY}.log
+# make it custom:
+# export STARSHIP_CACHE=~/.starship/cache
+
+command_timeout=200
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# https://starship.rs/config/#default-prompt-format
 format = """
+$custom\
 $username\
 $hostname\
-$directory\
-$git_branch\
-$git_status\
+$shlvl\
 $kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
 $docker_context\
-$terraform\
-$aws\
-$gcloud\
-$azure\
-$nodejs\
-$python\
+$package\
+$deno\
 $golang\
-$rust\
 $helm\
+$nodejs\
+$php\
+$python\
+$rust\
+$memory_usage\
+$env_var\
+$lua\
+$jobs\
+$battery\
+$time\
 $cmd_duration\
 $line_break\
+$status\
+$shell\
 $character"""
 
-[username]
-style_user = "blue bold"
-style_root = "red bold"
-format = "[$user]($style) "
-disabled = false
-show_always = true
-
-[hostname]
-ssh_only = false
-format = "on [$hostname](bold yellow) "
-disabled = false
-
 [directory]
-style = "cyan bold"
-format = "[$path]($style) "
-truncation_length = 0
-truncate_to_repo = true
-
-[git_branch]
-symbol = "git:"
-style = "bright-black"
-format = "[$symbol$branch]($style) "
-
-[git_status]
-style = "bright-black"
-format = "[$all_status$ahead_behind]($style)"
-conflicted = "⚡"
-ahead = "⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-up_to_date = ""
-untracked = "?${count}"
-stashed = "📦"
-modified = "!${count}"
-staged = "+${count}"
-renamed = "»${count}"
-deleted = "✘${count}"
+read_only = " "
+truncation_length = 8
+truncate_to_repo = false
+truncation_symbol = "…/"
 
 [kubernetes]
-format = "k8s:[$context]($style) "
-style = "bright-blue"
+# The namespace needs to be set in the kubeconfig file
+# If the $KUBECONFIG env var is set the module will use that if
+# not it will use the ~/.kube/config
 disabled = false
-
-[docker_context]
-format = "docker:[$context]($style) "
-style = "bright-blue"
-only_with_files = false
-
-[terraform]
-format = "tf:[$workspace]($style) "
-style = "bright-magenta"
-disabled = false
-
-[aws]
-format = "aws:[$profile]($style) "
-style = "bright-yellow"
-symbol = ""
-
-[gcloud]
-format = "gcp:[$project]($style) "
-style = "bright-yellow"
-symbol = ""
-
-[azure]
-format = "az:[$subscription]($style) "
-style = "bright-yellow"
-symbol = ""
-disabled = false
-
-[nodejs]
-format = "node:[$version]($style) "
-style = "bright-green"
-symbol = ""
-
-[python]
-format = "py:[$version]($style) "
-style = "bright-green"
-symbol = ""
-
-[golang]
-format = "go:[$version]($style) "
-style = "bright-green"
-symbol = ""
-
-[rust]
-format = "rust:[$version]($style) "
-style = "bright-green"
-symbol = ""
-
-[helm]
-format = "helm:[$version]($style) "
-style = "bright-blue"
-symbol = ""
-
-[package]
-format = "pkg:[$version]($style) "
-style = "208"
-symbol = ""
-
-[cmd_duration]
-format = "took [$duration]($style) "
-style = "yellow"
-min_time = 2_000
-
-[character]
-success_symbol = "[❯](purple)"
-error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
-
-# CI/CD Environment Detection
-[env_var.CI]
-variable = "CI"
-format = "ci "
-style = "dimmed"
-
-[env_var.GITHUB_ACTIONS]
-variable = "GITHUB_ACTIONS"
-format = "gh-actions "
-style = "dimmed"
-
-[env_var.JENKINS_URL]
-variable = "JENKINS_URL"
-format = "jenkins "
-style = "dimmed"
-
-# Memory usage (minimal display)
-[memory_usage]
-disabled = false
-threshold = 70
-style = "dimmed red"
-format = "mem:[$ram]($style) "
-
-# Clean up - disable modules we don't need
-[os]
-disabled = true
-
-[battery]
-disabled = true
+# https://starship.rs/advanced-config/#style-strings
+style = "purple bold"
+format = '[$symbol$context( \($namespace\))]($style) in '
 
 [time]
 disabled = true
+use_12hr = false
+format = '🕙[\[ $time \]]($style) '
+time_format = "%T"
+utc_time_offset = "local"
+time_range = "09:00:00-19:10:00"
 
 [status]
-disabled = true
+symbol = "🔴 "
+disabled = false
+
+[git_commit]
+tag_disabled = false
+
+# https://github.com/starship/starship/discussions/1252#discussioncomment-822676
+# show os icon, thanks https://www.nerdfonts.com/cheat-sheet
+#                 
+[custom.os-icon]
+disabled = false
+command = "os-icon"
+style = "bold blue"
+format = "[$symbol($output  )]($style)"
+symbol = ""
+when = "true"
+shell = ["bash", "--noprofile", "--norc"]
+
+[custom.vpn-icon]
+disabled = false
+command = "curl -Ssf -H 'accept: text/plain' http://127.0.0.1:8084/api/vpn/status/icon"
+style = "bold green"
+format = "[$symbol($output)]($style)"
+symbol = "VPN"
+when = "true"
+shell = ["bash", "--noprofile", "--norc"]
+
+# https://github.com/starship/starship/discussions/1252#discussioncomment-838901
+[custom.git_remote_url]
+description = 'Remote git repository'
+when = 'git rev-parse --is-inside-work-tree'
+command = """
+GIT_REMOTE=$(command git remote get-url origin 2> /dev/null)
+if [[ -z "$GIT_REMOTE" ]]; then
+GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
+fi
+GIT_REMOTE_URL=$(echo $GIT_REMOTE | sed -E 's/^https?:\\/\\/(.+@)?//; s/\\.git$//;  s/\\.git$//; s/.+@(.+):([[:digit:]]+)\\/(.+)$/\\1\\/\\3/; s/.+@(.+):(.+)$/\\1\\/\\2/; s/\\/$//')
+if [[ "$GIT_REMOTE" =~ "github" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ -n "$GIT_REMOTE" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+else
+    GIT_REMOTE_SYMBOL=" "
+fi
+
+GIT_USERNAME_USED=$(command git config --get user.name 2> /dev/null)
+
+echo "$GIT_REMOTE_SYMBOL$GIT_USERNAME_USED@$GIT_REMOTE_URL"
+"""
+# Default format is according to the segmented-brackets preset (https://github.com/starship/starship/pull/2747)
+format = '\[[$output]($style)\]'
+# If you prefer the default Starship style, use the following
+# format = "at [$output]($style)"
+shell = ["bash", "--noprofile", "--norc"]
+style = 'blue'
+
+# symbol presets
+# https://starship.rs/presets/#nerd-font-symbols
+[aws]
+symbol = "  "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+# [directory]
+# read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
+
+[lua]
+symbol = " "
