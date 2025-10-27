@@ -9,7 +9,6 @@ packages:
       - ov-bin
       - plex-desktop
       - powershell-bin
-      - proton-mail-bin
       - vesktop
       - visual-studio-code-bin
     pacman:
@@ -43,7 +42,6 @@ packages:
       - tailscale 
       - tree
       - uv
-      - wezterm
       - zoxide
       - zig
   linux:
