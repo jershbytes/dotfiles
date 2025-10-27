@@ -7,7 +7,6 @@ packages:
       - joplin-desktop
       - ov-bin
       - plex-desktop
-      - powershell-bin
       - vesktop
       - visual-studio-code-bin
     pacman:
