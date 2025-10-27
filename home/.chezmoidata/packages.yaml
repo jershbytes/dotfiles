@@ -6,7 +6,6 @@ packages:
       - firefox
       - joplin-desktop
       - ov-bin
-      - plex-desktop
       - vesktop
       - visual-studio-code-bin
     pacman:
@@ -38,7 +37,7 @@ packages:
       - rpi-imager
       - signal-desktop
       - starship
-      - tailscale 
+      - tailscale
       - tree
       - uv
       - zoxide
