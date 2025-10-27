@@ -13,8 +13,8 @@ This automated setup is currently only configured for `Arch and MacOS`.
 ## 🏃How to run
 
 ```bash
-export USERNAME=JershBytes
-sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply $USERNAME
+export GITHUB_USERNAME=JershBytes
+sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
 ```
 ## ⚖️ LICENSE
 can be found [here](/LICENSE)
