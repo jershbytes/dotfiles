@@ -1,0 +1,31 @@
+packages:
+  apt:
+      - age
+      - bat
+      - bind9-dnsutils
+      - curl
+      - dos2unix
+      - duf
+      - fd-find
+      - fzf
+      - gnupg2
+      - jq
+      - mc
+      - podman
+      - podman-docker
+      - python3-full
+      - python3-pip
+      - python3-requests
+      - ripgrep
+      - software-properties-common
+      - sshpass
+      - terminator
+      - traceroute
+      - tree
+      - unzip
+      - wget
+      - whois
+      - wireshark
+      - zoxide
+      - zsh
+      - starship

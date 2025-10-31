@@ -1,0 +1,23 @@
+packages:
+  macos:
+    brews:
+      - curl
+      - docker
+      - fd
+      - fzf
+      - git
+      - jq
+      - librewolf
+      - neovide
+      - neovim
+      - ripgrep
+      - starship
+      - wget
+      - zig
+      - zoxide
+    casks:
+      - deezer
+      - discord
+      - ghostty
+      - ungoogled-chromium
+      - visual-studio-code
