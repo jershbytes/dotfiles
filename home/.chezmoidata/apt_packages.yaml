@@ -28,4 +28,3 @@ packages:
       - wireshark
       - zoxide
       - zsh
-      - starship
