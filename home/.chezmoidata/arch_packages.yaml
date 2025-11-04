@@ -8,6 +8,7 @@ packages:
       - ov-bin
       - vesktop
       - visual-studio-code-bin
+      - plasma6-applets-panel-colorizer
     pacman:
       - 7zip
       - age
@@ -39,6 +40,7 @@ packages:
       - starship
       - tailscale
       - tree
+      - wofi
       - uv
       - zoxide
       - zig
