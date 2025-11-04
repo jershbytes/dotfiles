@@ -1,0 +1,70 @@
+/**
+ * Wofi style for Mystical Blue Theme
+ * Place this file in ~/.config/wofi/style.css
+ */
+
+/* Main window */
+window {
+    border: 1px solid #000000;
+    border-radius: 11px;
+    background-color: rgba(38, 43, 52, 0.85);
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 12px;
+}
+
+/* Outer box with border */
+#outer-box {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px;
+}
+
+/* Input field */
+#input {
+    color: #dddddd;
+    background-color: transparent;
+    border: none;
+    padding: 8px 0 8px 8px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Scrollbar */
+#scroll {
+    margin: 0px;
+}
+
+/* Entry list */
+#inner-box {
+    background-color: transparent;
+    margin: 10px;
+}
+
+/* Individual entries */
+#entry {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+/* Hovered/selected entry */
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Entry text */
+#text {
+    color: #e1e1e1;
+}
+
+/* Entry text when selected */
+#entry:selected #text {
+    color: #e1e1e1;
+}
+
+/* Image/icon styling */
+#img {
+    margin-right: 10px;
+}
