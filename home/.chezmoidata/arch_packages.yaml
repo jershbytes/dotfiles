@@ -27,6 +27,7 @@ packages:
       - fd
       - fzf
       - ghostty
+      - github-cli
       - gnupg
       - kvantum
       - lazygit
