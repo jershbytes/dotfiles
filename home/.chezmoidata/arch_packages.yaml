@@ -49,6 +49,7 @@ packages:
     brews:
       - fd
       - fzf
+      - mise
       - ripgrep
       - starship
       - zig
