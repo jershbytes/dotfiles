@@ -13,7 +13,7 @@ alias cat='bat'
 
 # Change directory aliases
 alias home='cd ~'
-alias zz="z" # zoxide cd
+alias zz="z" 
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -51,7 +51,7 @@ alias 755='chmod -R 755'
 alias 777='chmod -R 777'
 
 # Search command line history
-alias h="history | grep "
+alias huh="history | grep "
 
 # Search running processes
 alias p="ps aux | grep "
