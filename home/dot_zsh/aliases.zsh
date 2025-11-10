@@ -13,12 +13,7 @@ alias cat='bat'
 
 # Change directory aliases
 alias home='cd ~'
-alias zz="z" 
-alias cd..='cd ..'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+alias zz="z"
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
