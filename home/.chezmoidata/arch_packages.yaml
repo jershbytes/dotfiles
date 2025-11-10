@@ -38,6 +38,7 @@ packages:
       - ripgrep
       - rpi-imager
       - signal-desktop
+      - solaar
       - starship
       - tailscale
       - tree
