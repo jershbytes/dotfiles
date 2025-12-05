@@ -1,29 +1,39 @@
 packages:
   macos:
     brews:
+      - ansible
+      - ansible-lint
+      - bat
       - bun
       - curl
       - docker
       - fd
       - fzf
+      - gnupg
       - git
       - jq
+      - lazygit
       - librewolf
       - neovide
       - neovim
+      - opentofu
       - ripgrep
       - starship
+      - tree
       - uv
       - wget
       - zig
       - zoxide
+      - zsh
     casks:
+      - bitwarden
       - deezer
       - discord
       - firefox
+      - joplin
       - ghostty
+      - raspberry-pi-imager
       - signal
       - ungoogled-chromium
       - vesktop
       - visual-studio-code
-      
