@@ -1,6 +1,7 @@
 packages:
   macos:
     brews:
+      - bun
       - curl
       - docker
       - fd
@@ -12,12 +13,17 @@ packages:
       - neovim
       - ripgrep
       - starship
+      - uv
       - wget
       - zig
       - zoxide
     casks:
       - deezer
       - discord
+      - firefox
       - ghostty
+      - signal
       - ungoogled-chromium
+      - vesktop
       - visual-studio-code
+      
