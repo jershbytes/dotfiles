@@ -44,7 +44,6 @@ packages:
       - tree
       - wofi
       - uv
-      - zerotier-one
       - zoxide
       - zig
   linux:
