@@ -26,6 +26,7 @@ packages:
       - zoxide
       - zsh
     casks:
+      - applite
       - bitwarden
       - deezer
       - discord
