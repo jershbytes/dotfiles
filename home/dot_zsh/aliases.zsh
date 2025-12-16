@@ -1,4 +1,5 @@
 # Alias's to modified commands
+alias cat='bat'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
@@ -9,7 +10,7 @@ alias cls='clear'
 alias vi='nvim'
 alias vim='nvim'
 alias vis='nvim "+set si"'
-alias cat='ccat'
+
 
 # Change directory aliases
 alias home='cd ~'
