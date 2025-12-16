@@ -16,3 +16,5 @@ export BAT_PAGER="ov -F -H3"                # Use ov for Bat pager
 export TERM=xterm
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"  # Starship prompt config
 
+# GPG Settings
+export GPG_TTY=$(tty)
