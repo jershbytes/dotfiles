@@ -9,7 +9,6 @@ export PATH="/usr/bin/ansible-lint:$PATH"   # Add Ansible Lint to PATH
 
 ### APP CONFIGS ###
 export EDITOR="code --wait"                 # Set VSCode as default editor
-export BAT_PAGER="ov -F -H3"                # Use ov for Bat pager
 
 # Terminal settings
 export TERM=xterm

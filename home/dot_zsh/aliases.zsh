@@ -9,6 +9,7 @@ alias cls='clear'
 alias vi='nvim'
 alias vim='nvim'
 alias vis='nvim "+set si"'
+alias cat='ccat'
 
 # Change directory aliases
 alias home='cd ~'
