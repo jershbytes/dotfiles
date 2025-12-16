@@ -1,7 +1,6 @@
 packages:
   apt:
       - age
-      - bat
       - bind9-dnsutils
       - curl
       - dos2unix

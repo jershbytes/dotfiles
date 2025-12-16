@@ -8,6 +8,7 @@ archlinux
 brew
 bun
 chezmoi
+colorize
 docker
 docker-compose
 fzf
@@ -16,13 +17,13 @@ git
 history
 mise
 nvm
-terraform
+opentofu
 pip
 starship
 sudo
 systemd
 ubuntu
-web-search
+vscode
 zoxide
 zsh-autosuggestions
 zsh-interactive-cd
