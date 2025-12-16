@@ -26,7 +26,6 @@ packages:
       - extension-manager
       - fd
       - fzf
-      - ghostty
       - github-cli
       - gnupg
       - kvantum
@@ -42,7 +41,7 @@ packages:
       - starship
       - tailscale
       - tree
-      - wofi
+      - wezterm
       - uv
       - zoxide
       - zig
