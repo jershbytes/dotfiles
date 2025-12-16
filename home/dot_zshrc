@@ -3,6 +3,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # --- load plugins
 plugins=(
+aliases
 ansible
 archlinux
 brew
