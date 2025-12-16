@@ -15,7 +15,7 @@ packages:
       - ansible
       - ansible-core
       - ansible-lint
-      - bat
+      - ansible-navigator
       - bitwarden
       - chezmoi
       - docker
@@ -46,22 +46,6 @@ packages:
       - uv
       - zoxide
       - zig
-  linux:
-    brews:
-      - fd
-      - fzf
-      - mise
-      - ripgrep
-      - starship
-      - zig
-      - zoxide
-      - zsh
-      - ansible
-      - opentofu
-      - tree
-      - ansible-lint
-      - gnupg
-      - bat
 
 
 
