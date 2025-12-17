@@ -6,15 +6,12 @@
  <br>
 
 
-This repo contains the configurations to set up my machines. This is using [**Chezmoi**](https://www.chezmoi.io/), the dotfile manager to set up the installation.
-
-This automated setup is currently only configured for `Arch and MacOS`.
+This repo contains the configurations to set up my machines. This is using [**Chezmoi**](https://www.chezmoi.io/), the dotfile manager to set up the installation. This automated setup is currently only configured for `Arch and MacOS`.
 
 ## 🏃How to run
 
-```bash
-export GITHUB_USERNAME=JershBytes
-sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply git@github.com:$GITHUB_USERNAME/dotfiles.git
+Install them with:
+
+```console
+$ chezmoi init jershbytes
 ```
-## ⚖️ LICENSE
-can be found [here](/LICENSE)
