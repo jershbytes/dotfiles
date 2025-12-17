@@ -1,15 +1,15 @@
 {{- $gitConfig := bitwardenFields "item" "Git Config" -}}
 [user]
-    name = {{ $gitConfig.name. value | quote }}
-    email = {{ $gitConfig.email.value | quote }}
-    username = {{ $gitConfig.github_username. value | quote }}
+    name = {{ (index $gitConfig "name").value | quote }}
+    email = {{ (index $gitConfig "email").value | quote }}
+    username = {{ (index $gitConfig "github_username").value | quote }}
 
 [core]
     editor = code --wait
     excludesFile = ~/.gitignore
     autocrlf = input
 
-[url "git@github. com:"]
+[url "git@github.com:"]
     insteadOf = https://github.com/
 
 [web]
