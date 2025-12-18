@@ -1,0 +1,2 @@
+{{- $gitKey := bitwardenFields "item" "SSH Keys" -}}
+{{- (index $gitKey "git_public_key").value -}}

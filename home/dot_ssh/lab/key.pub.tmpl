@@ -1,0 +1,2 @@
+{{- $labKey := bitwardenFields "item" "SSH Keys" -}}
+{{- (index $labKey "lab_public_key").value -}}

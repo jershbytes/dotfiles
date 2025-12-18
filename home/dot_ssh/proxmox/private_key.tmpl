@@ -1,0 +1,2 @@
+{{- $proxmoxKey := bitwardenFields "item" "SSH Keys" -}}
+{{- (index $proxmoxKey "proxmox_private_key").value -}}
