@@ -4,6 +4,7 @@ packages:
       - ansible
       - ansible-lint
       - bat
+      - bitwarden-cli
       - bun
       - curl
       - docker

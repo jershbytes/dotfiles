@@ -6,3 +6,7 @@ LICENSE
 vscode/
 resources/
 ansible/
+
+. cache/
+.local/share/
+.local/state/

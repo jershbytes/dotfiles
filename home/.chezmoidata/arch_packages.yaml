@@ -17,6 +17,7 @@ packages:
       - ansible-lint
       - ansible-navigator
       - bitwarden
+      - bitwarden-cli
       - chezmoi
       - docker
       - docker-compose

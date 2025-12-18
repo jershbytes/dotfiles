@@ -1,0 +1,36 @@
+{{- $sshHosts := bitwardenFields "item" "SSH Hosts" -}}
+# GitHub
+Host github.com
+  HostName github.com
+  User git
+  Port 22
+  IdentityFile ~/.ssh/git/key
+  IdentitiesOnly yes
+
+# Forgejo
+Host {{ (index $sshHosts "forgejo_hostname").value }}
+  HostName {{ (index $sshHosts "forgejo_hostname").value }}
+  User git
+  Port 222
+  IdentityFile ~/.ssh/git/key
+  IdentitiesOnly yes
+
+# Codeberg
+Host codeberg.org
+  HostName codeberg.org
+  User git
+  Port 22
+  IdentityFile ~/.ssh/git/key
+  IdentitiesOnly yes
+
+# Proxmox VE hosts
+Host pve*
+  User root
+  Port 5922
+  IdentityFile ~/.ssh/proxmox/key
+
+# All other hosts in the lab
+Host *
+  Port 5922
+  User jntadmin
+  IdentityFile ~/.ssh/lab/key
