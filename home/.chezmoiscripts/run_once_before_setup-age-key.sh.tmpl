@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+
+# Only run if age key doesn't exist
+if [ -f "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt" ]; then
+    exit 0
+fi
+
+{{- $ageKey := bitwardenFields "item" "Chezmoi Age Key" }}
+
+# Create the age key from Bitwarden
+mkdir -p "{{ .chezmoi.homeDir }}/.config/chezmoi"
+cat > "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt" << 'AGEKEY'
+{{ (index $ageKey "private_key").value }}
+AGEKEY
+
+chmod 600 "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt"
+
+echo "✓ Age encryption key restored from Bitwarden"
