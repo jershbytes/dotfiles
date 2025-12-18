@@ -8,10 +8,12 @@
 
 This repo contains the configurations to set up my machines. This is using [**Chezmoi**](https://www.chezmoi.io/), the dotfile manager to set up the installation. This automated setup is currently only configured for `Arch and MacOS`.
 
-## 🏃How to run
+## Install with:
 
-Install them with:
+```bash
+# Unlock Bitwarden first
+export BW_SESSION=$(bw unlock --raw)
 
-```console
-$ chezmoi init jershbytes
+# Then apply dotfiles
+chezmoi init --apply jershbytes
 ```
