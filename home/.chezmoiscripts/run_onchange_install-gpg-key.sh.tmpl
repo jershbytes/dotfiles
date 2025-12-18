@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+# This script runs whenever the GPG key changes in Bitwarden
+
+{{- $gpgKey := bitwardenFields "item" "GPG Key" }}
+
+# Import GPG private key
+echo "{{ (index $gpgKey "private_key").value }}" | gpg --import --batch --yes 2>/dev/null || true
+
+# Import GPG public key
+echo "{{ (index $gpgKey "public_key").value }}" | gpg --import --batch --yes 2>/dev/null || true
+
+# Set trust level to ultimate
+echo "{{ (index $gpgKey "key_fingerprint").value }}:6:" | gpg --import-ownertrust 2>/dev/null || true
+
+echo "✓ GPG key imported successfully"
