@@ -1,8 +1,8 @@
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
 {{-   $osid = .chezmoi.osRelease.id -}}
-{{- $bwEmail := bitwardenFields "item" "bitwarden" -}}
 {{- end -}}
+{{- $bwEmail := bitwardenFields "item" "bitwarden" -}}
 
 [data]
     osid = {{ $osid | quote }}
