@@ -17,3 +17,13 @@ export BW_SESSION=$(bw unlock --raw)
 # Then apply dotfiles
 chezmoi init --apply jershbytes
 ```
+
+## Installing bitwarden-cli
+
+```bash
+#MacOS
+brew install bitwarden-cli
+
+#ArchLinux
+pacman -S bitwarden-cli
+```
