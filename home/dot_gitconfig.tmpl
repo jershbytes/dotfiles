@@ -3,6 +3,7 @@
     name = {{ (index $gitConfig "name").value | quote }}
     email = {{ (index $gitConfig "email").value | quote }}
     username = {{ (index $gitConfig "github_username").value | quote }}
+    signingkey = {{ (index $gitConfig "key_id").value | quote }}
 
 [core]
     editor = code --wait
@@ -20,3 +21,4 @@
 
 [commit]
     template = ~/. gitmessage
+    gpgsign = true
