@@ -90,3 +90,6 @@ alias bye="shutdown -h now"
 # Chezmoi Aliases
 alias dot="chezmoi edit"                       # Alias for Chezmoi edit command
 alias dotdrop="chezmoi update && chezmoi apply"                # Serve MkDocs documentation locally
+
+# fastfetch Aliases
+alias ff='fastfetch'
