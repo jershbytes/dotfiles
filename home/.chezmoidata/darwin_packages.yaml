@@ -1,11 +1,8 @@
 packages:
   macos:
     brews:
-      - ansible
-      - ansible-lint
       - bat
       - bitwarden-cli
-      - bun
       - curl
       - docker
       - fd
@@ -30,6 +27,7 @@ packages:
     casks:
       - applite
       - bitwarden
+      - brave-browser
       - deezer
       - discord
       - firefox
