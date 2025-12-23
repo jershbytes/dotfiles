@@ -1,35 +1,25 @@
 packages:
   arch:
     aur:
-      - bun-bin
       - deezer
       - firefox
       - joplin-desktop
       - ov-bin
       - vesktop
       - visual-studio-code-bin
-      - plasma6-applets-panel-colorizer
     pacman:
       - 7zip
       - age
-      - ansible
-      - ansible-core
-      - ansible-lint
-      - ansible-navigator
+      - bat
       - bitwarden
-      - bitwarden-cli
-      - chezmoi
       - docker
       - docker-compose
       - docker-buildx
       - duf
       - exfatprogs
-      - extension-manager
       - fd
       - fzf
-      - github-cli
       - gnupg
-      - kvantum
       - lazygit
       - neovide
       - neovim
@@ -40,7 +30,6 @@ packages:
       - signal-desktop
       - solaar
       - starship
-      - tailscale
       - tree
       - wezterm
       - uv
