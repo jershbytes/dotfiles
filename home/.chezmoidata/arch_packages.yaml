@@ -6,6 +6,7 @@ packages:
       - firefox
       - joplin-desktop
       - ov-bin
+      - proton-mail-bin
       - vesktop
       - visual-studio-code-bin
     pacman:
@@ -23,6 +24,7 @@ packages:
       - gnupg
       - lazygit
       - neovide
+      - nerd-fonts
       - neovim
       - opentofu
       - packer
