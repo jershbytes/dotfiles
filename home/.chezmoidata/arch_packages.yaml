@@ -6,7 +6,6 @@ packages:
       - firefox
       - joplin-desktop
       - ov-bin
-      - plex-desktop
       - proton-mail-bin
       - vesktop
       - visual-studio-code-bin
