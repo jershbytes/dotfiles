@@ -8,6 +8,16 @@
 
 This repo contains the configurations to set up my machines. This is using [**Chezmoi**](https://www.chezmoi.io/), the dotfile manager to set up the installation. This automated setup is currently only configured for `Arch and MacOS`.
 
+## Installing bitwarden-cli and chezmoi
+
+```bash
+#MacOS
+brew install bitwarden-cli chezmoi
+
+#ArchLinux
+pacman -S bitwarden-cli chezmoi
+```
+
 ## Install with:
 
 ```bash
@@ -18,12 +28,4 @@ export BW_SESSION=$(bw unlock --raw)
 chezmoi init --apply jershbytes
 ```
 
-## Installing bitwarden-cli
 
-```bash
-#MacOS
-brew install bitwarden-cli
-
-#ArchLinux
-pacman -S bitwarden-cli
-```
