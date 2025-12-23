@@ -6,26 +6,25 @@
  <br>
 
 
-This repo contains the configurations to set up my machines. This is using [**Chezmoi**](https://www.chezmoi.io/), the dotfile manager to set up the installation. This automated setup is currently only configured for `Arch and MacOS`.
+JershBytes's dotfiles, managed with [`chezmoi`](https://github.com/twpayne/chezmoi).
 
-## Installing bitwarden-cli and chezmoi
+Install them with:
 
-```bash
-#MacOS
-brew install bitwarden-cli chezmoi
-
-#ArchLinux
-pacman -S bitwarden-cli chezmoi
+```console
+chezmoi init jershbytes
 ```
 
-## Install with:
+Personal secrets are stored in [Bitwarden](https://bitwarden.com/) and you'll
+need the [Bitwarden CLI](https://bitwarden.com/help/cli/) installed.
+Login to Bitwarden with:
 
-```bash
-# Unlock Bitwarden first
+```console
+bw login
 export BW_SESSION=$(bw unlock --raw)
-
-# Then apply dotfiles
-chezmoi init --apply jershbytes
 ```
 
+<h1 align="center">
+  Preview
+</h1>
 
+![Terminal Preview](./.github/images/cachyos.png)
