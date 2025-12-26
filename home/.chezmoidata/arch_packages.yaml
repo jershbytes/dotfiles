@@ -4,6 +4,7 @@ packages:
       - brave-bin
       - deezer
       - firefox
+      - fresh-editor
       - joplin-desktop
       - ov-bin
       - plezy
