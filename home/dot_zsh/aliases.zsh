@@ -10,6 +10,7 @@ alias cls='clear'
 alias vi='nvim'
 alias vim='nvim'
 alias vis='nvim "+set si"'
+alias edit='fresh'
 
 
 # Change directory aliases
