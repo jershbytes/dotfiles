@@ -88,9 +88,5 @@ alias sha1='openssl sha1'
 # General useful alias's
 alias bye="shutdown -h now"
 
-# Chezmoi Aliases
-alias dot="chezmoi edit"                       # Alias for Chezmoi edit command
-alias dotdrop="chezmoi update && chezmoi apply"                # Serve MkDocs documentation locally
-
 # fastfetch Aliases
 alias ff='fastfetch'
