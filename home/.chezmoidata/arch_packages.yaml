@@ -21,7 +21,7 @@ packages:
       - docker-compose
       - docker-buildx
       - duf
-      - element-desktop/
+      - element-desktop
       - exfatprogs
       - fd
       - fzf
