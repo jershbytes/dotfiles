@@ -11,6 +11,7 @@ packages:
       - proton-mail-bin
       - vesktop
       - visual-studio-code-bin
+      - witr-bin
     pacman:
       - 7zip
       - age
