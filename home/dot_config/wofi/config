@@ -10,5 +10,4 @@ width=40%
 yoffset=300
 line_wrap=word
 signle_click=true
-bindr=SUPER,Super_L,exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window
 
