@@ -18,8 +18,8 @@ $cmd_duration
 $character"""
 
 [character]
-success_symbol = "[❯](bold magenta)"
-error_symbol = "[❯](bold red)"
+success_symbol = "[❯](bold #50fa7b)"
+error_symbol = "[❯](bold #ff5555)"
 vimcmd_symbol = "[❮](bold magenta)"
 
 [username]
