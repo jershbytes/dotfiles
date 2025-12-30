@@ -29,6 +29,7 @@ packages:
       - bitwarden
       - brave-browser
       - deezer
+      - devnullvoid/pvetui/pvetui
       - discord
       - firefox
       - joplin
