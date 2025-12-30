@@ -1,5 +1,5 @@
 <div align="center">
-  <img src=".github/images/dotfiles.png" alt="Header" width="100" height="100"><br> 
+  <img src="assets/dotfiles.png" alt="Header" width="100" height="100"><br> 
     <i>My personal dotfiles for Linux and MacOS 🚀 </i>
  </div>
  <br>
@@ -27,4 +27,4 @@ export BW_SESSION=$(bw unlock --raw)
   Preview
 </h1>
 
-![Terminal Preview](./.github/images/cachyos.png)
+![Terminal Preview](assets/terminal_preview.png)
