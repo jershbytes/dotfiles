@@ -90,3 +90,6 @@ alias bye="shutdown -h now"
 
 # fastfetch Aliases
 alias ff='fastfetch'
+
+# chezmoi alias
+alias chz='chezmoi'

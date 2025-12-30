@@ -1,48 +1,45 @@
-# --- disable auto-update
+# Disable auto-update
 DISABLE_AUTO_UPDATE="true"
+
+# Load Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Defer plugin loading
+OMZ_LAZY_LOAD=true
+
+# fpath setup (before plugins)
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # --- load plugins
 plugins=(
-aliases
-ansible
-archlinux
-brew
-bun
-chezmoi
-docker
-docker-compose
-fzf
-genpass
-git
-history
-mise
-nvm
-opentofu
-pip
-starship
-sudo
-systemd
-ubuntu
-vscode
-zoxide
-zsh-autosuggestions
-zsh-interactive-cd
+aliases ansible archlinux brew bun chezmoi colored-man-pages copyfile copypath docker docker-compose fzf genpass git gitignore history macos
+nvm opentofu pip starship sudo systemd ubuntu uv vscode zoxide zsh-autosuggestions zsh-interactive-cd
 )
 
-# --- Load custom aliases and functions
+# --- Oh My Zsh Core Initialization
+source $ZSH/oh-my-zsh.sh
+
+# Load custom files
 for file in ~/.zsh/*.zsh; do
-  [ -f "$file" ] && source "$file"
+  source "$file" 2>/dev/null
 done
+unset file
 
-# zsh-completions
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+# Lazy-load completions (cached)
+autoload -Uz compinit
 
-# --- load homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if [[ -f ${ZDOTDIR:-~}/.zcompdump ]]; then
+    if [[ $(find ${ZDOTDIR:-~}/.zcompdump -mtime -1 2>/dev/null) ]]; then
+        # Cache is less than 24 hours old
+        compinit -C
+    else
+        # Cache is older than 24 hours
+        compinit
+    fi
+else
+    # No cache exists yet
+    compinit
+fi
 
-# --- case insensitive completion
-autoload -Uz compinit && compinit
+# Completion settings
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
-# --- initialize oh-my-zsh
-source "$ZSH/oh-my-zsh.sh"

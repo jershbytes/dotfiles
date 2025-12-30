@@ -17,6 +17,34 @@ $git_state\
 $cmd_duration
 $character"""
 
+# OS symbols using Nerd Fonts
+[os]
+disabled = false
+style = "bold white"
+format = "[$symbol]($style) "
+
+[os.symbols]
+AlmaLinux = " "
+Arch = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+Fedora = " "
+FreeBSD = " "
+Kali = " "
+Linux = " "
+Macos = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Ubuntu = " "
+Windows = "󰍲 "
+
 [character]
 success_symbol = "[❯](bold #50fa7b)"
 error_symbol = "[❯](bold #ff5555)"
@@ -40,7 +68,7 @@ truncate_to_repo = false
 format = "in [$path]($style) "
 
 [git_branch]
-symbol = " "
+symbol = " "
 format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [git_status]
@@ -49,12 +77,12 @@ conflicted = "="
 ahead = "⇡${count}"
 behind = "⇣${count}"
 diverged = "⇡${ahead_count}⇣${behind_count}"
-untracked = ""
-stashed = "≡"
+untracked = "?"
+stashed = '\$'
 modified = "*"
-staged = ""
-renamed = ""
-deleted = ""
+staged = "!"
+renamed = "»"
+deleted = "✘"
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
@@ -73,20 +101,20 @@ shell = ["bash", "--noprofile", "--norc"]
 
 # Tool-specific modules (shown only when detected)
 [python]
-symbol = "🐍 "
+symbol = " "
 style = "yellow"
 format = '[$symbol$version(\($virtualenv\))]($style) '
 detect_extensions = ["py"]
 detect_files = ["pyproject.toml", "requirements.txt", ".python-version", "Pipfile"]
 
 [nodejs]
-symbol = "⬢ "
+symbol = " "
 style = "green"
 format = '[$symbol$version]($style) '
 detect_files = ["package.json", "bun.lockb", ".node-version"]
 
 [bun]
-symbol = "🍞 "
+symbol = " "
 style = "bold red"
 format = '[$symbol$version]($style) '
 
@@ -97,13 +125,11 @@ format = '[$symbol$workspace]($style) '
 detect_extensions = ["tf", "tfvars"]
 detect_files = ["terraform.tfvars"]
 
+[docker_context]
+disabled = false
+format = 'via [🐋 $context](blue bold)'
+
 # Additional useful modules
-[package]
-disabled = true
-
-[time]
-disabled = true
-
 [status]
 disabled = false
 symbol = ""
@@ -111,71 +137,6 @@ format = '[\[$status\]]($style) '
 style = "bold red"
 
 # Disable modules we don't need for a minimal prompt
-[aws]
-disabled = true
-
-[docker_context]
-disabled = true
-
-[gcloud]
-disabled = true
-
-[kubernetes]
-disabled = true
 
 [line_break]
 disabled = true
-
-# OS symbols using Nerd Fonts
-[os]
-disabled = false
-style = "bold white"
-format = "[$symbol]($style) "
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-AOSC = " "
-Arch = " "
-Artix = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-Nobara = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
