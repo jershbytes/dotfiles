@@ -9,7 +9,6 @@ packages:
       - fresh-editor-bin
       - joplin-desktop
       - ov-bin
-      - plezy
       - proton-mail-bin
       - pvetui-bin
       - vesktop
