@@ -10,11 +10,8 @@ packages:
       - joplin-desktop
       - ov-bin
       - proton-mail-bin
-      - pvetui-bin
       - vesktop
       - visual-studio-code-bin
-      - witr-bin
-      - wowup 
     pacman:
       - 7zip
       - age
