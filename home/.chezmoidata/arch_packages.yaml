@@ -1,21 +1,18 @@
 packages:
   arch:
     aur:
-      - brave-bin
       - deezer
       - goxlr-utility
       - goxlr-utility-ui
       - fresh-editor-bin
-      - joplin-desktop
       - ov-bin
-      - proton-mail-bin
-      - vesktop
-      - visual-studio-code-bin
     pacman:
       - 7zip
       - age
       - bat
       - bitwarden
+      - brave-bin
+      - code
       - docker
       - docker-compose
       - docker-buildx
@@ -26,12 +23,14 @@ packages:
       - flatpak
       - fzf
       - gnupg
+      - joplin-desktop
       - lazygit
       - neovide
       - nerd-fonts
       - neovim
       - opentofu
       - packer
+      - proton-mail-bin
       - ripgrep
       - rpi-imager
       - signal-desktop
@@ -40,8 +39,7 @@ packages:
       - tree
       - wezterm
       - uv
+      - vesktop-bin
       - zoxide
       - zig
-
-
 
