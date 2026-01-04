@@ -6,6 +6,7 @@ packages:
       - goxlr-utility-ui
       - fresh-editor-bin
       - ov-bin
+      - visual-studio-code-bin
     pacman:
       - 7zip
       - age
