@@ -21,6 +21,7 @@ packages:
       - fd
       - flatpak
       - fzf
+      - ghostty
       - gnupg
       - joplin-desktop
       - lazygit
@@ -36,9 +37,7 @@ packages:
       - solaar
       - starship
       - tree
-      - wezterm
       - uv
       - vesktop-bin
       - zoxide
       - zig
-
