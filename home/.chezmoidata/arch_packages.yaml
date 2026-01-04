@@ -3,7 +3,6 @@ packages:
     aur:
       - brave-bin
       - deezer
-      - firefox
       - goxlr-utility
       - goxlr-utility-ui
       - fresh-editor-bin
