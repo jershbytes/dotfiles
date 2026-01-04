@@ -12,7 +12,6 @@ packages:
       - bat
       - bitwarden
       - brave-bin
-      - code
       - docker
       - docker-compose
       - docker-buildx
