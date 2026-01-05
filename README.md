@@ -10,7 +10,7 @@ JershBytes's dotfiles, managed with [`chezmoi`](https://github.com/twpayne/chezm
 
 Install them with:
 
-```shell
+```console
 pacman -S bitwarden-cli chezmoi git yay zsh
 ```
 
