@@ -18,7 +18,8 @@ function bw_lgoin() {
 }
 
 function apply_dotfiles() {
-    chezmoi init --apply jershbytes
+    chezmoi init jershbytes
+    chezmoi apply
 }
 
 
