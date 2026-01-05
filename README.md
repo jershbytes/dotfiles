@@ -11,7 +11,7 @@ JershBytes's dotfiles, managed with [`chezmoi`](https://github.com/twpayne/chezm
 Install them with:
 
 ```console
-pacman -S bitwarden-cli chezmoi git yay zsh
+pacman -S bitwarden-cli chezmoi yay zsh
 ```
 
 Then initialize chezmoi with:
