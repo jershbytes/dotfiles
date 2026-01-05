@@ -1,6 +1,6 @@
 <div align="center">
   <img src="assets/dotfiles.png" alt="Header" width="100" height="100"><br> 
-    <i>My personal dotfiles for Linux and MacOS 🚀 </i>
+    <i>My personal dotfiles for Arch and MacOS 🚀 </i>
  </div>
  <br>
  <br>
@@ -9,6 +9,12 @@
 JershBytes's dotfiles, managed with [`chezmoi`](https://github.com/twpayne/chezmoi).
 
 Install them with:
+
+```shell
+pacman -S bitwarden-cli chezmoi git yay zsh
+```
+
+Then initialize chezmoi with:
 
 ```console
 chezmoi init jershbytes

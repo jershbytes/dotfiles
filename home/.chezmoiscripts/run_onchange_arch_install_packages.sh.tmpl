@@ -15,6 +15,14 @@ sudo pacman -S --needed --noconfirm {{ range .packages.arch.pacman -}}
 yay -S --needed --noconfirm {{ range .packages.arch.aur -}}
 {{ . | quote }} {{ end }}
 
+# Add update scrpt so /usr/local/bin
+sudo tee /usr/local/bin/update >/dev/null <<'EOF'
+#!/usr/bin/env zsh
+yay -Syu --noconfirm
+EOF
+
+sudo chmod +x /usr/local/bin/update
+
 {{ else -}}
 # No Arch or CachyOS detected. Skipping package installation.
 {{ end }}

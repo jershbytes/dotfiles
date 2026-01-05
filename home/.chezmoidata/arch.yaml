@@ -2,7 +2,6 @@ packages:
   arch:
     aur:
       - deezer
-      - goxlr-utility
       - goxlr-utility-ui
       - ov-bin
       - visual-studio-code-bin
@@ -22,6 +21,7 @@ packages:
       - flatpak
       - fzf
       - ghostty
+      - goxlr-utility
       - gnupg
       - joplin-desktop
       - lazygit

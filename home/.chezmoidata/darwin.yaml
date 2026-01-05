@@ -1,8 +1,7 @@
 packages:
-  macos:
+  darwin:
     brews:
       - bat
-      - bitwarden-cli
       - curl
       - docker
       - fd
@@ -12,10 +11,10 @@ packages:
       - icann-rdap
       - jq
       - lazygit
-      - librewolf
       - neovide
       - neovim
       - opentofu
+      - ov
       - ripgrep
       - starship
       - tree
@@ -29,13 +28,10 @@ packages:
       - bitwarden
       - brave-browser
       - deezer
-      - devnullvoid/pvetui/pvetui
-      - discord
       - firefox
       - joplin
       - ghostty
       - raspberry-pi-imager
       - signal
-      - ungoogled-chromium
       - vesktop
       - visual-studio-code
