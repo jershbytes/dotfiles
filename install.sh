@@ -29,7 +29,7 @@ case "$(uname -s)" in
             bw_lgoin
             apply_dotfiles
         else
-            echo "Unsupported operating system: $(uname -s)"
+            echo "Unsupported Linux distribution. This script only supports Arch Linux."
             exit 1
         fi
         ;;
