@@ -30,9 +30,3 @@ Login to Bitwarden with:
 bw login
 export BW_SESSION=$(bw unlock --raw)
 ```
-
-<h1 align="center">
-  Preview
-</h1>
-
-![Terminal Preview](assets/terminal_preview.png)
