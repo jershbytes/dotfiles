@@ -11,12 +11,12 @@ JershBytes's dotfiles, managed with [`chezmoi`](https://github.com/twpayne/chezm
 ## Quick Install
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/jershbytes/dotfiles/main/install.sh)"
+sh -c "$(curl -fsSL https://rossjm.dev/install-dotfiles)"
 ```
 
 Or download and inspect first:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/jershbytes/dotfiles/main/install.sh -o install.sh
+curl -fsSL https://rossjm.dev/install-dotfiles -o install.sh
 chmod +x install.sh
 ./install.sh
 ```
