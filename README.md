@@ -8,17 +8,19 @@
 
 JershBytes's dotfiles, managed with [`chezmoi`](https://github.com/twpayne/chezmoi).
 
-Install them with:
+## Quick Install
 
-```console
-pacman -S bitwarden-cli chezmoi yay zsh
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/jershbytes/dotfiles/main/install.sh)"
 ```
 
-Then initialize chezmoi with:
-
-```console
-chezmoi init jershbytes
+Or download and inspect first:
+```bash
+curl -fsSL https://raw.githubusercontent.com/jershbytes/dotfiles/main/install.sh -o install.sh
+chmod +x install.sh
+./install.sh
 ```
+
 
 Personal secrets are stored in [Bitwarden](https://bitwarden.com/) and you'll
 need the [Bitwarden CLI](https://bitwarden.com/help/cli/) installed.
