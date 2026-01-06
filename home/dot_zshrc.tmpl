@@ -1,9 +1,10 @@
 # Disable auto-update
 DISABLE_AUTO_UPDATE="true"
 
-# Load Homebrew
+{{ if eq .chezmoi.os "darwin" -}}
+# Load Homebrew only if dawwin
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
+{{ end -}}
 # Defer plugin loading
 OMZ_LAZY_LOAD=true
 
