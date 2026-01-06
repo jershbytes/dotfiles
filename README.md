@@ -1,12 +1,12 @@
-<div align="center">
-  <img src="assets/dotfiles.png" alt="Header" width="100" height="100"><br> 
-    <i>My personal dotfiles for Arch and MacOS 🚀 </i>
- </div>
- <br>
- <br>
+<h3 align="center">  My personal dotfiles for Arch and MacOS  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" alt="🚀" width="16" height="16"> </h3>
 
+<p align="center"> 
+<i> managed with 
+  <a href="https://www.chezmoi.io/"> <code> chezmoi </code>
+</i>
+  </a>
+</p>
 
-JershBytes's dotfiles, managed with [`chezmoi`](https://github.com/twpayne/chezmoi).
 
 ## Quick Install
 
