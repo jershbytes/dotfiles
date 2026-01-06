@@ -5,6 +5,7 @@ DISABLE_AUTO_UPDATE="true"
 # Load Homebrew only if dawwin
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{ end -}}
+
 # Defer plugin loading
 OMZ_LAZY_LOAD=true
 
@@ -14,7 +15,7 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 # --- load plugins
 plugins=(
 aliases ansible archlinux brew bun chezmoi colored-man-pages copyfile copypath docker docker-compose fzf genpass git gitignore history macos
-nvm opentofu pip starship sudo systemd ubuntu uv vscode zoxide zsh-autosuggestions zsh-interactive-cd
+nvm opentofu pip starship sudo systemd uv vscode zoxide zsh-autosuggestions zsh-interactive-cd
 )
 
 # --- Oh My Zsh Core Initialization

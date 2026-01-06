@@ -28,3 +28,7 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+[".config/nvim"]
+    type = "git-repo"
+    url  = "git@github.com:jershbytes/nvim.git"
+    refreshPeriod = "168h"
