@@ -5,10 +5,8 @@ export LANG="en_US.UTF-8"     # Language
 export PATH="$PATH:$HOME/.local/bin"        # Add user local bin (e.g., MkDocs)
 export BUN_INSTALL="$HOME/.bun"             # Bun installation path
 export PATH="$BUN_INSTALL/bin:$PATH"        # Add Bun to PATH
-export PATH="/usr/bin/ansible-lint:$PATH"   # Add Ansible Lint to PATH
 
-### APP CONFIGS ###
-export EDITOR="code --wait"                 # Set VSCode as default editor
+### APP CONFIGS ###             # Set VSCode as default editor
 export BAT_PAGER="ov -F -H3"
 
 # Terminal settings

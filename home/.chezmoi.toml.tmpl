@@ -11,6 +11,10 @@ encryption = "age"
     osid = {{ $osid | quote }}
     email = "{{ (index $bwEmail "email").value }}"
 
+[edit]
+    command = "code"
+    args = ["--wait"]
+
 [git]
     autoCommit = true
     autoPush = true
