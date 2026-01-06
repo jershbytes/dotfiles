@@ -1,9 +1,10 @@
 packages:
-  arch:
     aur:
       - deezer
       - ov-bin
       - visual-studio-code-bin
+    flatpak:
+      - tv.plex.PlexDesktop
     pacman:
       - 7zip
       - age

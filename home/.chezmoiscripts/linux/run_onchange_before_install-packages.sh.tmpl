@@ -8,12 +8,15 @@ if ! command -v yay &> /dev/null; then
 fi
 
 # Install packages using pacman
-sudo pacman -S --needed --noconfirm {{ range .packages.arch.pacman -}}
+sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}
 {{ . | quote }} {{ end }}
 
 # Install packages using yay
-yay -S --needed --noconfirm {{ range .packages.arch.aur -}}
+yay -S --needed --noconfirm {{ range .packages.aur -}}
 {{ . | quote }} {{ end }}
+
+# Install plex via flatpak
+flatpak install flathub {{ range .packages.flatpak -}}
 
 # Add update scrpt so /usr/local/bin
 sudo tee /usr/local/bin/update >/dev/null <<'EOF'
