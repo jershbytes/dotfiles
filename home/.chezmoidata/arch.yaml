@@ -1,6 +1,7 @@
 packages:
     aur:
       - deezer
+      - kwin-scripts-kzones
       - ov-bin
       - plasma6-applets-panel-colorizer
       - visual-studio-code-bin
