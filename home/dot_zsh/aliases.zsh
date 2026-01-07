@@ -13,7 +13,7 @@ alias vis='nvim "+set si"'
 alias edit='fresh'
 
 
-# Change directory aliases
+# Directory aliases
 alias home='cd ~'
 alias zz="z"
 
@@ -38,14 +38,6 @@ alias ldir="ls -l | egrep '^d'"   # directories only
 alias lla='ls -Al'                # List and Hidden Files
 alias las='ls -A'                 # Hidden Files
 alias lls='ls -l'                 # List
-
-# alias chmod commands
-alias mx='chmod a+x'
-alias 000='chmod -R 000'
-alias 644='chmod -R 644'
-alias 666='chmod -R 666'
-alias 755='chmod -R 755'
-alias 777='chmod -R 777'
 
 # Search command line history
 alias huh="history | grep "
@@ -79,9 +71,6 @@ alias untar='tar -xvf'
 alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
 
-# Show all logs in /var/log
-alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
-
 # SHA1
 alias sha1='openssl sha1'
 
@@ -92,4 +81,10 @@ alias bye="shutdown -h now"
 alias ff='fastfetch'
 
 # chezmoi alias
-alias chz='chezmoi'
+alias cz='chezmoi'
+alias cza='chezmoi add'
+alias czcd='chezmoi cd'
+alias cze='chezmoi edit'
+alias czea='chezmoi edit --apply'
+alias czra='chezmoi re-add'
+alias czu='chezmoi update'
