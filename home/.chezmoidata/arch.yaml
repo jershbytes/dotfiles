@@ -4,10 +4,10 @@ packages:
       - kwin-scripts-kzones
       - ov-bin
       - plasma6-applets-panel-colorizer
-      - streamcontroller 
       - visual-studio-code-bin
     flatpak:
       - tv.plex.PlexDesktop
+      - com.core447.StreamController
     pacman:
       - 7zip
       - age
