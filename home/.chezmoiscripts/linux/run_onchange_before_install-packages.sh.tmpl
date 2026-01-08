@@ -15,10 +15,6 @@ sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}
 yay -S --needed --noconfirm {{ range .packages.aur -}}
 {{ . | quote }} {{ end }}
 
-# Install plex via flatpak
-flatpak install flathub {{ range .packages.flatpak -}}
-{{ . | quote }} {{ end }}
-
 # Add update scrpt so /usr/local/bin
 sudo tee /usr/local/bin/update >/dev/null <<'EOF'
 #!/usr/bin/env zsh
@@ -27,6 +23,10 @@ EOF
 
 sudo chmod +x /usr/local/bin/update
 
-{{ else -}}
-# No Arch or CachyOS detected. Skipping package installation.
-{{ end }}
+{{ end -}}
+
+# Install packages via flatpak 
+{{ if eq .chezmoi.hostname "BigWoke" -}}
+flatpak install flathub {{ range .packages.flatpak -}}
+{{ . | quote }} {{ end }}
+{{ end -}}
