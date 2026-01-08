@@ -1,117 +1,82 @@
-# prezto.toml
-add_newline = false
+# Lambda-inspired Starship theme
 
-# A minimal left prompt
-format = """$os $username$directory$character"""
+format = """
+[╭─](bold dimmed)\
+$username\
+[ at ](bold white)\
+$hostname\
+[ in ](bold white)\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$status\
+$cmd_duration\
+$line_break\
+[╰](bold dimmed)\
+$python\
+$character"""
 
-# move the rest of the prompt to the right
-right_format = """$status$all"""
-
-[character]
-success_symbol = "[❯](red)[❯](yellow)[❯](green)"
-error_symbol = "[❯](red)[❯](yellow)[❯](green)"
-vicmd_symbol = "[❮](green)[❮](yellow)[❮](red)"
-
-[git_branch]
-format = '[$branch]($style) '
-style = 'bold green'
-
-[python]
-format = '\($virtualenv\) '
-
-[git_status]
-format = '$all_status$ahead_behind '
-ahead = '[⬆](bold purple) '
-behind = '[⬇](bold purple) '
-staged = '[✚](green) '
-deleted = '[✖](red) '
-renamed = '[➜](purple) '
-stashed = '[✭](cyan) '
-untracked = '[◼](white) '
-modified = '[✱](blue) '
-conflicted = '[═](yellow) '
-diverged = '⇕ '
-up_to_date = ''
-
-[directory]
-style = "blue"
-truncation_length = 1
-truncation_symbol = ""
+[fill]
+symbol = " "
 
 [username]
-format = '[$user]($style) in '
-disabled = false
 show_always = true
-aliases = { "jershbytes" = "jersh" }
+format = "[$user]($style)"
+style_user = "bold #df005f"
+style_root = "bold #df005f"
 
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "bold #df5f00"
 
-[cmd_duration]
-format = '[$duration]($style) '
+[directory]
+format = "[$path]($style)"
+style = "bold #87ff00"
+truncation_length = 3
+truncate_to_repo = false
+home_symbol = "⌁"
 
-[line_break]
-disabled = true
+[git_branch]
+format = "[ \\([$branch]($style)\\)]($style)"
+style = "bold #5fdfff"
+
+[git_status]
+format = "([\\[$all_status$ahead_behind\\]]($style))"
+style = "bold #df5f00"
+conflicted = "="
+ahead = "⇡${count}"
+behind = "⇣${behind_count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[python]
+format = "[(\\(${virtualenv}\\))]($style)"
+style = "bold #5fdfff"
+
+[character]
+success_symbol = "[─λ](bold dimmed)"
+error_symbol = "[─λ](bold dimmed)"
+vimcmd_symbol = "[─\\[n\\]─λ](bold red)"
+vimcmd_visual_symbol = "[─\\[v\\]─λ](bold magenta)"
+vimcmd_replace_symbol = "[─\\[r\\]─λ](bold cyan)"
 
 [status]
 disabled = false
-symbol = '✘ '
+format = "[$status]($style) "
+style = "bold red"
+success_symbol = ""
 
-[os]
+[cmd_duration]
+min_time = 0
+format = "[(took $duration)]($style) "
+style = "bold blue"
+
+[line_break]
 disabled = false
-
-[terraform]
-format = 'via [$symbol$version $workspace]($style) '
-
-[bun]
-format = 'via [🍔 $version](bold green) '
-
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-AOSC = " "
-Arch = " "
-Artix = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Elementary = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Ios = "󰀷 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-Nobara = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
-Zorin = " "
