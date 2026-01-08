@@ -60,3 +60,5 @@ case "$(uname -s)" in
         exit 1
         ;;
 esac
+
+echo "⚠️ DON'T FORGET TO REMOVE bw_session FILE ⚠️"
