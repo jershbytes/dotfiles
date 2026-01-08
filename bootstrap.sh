@@ -12,9 +12,25 @@ function darwin_install() {
     brew install bitwarden-cli chezmoi git
 }
 
-function bw_lgoin() {
-    bw login
-    export BW_SESSION=$(bw unlock --raw)
+function bw_login() {
+    if !  bw login; then
+        echo "Failed to login to Bitwarden"
+        exit 1
+    fi
+    
+    # Unlock and save session to file
+    bw unlock --raw > ~/.bw_session
+    
+    # Export for current script
+    export BW_SESSION=$(cat ~/.bw_session)
+    
+    # Verify session works
+    if ! bw sync; then
+        echo "Failed to sync Bitwarden.  Session may be invalid."
+        exit 1
+    fi
+    
+    echo "Bitwarden session established successfully"
 }
 
 function apply_dotfiles() {
