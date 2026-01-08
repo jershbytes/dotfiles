@@ -43,7 +43,7 @@ case "$(uname -s)" in
     Linux*)
         if command -v pacman &> /dev/null; then
             arch_install
-            bw_lgoin
+            bw_login
             apply_dotfiles
         else
             echo "Unsupported Linux distribution. This script only supports Arch Linux."
@@ -52,7 +52,7 @@ case "$(uname -s)" in
         ;;
     Darwin*)
         darwin_install
-        bw_lgoin
+        bw_login
         apply_dotfiles
         ;;
     *)
