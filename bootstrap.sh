@@ -17,19 +17,16 @@ function bw_login() {
         echo "Failed to login to Bitwarden"
         exit 1
     fi
-    
-    # Unlock and save session to file
-    bw unlock --raw > ~/.bw_session
-    
-    # Export for current script
-    export BW_SESSION=$(cat ~/.bw_session)
-    
+
+    # Unlock and save session directly to variable
+    export BW_SESSION=$(bw unlock --raw)
+
     # Verify session works
     if ! bw sync; then
         echo "Failed to sync Bitwarden.  Session may be invalid."
         exit 1
     fi
-    
+
     echo "Bitwarden session established successfully"
 }
 
@@ -61,4 +58,3 @@ case "$(uname -s)" in
         ;;
 esac
 
-echo "⚠️ DON'T FORGET TO REMOVE bw_session FILE ⚠️"
