@@ -11,11 +11,8 @@ alias vi='nvim'
 alias vim='nvim'
 alias vis='nvim "+set si"'
 alias edit='fresh'
-
-
-# Directory aliases
 alias home='cd ~'
-alias zz="z"
+alias cd="z"
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
