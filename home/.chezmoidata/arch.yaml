@@ -42,7 +42,6 @@ packages:
       - starship
       - tree
       - uv
-      - wofi
       - vesktop-bin
       - zoxide
       - zig
