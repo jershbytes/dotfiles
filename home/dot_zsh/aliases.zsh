@@ -46,3 +46,6 @@ alias cze='chezmoi edit'
 alias czea='chezmoi edit --apply'
 alias czra='chezmoi re-add'
 alias czu='chezmoi update'
+
+# Systemd Aliases
+alias flush-dns='sudo systemd-resolve --flush-caches'
