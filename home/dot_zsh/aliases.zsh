@@ -9,6 +9,9 @@ alias less='less -R'
 alias cls='clear'
 alias vi='nvim'
 alias vim='nvim'
+alias home='cd ~'
+alias cd="z"
+alias ls="eza --icons=always"
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
