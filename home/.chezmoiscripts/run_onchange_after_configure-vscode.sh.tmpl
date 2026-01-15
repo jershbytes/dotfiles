@@ -1,0 +1,38 @@
+{{ if and (eq .chezmoi.os "darwin" "linux") -}}
+
+{{ $extensions := list
+    "4ops.terraform"
+    "aaron-bond.better-comments"
+    "editorconfig.editorconfig"
+    "hashicorp.terraform"
+    "jeanp413.open-remote-ssh"
+    "mechatroner.rainbow-csv"
+    "monokai.theme-monokai-pro-vscode"
+    "ms-azuretools.vscode-containers"
+    "ms-azuretools.vscode-docker"
+    "ms-python.debugpy"
+    "ms-python.python"
+    "ms-python.vscode-python-envs"
+    "nefrob.vscode-just-syntax"
+    "oderwat.indent-rainbow"
+    "pkief.material-icon-theme"
+    "prettier.prettier-vscode"
+    "redhat.ansible"
+    "redhat.vscode-yaml"
+    "rogalmic.bash-debug"
+    "rpinski.shebang-snippets"
+    "shardulm94.trailing-spaces"
+    "streetsidesoftware.code-spell-checker"
+    "ultram4rine.vscode-choosealicense"
+    "usernamehw.errorlens"
+    "yzhang.markdown-all-in-one" -}}
+
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ range $extensions -}}
+codium --force --install-extension {{ . }}
+{{ end -}}
+
+{{ end -}}
