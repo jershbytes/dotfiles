@@ -1,6 +1,7 @@
 {{ if and (eq .chezmoi.os "darwin" "linux") -}}
 
 {{ $extensions := list
+    "4ops.packer"
     "4ops.terraform"
     "aaron-bond.better-comments"
     "editorconfig.editorconfig"
