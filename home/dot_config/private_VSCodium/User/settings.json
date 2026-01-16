@@ -1,0 +1,77 @@
+{
+    "redhat.telemetry.enabled": false,
+    "workbench.startupEditor": "none",
+    "git.autofetch": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "window.customTitleBarVisibility": "auto",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.enableSmartCommit": true,
+
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.useLocalIp": true,
+    "tabnine.experimentalAutoImports": true,
+    "license.author": "Joshua Ross",
+    "license.default": "mit",
+    "simple.readme.settings.name": "Joshua Ross",
+    "simple.readme.settings.github": "JershBytes",
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "workbench.sideBar.location": "right",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "diffEditor.ignoreTrimWhitespace": true
+    },
+    "remoteHub.commitDirectlyWarning": "off",
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "docker.extension.enableComposeLanguageServer": false,
+    "explorer.confirmDelete": false,
+"github.copilot.chat.codeGeneration.instructions": [
+    {
+        "file": ".vscode/copilot-instructions.md"
+    }
+],
+"javascript.updateImportsOnFileMove.enabled": "always",
+"github.copilot.nextEditSuggestions.enabled": true,
+"github.gitProtocol": "ssh",
+"git.enableCommitSigning": true,
+"[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+},
+"[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+},
+"github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+},
+"[ansible]": {
+    "editor.autoIndent": "advanced",
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+    "editor.quickSuggestions": {
+        "comments": true,
+        "other": true,
+        "strings": true
+    },
+    "editor.tabSize": 2
+},
+"editor.tabCompletion": "on",
+
+}
