@@ -4,16 +4,11 @@
     "git.autofetch": true,
     "workbench.iconTheme": "material-icon-theme",
     "window.customTitleBarVisibility": "auto",
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "security.workspace.trust.untrustedFiles": "open",
     "git.enableSmartCommit": true,
 
     "license.author": "Joshua Ross",
     "license.default": "mit",
-    "simple.readme.settings.name": "Joshua Ross",
-    "simple.readme.settings.github": "JershBytes",
     "editor.fontFamily": "'JetBrainsMono Nerd Font'",
     "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
@@ -22,13 +17,10 @@
         "editor.defaultFormatter": "yzhang.markdown-all-in-one",
         "diffEditor.ignoreTrimWhitespace": true
     },
-    "remoteHub.commitDirectlyWarning": "off",
     "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
-    "docker.extension.enableComposeLanguageServer": false,
     "explorer.confirmDelete": false,
 
 "javascript.updateImportsOnFileMove.enabled": "always",
-"github.copilot.nextEditSuggestions.enabled": true,
 "github.gitProtocol": "ssh",
 "git.enableCommitSigning": true,
 "[dockercompose]": {
