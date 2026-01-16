@@ -58,5 +58,8 @@
     "editor.tabSize": 2
 },
 "editor.tabCompletion": "on",
+"editor.tabSize": 2,
+"editor.indentSize": "tabSize",
+"git.openRepositoryInParentFolders": "always",
 
 }
