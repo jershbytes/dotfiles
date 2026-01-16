@@ -10,16 +10,10 @@
     "security.workspace.trust.untrustedFiles": "open",
     "git.enableSmartCommit": true,
 
-    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-    "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
-    "liveServer.settings.fullReload": true,
-    "liveServer.settings.useLocalIp": true,
-    "tabnine.experimentalAutoImports": true,
     "license.author": "Joshua Ross",
     "license.default": "mit",
     "simple.readme.settings.name": "Joshua Ross",
     "simple.readme.settings.github": "JershBytes",
-    "vsicons.dontShowNewVersionMessage": true,
     "editor.fontFamily": "'JetBrainsMono Nerd Font'",
     "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
@@ -32,11 +26,7 @@
     "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "docker.extension.enableComposeLanguageServer": false,
     "explorer.confirmDelete": false,
-"github.copilot.chat.codeGeneration.instructions": [
-    {
-        "file": ".vscode/copilot-instructions.md"
-    }
-],
+
 "javascript.updateImportsOnFileMove.enabled": "always",
 "github.copilot.nextEditSuggestions.enabled": true,
 "github.gitProtocol": "ssh",
@@ -55,12 +45,7 @@
 "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
 },
-"github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-},
+
 "[ansible]": {
     "editor.autoIndent": "advanced",
     "editor.detectIndentation": true,
