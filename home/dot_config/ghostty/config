@@ -11,4 +11,4 @@ gtk-wide-tabs = false
 window-theme = system
 window-decoration = client
 background-opacity = 0.8
-theme = Andromeda
+theme = Dracula
