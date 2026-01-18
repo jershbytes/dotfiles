@@ -22,10 +22,13 @@ packages:
       - exfatprogs
       - eza
       - fd
+      - firefoxpwa
       - flatpak
       - fzf
       - ghostty
       - gnupg
+      - ttc-iosveka
+      - ttf-jetbrains-mono-nerd
       - joplin-desktop
       - just
       - lazygit
@@ -44,5 +47,6 @@ packages:
       - uv
       - vesktop-bin
       - vscodium
+      - yazi
       - zoxide
       - zig
