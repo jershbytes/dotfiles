@@ -17,7 +17,6 @@
         "editor.defaultFormatter": "yzhang.markdown-all-in-one",
         "diffEditor.ignoreTrimWhitespace": true
     },
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "explorer.confirmDelete": false,
 
 "javascript.updateImportsOnFileMove.enabled": "always",
@@ -49,9 +48,22 @@
     },
     "editor.tabSize": 2
 },
+"editor.fontFamily": "Iosevka Expanded",
+"editor.fontLigatures": "'ss05', 'calt' 0, 'dlig' 1, 'cv07' 2, 'cv10' 26, 'cv20' 10, 'cv44' 8, 'cv35' 2, 'cv60' 2, 'VSAL' 1, 'VLAD' 2",
+"editor.fontSize": 15,
+"editor.fontWeight": "400",
+"editor.lineHeight": 25,
+"terminal.integrated.fontWeight": "400",
+"terminal.integrated.fontSize": 14,
+"debug.console.fontFamily": "Iosevka Expanded",
+"editor.cursorWidth": 3,
+"editor.guides.bracketPairs": "active",
+"editor.guides.bracketPairsHorizontal": "active",
+"editor.renderWhitespace": "trailing",
 "editor.tabCompletion": "on",
 "editor.tabSize": 2,
 "editor.indentSize": "tabSize",
 "git.openRepositoryInParentFolders": "always",
+"workbench.colorTheme": "Sweet Dracula Monokai",
 
 }
