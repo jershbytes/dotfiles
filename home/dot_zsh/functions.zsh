@@ -102,3 +102,33 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+
+# List all system applications
+list-packages() {
+	case "$1" in
+		all|"")
+			echo "== Pacman (explicit) =="
+			pacman -Qe
+
+			echo -e "\n== AUR =="
+			pacman -Qm
+
+			echo -e "\n== Flatpak Apps =="
+			flatpak list --app
+			;;
+		pacman)
+			pacman -Qe
+			;;
+		aur)
+			pacman -Qm
+			;;
+		flatpak)
+			flatpak list --app
+			;;
+		*)
+			echo "Usage: list-packages [all|pacman|aur|flatpak]"
+			return 1
+			;;
+	esac
+}
