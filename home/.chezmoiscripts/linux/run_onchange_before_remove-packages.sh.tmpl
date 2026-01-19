@@ -1,0 +1,19 @@
+{{ if eq .osid "linux-ubuntu" -}}
+
+{{ $packages := list
+     "firefox"
+      -}}
+
+
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $sudo }}pcaman -R --noconfirm {{ $packages | join " " }}
+
+{{ end -}}
