@@ -27,7 +27,7 @@ packages:
       - fzf
       - ghostty
       - gnupg
-      - ttc-iosveka
+      - ttc-iosevka
       - ttf-jetbrains-mono-nerd
       - joplin-desktop
       - just
