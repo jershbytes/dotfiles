@@ -1,9 +1,9 @@
-# Lambda-inspired Starship theme
+"$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
 [╭─](bold dimmed)\
-$username\
-[ at ](bold white)\
+$username using $os\
+[ on ](bold white)\
 $hostname\
 [ in ](bold white)\
 $directory\
@@ -17,34 +17,40 @@ $line_break\
 $python\
 $character"""
 
+palette = "dracula"
+
 [fill]
 symbol = " "
+
+[os]
+format = '[$symbol]($style)'
+disabled = false
 
 [username]
 show_always = true
 format = "[$user]($style)"
-style_user = "bold #df005f"
-style_root = "bold #df005f"
+style_user = "bold pink"
+style_root = "bold pink"
 
 [hostname]
 ssh_only = false
 format = "[$hostname]($style)"
-style = "bold #df5f00"
+style = "bold yellow"
 
 [directory]
 format = "[$path]($style)"
-style = "bold #87ff00"
+style = "bold green"
 truncation_length = 3
 truncate_to_repo = false
 home_symbol = "⌁"
 
 [git_branch]
 format = "[ \\([$branch]($style)\\)]($style)"
-style = "bold #5fdfff"
+style = "bold cyan"
 
 [git_status]
 format = "([\\[$all_status$ahead_behind\\]]($style))"
-style = "bold #df5f00"
+style = "bold yellow"
 conflicted = "="
 ahead = "⇡${count}"
 behind = "⇣${behind_count}"
@@ -58,13 +64,13 @@ deleted = "✘"
 
 [python]
 format = "[(\\(${virtualenv}\\))]($style)"
-style = "bold #5fdfff"
+style = "bold cyan"
 
 [character]
 success_symbol = "[─λ](bold dimmed)"
 error_symbol = "[─λ](bold dimmed)"
 vimcmd_symbol = "[─\\[n\\]─λ](bold red)"
-vimcmd_visual_symbol = "[─\\[v\\]─λ](bold magenta)"
+vimcmd_visual_symbol = "[─\\[v\\]─λ](bold purple)"
 vimcmd_replace_symbol = "[─\\[r\\]─λ](bold cyan)"
 
 [status]
@@ -80,3 +86,34 @@ style = "bold blue"
 
 [line_break]
 disabled = false
+
+[palettes.dracula]
+pink = "#ff79c6"
+red = "#ff5555"
+yellow = "#f1fa8c"
+green = "#50fa7b"
+blue = "#644ac9"
+purple = "#bd93f9"
+cyan = "#8be9fd"
+comment = "#6272a4"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[os.symbols]
+Alpine = " "
+AlmaLinux = " "
+Arch = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+Fedora = " "
+Linux = " "
+Macos = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Ubuntu = " "
+Unknown = " "
