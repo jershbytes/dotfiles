@@ -11,7 +11,7 @@ alias vi='nvim'
 alias vim='nvim'
 alias home='cd ~'
 alias cd="z"
-alias ls="eza --icons=always"
+alias ls='eza --icons --color=always'
 alias code="vscodium"
 
 # Remove a directory and all files
