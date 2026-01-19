@@ -2,8 +2,10 @@
 
 format = """
 [╭─](bold dimmed)\
-$username using $os\
-[ on ](bold white)\
+$os\
+$username\
+
+[@](bold white)\
 $hostname\
 [ in ](bold white)\
 $directory\
@@ -23,7 +25,7 @@ palette = "dracula"
 symbol = " "
 
 [os]
-format = '[$symbol]($style)'
+format = '[$symbol]($style) '
 disabled = false
 
 [username]
