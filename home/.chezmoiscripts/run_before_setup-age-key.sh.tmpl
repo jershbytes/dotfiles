@@ -1,5 +1,6 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+
+set -eufo pipefail
 
 # Only run if age key doesn't exist
 if [ -f "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt" ]; then

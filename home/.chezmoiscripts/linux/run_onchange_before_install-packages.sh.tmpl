@@ -29,4 +29,9 @@ sudo chmod +x /usr/local/bin/update
 {{ if eq .chezmoi.hostname "BigWoke" -}}
 flatpak install flathub {{ range .packages.flatpak -}}
 {{ . | quote }} {{ end }}
+
+# Install goxlr for desktop pc
+sudo pacman -S --needed --noconfirm goxlr-utility
+yay -S --needed --noconfirm goxlr-utility-ui
+
 {{ end -}}
