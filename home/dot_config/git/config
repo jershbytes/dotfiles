@@ -1,0 +1,30 @@
+{{- $gitConfig := bitwardenFields "item" "Git Config" -}}
+[user]
+    name = {{ (index $gitConfig "name").value | quote }}
+    email = {{ (index $gitConfig "email").value | quote }}
+    username = {{ (index $gitConfig "github_username").value | quote }}
+    signingkey = {{ (index $gitConfig "key_id").value | quote }}
+
+[core]
+    autocrlf = input
+    editor = nvim
+    excludesFile = ~/.config/git/gitignore
+    
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+[url "ssh://git@codeberg.org/"]
+    insteadOf = https://codeberg.org/
+
+[url "git@gitlab.com:"]
+    insteadOf = https://gitlab.com/
+
+[web]
+    browser = "waterfox"
+
+[init]
+    defaultBranch = main
+
+[commit]
+    template = ~/.config/git/gitmessage
+    gpgsign = true
