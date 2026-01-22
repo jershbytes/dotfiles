@@ -1,5 +1,6 @@
 packages:
     aur:
+      - appimagelauncher
       - deezer
       - kwin-scripts-kzones
       - ov-bin
