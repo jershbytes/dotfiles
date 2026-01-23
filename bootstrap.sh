@@ -3,7 +3,7 @@
 set -e
 
 function arch_install() {
-    sudo pacman -S --noconfirm bitwarden-cli chezmoi yay zsh
+    sudo pacman -Syu --noconfirm bitwarden-cli chezmoi yay zsh
 }
 
 function darwin_install() {
@@ -31,7 +31,7 @@ function bw_login() {
 }
 
 function apply_dotfiles() {
-    chezmoi init jershbytes
+    chezmoi init codeberg.org/jershbytes
     chezmoi apply
 }
 
