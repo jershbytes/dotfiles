@@ -46,7 +46,6 @@ packages:
       - uv
       - vesktop-bin
       - vscodium
-      - waterfox
       - yazi
       - zoxide
       - zig
