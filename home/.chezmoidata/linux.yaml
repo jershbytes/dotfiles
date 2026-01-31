@@ -4,6 +4,7 @@ packages:
       - kwin-scripts-kzones
       - ov-bin
       - plasma6-applets-panel-colorizer
+      - visual-studio-code-bin
     flatpak:
       - tv.plex.PlexDesktop
       - com.core447.StreamController
