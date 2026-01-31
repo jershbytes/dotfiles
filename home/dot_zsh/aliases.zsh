@@ -9,7 +9,6 @@ alias less='less -R'
 alias cls='clear'
 alias vi='neovide'
 alias vim='neovide'
-alias code='codium'
 alias home='cd ~'
 alias cd="z"
 alias ls='eza --icons --color=always'
