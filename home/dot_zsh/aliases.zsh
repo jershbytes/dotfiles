@@ -12,6 +12,7 @@ alias vim='neovide'
 alias home='cd ~'
 alias cd="z"
 alias ls='eza --icons --color=always'
+alias rp='rpaste'
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
