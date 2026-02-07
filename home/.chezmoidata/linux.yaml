@@ -13,6 +13,7 @@ packages:
       - 7zip
       - age
       - bat
+      - betterbird
       - bitwarden
       - brave-bin
       - docker
@@ -38,7 +39,7 @@ packages:
       - neovim
       - opentofu
       - packer
-      - proton-mail-bin
+      - protonmail-bridge
       - ripgrep
       - rpi-imager
       - signal-desktop
