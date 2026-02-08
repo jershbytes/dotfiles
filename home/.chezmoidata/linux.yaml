@@ -28,7 +28,6 @@ packages:
       - ghostty
       - gnupg
       - librewolf
-      - ttc-iosevka
       - ttf-jetbrains-mono-nerd
       - joplin-desktop
       - just
@@ -46,7 +45,6 @@ packages:
       - tree
       - uv
       - vesktop-bin
-      - vscodium
       - yazi
       - zoxide
       - zig
