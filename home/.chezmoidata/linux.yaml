@@ -1,14 +1,13 @@
 packages:
     aur:
-      - deezer
       - kwin-scripts-kzones
-      - nordic-wallpapers
       - ov-bin
       - plasma6-applets-panel-colorizer
-      - visual-studio-code-bin
     flatpak:
-      - tv.plex.PlexDesktop
       - com.core447.StreamController
+      - com.visualstudio.code
+      - dev.aunetx.deezer
+      - tv.plex.PlexDesktop
     pacman:
       - 7zip
       - age
