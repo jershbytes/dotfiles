@@ -1,11 +1,10 @@
 packages:
     aur:
-      - kwin-scripts-kzones
       - ov-bin
       - plasma6-applets-panel-colorizer
+      - visual-studio-code-bin
     flatpak:
       - com.core447.StreamController
-      - com.visualstudio.code
       - dev.aunetx.deezer
       - tv.plex.PlexDesktop
     pacman:
