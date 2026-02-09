@@ -21,11 +21,9 @@ nvm opentofu pip starship sudo systemd uv vscode zoxide zsh-autosuggestions zsh-
 # --- Oh My Zsh Core Initialization
 source $ZSH/oh-my-zsh.sh
 
-# Load custom files
-for file in ~/.zsh/*.zsh; do
-  source "$file" 2>/dev/null
-done
-unset file
+# Load custom aliases and functions
+[[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
+[[ -f ~/.zsh_functions ]] && source ~/.zsh_functions
 
 # Lazy-load completions (cached)
 autoload -Uz compinit

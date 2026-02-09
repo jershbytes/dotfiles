@@ -15,24 +15,19 @@ sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}
 yay -S --needed --noconfirm {{ range .packages.aur -}}
 {{ . | quote }} {{ end }}
 
-# Add update scrpt so /usr/local/bin
-sudo tee /usr/local/bin/update >/dev/null <<'EOF'
-#!/usr/bin/env zsh
-yay -Syu --noconfirm
-EOF
+# Install plex desktop client
+flatpak install flathub tv.plex.PlexDesktop
 
-sudo chmod +x /usr/local/bin/update
-
+# Remove firefox
+sudo pacman -R firefox --noconfirm
 {{ end -}}
 
-# Install packages via flatpak 
 {{ if eq .chezmoi.hostname "BigWoke" -}}
-flatpak install flathub {{ range .packages.flatpak -}}
-{{ . | quote }} {{ end }}
 
-# Install goxlr for desktop pc
+# Install bigwoke specific applications
 sudo pacman -S --needed --noconfirm goxlr-utility
 yay -S --needed --noconfirm goxlr-utility-ui
 yay -S --needed --noconfirm curseforge
-
+yay -S --needed --noconfirm plasma6-applets-panel-colorizer
+flatpak install flathub com.core447.StreamController
 {{ end -}}

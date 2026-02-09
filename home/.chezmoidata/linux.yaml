@@ -1,24 +1,17 @@
 packages:
     aur:
+      - deezer
       - ov-bin
-      - plasma6-applets-panel-colorizer
       - visual-studio-code-bin
-    flatpak:
-      - com.core447.StreamController
-      - dev.aunetx.deezer
-      - tv.plex.PlexDesktop
     pacman:
-      - 7zip
       - age
       - bat
       - betterbird
       - bitwarden
-      - brave-bin
       - discord
       - docker
       - docker-compose
       - docker-buildx
-      - duf
       - element-desktop
       - exfatprogs
       - eza
@@ -27,14 +20,13 @@ packages:
       - flatpak
       - fzf
       - gnupg
+      - konsole
       - librewolf
       - ttf-jetbrains-mono-nerd
       - joplin-desktop
       - just
-      - lazygit
-      - neovide
       - neovim
-      - opentofu
+      - terraform
       - packer
       - protonmail-bridge
       - ripgrep
