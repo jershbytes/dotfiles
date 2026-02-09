@@ -26,7 +26,6 @@ packages:
       - firefoxpwa
       - flatpak
       - fzf
-      - ghostty
       - gnupg
       - librewolf
       - ttf-jetbrains-mono-nerd
