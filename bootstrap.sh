@@ -31,7 +31,7 @@ function bw_login() {
 }
 
 function apply_dotfiles() {
-    chezmoi init codeberg.org/jershbytes
+    chezmoi init jershbytes
     chezmoi apply
 }
 
