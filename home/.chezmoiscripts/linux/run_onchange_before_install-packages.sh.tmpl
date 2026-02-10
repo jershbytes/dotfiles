@@ -18,16 +18,13 @@ yay -S --needed --noconfirm {{ range .packages.aur -}}
 # Install plex desktop client
 flatpak install flathub tv.plex.PlexDesktop
 
-# Remove firefox
-sudo pacman -R firefox --noconfirm
+# Remove non needed apps
+sudo pacman -R firefox konsole alacrity --noconfirm
 {{ end -}}
 
 {{ if eq .chezmoi.hostname "BigWoke" -}}
-
 # Install bigwoke specific applications
 sudo pacman -S --needed --noconfirm goxlr-utility
 yay -S --needed --noconfirm goxlr-utility-ui
-yay -S --needed --noconfirm curseforge
-yay -S --needed --noconfirm plasma6-applets-panel-colorizer
 flatpak install flathub com.core447.StreamController
 {{ end -}}

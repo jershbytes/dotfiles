@@ -1,7 +1,9 @@
 packages:
     aur:
       - deezer
+      - plasma6-applets-panel-colorizer
       - ov-bin
+      - wowup-cf
       - visual-studio-code-bin
     pacman:
       - age
@@ -19,8 +21,8 @@ packages:
       - firefoxpwa
       - flatpak
       - fzf
+      - ghostty
       - gnupg
-      - konsole
       - librewolf
       - ttf-jetbrains-mono-nerd
       - joplin-desktop
