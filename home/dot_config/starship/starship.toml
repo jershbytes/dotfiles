@@ -103,4 +103,8 @@ Redhat = " "
 RedHatEnterprise = " "
 RockyLinux = " "
 Ubuntu = " "
+<<<<<<< HEAD
 Unknown = " "
+=======
+Unknown = " "
+>>>>>>> e3e4dd1 (Update .config/starship/starship.toml)
