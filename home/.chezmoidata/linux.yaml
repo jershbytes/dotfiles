@@ -30,7 +30,6 @@ packages:
       - neovim
       - terraform
       - packer
-      - protonmail-bridge
       - ripgrep
       - rpi-imager
       - signal-desktop
