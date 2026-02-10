@@ -3,7 +3,7 @@ packages:
       - deezer
       - plasma6-applets-panel-colorizer
       - ov-bin
-      - wowup-cf
+      - wowup-cf-bin
       - visual-studio-code-bin
     pacman:
       - age
