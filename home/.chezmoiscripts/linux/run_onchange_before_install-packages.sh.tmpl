@@ -15,12 +15,9 @@ sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}
 yay -S --needed --noconfirm {{ range .packages.aur -}}
 {{ . | quote }} {{ end }}
 
-# Install plex desktop client
-flatpak install flathub tv.plex.PlexDesktop
-
-# Remove non needed apps
-sudo pacman -R firefox konsole alacrity --noconfirm
-{{ end -}}
+# Install packages using flatpak
+flatpak install  {{ range .packages.flatpak -}}
+{{ . | quote }} {{ end }}
 
 {{ if eq .chezmoi.hostname "BigWoke" -}}
 # Install bigwoke specific applications

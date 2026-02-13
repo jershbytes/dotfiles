@@ -5,6 +5,9 @@ packages:
       - ov-bin
       - wowup-cf-bin
       - visual-studio-code-bin
+    flatpak:
+      - im.fluffychat.Fluffychat
+      - tv.plex.PlexDesktop
     pacman:
       - age
       - bat
