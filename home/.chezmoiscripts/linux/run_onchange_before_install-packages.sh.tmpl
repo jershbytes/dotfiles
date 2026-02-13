@@ -16,7 +16,7 @@ yay -S --needed --noconfirm {{ range .packages.aur -}}
 {{ . | quote }} {{ end }}
 
 # Install packages using flatpak
-flatpak install  {{ range .packages.flatpak -}}
+flatpak install {{ range .packages.flatpak -}}
 {{ . | quote }} {{ end }}
 
 {{ if eq .chezmoi.hostname "BigWoke" -}}
@@ -24,4 +24,5 @@ flatpak install  {{ range .packages.flatpak -}}
 sudo pacman -S --needed --noconfirm goxlr-utility
 yay -S --needed --noconfirm goxlr-utility-ui
 flatpak install flathub com.core447.StreamController
+{{ end -}}
 {{ end -}}
