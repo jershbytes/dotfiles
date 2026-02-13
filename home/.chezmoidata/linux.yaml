@@ -28,7 +28,7 @@ packages:
       - joplin-desktop
       - just
       - neovim
-      - terraform
+      - opentofu
       - packer
       - ripgrep
       - rpi-imager
