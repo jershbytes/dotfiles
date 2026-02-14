@@ -11,7 +11,6 @@ packages:
     pacman:
       - age
       - bat
-      - betterbird
       - bitwarden
       - discord
       - docker
@@ -37,6 +36,7 @@ packages:
       - signal-desktop
       - solaar
       - starship
+      - thunderbird
       - tree
       - uv
       - yazi
