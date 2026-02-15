@@ -6,7 +6,6 @@ packages:
       - wowup-cf-bin
       - visual-studio-code-bin
     flatpak:
-      - im.fluffychat.Fluffychat
       - tv.plex.PlexDesktop
     pacman:
       - age
@@ -39,6 +38,5 @@ packages:
       - thunderbird
       - tree
       - uv
-      - yazi
       - zoxide
       - zig
