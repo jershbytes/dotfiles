@@ -30,12 +30,12 @@ packages:
       - neovim
       - opentofu
       - packer
+      - proton-mail-bin
       - ripgrep
       - rpi-imager
       - signal-desktop
       - solaar
       - starship
-      - thunderbird
       - tree
       - uv
       - zoxide
