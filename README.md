@@ -17,11 +17,12 @@ chmod +x install.sh
 ```
 
 
-Personal secrets are stored in [Bitwarden](https://bitwarden.com/) and you'll
-need the [Bitwarden CLI](https://bitwarden.com/help/cli/) installed.
-Login to Bitwarden with:
+Personal secrets are stored in [ProtonPass](https://proton.me/pass) and you'll
+need the [ProtonPass CLI](https://protonpass.github.io/pass-cli/) installed.
+The ProtonPass app and CLI will be installed automatically, then you can apply your dotfiles:
 
 ```console
-bw login
+chezmoi init jershbytes
+chezmoi apply
 export BW_SESSION=$(bw unlock --raw)
 ```

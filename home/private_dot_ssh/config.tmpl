@@ -1,4 +1,4 @@
-{{- $sshHosts := bitwardenFields "item" "SSH Hosts" -}}
+{{- $ppForgejo := protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/r_IeRiiM2mf8IjelEUzlnJUI763E-ncmcjyQeonO233b1qFk9UhkyVhKfz9wAnQHnx9pi-bzybxW5/forgejo_hostname" -}}
 # GitHub
 Host github.com
   HostName github.com
@@ -8,8 +8,8 @@ Host github.com
   IdentitiesOnly yes
 
 # Forgejo
-Host {{ (index $sshHosts "forgejo_hostname").value }}
-  HostName {{ (index $sshHosts "forgejo_hostname").value }}
+Host {{ $ppForgejo }}
+  HostName {{ $ppForgejo }}
   User git
   Port 222
   IdentityFile ~/.ssh/git/key

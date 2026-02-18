@@ -10,7 +10,7 @@ packages:
     pacman:
       - age
       - bat
-      - bitwarden
+      - pproton-pass
       - discord
       - docker
       - docker-compose

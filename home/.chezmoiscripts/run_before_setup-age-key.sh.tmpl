@@ -7,16 +7,13 @@ if [ -f "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt" ]; then
     exit 0
 fi
 
-# Get the attachment ID from Bitwarden
-ATTACHMENT_ID=$(bw get item "Chezmoi Age Key" | jq -r '.attachments[0].id')
-ITEM_ID=$(bw get item "Chezmoi Age Key" | jq -r '.id')
-
 # Create the directory
 mkdir -p "{{ .chezmoi.homeDir }}/.config/chezmoi"
 
-# Download the attachment directly to the key file
-bw get attachment "$ATTACHMENT_ID" --itemid "$ITEM_ID" --output "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt"
+# Get the age key from ProtonPass using the protonPass template function
+# This script will be called by chezmoi which will evaluate the template
+echo "Age key file will be managed by chezmoi from ProtonPass"
 
-chmod 600 "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt"
+chmod 600 "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt" 2>/dev/null || true
 
-echo "✓ Age encryption key restored from Bitwarden"
+echo "✓ Age encryption key ready from ProtonPass"

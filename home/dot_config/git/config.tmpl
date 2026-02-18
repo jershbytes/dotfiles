@@ -1,4 +1,4 @@
-{{- $gitConfig := bitwardenFields "item" "Git Config" -}}
+{{- $gitConfig := protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/r_IeRiiM2mf8IjelEUzlnJUI763E-ncmcjyQeonO233b1qFk9UhkyVhKfz9wAnQHnx9pi-bzybxW5/git_user_name" -}}
 [user]
     name = {{ (index $gitConfig "name").value | quote }}
     email = {{ (index $gitConfig "email").value | quote }}

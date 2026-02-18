@@ -3,13 +3,13 @@
 {{-   $osid = .chezmoi.osRelease.id -}}
 {{- end -}}
 
-{{- $bwEmail := bitwardenFields "item" "bitwarden-email" -}}
+{{- $ppEmail := protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/r_IeRiiM2mf8IjelEUzlnJUI763E-ncmcjyQeonO233b1qFk9UhkyVhKfz9wAnQHnx9pi-bzybxW5/email" -}}
 
 encryption = "age"
 
 [data]
     osid = {{ $osid | quote }}
-    email = "{{ (index $bwEmail "email").value }}"
+    email = "{{ $ppEmail }}"
 
 [edit]
     command = "code"
@@ -19,9 +19,8 @@ encryption = "age"
     autoCommit = true
     autoPush = true
 
-[bitwarden]
-    command = "bw"
-    unlock = "auto"
+[proton_pass]
+    command = "pass-cli"
 
 [age]
     identity = "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt"

@@ -24,7 +24,7 @@ packages:
       - zsh
     casks:
       - applite
-      - bitwarden
+      - proton-pass
       - brave-browser
       - deezer
       - firefox
