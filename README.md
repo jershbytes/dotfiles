@@ -24,5 +24,4 @@ The ProtonPass app and CLI will be installed automatically, then you can apply y
 ```console
 chezmoi init jershbytes
 chezmoi apply
-export BW_SESSION=$(bw unlock --raw)
 ```
