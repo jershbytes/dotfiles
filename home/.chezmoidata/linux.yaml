@@ -10,7 +10,6 @@ packages:
     pacman:
       - age
       - bat
-      - pproton-pass
       - discord
       - docker
       - docker-compose
@@ -31,6 +30,7 @@ packages:
       - opentofu
       - packer
       - proton-mail-bin
+      - pproton-pass
       - ripgrep
       - rpi-imager
       - signal-desktop
