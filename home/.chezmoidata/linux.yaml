@@ -30,7 +30,7 @@ packages:
       - opentofu
       - packer
       - proton-mail-bin
-      - pproton-pass
+      - proton-pass
       - ripgrep
       - rpi-imager
       - signal-desktop
