@@ -1,9 +1,8 @@
-{{- $gitConfig := protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/r_IeRiiM2mf8IjelEUzlnJUI763E-ncmcjyQeonO233b1qFk9UhkyVhKfz9wAnQHnx9pi-bzybxW5/git_user_name" -}}
 [user]
-    name = {{ (index $gitConfig "name").value | quote }}
-    email = {{ (index $gitConfig "email").value | quote }}
-    username = {{ (index $gitConfig "github_username").value | quote }}
-    signingkey = {{ (index $gitConfig "key_id").value | quote }}
+    name = {{ protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/-4_5v7HrkFVeb_I-njXJgUD9yA6K3RHSq5_kDfoyAIT3ow-djTHGO9K6TEyU0G-u38QQze8PpBd6N-iU4KCEIA==/name" | trim | quote }}
+    email = {{ protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/-4_5v7HrkFVeb_I-njXJgUD9yA6K3RHSq5_kDfoyAIT3ow-djTHGO9K6TEyU0G-u38QQze8PpBd6N-iU4KCEIA==/email" | trim | quote }}
+    username = {{ protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/-4_5v7HrkFVeb_I-njXJgUD9yA6K3RHSq5_kDfoyAIT3ow-djTHGO9K6TEyU0G-u38QQze8PpBd6N-iU4KCEIA==/github_username" | trim | quote }}
+    signingkey = {{ protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/-4_5v7HrkFVeb_I-njXJgUD9yA6K3RHSq5_kDfoyAIT3ow-djTHGO9K6TEyU0G-u38QQze8PpBd6N-iU4KCEIA==/key_id" | trim | quote }}
 
 [core]
     autocrlf = input
