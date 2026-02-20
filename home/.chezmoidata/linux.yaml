@@ -1,6 +1,7 @@
 packages:
     aur:
       - deezer
+      - fluxer-bin
       - plasma6-applets-panel-colorizer
       - ov-bin
       - wowup-cf-bin
