@@ -3,7 +3,7 @@
 set -e
 
 function arch_install() {
-    sudo pacman -Syu --noconfirm pass-cli chezmoi yay zsh
+    sudo pacman -Syu --noconfirm yay zsh chezmoi  
 }
 
 function darwin_install() {
