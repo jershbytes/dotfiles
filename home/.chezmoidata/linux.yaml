@@ -24,7 +24,6 @@ packages:
       - ghostty
       - gnupg
       - hugo
-      - librewolf
       - ttf-jetbrains-mono-nerd
       - joplin-desktop
       - just
