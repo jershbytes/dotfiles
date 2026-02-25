@@ -10,10 +10,18 @@ fi
 # Create the directory
 mkdir -p "{{ .chezmoi.homeDir }}/.config/chezmoi"
 
-# Get the age key from ProtonPass using the protonPass template function
-# This script will be called by chezmoi which will evaluate the template
-echo "Age key file will be managed by chezmoi from ProtonPass"
+echo "Fetching age key attachment from ProtonPass..."
 
-chmod 600 "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt" 2>/dev/null || true
+SHARE_ID="lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw=="
+ITEM_ID="_vUbit8jDG8aK5mhEYVXw7-qdpLJGu_1VWqzy9SYB8NI7gkth66ZeBWOP5YQ7hZF7PT8XYraj3cjFC9G7yXqjg=="
+ATTACHMENT_ID="5NBLQR7GvbCLLvwpBaThpxvulJFRQ6GV0k7z3s2rk8FSbQX6B343W9RUoKL2LVltYhdsXfscbqJdKqwV5OP0iQ=="
+
+pass-cli item attachment download \
+    --share-id="$SHARE_ID" \
+    --item-id="$ITEM_ID" \
+    --attachment-id="$ATTACHMENT_ID" \
+    --output="{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt"
+
+chmod 600 "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt"
 
 echo "✓ Age encryption key ready from ProtonPass"
