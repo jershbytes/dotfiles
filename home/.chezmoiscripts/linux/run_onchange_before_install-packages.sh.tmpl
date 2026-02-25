@@ -21,8 +21,8 @@ flatpak install {{ range .packages.flatpak -}}
 
 {{ if eq .chezmoi.hostname "BigWoke" -}}
 # Install bigwoke specific applications
-sudo pacman -S --needed --noconfirm goxlr-utility
-yay -S --needed --noconfirm goxlr-utility-ui
+sudo pacman -S --needed --noconfirm goxlr-utility sudo cachyos-gaming-meta
+yay -S --needed --noconfirm goxlr-utility-ui input-remapper-bin
 flatpak install flathub com.core447.StreamController
 {{ end -}}
 {{ end -}}

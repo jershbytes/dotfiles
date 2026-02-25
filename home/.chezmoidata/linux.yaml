@@ -24,9 +24,9 @@ packages:
       - ghostty
       - gnupg
       - hugo
-      - ttf-jetbrains-mono-nerd
       - joplin-desktop
       - just
+      - kvantum
       - neovim
       - opentofu
       - packer
@@ -36,9 +36,11 @@ packages:
       - rpi-imager
       - rustypaste-cli
       - signal-desktop
+      - ttf-jetbrains-mono-nerd
       - solaar
       - starship
       - tree
+      - ungoogled-chromium-bin
       - uv
       - zoxide
       - zig
