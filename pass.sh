@@ -4,7 +4,7 @@ set -e
 
 ### Variables ###
 read -rp "Enter Proton Username..." USERNAME
-read -rp "Enter Proton Password..." PASSWORD
+read -rsp "Enter Proton Password..." PASSWORD
 read -rp "Enter the TOTP..." TOTP
 
 # Grab proton-pass-cli installer
