@@ -24,5 +24,6 @@ flatpak install {{ range .packages.flatpak -}}
 sudo pacman -S --needed --noconfirm goxlr-utility sudo cachyos-gaming-meta
 yay -S --needed --noconfirm goxlr-utility-ui input-remapper-bin
 flatpak install flathub com.core447.StreamController
+sudo systemctl enable --now input-remapper # enable input-remapper
 {{ end -}}
 {{ end -}}
