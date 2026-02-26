@@ -17,7 +17,7 @@ export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"  # Starship prompt
 export GPG_TTY=$(tty)
 
 # proton-pass-cli configuration
-export PROTON_PASS_KEY_PROVIDER=keyring
+export PROTON_PASS_KEY_PROVIDER=fs
 
 # eza colors
 export EZA_COLORS="\
