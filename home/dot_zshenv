@@ -16,6 +16,9 @@ export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"  # Starship prompt
 # GPG Settings
 export GPG_TTY=$(tty)
 
+# proton-pass-cli configuration
+export PROTON_PASS_KEY_PROVIDER=keyring
+
 # eza colors
 export EZA_COLORS="\
 uu=36:\
@@ -34,3 +37,4 @@ tr=34:\
 tw=35:\
 tx=36:\
 xx=95:"
+
