@@ -28,6 +28,7 @@ packages:
       - just
       - kvantum
       - neovim
+      - neovide
       - opentofu
       - packer
       - proton-mail-bin
