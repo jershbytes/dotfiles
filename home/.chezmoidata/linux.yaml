@@ -28,7 +28,6 @@ packages:
       - joplin-desktop
       - just
       - kvantum
-      - librewolf-bin
       - neovim
       - neovide
       - opentofu
