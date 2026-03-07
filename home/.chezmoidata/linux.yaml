@@ -20,6 +20,7 @@ packages:
       - docker
       - docker-compose
       - docker-buildx
+      - element-desktop
       - exfatprogs
       - eza
       - fd
