@@ -10,6 +10,10 @@ packages:
       - tv.plex.PlexDesktop
     pacman:
       - age
+      - ansible
+      - ansible-lint
+      - ansible-navigator
+      - awxkit
       - bat
       - bun
       - discord
@@ -24,6 +28,7 @@ packages:
       - fzf
       - ghostty
       - gnupg
+      - halloy
       - hugo
       - joplin-desktop
       - just
