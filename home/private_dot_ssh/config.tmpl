@@ -27,11 +27,11 @@ Host codeberg.org
 # Proxmox VE hosts
 Host pve*
   User root
-  Port 5922
+  Port 22
   IdentityFile ~/.ssh/proxmox/key
 
 # All other hosts in the lab
 Host *
-  Port 5922
-  User jntadmin
+  Port 22
+  User adm_rossj
   IdentityFile ~/.ssh/lab/key
