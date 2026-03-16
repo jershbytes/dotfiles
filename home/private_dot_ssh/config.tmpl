@@ -9,8 +9,8 @@ Host github.com
   IdentitiesOnly yes
 
 # Forgejo
-Host git.jershlabs.xyz
-  HostName git.jershlabs.xyz
+Host {{ $ppForgejo }}
+  HostName {{ $ppForgejo }}
   User git
   Port 222
   IdentityFile ~/.ssh/git/key
@@ -27,11 +27,11 @@ Host codeberg.org
 # Proxmox VE hosts
 Host pve*
   User root
-  Port 22
+  Port 5922
   IdentityFile ~/.ssh/proxmox/key
 
 # All other hosts in the lab
 Host *
-  Port 22
-  User adm_rossj
+  Port 5922
+  User jntadmin
   IdentityFile ~/.ssh/lab/key
