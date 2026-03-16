@@ -1,5 +1,3 @@
-{{- $ppForgejo := protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/sjKDuk3_h2Mar8mEpbyvrvbFtFW2wFJ5Hw2HGC-bW48REumxZHk_Rctg8DqBb7uG9oBDZxO1n4y7QieVjBFpHQ==/forgejo_hostname" -}}
-
 # GitHub
 Host github.com
   HostName github.com
@@ -9,8 +7,8 @@ Host github.com
   IdentitiesOnly yes
 
 # Forgejo
-Host {{ $ppForgejo }}
-  HostName {{ $ppForgejo }}
+Host forgejo.jershlabs.xyz
+  HostName forgejo.jershlabs.xyz
   User git
   Port 222
   IdentityFile ~/.ssh/git/key
@@ -27,11 +25,11 @@ Host codeberg.org
 # Proxmox VE hosts
 Host pve*
   User root
-  Port 5922
+  Port 22
   IdentityFile ~/.ssh/proxmox/key
 
 # All other hosts in the lab
 Host *
-  Port 5922
+  Port 22
   User jntadmin
   IdentityFile ~/.ssh/lab/key
