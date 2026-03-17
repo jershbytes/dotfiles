@@ -6,14 +6,6 @@ Host github.com
   IdentityFile ~/.ssh/git/key
   IdentitiesOnly yes
 
-# Forgejo
-Host forgejo.jershlabs.xyz
-  HostName forgejo.jershlabs.xyz
-  User git
-  Port 222
-  IdentityFile ~/.ssh/git/key
-  IdentitiesOnly yes
-
 # Codeberg
 Host codeberg.org
   HostName codeberg.org
@@ -31,5 +23,5 @@ Host pve*
 # All other hosts in the lab
 Host *
   Port 22
-  User jntadmin
+  User adm_rossj
   IdentityFile ~/.ssh/lab/key
