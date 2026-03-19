@@ -40,7 +40,7 @@ format = "[$user]($style)"
 
 [hostname]
 ssh_only = false
-style = "bold purple"
+style = "bold green"
 format = "@[$hostname]($style) "
 
 [container]
