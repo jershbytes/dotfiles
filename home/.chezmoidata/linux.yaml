@@ -16,7 +16,6 @@ packages:
       - awxkit
       - bat
       - bun
-      - discord
       - docker
       - docker-compose
       - docker-buildx
@@ -34,6 +33,7 @@ packages:
       - joplin-desktop
       - just
       - kvantum
+      - legcord
       - neovim
       - neovide
       - opentofu
