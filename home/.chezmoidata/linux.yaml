@@ -49,6 +49,5 @@ packages:
       - tree
       - ungoogled-chromium-bin
       - uv
-      - vscodium
       - zoxide
       - zig
