@@ -2,9 +2,9 @@ packages:
     aur:
       - deezer
       - fluxer-bin
-      - plasma6-applets-panel-colorizer
       - ov-bin
       - wowup-cf-bin
+      - visual-studio-code-bin
     flatpak:
       - tv.plex.PlexDesktop
     pacman:
@@ -22,7 +22,6 @@ packages:
       - exfatprogs
       - eza
       - fd
-      - firefoxpwa
       - flatpak
       - fzf
       - ghostty
@@ -41,7 +40,6 @@ packages:
       - proton-pass
       - ripgrep
       - rpi-imager
-      - rustypaste-cli
       - signal-desktop
       - ttf-jetbrains-mono-nerd
       - solaar
