@@ -3,7 +3,6 @@ packages:
       - deezer
       - fluxer-bin
       - ov-bin
-      - webapp-manager
       - wowup-cf-bin
       - visual-studio-code-bin
     flatpak:
