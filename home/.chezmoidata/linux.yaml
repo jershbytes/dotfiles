@@ -3,7 +3,6 @@ packages:
       - deezer
       - fluxer-bin
       - ov-bin
-      - wowup-cf-bin
       - visual-studio-code-bin
     flatpak:
       - tv.plex.PlexDesktop
