@@ -1,5 +1,5 @@
 ---
-woke-packages:
+wokePackages:
     aur:
       - archon-appimage
       - goxlr-utility-ui
