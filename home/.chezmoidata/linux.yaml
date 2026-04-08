@@ -1,19 +1,16 @@
+---
 packages:
     aur:
-      - deezer
-      - fluxer-bin
       - ov-bin
       - visual-studio-code-bin
     flatpak:
+      - dev.aunetx.deezer
       - tv.plex.PlexDesktop
     pacman:
       - age
-      - ansible
-      - ansible-lint
-      - ansible-navigator
-      - awxkit
       - bat
       - bun
+      - discord
       - docker
       - docker-compose
       - docker-buildx
@@ -30,7 +27,6 @@ packages:
       - joplin-desktop
       - just
       - kvantum
-      - legcord
       - neovim
       - neovide
       - opentofu

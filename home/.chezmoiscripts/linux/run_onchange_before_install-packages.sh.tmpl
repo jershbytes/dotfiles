@@ -21,9 +21,9 @@ flatpak install {{ range .packages.flatpak -}}
 
 {{ if eq .chezmoi.hostname "BigWoke" -}}
 # Install bigwoke specific applications
-sudo pacman -S --needed --noconfirm goxlr-utility cachyos-gaming-meta
-yay -S --needed --noconfirm goxlr-utility-ui input-remapper-bin archon-appimage
-flatpak install flathub com.core447.StreamController
+sudo pacman -S --needed --noconfirm {{ range .woke-packages.pacman -}}
+yay -S --needed --noconfirm {{ range .woke-packages.aur -}}
+flatpak install flathub {{ range .woke-packages.flatpak -}}
 sudo systemctl enable --now input-remapper # enable input-remapper
 # End of install for bigwoke specific applications
 

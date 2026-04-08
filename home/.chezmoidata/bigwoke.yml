@@ -1,0 +1,11 @@
+---
+woke-packages:
+    aur:
+      - archon-appimage
+      - goxlr-utility-ui
+      - input-remapper-bin
+    flatpak:
+      - com.core447.StreamController
+    pacman:
+      - cachyos-gaming-meta
+      - goxlr-utility
