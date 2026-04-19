@@ -25,8 +25,6 @@ sudo pacman -S --needed --noconfirm {{ range .wokePackages.pacman -}}
 {{ . | quote }} {{ end }}
 yay -S --needed --noconfirm {{ range .wokePackages.aur -}}
 {{ . | quote }} {{ end }}
-flatpak install flathub {{ range .wokePackages.flatpak -}}
-{{ . | quote }} {{ end }}
 sudo systemctl enable --now input-remapper # enable input-remapper
 # End of install for bigwoke specific applications
 

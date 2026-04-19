@@ -4,8 +4,7 @@ wokePackages:
       - archon-appimage
       - goxlr-utility-ui
       - input-remapper-bin
-    flatpak:
-      - com.core447.StreamController
+      - opendeck-bin
     pacman:
       - cachyos-gaming-meta
       - goxlr-utility
