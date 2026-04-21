@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+{{ if eq .osid "linux-rhel" }}
+# Install packages using dnf
+sudo dnf install -y{{- range .packages.epel }} {{ . | quote }}{{- end }}
+
+# Add update scrpt so /usr/local/bin
+sudo tee /usr/local/bin/update >/dev/null <<'EOF'
+#!/usr/bin/env zsh
+sudo dnf upgrade
+EOF
+
+sudo chmod +x /usr/local/bin/update
+{{ end }}

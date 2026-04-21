@@ -1,0 +1,16 @@
+packages:
+  epel:
+    - age
+    - ansible
+    - ansible-lint
+    - bat
+    - fzf
+    - podman-docker
+    - ripgrep
+    - sshpass
+    - terminator
+    - unzip
+    - tree
+    - wget
+    - whois
+    - zoxide
