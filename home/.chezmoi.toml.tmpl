@@ -1,6 +1,6 @@
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
-{{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
+{{-   $osid = .chezmoi.osRelease.id -}}
 {{- end -}}
 
 [data]
@@ -9,6 +9,7 @@
 [git]
     autoCommit = true
     autoPush = true
+
 [edit]
     command = "code"
     args = ["--wait"]

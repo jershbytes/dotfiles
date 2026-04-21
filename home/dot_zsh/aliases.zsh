@@ -9,7 +9,6 @@ alias less='less -R'
 alias home='cd ~'
 alias cd="z"
 alias ls='eza --icons --color=always'
-alias apt='nala'
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
