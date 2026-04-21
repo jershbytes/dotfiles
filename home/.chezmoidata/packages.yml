@@ -1,8 +1,6 @@
 packages:
   epel:
     - age
-    - ansible
-    - ansible-lint
     - bat
     - fzf
     - podman-docker
@@ -13,4 +11,3 @@ packages:
     - tree
     - wget
     - whois
-    - zoxide
