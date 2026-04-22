@@ -5,10 +5,4 @@
 
 ## Install
 
-```bash
-export GITHUB_USERNAME="JershBytes"
-```
-
-
-```bash
-sh -c "$(curl -fsLS https://get.chezmoi.io/lb)" -- init --apply "$GITHUB_USERNAME/work-dotfiles.git"
+Download the script located [here](./install.sh).
