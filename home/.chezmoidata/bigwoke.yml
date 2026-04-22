@@ -2,9 +2,11 @@
 wokePackages:
     aur:
       - archon-appimage
+      - curseforge
       - goxlr-utility-ui
       - input-remapper-bin
       - opendeck-bin
+      - 
     pacman:
       - cachyos-gaming-meta
       - goxlr-utility
