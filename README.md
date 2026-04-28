@@ -10,10 +10,6 @@
 export PATH="/home/$USER/.local/bin:$PATH"
 ```
 
-### Proton Pass Installer
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/jershbytes/dotfiles/refs/heads/main/pass.sh)"
-```
 ### Dotfiles Installer
 
 ```bash
