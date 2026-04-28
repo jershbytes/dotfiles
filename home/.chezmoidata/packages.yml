@@ -11,3 +11,5 @@ packages:
     - tree
     - wget
     - whois
+  brews:
+    - uv
