@@ -15,7 +15,6 @@ packages:
       - docker-compose
       - docker-buildx
       - element-desktop
-      - exfatprogs
       - eza
       - fd
       - flatpak
