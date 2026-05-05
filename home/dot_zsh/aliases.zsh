@@ -54,3 +54,6 @@ alias cze='chezmoi edit'
 alias czea='chezmoi edit --apply'
 alias czra='chezmoi re-add'
 alias czu='chezmoi update'
+
+# Kiro alias
+alias ksc='kiro'
