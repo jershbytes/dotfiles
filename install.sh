@@ -13,7 +13,7 @@ function darwin_install() {
 }
 
 function apply_dotfiles() {
-    chezmoi init jershbytes
+    chezmoi init https://forgejo.praxis.red/JershBytes/dotfiles.git
     chezmoi apply
 }
 
