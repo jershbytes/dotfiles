@@ -13,3 +13,4 @@ packages:
     - whois
   brews:
     - uv
+    - nvim
