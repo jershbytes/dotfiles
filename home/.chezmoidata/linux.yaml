@@ -9,7 +9,6 @@ packages:
     pacman:
       - age
       - bat
-      - bun
       - discord
       - docker
       - docker-compose
@@ -26,10 +25,9 @@ packages:
       - joplin-desktop
       - just
       - kvantum
+      - mise
       - neovim
       - neovide
-      - opentofu
-      - packer
       - proton-mail-bin
       - proton-pass
       - ripgrep
@@ -42,4 +40,3 @@ packages:
       - ungoogled-chromium-bin
       - uv
       - zoxide
-      - zig
