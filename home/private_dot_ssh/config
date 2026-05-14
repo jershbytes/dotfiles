@@ -14,11 +14,11 @@ Host codeberg.org
   IdentityFile ~/.ssh/git/key
   IdentitiesOnly yes
 
-# Forgejo
-Host forgejo.jershlabs.xyz
-  HostName forgejo.jershlabs.xyz
+# Gitlab-CE
+Host git.jershlabs.xyz
+  HostName git.jershlabs.xyz
   User git
-  Port 222
+  Port 22
   IdentityFile ~/.ssh/git/key
   IdentitiesOnly yes
 
