@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Alias's to modified commands
 alias cat='bat'
 alias cp='cp -i'

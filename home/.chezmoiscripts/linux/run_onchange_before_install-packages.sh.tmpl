@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-{{ if eq .osid "linux-rhel" }}
+{{ if eq .osid "rhel" }}
 
 # Install packages using dnf
 sudo dnf install -y{{- range .packages.epel }} {{ . | quote }}

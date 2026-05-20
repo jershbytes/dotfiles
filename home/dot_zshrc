@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
   # Defer plugin loading
@@ -8,7 +10,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
   # --- Initialize Oh My Zsh plugins
   plugins=(
-    aliases ansible brew chezmoi colored-man-pages copyfile copypath fzf genpass git gitignore history pip sudo starship systemd terraform ubuntu uv vscode zoxide
+    aliases ansible brew chezmoi colored-man-pages copyfile copypath dnf fzf genpass git gitignore history sudo starship systemd terraform ubuntu uv vscode zoxide
     zsh-autosuggestions zsh-interactive-cd
   )
 
