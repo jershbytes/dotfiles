@@ -12,5 +12,7 @@ packages:
     - wget
     - whois
   brews:
+    - ansible
+    - ansible-lint
     - uv
     - nvim
