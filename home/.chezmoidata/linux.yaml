@@ -7,6 +7,7 @@ packages:
       - dev.aunetx.deezer
       - tv.plex.PlexDesktop
     pacman:
+      - 7zip
       - age
       - bat
       - discord
@@ -21,8 +22,10 @@ packages:
       - ghostty
       - gnupg
       - halloy
+      - imagemagick
       - hugo
       - joplin-desktop
+      - jq
       - just
       - kvantum
       - mise
@@ -30,6 +33,7 @@ packages:
       - neovide
       - proton-mail-bin
       - proton-pass
+      - resvg
       - ripgrep
       - rpi-imager
       - signal-desktop
@@ -39,4 +43,5 @@ packages:
       - tree
       - ungoogled-chromium-bin
       - uv
+      - yazi
       - zoxide
