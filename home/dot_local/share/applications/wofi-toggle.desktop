@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Wofi Toggle
+Comment=Toggle Wofi launcher
+Exec=/home/jersh/.local/bin/wofi-toggle
+Icon=wofi
+Type=Application
+Categories=Utility;
