@@ -43,5 +43,6 @@ packages:
       - tree
       - ungoogled-chromium-bin
       - uv
+      - wofi
       - yazi
       - zoxide
