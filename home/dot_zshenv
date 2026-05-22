@@ -1,5 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh" # Oh My Zsh installation path
 export LANG="en_US.UTF-8"     # Language
+export ZDOTDIR="$HOME/.config/zsh" # Load .zshrc from ~/.config/zsh
+
 
 ### PATHS ###
 export PATH="$PATH:$HOME/.local/bin"        # Add user local bin (e.g., MkDocs)
