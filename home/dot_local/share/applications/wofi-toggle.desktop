@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Wofi Toggle
-Comment=Toggle Wofi launcher
-Exec=%h/.local/bin/wofi-toggle
-Icon=wofi
-Type=Application
-Categories=Utility;

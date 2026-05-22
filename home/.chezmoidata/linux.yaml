@@ -18,6 +18,7 @@ packages:
       - eza
       - fd
       - flatpak
+      - fuzzel
       - fzf
       - ghostty
       - gnupg
@@ -43,6 +44,5 @@ packages:
       - tree
       - ungoogled-chromium-bin
       - uv
-      - wofi
       - yazi
       - zoxide
