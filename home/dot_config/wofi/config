@@ -1,0 +1,11 @@
+width=720
+height=420
+location=center
+show=drun
+prompt=Applications
+filter_rate=100
+allow_images=true
+image_size=20
+gtk_dark=true
+term=foot
+single_instance=true
