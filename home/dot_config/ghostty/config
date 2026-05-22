@@ -1,14 +1,18 @@
-# Config settings
+theme = Nord
+window-theme = ghostty
+window-height = 35
+window-width = 100
+background-opacity = 0.95
+font-size = 12
+gtk-titlebar = false
+confirm-close-surface = false
 clipboard-read = allow
 clipboard-write = allow
 copy-on-select = clipboard
-window-height = 25
-window-width = 110
-scrollback-limit = 10000
-gtk-wide-tabs = false
 
-# Theme settings
-window-theme = system
-window-decoration = client
-background-opacity = 0.8
-theme = Nord
+
+#keybind = ctrl+up=scroll_page_lines:5
+#keybind = ctrl+down=scroll_page_lines:-5
+
+keybind = ctrl+up=scroll_page_up
+keybind = ctrl+down=scroll_page_down
