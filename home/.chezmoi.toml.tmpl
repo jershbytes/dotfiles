@@ -27,5 +27,4 @@ encryption = "age"
     recipient = "age1aswg239d4ha5xaak3tya3u83dxupk2f8apn5v52wwgqshlydjewqv55446"
 
 [hooks.read-source-state.pre]
-    command = "bash"
-    args = ["{{ .chezmoi.sourceDir }}/.install-password-manager.sh"]
+    command = ".local/share/chezmoi/.install-password-manager.sh"

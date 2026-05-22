@@ -15,6 +15,3 @@ Linux)
     exit 1
     ;;
 esac
-
-# Login to proton-pass-cli
-pass-cli login
