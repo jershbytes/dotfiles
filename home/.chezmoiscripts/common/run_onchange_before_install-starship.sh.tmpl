@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Install starship if not already installed
+if ! command -v starship &>/dev/null; then
+  echo "Starship not found. Installing..."
+  curl -sS https://starship.rs/install.sh | sh -s -- --yes
+else
+  echo "Starship is already installed: $(starship --version)"
+fi
