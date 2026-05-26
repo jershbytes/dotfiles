@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -e
 
 GITHUB_USERNAME=JershBytes
 
-sh -c "$(curl -fsLS https://get.chezmoi.io/lb)" -- init --apply git@github.com:$GITHUB_USERNAME/work-dotfiles.git
+sh -c "$(curl -fsLS https://get.chezmoi.io/lb)" -- init --apply $GITHUB_USERNAME
