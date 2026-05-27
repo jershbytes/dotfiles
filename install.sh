@@ -1,40 +1,23 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-set -e
+set -e # -e: exit on error
 
-function arch_install() {
-    sudo pacman -Syu --noconfirm yay zsh chezmoi
-}
+if [ ! "$(command -v chezmoi)" ]; then
+  bin_dir="$HOME/.local/bin"
+  chezmoi="$bin_dir/chezmoi"
+  if [ "$(command -v curl)" ]; then
+    sh -c "$(curl -fsSL https://git.io/chezmoi)" -- -b "$bin_dir"
+  elif [ "$(command -v wget)" ]; then
+    sh -c "$(wget -qO- https://git.io/chezmoi)" -- -b "$bin_dir"
+  else
+    echo "To install chezmoi, you must have curl or wget installed." >&2
+    exit 1
+  fi
+else
+  chezmoi=chezmoi
+fi
 
-function darwin_install() {
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    brew install pass-cli chezmoi git
-}
-
-function apply_dotfiles() {
-    chezmoi init https://forgejo.praxis.red/JershBytes/dotfiles.git
-    chezmoi apply
-}
-
-
-case "$(uname -s)" in
-    Linux*)
-        if command -v pacman &> /dev/null; then
-            arch_install
-            apply_dotfiles
-        else
-            echo "Unsupported Linux distribution. This script only supports Arch Linux."
-            exit 1
-        fi
-        ;;
-    Darwin*)
-        darwin_install
-        apply_dotfiles
-        ;;
-    *)
-        echo "Unsupported operating system: $(uname -s)"
-        exit 1
-        ;;
-esac
-
+# POSIX way to get script's dir: https://stackoverflow.com/a/29834779/12156188
+script_dir="$(cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P)"
+# exec: replace current process with chezmoi init
+exec "$chezmoi" init --apply "--source=$script_dir"
