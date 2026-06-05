@@ -1,15 +1,3 @@
-# Powerful but minimal zsh configuration
-# Author: Radley E. Sidwell-Lewis
-# GitHub: https://www.github.com/radleylewis/zsh
-#
-# Uses:
-#   Plugins:      fast-syntax-highlighting, zsh-autosuggestions,
-#                 zsh-history-substring-search, zsh-vi-mode
-#   Prompt:       starship
-#   Navigation:   zoxide, fzf, fd
-#   CLI tools:    eza, bat, nvim, ripgrep
-#   Node:         nvm
-
 # =========================================================
 # oh-my-zsh
 # =========================================================
@@ -29,7 +17,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   )
 
   # --- Oh My Zsh Core Initialization
-  source $ZSH/oh-my-zsh.zsh
+  source $ZSH/oh-my-zsh.sh
 
 # =========================================================
 # History
@@ -58,11 +46,8 @@ setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
 # Smart directory navigation & lf
 # =========================================================
 
-LF_ICONS=$(cat ~/.config/lf/icons | tr '\n' ':')
-export LF_ICONS
-
-# Initialize zoxide
-eval "$(zoxide init zsh)"
+# LF_ICONS=$(cat ~/.config/lf/icons | tr '\n' ':')
+# export LF_ICONS
 
 # =========================================================
 # Completion
