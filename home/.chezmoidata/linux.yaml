@@ -1,7 +1,6 @@
 ---
 packages:
     aur:
-      - ov-bin
       - visual-studio-code-bin
     flatpak:
       - dev.aunetx.deezer
@@ -11,9 +10,6 @@ packages:
       - age
       - bat
       - discord
-      - docker
-      - docker-compose
-      - docker-buildx
       - element-desktop
       - eza
       - fd
