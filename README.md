@@ -5,4 +5,9 @@
 
 ## Install
 
-Download the script located [here](./install.sh).
+```bash
+
+export GITHUB_USERNAME=JershBytes
+
+sh -c "$(curl -fsLS https://get.chezmoi.io/lb)" -- init --apply $GITHUB_USERNAME
+```
