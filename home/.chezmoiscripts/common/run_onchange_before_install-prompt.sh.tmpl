@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -eo pipefail
+
 
 # Install starship if not already installed
 if ! command -v starship &>/dev/null; then
@@ -17,3 +18,12 @@ if ! command -v zoxide &>/dev/null; then
 else
   echo "zoxide is already installed: $(zoxide --version)"
 fi
+
+# Ubuntu installs bat and fd under different names — symlink them so everything works
+[ -L ~/.local/bin/bat ] || ln -s "$(which batcat)" ~/.local/bin/bat
+[ -L ~/.local/bin/fd ] || ln -s "$(which fdfind)" ~/.local/bin/fd
+
+# Create required directories
+mkdir -p ~/.local/state/zsh   # history
+mkdir -p ~/.cache/zsh         # completion cache
+
