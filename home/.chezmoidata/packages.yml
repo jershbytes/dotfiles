@@ -1,18 +1,11 @@
 packages:
-  epel:
-    - age
+  ubuntu:
+    - zsh
+    - neovim
+    - eza
     - bat
+    - fd-find
     - fzf
-    - podman-docker
     - ripgrep
-    - sshpass
-    - terminator
-    - unzip
-    - tree
-    - wget
-    - whois
   brews:
-    - ansible
-    - ansible-lint
     - uv
-    - nvim
