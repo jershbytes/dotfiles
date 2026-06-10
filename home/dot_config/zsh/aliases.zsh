@@ -11,6 +11,7 @@ alias less='less -R'
 alias home='cd ~'
 alias cd="z"
 alias ls='eza --icons --color=always'
+alias vim='nvim'
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
