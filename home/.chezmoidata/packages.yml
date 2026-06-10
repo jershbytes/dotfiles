@@ -11,6 +11,7 @@ packages:
     - fortune
     - lolcat
     - duf
+    - cowsay
     - zsh
     - neovim
     - eza
