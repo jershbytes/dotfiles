@@ -3,7 +3,7 @@
 # Navigation
 alias cd='z'
 alias tree='eza --tree --icons'
-alias ls='eza --icons'
+alias ls='eza --icons --color=always'
 alias ll='eza -lh --icons --git'
 alias la='eza -lah --icons --git'
 
