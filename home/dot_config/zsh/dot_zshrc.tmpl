@@ -14,8 +14,8 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # --- load plugins
 plugins=(
-aliases ansible archlinux brew bun chezmoi colored-man-pages copyfile copypath docker docker-compose fzf genpass git gitignore history
-nvm opentofu pip starship sudo systemd uv vscode zoxide zsh-autosuggestions zsh-interactive-cd
+aliases ansible archlinux brew bun chezmoi colored-man-pages copyfile copypath docker docker-compose fzf genpass git gitignore
+nvm opentofu pip starship sudo systemd uv vscode zsh-autosuggestions zsh-interactive-cd
 )
 
 # --- Oh My Zsh Core Initialization
@@ -51,6 +51,9 @@ setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
 
 # LF_ICONS=$(cat ~/.config/lf/icons | tr '\n' ':')
 # export LF_ICONS
+
+# Initialize zoxide
+eval "$(zoxide init zsh)"
 
 # =========================================================
 # Completion
