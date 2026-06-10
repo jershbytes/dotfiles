@@ -1,5 +1,16 @@
 packages:
   ubuntu:
+    - curl
+    - wget
+    - dos2unix
+    - net-tools
+    - bind9-dnsutils
+    - unzip
+    - git-delta
+    - mc
+    - fortune
+    - lolcat
+    - duf
     - zsh
     - neovim
     - eza
