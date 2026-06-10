@@ -59,3 +59,6 @@ alias czu='chezmoi update'
 
 # Kiro alias
 alias ksc='kiro'
+
+# funny aliases
+alias lolcow='fortune | cowsay | lolcat'
