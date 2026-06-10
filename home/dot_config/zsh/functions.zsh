@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 #######################################################
 # SPECIAL FUNCTIONS
 #######################################################
@@ -25,18 +27,6 @@ extract() {
 	done
 }
 
-# Searches for text in all files in the current folder
-ftext() {
-	# -i case-insensitive
-	# -I ignore binary files
-	# -H causes filename to be printed
-	# -r recursive search
-	# -n causes line number to be printed
-	# optional: -F treat search term as a literal, not a regular expression
-	# optional: -l only print filenames and not the matching lines ex. grep -irl "$1" *
-	grep -iIHrn --color=always "$1" . | less -r
-}
-
 # Copy file with a progress bar
 cpp() {
     set -e
@@ -61,23 +51,6 @@ cpp() {
 pwdtail() {
 	pwd | awk -F/ '{nlast = NF -1;print $nlast"/"$NF}'
 }
-
-# IP address lookup
-function whatsmyip () {
-    # Internal IP Lookup.
-    if command -v ip &> /dev/null; then
-        echo -n "Internal IP: "
-        ip addr show wlan0 | grep "inet " | awk '{print $2}' | cut -d/ -f1
-    else
-        echo -n "Internal IP: "
-        ifconfig wlan0 | grep "inet " | awk '{print $2}'
-    fi
-
-    # External IP Lookup
-    echo -n "External IP: "
-    curl -4 ifconfig.me
-}
-alias whatismyip="whatsmyip"
 
 ipinfo() {
 DASH="$(for i in {1..29}; do echo -n "-"; done)"
