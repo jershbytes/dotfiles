@@ -13,13 +13,10 @@ OMZ_LAZY_LOAD=true
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # --- load plugins
-plugins=(
-aliases ansible archlinux brew bun chezmoi colored-man-pages copyfile copypath docker docker-compose fzf genpass git gitignore
-nvm opentofu pip starship sudo systemd uv vscode zsh-autosuggestions zsh-interactive-cd
-)
+plugins=( aliases ansible archlinux brew bun chezmoi colored-man-pages copyfile copypath genpass gitopentofu pip starship sudo systemd uv vscode zsh-autosuggestions zsh-interactive-cd )
 
 # --- Oh My Zsh Core Initialization
-source $OMZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 
 # =========================================================
@@ -109,9 +106,6 @@ source "$ZDOTDIR/fzf.zsh"
 
 # Aliases
 source "$ZDOTDIR/aliases.zsh"
-
-# Functions
-source "$ZDOTDIR/functions.zsh"
 
 # Functions
 source "$ZDOTDIR/functions.zsh"
