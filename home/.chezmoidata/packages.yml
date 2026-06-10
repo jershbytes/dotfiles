@@ -12,6 +12,8 @@ packages:
     - lolcat
     - duf
     - cowsay
+    - podman
+    - podman-docker
     - zsh
     - eza
     - bat
