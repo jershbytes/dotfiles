@@ -19,6 +19,7 @@ else
   echo "zoxide is already installed: $(zoxide --version)"
 fi
 
+# Install yazi if not already installed
 if ! command -v yazi &>/dev/null; then
   echo "yazi not found. Installing..."
 curl -sS https://debian.griffo.io/EA0F721D231FDD3A0A17B9AC7808B4DD62C41256.asc | gpg --dearmor --yes | sudo tee /etc/apt/trusted.gpg.d/debian.griffo.io.gpg > /dev/null

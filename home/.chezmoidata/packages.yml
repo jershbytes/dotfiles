@@ -1,5 +1,5 @@
 packages:
-  ubuntu:
+  apt:
     - curl
     - wget
     - dos2unix
@@ -13,11 +13,11 @@ packages:
     - duf
     - cowsay
     - zsh
-    - neovim
     - eza
     - bat
     - fd-find
     - fzf
     - ripgrep
-  brews:
-    - uv
+  snaps:
+    - astral-uv
+    - nvim
