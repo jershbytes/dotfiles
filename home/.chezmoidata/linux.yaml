@@ -27,6 +27,8 @@ packages:
       - kvantum
       - mise
       - neovim
+      - podman
+      - podman-docker
       - protonmail-bridge
       - proton-pass
       - resvg
