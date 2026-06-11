@@ -28,7 +28,7 @@ packages:
       - mise
       - neovim
       - neovide
-      - proton-mail-bin
+      - protonmail-bridge
       - proton-pass
       - resvg
       - ripgrep
@@ -37,6 +37,7 @@ packages:
       - ttf-jetbrains-mono-nerd
       - solaar
       - starship
+      - thunderbird
       - tree
       - ungoogled-chromium-bin
       - uv
