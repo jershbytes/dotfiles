@@ -6,14 +6,14 @@
 ## Install
 
 ### Set PATH
-```bash
+```shell
 export PATH="/home/$USER/.local/bin:$PATH"
 ```
 
 ### Dotfiles Installer
 
-```bash
-sh -c "$(curl -fsSL https://forgejo.praxis.red/JershBytes/dotfiles/raw/branch/main/install.sh)"
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/jershbytes/dots/refs/heads/main/install.sh)"
 ```
 
 > [!NOTE]

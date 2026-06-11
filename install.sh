@@ -2,18 +2,20 @@
 
 set -e
 
+export GITHUB_USERNAME=JershBytes
+
 function arch_install() {
-    sudo pacman -Syu --noconfirm yay zsh chezmoi
+    sudo pacman -S --noconfirm yay zsh chezmoi
 }
 
 function darwin_install() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    brew install pass-cli chezmoi git
+    brew install chezmoi git
 }
 
 function apply_dotfiles() {
-    chezmoi init --apply https://forgejo.praxis.red/JershBytes/dotfiles.git
+    chezmoi init --apply $GITHUB_USERNAME/dots
 }
 
 
