@@ -31,6 +31,7 @@ alias less='less -R'
 alias cls='clear'
 
 # System
+alias ssh="TERM=xterm-256color ssh"
 alias ps='ps auxf'
 alias ping='ping -c 10'
 alias bye='shutdown -h now'
