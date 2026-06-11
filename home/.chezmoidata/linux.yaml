@@ -27,7 +27,6 @@ packages:
       - kvantum
       - mise
       - neovim
-      - neovide
       - protonmail-bridge
       - proton-pass
       - resvg

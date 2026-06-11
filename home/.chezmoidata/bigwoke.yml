@@ -1,7 +1,6 @@
 ---
 wokePackages:
     aur:
-      - archon-appimage
       - goxlr-utility-ui
       - input-remapper-bin
       - opendeck-bin
