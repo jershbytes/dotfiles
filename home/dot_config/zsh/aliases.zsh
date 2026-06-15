@@ -43,6 +43,7 @@ alias ff='fastfetch'
 # chezmoi
 alias cz='chezmoi'
 alias cza='chezmoi add'
+alias czap='chezmoi apply'
 alias czcd='chezmoi cd'
 alias cze='chezmoi edit'
 alias czea='chezmoi edit --apply'
