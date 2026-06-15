@@ -3,17 +3,16 @@
 <p align="center"><a href="https://www.chezmoi.io/"><img src="https://img.shields.io/badge/managed%20with-chezmoi-00A0FF.svg" alt="chezmoi"></a></p>
 
 
-## Install
+## Dotfiles Installer
 
-### Set PATH
-```shell
-export PATH="/home/$USER/.local/bin:$PATH"
-```
-
-### Dotfiles Installer
-
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/jershbytes/dots/refs/heads/main/install.sh)"
+```just
+Available recipes:
+    apply             # Apply dotfiles
+    arch-dependencies # Install arch-dependencies
+    default           # List recipes
+    install           # Install chezmoi
+    setup_arch        # Run everything together on arch
+    setup_mac         # Run everything together on mac
 ```
 
 > [!NOTE]
