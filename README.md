@@ -7,12 +7,11 @@
 
 ```just
 Available recipes:
-    apply             # Apply dotfiles
-    arch-dependencies # Install arch-dependencies
     default           # List recipes
-    install           # Install chezmoi
-    setup_arch        # Run everything together on arch
-    setup_mac         # Run everything together on mac
+    apply_dotfiles    # Initialize and apply dotfiles from this GitHub account
+    arch_install      # Install required packages on Arch Linux
+    darwin_install    # Install Homebrew and base packages on macOS
+    install           # Detect OS and run the appropriate install flow
 ```
 
 > [!NOTE]
