@@ -13,6 +13,10 @@ alias mv='mv -i'
 alias mkdir='mkdir -p'
 alias rmd='/bin/rm --recursive --force --verbose'
 
+# Editor
+alias vi='nvim'
+alias vim='nvim'
+
 # Archives
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'
