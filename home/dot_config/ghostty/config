@@ -1,4 +1,5 @@
-theme = Nord
+config-file = ~/.config/ghostty/themes/dracula-alucard.conf
+
 window-theme = ghostty
 window-height = 35
 window-width = 100
