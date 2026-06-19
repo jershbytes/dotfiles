@@ -21,10 +21,6 @@ alias untar='tar -xvf'
 alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
 
-# Editors
-alias vi='nvim'
-alias vim='nvim'
-
 # Viewing / output
 alias cat='bat'
 alias less='less -R'
