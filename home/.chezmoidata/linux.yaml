@@ -25,11 +25,10 @@ packages:
       - jq
       - just
       - kvantum
-      - mise
       - neovim
       - podman
       - podman-docker
-      - protonmail-bridge
+      - proton-mail-bin
       - proton-pass
       - resvg
       - ripgrep
@@ -38,7 +37,6 @@ packages:
       - ttf-jetbrains-mono-nerd
       - solaar
       - starship
-      - thunderbird
       - tree
       - ungoogled-chromium-bin
       - uv

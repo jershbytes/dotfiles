@@ -1,4 +1,4 @@
-# ~/.config/zsh/.zshenv
+#!/usr/bin/env zsh
 
 # ---------- XDG base directories ----------
 # Centralizes config/cache/data locations
