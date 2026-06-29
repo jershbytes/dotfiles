@@ -2,7 +2,7 @@
 wokePackages:
     aur:
       - goxlr-utility-ui
-      - input-remapper-bin
+      - input-remapper-git
       - opendeck-bin
       - wowup-cf-bin
     pacman:
