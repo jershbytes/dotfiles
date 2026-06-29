@@ -13,7 +13,7 @@ export PATH="/home/$USER/.local/bin:$PATH"
 ### Dotfiles Installer
 
 ```bash
-sh -c "$(curl -fsSL https://github.com/JershBytes/dotfiles/raw/branch/main/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/jershbytes/dotfiles/refs/heads/main/install.sh)"
 ```
 
 > [!NOTE]
