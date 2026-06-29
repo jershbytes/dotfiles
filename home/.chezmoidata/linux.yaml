@@ -27,6 +27,7 @@ packages:
       - just
       - kvantum
       - neovim
+      - opentofu
       - podman
       - podman-docker
       - proton-mail-bin
@@ -38,6 +39,7 @@ packages:
       - ttf-jetbrains-mono-nerd
       - solaar
       - starship
+      - terragrunt
       - tree
       - ungoogled-chromium-bin
       - uv
