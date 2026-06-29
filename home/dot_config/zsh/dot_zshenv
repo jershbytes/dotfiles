@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # ---------- XDG base directories ----------
 # Centralizes config/cache/data locations
 export OMZSH="$HOME/.oh-my-zsh"

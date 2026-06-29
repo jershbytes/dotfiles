@@ -14,12 +14,12 @@ packages:
       - eza
       - fd
       - flatpak
-      - fuzzel
       - fzf
       - ghostty
       - gnupg
       - halloy
       - imagemagick
+      - infisical
       - hugo
       - joplin-desktop
       - jq
