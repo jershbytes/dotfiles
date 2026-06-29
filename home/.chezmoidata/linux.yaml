@@ -2,6 +2,7 @@
 packages:
     aur:
       - visual-studio-code-bin
+      - infisical
     flatpak:
       - dev.aunetx.deezer
       - tv.plex.PlexDesktop
@@ -19,7 +20,6 @@ packages:
       - gnupg
       - halloy
       - imagemagick
-      - infisical
       - hugo
       - joplin-desktop
       - jq
