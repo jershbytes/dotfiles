@@ -10,6 +10,7 @@ packages:
       - 7zip
       - age
       - bat
+      - cmatrix
       - discord
       - element-desktop
       - eza

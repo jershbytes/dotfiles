@@ -40,6 +40,7 @@ alias zsh-reload='exec zsh'
 
 # Tools
 alias ff='fastfetch'
+alias matrix='cmatrix'
 
 # chezmoi
 alias cz='chezmoi'
