@@ -31,7 +31,7 @@ export PROTON_PASS_LINUX_KEYRING=dbus
 export INFISICAL_DOMAIN="https://infisical.jershlabs.xyz"
 
 # ---------- Starship ----------
-export STARSHIP_CONFIG="$ZDOTDIR/starship.toml"
+export STARSHIP_CONFIG="$ZDOTDIR/conf.d/starship.toml"
 
 # ---------- eza ----------
 export EZA_COLORS="\
