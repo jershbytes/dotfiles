@@ -1,0 +1,12 @@
+# ~/.zshenv — the only zsh file allowed to live in $HOME
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+
+# Prepend to PATH only if not already present.
+path_prepend() {
+  case ":$PATH:" in
+    *":$1:"*) ;;            # already there — do nothing
+    *) PATH="$1:$PATH" ;;
+  esac
+}
+
+path_prepend "$HOME/.local/bin"
