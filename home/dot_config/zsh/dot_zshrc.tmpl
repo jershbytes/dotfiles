@@ -15,11 +15,11 @@ DISABLE_AUTO_UPDATE="true"
 # Defer plugin loading
 OMZ_LAZY_LOAD=true
 
-# --- Oh My Zsh Core Initialization
-source $OMZSH/oh-my-zsh.sh
-
 # fpath setup (before plugins)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # --- load plugins
 plugins=( aliases ansible archlinux brew bun chezmoi colored-man-pages copyfile copypath genpass git opentofu pip starship sudo systemd uv vscode zsh-autosuggestions zsh-interactive-cd )
+
+# --- Oh My Zsh Core Initialization
+source $OMZSH/oh-my-zsh.sh
