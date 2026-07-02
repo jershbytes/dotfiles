@@ -1,25 +1,25 @@
-# Disable auto-update
-DISABLE_AUTO_UPDATE="true"
+# ~/.config/zsh/.zshrc — loads every fragment in numeric order
+for _file in "${ZDOTDIR}"/conf.d/*.zsh(N); do
+  source "$_file"
+done
+unset _file
 
 {{ if eq .chezmoi.os "darwin" -}}
 # Load Homebrew only if dawwin
 eval "$(/opt/homebrew/bin/brew shellenv)"
 {{ end -}}
 
+# Disable auto-update
+DISABLE_AUTO_UPDATE="true"
+
 # Defer plugin loading
 OMZ_LAZY_LOAD=true
+
+# --- Oh My Zsh Core Initialization
+source $OMZSH/oh-my-zsh.sh
 
 # fpath setup (before plugins)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # --- load plugins
 plugins=( aliases ansible archlinux brew bun chezmoi colored-man-pages copyfile copypath genpass git opentofu pip starship sudo systemd uv vscode zsh-autosuggestions zsh-interactive-cd )
-
-# --- Oh My Zsh Core Initialization
-source "$OMZSH/oh-my-zsh.sh"
-
-# ~/.config/zsh/.zshrc — loads every fragment in numeric order
-for _file in "${ZDOTDIR}"/conf.d/*.zsh(N); do
-  source "$_file"
-done
-unset _file
