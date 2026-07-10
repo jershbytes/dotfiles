@@ -2,7 +2,7 @@
 packages:
     aur:
       - visual-studio-code-bin
-      - infisical
+      - infisical-bin
     flatpak:
       - dev.aunetx.deezer
       - tv.plex.PlexDesktop
