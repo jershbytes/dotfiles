@@ -1,7 +1,0 @@
-{{ if or (eq .osid "cachyos") (eq .osid "arch") -}}
-#!/usr/bin/env bash
-
-set -eufo pipefail
-
-chsh -s /usr/bin/zsh
-{{ end -}}
