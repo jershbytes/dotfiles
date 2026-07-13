@@ -21,9 +21,9 @@ flatpak install {{ range .packages.flatpak -}}
 
 {{ if eq .chezmoi.hostname "BigWoke" -}}
 # Install bigwoke specific applications
-sudo pacman -S --needed --noconfirm {{ range .wokePackages.pacman -}}
+sudo pacman -S --needed --noconfirm {{ range .Packages.woke_pacman -}}
 {{ . | quote }} {{ end }}
-yay -S --needed --noconfirm {{ range .wokePackages.aur -}}
+yay -S --needed --noconfirm {{ range .Packages.woke_aur -}}
 {{ . | quote }} {{ end }}
 sudo systemctl enable --now input-remapper # enable input-remapper
 # End of install for bigwoke specific applications
