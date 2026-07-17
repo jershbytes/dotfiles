@@ -4,7 +4,7 @@ set -e
 
 REPO="https://github.com/jershbytes/dotfiles.git"
 
-function arch_install() {
+function cachy_install() {
   sudo pacman -Syu --noconfirm yay zsh chezmoi
 }
 
@@ -21,7 +21,7 @@ function apply_dotfiles() {
 case "$(uname -s)" in
 Linux*)
   if command -v pacman &>/dev/null; then
-    arch_install
+    cachy_install
     apply_dotfiles
   else
     echo "Unsupported Linux distribution. This script only supports Arch Linux."
