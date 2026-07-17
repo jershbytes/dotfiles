@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 {{ if or (eq .osid "cachyos") (eq .osid "arch") -}}
 
-# Ensure yay is installed
-if ! command -v yay &> /dev/null; then
-    echo "yay is not installed. Please install the yay binary before running this script."
+# Ensure aura is installed
+if ! command -v aura &> /dev/null; then
+    echo "aura is not installed. Please install the aura binary before running this script."
     exit 1
 fi
 
@@ -12,7 +12,7 @@ sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}
 {{ . | quote }} {{ end }}
 
 # Install packages using yay
-yay -S --needed --noconfirm {{ range .packages.aur -}}
+aura -S --needed --noconfirm {{ range .packages.aur -}}
 {{ . | quote }} {{ end }}
 
 # Install packages using flatpak
@@ -21,9 +21,9 @@ flatpak install {{ range .packages.flatpak -}}
 
 {{ if eq .chezmoi.hostname "BigWoke" -}}
 # Install bigwoke specific applications
-sudo pacman -S --needed --noconfirm {{ range .Packages.woke_pacman -}}
+sudo pacman -S --needed --noconfirm {{ range .packages.woke_pacman -}}
 {{ . | quote }} {{ end }}
-yay -S --needed --noconfirm {{ range .Packages.woke_aur -}}
+aura -S --needed --noconfirm {{ range .packages.woke_aur -}}
 {{ . | quote }} {{ end }}
 sudo systemctl enable --now input-remapper # enable input-remapper
 # End of install for bigwoke specific applications
