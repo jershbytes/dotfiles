@@ -48,7 +48,6 @@ packages:
       - goxlr-utility-ui
       - input-remapper-git
       - opendeck-bin
-      - wowup-cf-bin
     woke_pacman:
       - cachyos-gaming-meta
       - goxlr-utility
