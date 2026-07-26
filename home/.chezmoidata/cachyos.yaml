@@ -49,3 +49,4 @@ packages:
     woke_pacman:
       - cachyos-gaming-meta
       - goxlr-utility
+      - openrazer-daemon
