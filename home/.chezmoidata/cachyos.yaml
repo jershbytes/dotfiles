@@ -25,7 +25,6 @@ packages:
       - joplin-desktop
       - jq
       - just
-      - kvantum
       - neovim
       - opentofu
       - podman
@@ -38,7 +37,6 @@ packages:
       - signal-desktop
       - ttf-jetbrains-mono-nerd
       - solaar
-      - terragrunt
       - tree
       - ungoogled-chromium-bin
       - uv
