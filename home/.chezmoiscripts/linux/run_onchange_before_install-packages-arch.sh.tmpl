@@ -19,7 +19,7 @@ yay -S --needed --noconfirm {{ range .packages.aur -}}
 flatpak install {{ range .packages.flatpak -}}
 {{ . | quote }} {{ end }}
 
-{{ if eq .chezmoi.hostname "BigWoke" -}}
+{{ if eq .chezmoi.hostname "bigwoke" -}}
 # Install bigwoke specific applications
 sudo pacman -S --needed --noconfirm {{ range .packages.woke_pacman -}}
 {{ . | quote }} {{ end }}
