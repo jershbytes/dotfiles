@@ -6,6 +6,7 @@ packages:
     flatpak:
       - dev.aunetx.deezer
       - tv.plex.PlexDesktop
+      - tech.feliciano.pocket-casts
     pacman:
       - 7zip
       - age
