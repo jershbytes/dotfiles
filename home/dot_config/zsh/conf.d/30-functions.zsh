@@ -114,3 +114,33 @@ zhealth() {
   fi
   print "zhealth: \$HOME is clean — only ~/.zshenv expected"
 }
+
+show-repo() {
+    local url
+    url=$(git remote get-url origin 2>/dev/null) || { echo "Not a git repo"; return 1; }
+
+    # Convert SSH to HTTPS
+    url="${url#git@}"
+    url="${url%.git}"
+    url="${url/://}"
+
+    # Azure DevOps SSH uses ssh.dev.azure.com:v3/org/project/repo
+    if [[ "$url" == *"dev.azure.com"* || "$url" == *"visualstudio.com"* ]]; then
+        url="${url/ssh.dev.azure.com\/v3/dev.azure.com}"
+        url="https://${url/dev.azure.com\//dev.azure.com/}"
+        url="${url/\//_git/}"
+    else
+        url="https://${url}"
+    fi
+
+    # Open in browser (Linux/macOS/WSL)
+    if command -v xdg-open &>/dev/null; then
+        xdg-open "$url"
+    elif command -v open &>/dev/null; then
+        open "$url"
+    elif command -v wslview &>/dev/null; then
+        wslview "$url"
+    else
+        echo "$url"
+    fi
+}
