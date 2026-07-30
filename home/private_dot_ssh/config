@@ -26,10 +26,14 @@ Host git.jershlabs.xyz
 Host pve*
   User root
   Port 22
-  IdentityFile ~/.ssh/proxmox/key
+  IdentityFile ~/.ssh/id_ed25519_sk
+  IdentityAgent none
+  IdentitiesOnly yes
 
 # All other hosts in the lab
 Host *
   Port 22
   User adm_rossj
-  IdentityFile ~/.ssh/lab/key
+  IdentityFile ~/.ssh/id_ed25519_sk
+  IdentityAgent none
+  IdentitiesOnly yes
