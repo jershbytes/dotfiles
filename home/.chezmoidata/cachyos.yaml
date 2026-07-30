@@ -6,19 +6,22 @@ packages:
     flatpak:
       - dev.aunetx.deezer
       - tv.plex.PlexDesktop
-      - tech.feliciano.pocket-casts
     pacman:
+      - ghostty
+      - starship
+      - yazi
+      - zoxide
+      - eza
+      - fd
+      - fzf
       - 7zip
       - age
       - bat
       - cmatrix
       - discord
       - element-desktop
-      - eza
-      - fd
       - flatpak
-      - fzf
-      - ghostty
+      - fzf      
       - gnupg
       - halloy
       - imagemagick
@@ -41,8 +44,6 @@ packages:
       - tree
       - ungoogled-chromium-bin
       - uv
-      - yazi
-      - zoxide
     woke_aur:
       - goxlr-utility-ui
       - input-remapper-git
