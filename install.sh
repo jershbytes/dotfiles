@@ -3,9 +3,12 @@
 set -e
 
 repo="https://github.com/jershbytes/dotfiles.git"
+read -s -p "Token: " token
+
 
 cachy_install() {
-  sudo pacman -Syu --noconfirm yay zsh chezmoi proton-pass-cli-bin
+  sudo pacman -Syu --noconfirm yay zsh chezmoi
+  curl -fsSL https://proton.me/download/pass-cli/install.sh | bash
 }
 
 darwin_install() {
@@ -22,7 +25,7 @@ case "$(uname -s)" in
 Linux*)
   if command -v pacman &>/dev/null; then
     cachy_install
-    pass-cli login
+    pass-cli login --personal-access-token "$token"
     apply_dotfiles
   else
     echo "Unsupported Linux distribution. This script only supports Arch Linux."
