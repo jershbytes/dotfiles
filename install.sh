@@ -22,6 +22,7 @@ case "$(uname -s)" in
 Linux*)
   if command -v pacman &>/dev/null; then
     cachy_install
+    pass-cli login
     apply_dotfiles
   else
     echo "Unsupported Linux distribution. This script only supports Arch Linux."
