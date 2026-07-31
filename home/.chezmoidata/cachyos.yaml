@@ -17,6 +17,8 @@ packages:
       - 7zip
       - age
       - bat
+      - wireguard-tools
+      - vortix
       - cmatrix
       - discord
       - element-desktop
