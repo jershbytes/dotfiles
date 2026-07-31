@@ -119,18 +119,44 @@ show-repo() {
     local url
     url=$(git remote get-url origin 2>/dev/null) || { echo "Not a git repo"; return 1; }
 
-    # Convert SSH to HTTPS
-    url="${url#git@}"
-    url="${url%.git}"
-    url="${url/://}"
+    # Normalize common remote formats to an HTTPS URL:
+    # - https://host/org/repo(.git)
+    # - ssh://git@host/org/repo(.git)
+    # - git@host:org/repo(.git)
+    local normalized="$url"
+    normalized="${normalized%.git}"
+
+    if [[ "$normalized" == http://* || "$normalized" == https://* ]]; then
+        url="$normalized"
+    elif [[ "$normalized" == ssh://* ]]; then
+        normalized="${normalized#ssh://}"
+        normalized="${normalized#*@}"
+        url="https://$normalized"
+    elif [[ "$normalized" == *@*:* ]]; then
+        normalized="${normalized#*@}"
+        normalized="${normalized/:/\/}"
+        url="https://$normalized"
+    else
+        url="$normalized"
+    fi
 
     # Azure DevOps SSH uses ssh.dev.azure.com:v3/org/project/repo
-    if [[ "$url" == *"dev.azure.com"* || "$url" == *"visualstudio.com"* ]]; then
-        url="${url/ssh.dev.azure.com\/v3/dev.azure.com}"
-        url="https://${url/dev.azure.com\//dev.azure.com/}"
-        url="${url/\//_git/}"
-    else
-        url="https://${url}"
+    # and should map to https://dev.azure.com/org/project/_git/repo
+    if [[ "$url" == *"ssh.dev.azure.com"* || "$url" == *"dev.azure.com"* || "$url" == *"visualstudio.com"* ]]; then
+        local path
+        path="${url#*://}"
+        path="${path#*@}"
+        path="${path#ssh.dev.azure.com/}"
+        path="${path#dev.azure.com/}"
+        path="${path#v3/}"
+        if [[ "$path" == */*/* ]]; then
+            local org project repo
+            org="${path%%/*}"
+            path="${path#*/}"
+            project="${path%%/*}"
+            repo="${path#*/}"
+            url="https://dev.azure.com/${org}/${project}/_git/${repo}"
+        fi
     fi
 
     # Open in browser (Linux/macOS/WSL)
