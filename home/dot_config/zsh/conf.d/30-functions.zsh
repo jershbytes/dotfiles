@@ -144,3 +144,4 @@ show-repo() {
         echo "$url"
     fi
 }
+alias sr='show-repo'
