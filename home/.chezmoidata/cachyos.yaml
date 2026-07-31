@@ -22,7 +22,7 @@ packages:
       - element-desktop
       - flatpak
       - fzf      
-      - gnupg2
+      - gnupg
       - halloy
       - imagemagick
       - hugo
