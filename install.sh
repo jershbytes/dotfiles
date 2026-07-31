@@ -2,20 +2,20 @@
 
 set -e
 
-REPO="https://github.com/jershbytes/dotfiles.git"
+repo="https://github.com/jershbytes/dotfiles.git"
 
-function cachy_install() {
-  sudo pacman -Syu --noconfirm yay zsh chezmoi
+cachy_install() {
+  sudo pacman -Syu --noconfirm yay zsh chezmoi proton-pass-cli-bin
 }
 
-function darwin_install() {
+darwin_install() {
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   brew install pass-cli chezmoi git
 }
 
-function apply_dotfiles() {
-  chezmoi init --apply "$REPO"
+apply_dotfiles() {
+  chezmoi init --apply "$repo"
 }
 
 case "$(uname -s)" in
