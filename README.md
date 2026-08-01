@@ -3,17 +3,26 @@
 <p align="center"><a href="https://www.chezmoi.io/"><img src="https://img.shields.io/badge/managed%20with-chezmoi-00A0FF.svg" alt="chezmoi"></a></p>
 
 
-## Install
+# Install
 
-### Set PATH
+## CachyOS
+
 ```bash
-export PATH="/home/$USER/.local/bin:$PATH"
+sudo pacman -Syu --noconfirm yay zsh chezmoi
 ```
 
-### Dotfiles Installer
-
+## MacOS
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/jershbytes/dotfiles/refs/heads/main/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+brew install chezmoi git
+```
+
+
+## Apply Dotfiles
+
+```console
+$ chezmoi init jershbytes
 ```
 
 > [!NOTE]
