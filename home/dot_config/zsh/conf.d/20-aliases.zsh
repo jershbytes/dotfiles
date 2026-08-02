@@ -3,9 +3,9 @@
 # Navigation
 alias cd='z'
 alias tree='eza --tree --icons=always --color=always --'
-alias ls='eza --icons --color=always'
-alias ll='eza -lh --icons --git --color=always'
-alias la='eza -lah --icons --git --color=always'
+alias ls='eza --icons=always --color=always'
+alias ll='eza -lh --icons=always --git --color=always'
+alias la='eza -lah --icons=always --git --color=always'
 
 # File operations
 alias cp='cp -i'
