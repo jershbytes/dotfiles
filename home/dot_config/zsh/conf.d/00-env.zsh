@@ -60,3 +60,6 @@ setopt HIST_FIND_NO_DUPS
 setopt AUTOCD
 setopt NOBEEP
 setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
+
+# Reuse ls completions for eza (avoids defining a separate completion function)
+compdef eza=ls
