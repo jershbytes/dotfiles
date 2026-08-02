@@ -1,5 +1,3 @@
-config-file = ~/.config/ghostty/themes/dracula-alucard.conf
-
 window-theme = ghostty
 window-height = 35
 window-width = 100
@@ -10,7 +8,7 @@ confirm-close-surface = false
 clipboard-read = allow
 clipboard-write = allow
 copy-on-select = clipboard
-
+theme = Catppuccin Mocha
 
 #keybind = ctrl+up=scroll_page_lines:5
 #keybind = ctrl+down=scroll_page_lines:-5
