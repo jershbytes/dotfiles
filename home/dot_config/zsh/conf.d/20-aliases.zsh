@@ -3,9 +3,11 @@
 # Navigation
 alias cd='z'
 alias tree='eza --tree --icons=always --color=always --'
-alias ls='eza --icons=always --color=always --'
-alias ll='eza -lh --icons=always --git --color=always --'
-alias la='eza -lah --icons=always --git --color=always --'
+alias ls='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first'
+alias ll='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -l --git -h'
+alias la='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a'
+alias lla='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a -l --git -h'
+
 
 # File operations
 alias cp='cp -i'
@@ -31,7 +33,6 @@ alias less='less -R'
 alias cls='clear'
 
 # System
-alias ssh="TERM=xterm-256color ssh"
 alias ps='ps auxf'
 alias ping='ping -c 10'
 alias bye='shutdown -h now'
