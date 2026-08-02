@@ -68,35 +68,6 @@ for x in "$@"; do echo; echo -e "GEO-IP INFO: ($x)\n"$DASH"";
 done; echo
 }
 
-# List all system applications
-list-packages() {
-	case "$1" in
-		all|"")
-			echo "== Pacman (explicit) =="
-			pacman -Qe
-
-			echo -e "\n== AUR =="
-			pacman -Qm
-
-			echo -e "\n== Flatpak Apps =="
-			flatpak list --app
-			;;
-		pacman)
-			pacman -Qe
-			;;
-		aur)
-			pacman -Qm
-			;;
-		flatpak)
-			flatpak list --app
-			;;
-		*)
-			echo "Usage: list-packages [all|pacman|aur|flatpak]"
-			return 1
-			;;
-	esac
-}
-
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"

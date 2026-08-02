@@ -37,10 +37,6 @@ export STARSHIP_CONFIG="$ZDOTDIR/conf.d/starship.toml"
 # Personal binaries/scripts
 export PATH="$HOME/.local/bin:$PATH"
 
-# ---------- EZA ----------
-export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
-
-
 # =========================================================
 # History
 # =========================================================
