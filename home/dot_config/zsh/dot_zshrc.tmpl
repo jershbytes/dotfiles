@@ -1,27 +1,47 @@
-# ~/.config/zsh/.zshrc — loads every fragment in numeric order
-for _file in "${ZDOTDIR}"/conf.d/*.zsh(N); do
+# ZSH Configuration — Chezmoi Template
+
+ZSH_THEME="duellj"
+DISABLE_AUTO_UPDATE="true"
+OMZ_LAZY_LOAD=true
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Load Homebrew environment on macOS
+eval "$(/opt/homebrew/bin/brew shellenv)"
+{{- end }}
+
+# fpath setup (must run BEFORE oh-my-zsh runs compinit)
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
+# Oh My Zsh Plugins
+plugins=(
+  aliases
+  ansible
+  brew
+  bun
+  chezmoi
+  colored-man-pages
+  copyfile
+  copypath
+  genpass
+  git
+  opentofu
+  pip
+  sudo
+  uv
+  vscode
+  zsh-autosuggestions
+  zsh-interactive-cd
+  {{- if eq .chezmoi.os "linux" }}
+  archlinux
+  systemd
+  {{- end }}
+)
+
+# Load Oh My Zsh Core
+source $OMZSH/oh-my-zsh.sh
+
+# Load modular conf.d fragments (aliases, eza config, compdef, functions)
+for _file in "${ZDOTDIR:-$HOME/.config/zsh}"/conf.d/*.zsh(N); do
   source "$_file"
 done
 unset _file
-
-{{ if eq .chezmoi.os "darwin" -}}
-# Load Homebrew only if dawwin
-eval "$(/opt/homebrew/bin/brew shellenv)"
-{{ end -}}
-
-ZSH_THEME=duellj
-
-# Disable auto-update
-DISABLE_AUTO_UPDATE="true"
-
-# Defer plugin loading
-OMZ_LAZY_LOAD=true
-
-# fpath setup (before plugins)
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-
-# --- load plugins
-plugins=( aliases ansible archlinux brew bun chezmoi colored-man-pages copyfile copypath genpass git opentofu pip sudo systemd uv vscode zsh-autosuggestions zsh-interactive-cd )
-
-# --- Oh My Zsh Core Initialization
-source $OMZSH/oh-my-zsh.sh
