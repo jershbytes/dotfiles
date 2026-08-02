@@ -1,4 +1,3 @@
-# ~/.zshenv — the only zsh file allowed to live in $HOME
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
 # Prepend to PATH only if not already present.
