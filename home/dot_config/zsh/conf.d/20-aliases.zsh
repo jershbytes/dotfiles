@@ -2,10 +2,10 @@
 
 # Navigation
 alias cd='z'
-alias tree='eza --tree --icons=always --'
+alias tree='eza --tree --icons=always --color=always --'
 alias ls='eza --icons --color=always'
-alias ll='eza -lh --icons --git'
-alias la='eza -lah --icons --git'
+alias ll='eza -lh --icons --git --color=always'
+alias la='eza -lah --icons --git --color=always'
 
 # File operations
 alias cp='cp -i'

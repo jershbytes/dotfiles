@@ -33,6 +33,10 @@ export INFISICAL_DOMAIN="https://infisical.jershlabs.xyz"
 # ---------- Starship ----------
 export STARSHIP_CONFIG="$ZDOTDIR/conf.d/starship.toml"
 
+# ---------- eza ----------
+# If using a raw color spec file:
+export EZA_COLORS="$(cat ~/.config/eza/theme.yml)"
+
 # ---------- PATH ----------
 # Personal binaries/scripts
 export PATH="$HOME/.local/bin:$PATH"
