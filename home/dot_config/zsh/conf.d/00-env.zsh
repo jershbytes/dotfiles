@@ -2,7 +2,6 @@
 
 # ---------- XDG base directories ----------
 # Centralizes config/cache/data locations
-export OMZSH="$HOME/.oh-my-zsh"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -29,9 +28,6 @@ export PROTON_PASS_LINUX_KEYRING=dbus
 
 # ---------- Infisical Config ----------
 export INFISICAL_DOMAIN="https://infisical.jershlabs.xyz"
-
-# ---------- Starship ----------
-export STARSHIP_CONFIG="$ZDOTDIR/conf.d/starship.toml"
 
 # ---------- PATH ----------
 # Personal binaries/scripts

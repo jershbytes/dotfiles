@@ -1,4 +1,5 @@
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export OMZSH="$HOME/.oh-my-zsh"
 
 # Prepend to PATH only if not already present.
 path_prepend() {
