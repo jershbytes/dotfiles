@@ -3,6 +3,7 @@ packages:
     aur:
       - visual-studio-code-bin
       - infisical-bin
+      - konsave
     flatpak:
       - dev.aunetx.deezer
       - tv.plex.PlexDesktop
@@ -47,7 +48,6 @@ packages:
       - ungoogled-chromium-bin
       - uv
       - yubikey-personalization-gui
-      - papirus-icon-theme
     woke_aur:
       - goxlr-utility-ui
       - input-remapper-git
