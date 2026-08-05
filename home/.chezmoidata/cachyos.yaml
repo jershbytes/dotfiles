@@ -32,7 +32,6 @@ packages:
       - jq
       - just
       - neovim
-      - opentofu
       - podman
       - podman-docker
       - proton-mail-bin
@@ -45,7 +44,6 @@ packages:
       - solaar
       - tree
       - ungoogled-chromium-bin
-      - uv
       - yubikey-personalization-gui
     woke_aur:
       - goxlr-utility-ui
