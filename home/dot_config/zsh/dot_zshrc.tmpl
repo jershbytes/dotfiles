@@ -12,6 +12,7 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # Oh My Zsh Plugins
 plugins=(
+  mise
   aliases
   ansible
   {{- if eq .chezmoi.os "darwin" }}
