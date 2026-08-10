@@ -25,6 +25,7 @@ packages:
       - flatpak
       - fzf      
       - gnupg
+      - glow
       - halloy
       - imagemagick
       - hugo
