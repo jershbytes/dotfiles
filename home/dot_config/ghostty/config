@@ -10,8 +10,7 @@ clipboard-write = allow
 copy-on-select = clipboard
 theme = Catppuccin Mocha
 
-#keybind = ctrl+up=scroll_page_lines:5
-#keybind = ctrl+down=scroll_page_lines:-5
-
 keybind = ctrl+up=scroll_page_up
 keybind = ctrl+down=scroll_page_down
+
+shell-integration-features = ssh-env,ssh-terminfo
