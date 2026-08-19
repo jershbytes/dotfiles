@@ -37,8 +37,7 @@ alias ps='ps auxf'
 alias ping='ping -c 10'
 alias bye='shutdown -h now'
 alias flush-dns='sudo systemd-resolve --flush-caches'
-alias zsh-reload='exec zsh'
-alias ssh='ghostty +ssh --'
+alias zsh-reload='source ~/.config/zsh/.zshrc'
 
 # Tools
 alias ff='fastfetch'
