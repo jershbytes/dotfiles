@@ -20,7 +20,9 @@ $rust\
 $lua\
 $terraform\
 [](fg:primary_950 bg:primary_950)\
+[ ](fg:primary_950)\
 $fill\
+[ ](fg:primary_950)\
 $shell\
 $cmd_duration\
 $status\
