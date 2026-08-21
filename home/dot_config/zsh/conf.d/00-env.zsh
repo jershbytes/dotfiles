@@ -32,6 +32,7 @@ export INFISICAL_DOMAIN="https://infisical.jershlabs.xyz"
 # ---------- PATH ----------
 # Personal binaries/scripts
 export PATH="$HOME/.local/bin:$PATH"
+export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 
 # =========================================================
 # History

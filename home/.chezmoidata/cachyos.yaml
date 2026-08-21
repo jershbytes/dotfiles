@@ -9,6 +9,7 @@ packages:
       - tv.plex.PlexDesktop
     pacman:
       - ghostty
+      - starship
       - yazi
       - zoxide
       - eza
