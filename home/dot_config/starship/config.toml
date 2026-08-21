@@ -40,7 +40,7 @@ symbol = '─'
 [os]
 disabled = false
 style = 'bg:primary_700 fg:white'
-format = '[](primary_700)[ ]($style)[](fg:primary_700 bg:primary_950)'
+format = '[](primary_700)[os.symbols ]($style)[](fg:primary_700 bg:primary_950)'
 
 [directory]
 truncation_length = 1
@@ -130,16 +130,27 @@ show_milliseconds = true
 format = "[ $duration ](fg:white bg:primary_950)"
 
 [palettes.starship]
-primary_950 = '#192152'
-primary_800 = '#2337aa'
-primary_700 = '#2442d1'
-primary_600 = '#3059e4'
-primary_500 = '#4275ef'
-primary_300 = '#97bdf9'
+primary_950 = '#11111b'
+primary_800 = '#1e1e2e'
+primary_700 = '#313244'
+primary_600 = '#45475a'
+primary_500 = '#585b70'
+primary_300 = '#89b4fa'
 
-success_400 = '#4ADE80'
+success_400 = '#a6e3a1'
 
-danger_500 = '#EF4444'
+danger_500 = '#f38ba8'
 
-white = '#F9FAFB'
-gray = '#9CA3AF'
+white = '#cdd6f4'
+gray = '#7f849c'
+
+[os.symbols]
+Alpine = " "
+Arch = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+Fedora = " "
+FreeBSD = " "
+Linux = " "
+Macos = " "
