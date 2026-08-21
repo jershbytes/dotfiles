@@ -40,7 +40,7 @@ symbol = '─'
 [os]
 disabled = false
 style = 'bg:primary_700 fg:white'
-format = '[](primary_700)[$symbol ]($style)[](fg:primary_700 bg:primary_950)'
+format = '[](primary_700)[$symbol]($style)[](fg:primary_700 bg:primary_950)'
 
 [directory]
 truncation_length = 1
