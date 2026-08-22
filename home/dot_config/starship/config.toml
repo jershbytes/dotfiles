@@ -1,156 +1,32 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-
 add_newline = true
-palette = 'starship'
-scan_timeout = 10
+command_timeout = 200
+format = "[$directory$git_branch$git_status]($style)$character"
 
-format = """
-[╭╴](fg:gray)\
-$os\
-$directory\
-[](fg:primary_950 bg:primary_700)\
-$git_branch\
-$git_commit\
-[](fg:primary_700 bg:primary_950)\
-$bun\
-$nodejs\
-$dart\
-$golang\
-$rust\
-$lua\
-$terraform\
-[](fg:primary_950 bg:primary_950)\
-[ ](fg:primary_950)\
-$fill\
-[ ](fg:primary_950)\
-$shell\
-$cmd_duration\
-$status\
-[](fg:primary_700)\
-[](fg:gray)[ ]()
-[╰╴❯](fg:gray)[ ]()"""
-
-[line_break]
-disabled = true
-
-[fill]
-style = 'gray'
-symbol = '─'
-
-[os]
-disabled = false
-style = 'bg:primary_700 fg:white'
-format = '[](primary_700)[$symbol]($style)[](fg:primary_700 bg:primary_950)'
+[character]
+error_symbol = "[✗](bold cyan)"
+success_symbol = "[❯](bold cyan)"
 
 [directory]
-truncation_length = 1
-style = 'bold bg:primary_950 fg:white'
-format = '[$path]($style)'
-truncation_symbol = "   ~/.../"
-repo_root_style = 'bold bg:primary_950 fg:white'
-repo_root_format = '[  $repo_root ]($style)'
-
-[directory.substitutions]
-"~/Documents" = "󰈙 "
-"~/Downloads" = " "
-"~/Music" = " "
-"~/Pictures" = " "
-"~/Videos" = " "
-"~/project" = "󱌢 "
-"~/GitHub" = " "
-"~/.config" = " "
-"~/" = " 󰣇 ~ "
-"~" = " 󰣇 ~ "
+truncation_length = 2
+truncation_symbol = "…/"
+repo_root_style = "bold cyan"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-symbol = ""
-style = "bold fg:success_400 bg:primary_700"
-format = '[ $symbol $branch(:$remote_branch) ]($style)'
+format = "[$branch]($style) "
+style = "italic cyan"
 
-[git_commit]
-tag_disabled = true
-only_detached = false
-style = 'bold fg:white bg:primary_700'
-commit_hash_length = 4
-format = '[$hash]($style)'
-
-[bun]
-symbol = ''
-style = "bold fg:white bg:primary_950"
-version_format = "v${major}.${minor}"
-format = '[ $symbol $version]($style)'
-
-[dart]
-symbol = ''
-style = "bold fg:primary_300 bg:primary_950"
-version_format = "v${major}.${minor}"
-format = '[ $symbol $version]($style)'
-
-[golang]
-symbol = ""
-style = "bold fg:primary_300 bg:primary_950"
-version_format = "v${major}.${minor}"
-format = '[ $symbol $version]($style)'
-
-[lua]
-symbol = ""
-style = "bold fg:#c084fc bg:primary_950"
-version_format = "v${major}.${minor}"
-format = '[ $symbol $version]($style)'
-
-[rust]
-symbol = ""
-style = "bold fg:#fb923c bg:primary_950"
-version_format = "v${major}.${minor}"
-format = '[ $symbol $version]($style)'
-
-[terraform]
-symbol = ""
-style = "bold fg:#c084fc bg:primary_950"
-version_format = "v${major}.${minor}"
-format = '[ $symbol $version]($style)'
-
-[nodejs]
-symbol = ""
-style = "bold fg:#4ade80 bg:primary_950"
-version_format = "v${major}.${minor}"
-format = '[ $symbol $version]($style)'
-detect_extensions = [ ]
-
-[status]
-disabled = false
-style = 'bold bg:primary_950 fg:white'
-success_symbol = "[  ](fg:success_400 bg:primary_700)"
-symbol = "[  ](fg:danger_500 bg:primary_700)"
-format = '[](fg:primary_700 bg:primary_950)[$symbol]($style)'
-
-[cmd_duration]
-min_time = 0
-show_milliseconds = true
-format = "[ $duration ](fg:white bg:primary_950)"
-
-[palettes.starship]
-primary_950 = '#11111b'
-primary_800 = '#1e1e2e'
-primary_700 = '#313244'
-primary_600 = '#45475a'
-primary_500 = '#585b70'
-primary_300 = '#89b4fa'
-
-success_400 = '#a6e3a1'
-
-danger_500 = '#f38ba8'
-
-white = '#cdd6f4'
-gray = '#7f849c'
-
-[os.symbols]
-Alpine = " "
-Arch = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-Fedora = " "
-FreeBSD = " "
-Linux = " "
-Macos = " "
+[git_status]
+format     = '[$all_status]($style)'
+style      = "cyan"
+ahead      = "⇡${count} "
+diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
+behind     = "⇣${count} "
+conflicted = " "
+up_to_date = " "
+untracked  = "? "
+modified   = " "
+stashed    = ""
+staged     = ""
+renamed    = ""
+deleted    = ""
