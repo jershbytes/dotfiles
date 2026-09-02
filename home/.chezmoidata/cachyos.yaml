@@ -18,6 +18,7 @@ packages:
       - poppler
       - ripgrep
       - tree
+      - vortix
       - wireguard-tools
       - yazi
       - zoxide
@@ -28,6 +29,8 @@ packages:
       - halloy
       - joplin-desktop
       - plezy
+      - proton-mail-bin
+      - proton-pass
       - signal-desktop
       - solaar
       - ttf-jetbrains-mono-nerd
@@ -42,19 +45,12 @@ packages:
       - lazydocker
       - neovim
       - resvg
-    gaming:
-      - cachyos-gaming-meta
-      - goxlr-utility
-      - openrazer-daemon
-      - vortix
     system:
       - flatpak
       - rpi-imager
     aur:
       - infisical-bin
       - konsave
-      - proton-mail-bin
-      - proton-pass
       - visual-studio-code-bin
     flatpak:
       - dev.aunetx.deezer

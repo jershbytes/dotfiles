@@ -19,10 +19,6 @@ sudo pacman -S --needed --noconfirm {{ range .packages.desktop -}}
 sudo pacman -S --needed --noconfirm {{ range .packages.dev -}}
 {{ . | quote }} {{ end }}
 
-# Install gaming packages
-sudo pacman -S --needed --noconfirm {{ range .packages.gaming -}}
-{{ . | quote }} {{ end }}
-
 # Install system utilities
 sudo pacman -S --needed --noconfirm {{ range .packages.system -}}
 {{ . | quote }} {{ end }}
@@ -35,7 +31,7 @@ yay -S --needed --noconfirm {{ range .packages.aur -}}
 flatpak install {{ range .packages.flatpak -}}
 {{ . | quote }} {{ end }}
 
-{{ if eq .chezmoi.hostname "bigwoke" -}}
+{{ if eq .chezmoi.hostname "bigwoke" -}} 
 # Install bigwoke specific applications
 sudo pacman -S --needed --noconfirm {{ range .packages.woke_pacman -}}
 {{ . | quote }} {{ end }}
