@@ -1,53 +1,63 @@
 ---
 packages:
-    aur:
-      - visual-studio-code-bin
-      - infisical-bin
-      - konsave
-    flatpak:
-      - dev.aunetx.deezer
-    pacman:
-      - ghostty
-      - starship
-      - yazi
-      - zoxide
-      - eza
-      - fd
-      - fzf
+    cli:
       - 7zip
       - age
       - bat
-      - wireguard-tools
-      - vortix
       - cmatrix
-      - discord
-      - docker
-      - element-desktop
-      - flatpak
-      - fzf      
-      - gnupg
+      - eza
+      - fd
+      - fzf
+      - ffmpeg
       - glow
-      - halloy
-      - imagemagick
-      - hugo
-      - joplin-desktop
+      - gnupg
       - jq
       - just
       - libfido2
       - mise
-      - neovim
-      - plezy
-      - proton-mail-bin
-      - proton-pass
-      - resvg
+      - poppler
       - ripgrep
-      - rpi-imager
-      - signal-desktop
-      - ttf-jetbrains-mono-nerd
-      - solaar
       - tree
+      - wireguard-tools
+      - yazi
+      - zoxide
+    desktop:
+      - discord
+      - element-desktop
+      - ghostty
+      - halloy
+      - joplin-desktop
+      - plezy
+      - signal-desktop
+      - solaar
+      - ttf-jetbrains-mono-nerd
       - ungoogled-chromium-bin
       - yubikey-personalization-gui
+    dev:
+      - docker
+      - docker-buildx
+      - docker-compose
+      - hugo
+      - imagemagick
+      - lazydocker
+      - neovim
+      - resvg
+    gaming:
+      - cachyos-gaming-meta
+      - goxlr-utility
+      - openrazer-daemon
+      - vortix
+    system:
+      - flatpak
+      - rpi-imager
+    aur:
+      - infisical-bin
+      - konsave
+      - proton-mail-bin
+      - proton-pass
+      - visual-studio-code-bin
+    flatpak:
+      - dev.aunetx.deezer
     woke_aur:
       - goxlr-utility-ui
       - input-remapper-git

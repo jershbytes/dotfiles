@@ -7,8 +7,24 @@ if ! command -v yay &> /dev/null; then
     exit 1
 fi
 
-# Install packages using pacman
-sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}
+# Install command line utilities
+sudo pacman -S --needed --noconfirm {{ range .packages.cli -}}
+{{ . | quote }} {{ end }}
+
+# Install desktop applications
+sudo pacman -S --needed --noconfirm {{ range .packages.desktop -}}
+{{ . | quote }} {{ end }}
+
+# Install development tools
+sudo pacman -S --needed --noconfirm {{ range .packages.dev -}}
+{{ . | quote }} {{ end }}
+
+# Install gaming packages
+sudo pacman -S --needed --noconfirm {{ range .packages.gaming -}}
+{{ . | quote }} {{ end }}
+
+# Install system utilities
+sudo pacman -S --needed --noconfirm {{ range .packages.system -}}
 {{ . | quote }} {{ end }}
 
 # Install packages using yay
