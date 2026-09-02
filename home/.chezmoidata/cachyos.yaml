@@ -21,6 +21,7 @@ packages:
       - vortix
       - cmatrix
       - discord
+      - docker
       - element-desktop
       - flatpak
       - fzf      
@@ -35,8 +36,7 @@ packages:
       - libfido2
       - mise
       - neovim
-      - podman
-      - podman-docker
+      - plezy
       - proton-mail-bin
       - proton-pass
       - resvg
