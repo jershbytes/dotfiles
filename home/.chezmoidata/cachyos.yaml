@@ -6,7 +6,6 @@ packages:
       - konsave
     flatpak:
       - dev.aunetx.deezer
-      - tv.plex.PlexDesktop
     pacman:
       - ghostty
       - starship
