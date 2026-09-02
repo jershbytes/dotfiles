@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Prevent p10k from running the configuration wizard every reload
-export POWERLEVEL9K_CONFIG_FILE=~/.config/zsh/.p10k.zsh
+export POWERLEVEL9K_CONFIG_FILE="{{ .chezmoi.homeDir }}/.config/zsh/.p10k.zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 DISABLE_AUTO_UPDATE="true"
