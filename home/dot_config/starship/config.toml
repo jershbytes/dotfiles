@@ -1,0 +1,941 @@
+# ~/.config/starship.toml
+#
+# Run in zsh to see palette of available colors:
+# for i in {0..255}; do print -Pn "%K{$i} %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
+
+# Refresh
+#eval "$(starship init bash)"
+#
+# |   ~   󰈙      🔑     
+# fade_left: = |      
+# fade_right: = |      
+# end_left: = | 
+# end_right: = | 
+#
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+# =========prompt=========
+# [| ](fg:fg_1 bg:bg_1)\
+# [| ](fg:fg_1 bg:bg_1)\
+
+format = """
+$os\
+$cmd_duration\
+${custom.files}\
+${custom.directories}\
+$battery\
+$character\
+$status\
+$sudo\
+$line_break\
+$env_var\
+$username\
+$hostname\
+$localip\
+$directory\
+$direnv\
+$git_branch\
+$git_status\
+$git_commit\
+$git_state\
+$git_metrics\
+$fossil_branch\
+$fossil_metrics\
+$hg_branch\
+$hg_state\
+$pijul_channel\
+$vcs\
+$vcsh\
+$buf\
+$bun\
+$c\
+$cmake\
+$cobol\
+$conda\
+$crystal\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$fortran\
+$gleam\
+$golang\
+$gradle\
+$haxe\
+$helm\
+$haskell\
+$java\
+$julia\
+$kotlin\
+$lua\
+$maven\
+$meson\
+$mise\
+$mojo\
+$nats\
+$nim\
+$nix_shell\
+$nodejs\
+$ocaml\
+$odin\
+$opa\
+$package\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$red\
+$rlang\
+$ruby\
+$scala\
+$rust\
+$spack\
+$swift\
+$terraform\
+$typst\
+$vagrant\
+$vlang\
+$xmake\
+$zig\
+$aws\
+$azure\
+$container\
+$docker_context\
+$gcloud\
+$guix_shell\
+$kubernetes\
+$netns\
+$openstack\
+$pixi\
+$singularity\
+$time\
+$shlvl\
+$jobs\
+$shell\
+"""
+
+#${custom.files}${custom.directories}\
+
+# A continuation prompt that displays right half-circle and filled-in arrow
+continuation_prompt = "[$shell ](fg:fg_1 bg:bg_1)"
+
+#the continuation prompt may not be shown if the right prompt is used; RP only appears in fish/zsh/xonsh, not bash/pwsh/tcsh/ion
+# right_format = """
+# [| ](fg:bg_1)\
+# [| ](fg:bg_1 bg:bg_1)\
+# [| ](fg:bg_1 bg:bg_1)\
+# [test](fg:fg_1 bg:bg_1)\
+# [|](fg:bg_1)\
+# """
+
+follow_symlinks = false
+
+# =========palettes=========
+#conspy behavior in comments
+palette = 'lightgreen2' #dk purple BG steady lt yellow FG
+# palette = 'lightblue2' #dk cyan BG steady lt yellow FG
+# palette = 'lightcyan2' #lt gray BG steady lt yellow FG
+# palette = 'dark' #dk blue BG steady lt yellow FG
+# palette = 'darkgreen' #dk blue BG steady dk red FG
+# palette = 'darkyellow' #dk blue BG steady lt red FG
+# palette = 'darkblue' #dk blue BG steady dk green FG
+# palette = 'darkpurple' #dk blue BG steady lt yellow FG
+# palette = 'darkcyan' #dk blue BG steady dk yellow FG
+
+[palettes.lightgreen2]
+success_fg = 'bright-green'
+error_fg = 'red'
+fg_1 = 'bright-white'
+bg_1 = 'green'
+
+[palettes.lightblue2]
+success_fg = 'bright-green'
+error_fg = 'yellow'
+fg_1 = 'bright-white'
+bg_1 = 'blue'
+
+[palettes.lightcyan2]
+success_fg = 'yellow'
+error_fg = 'red'
+fg_1 = 'black'
+bg_1 = 'cyan'
+
+[palettes.dark]
+success_fg = 'green'
+error_fg = 'red'
+fg_1 = 'bright-white'
+bg_1 = 'dark-black'
+
+[palettes.darkgreen]
+success_fg = 'green'
+error_fg = 'red'
+fg_1 = 'bright-green'
+bg_1 = 'dark-black'
+
+[palettes.darkyellow]
+success_fg = 'green'
+error_fg = 'red'
+fg_1 = 'bright-yellow'
+bg_1 = 'dark-black'
+
+[palettes.darkblue]
+success_fg = 'green'
+error_fg = 'red'
+fg_1 = 'bright-blue'
+bg_1 = 'dark-black'
+
+[palettes.darkpurple]
+success_fg = 'green'
+error_fg = 'red'
+fg_1 = 'bright-purple'
+bg_1 = 'dark-black'
+
+[palettes.darkcyan]
+success_fg = 'green'
+error_fg = 'red'
+fg_1 = 'bright-cyan'
+bg_1 = 'dark-black'
+
+# [fill]
+# symbol = ' '
+
+# =======OS===========
+#GhostBSD: replace $os with \U000f02a0 󰊠
+
+[os]
+style = "fg:fg_1 bg:bg_1"
+format = "[ $symbol ]($style)"
+disabled = false
+
+[os.symbols]
+AIX = "AI "
+Alpaquita = "Al " #alpaca
+Alpine = "Al "
+AlmaLinux = "Al "
+ALTLinux = "AL "
+Amazon = "Am "
+Android = "An " #
+AOSC = "AO "
+Arch = "Ar "
+Artix = "Ar "
+Bluefin = "Bl "
+CachyOS = "Ca "
+CentOS = "Ce "
+Debian = "De "
+DragonFly = "Dr "
+Elementary = "El "
+Emscripten = "Em "
+EndeavourOS = "En "
+Fedora = "Fe "
+FreeBSD = "Fr "
+Garuda = "Ga "
+Gentoo = "Ge "
+#GhostBSD = "#G " #use this char in FreeBSD
+HardenedBSD = "Ha "
+Illumos = "Il "
+Ios = "Io "
+InstantOS = "In "
+Kali = "Ka "
+Linux = "Li "
+Mabox = "Ma "
+Macos = "Ma "
+Manjaro = "Ma "
+Mariner = "Ma "
+MidnightBSD = "Mi "
+Mint = "Mi "#🌿
+NetBSD = "Ne "
+NixOS = "Ni "
+Nobara = "No "
+OpenBSD = "Op " #󰈺
+OpenCloudOS = 'Op'
+openEuler = 'op'
+openSUSE = "op "
+OracleLinux = "Or " #󰌷 ⊂⊃
+PikaOS = "Pi "
+Pop = "Po "
+Raspbian = "Ra "
+Redhat = "Re "
+RedHatEnterprise = "Re "
+Redox = "Re "
+RockyLinux = "Ro "
+Solus = "So " #
+SUSE = "SU "
+Ubuntu = "Ub "
+Ultramarine = "Ul "
+Unknown = "Un "
+Uos = "Uo " #  Unity OS, UnionTech / Tongxin
+Void = "Vo "
+Windows = "Wi " #
+Zorin = "Zo "
+
+# ==========duration========
+
+[cmd_duration] #    
+format='[| $duration ]($style)'
+style='fg:fg_1 bg:bg_1'
+
+# =========files=========
+
+# inspired by @lolbat on CodeBerg
+[custom.files]
+description = "Show files count for current directory"
+command = "find ./ -maxdepth 1 -type f | wc -l"
+format = "[| F $output ]($style)"
+style = "fg:fg_1 bg:bg_1"
+when = "false"
+
+# =========directories=========
+
+[custom.directories]
+description = "Show directory count count for current directory"
+command = "find ./ -maxdepth 1 -type d | tail -n +2 | wc -l"
+format = "[| D $output ]($style)"
+style = "fg:fg_1 bg:bg_1"
+when = "false"
+
+# ==========battery========
+
+[battery]
+full_symbol = "bat "
+charging_symbol = "Chg "
+discharging_symbol = "DCh "
+empty_symbol = 'Emp '
+format = "[| $symbol$percentage ]($style)"
+disabled = false
+
+# [[battery.display]]
+# threshold = 25
+# style = "bold fg:fg_red2 bg:bg_1"
+
+# [[battery.display]]
+# threshold = 50
+# style = "bold fg:orange bg:bg_1"
+
+# [[battery.display]]
+# threshold = 75
+# style = "bold fg:yellow bg:bg_1"
+
+[[battery.display]]
+threshold = 100
+style = "fg:fg_1 bg:bg_1"
+# style = "bold fg:green bg:bg_1"
+
+# ==========status========
+
+[character]
+success_symbol = "[Ok](fg:success_fg bg:bg_1)" #✅
+error_symbol = "[X](fg:error_fg bg:bg_1)" #⛔
+format = "[| $symbol ](fg:fg_1 bg:bg_1)"
+
+[status]
+disabled = false
+format = '[$status:$common_meaning ](fg:error_fg bg:bg_1)'
+
+[sudo]
+symbol = "Su" #
+style = "fg:fg_1 bg:bg_1"
+format = "[| $symbol ]($style)"
+disabled = false
+
+# =========line break=========
+
+[line_break]
+disabled = true
+
+# =========user/host=========
+
+[env_var.STY]
+#variable = 'STY'
+style = "fg:fg_1 bg:bg_1"
+format = "[| sty $env_value ]($style)"
+# default=""
+# disabled = true
+
+[username] #          
+show_always = true
+style_user = "fg:fg_1 bg:bg_1"
+style_root = "fg:fg_1 bold bg:bg_1"
+format = '[| ($user) ]($style)'
+
+[hostname]
+ssh_only = true
+style = "fg:fg_1 bg:bg_1"
+format = "[ ss $hostname ]($style)" # ><
+trim_at = "."
+# disabled = true
+
+[localip]
+ssh_only = true
+style = "fg:fg_1 bg:bg_1"
+format = '[ $localipv4]($style)' #@
+disabled = false
+
+# ========directory==========
+
+[directory]
+style = "fg:fg_1 bg:bg_1"
+format = "[| $read_only$path ]($style)"
+read_only = 'R ' #🔒
+#read_only_style   = ''
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+home_symbol="Hom" #🏠
+use_os_path_sep = true
+
+[direnv]
+style = "fg:fg_1 bg:bg_1"
+format="[| $symbol $loaded/$allowed ]($style)"
+symbol="Denv "
+# detect_files=['.envrc']
+# detect_folders=[]
+# detect_env_vars=['TESTDIRENV']
+allowed_msg="Alw "
+not_allowed_msg="NAl "
+denied_msg="Den "
+loaded_msg="Ld "
+unloaded_msg="UnL "
+disabled=false
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "Doc" # Doc
+"Downloads" = "Down"
+"Desktop" = "Desk"
+"Music" = "Mus"
+"Pictures" = "Pic"
+"Videos" = "Vid"
+"Projects" = "Proj"
+"config" = "cfg"
+#"Bash"=" "
+#"CookLang"="󰭼 " 
+#"DotNet" = "󰪮 "
+#"dotnet" = "󰪮 "
+#"Java"="☕"
+## "jq"=" "
+#"Jupyter"=" "
+#"Rust"=" "
+#"Starship"="󱓟 "
+#"Themes"="󰔎 "
+#"themes"="󰔎 "
+#"icons"=" "
+#"Fonts" = " "
+#"fonts" = " "
+#"Dropbox" = " "
+#"dropbox" = " "
+#"VSCode"=" "
+#"share" = "󰒗 "
+#"scripts"="󰯃 "
+#"ssh" = "󰣀 "
+#"thunderbird"=" "
+#"firefox"=" "
+#"mozilla"=" "
+#"lib" = "󰌱 "
+#"bin" = " "
+# "root" = " "
+#"boot" = " "
+#"School" = "󰑴"
+#"GitHub" = ""
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+# =========src ctrl=========
+
+[git_branch]
+symbol = "git" #              |
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:fg_1 bg:bg_1"
+format = '[| $all_status$ahead_behind ]($style)'#"[ $ahead$behind$untracked$modified$staged$deleted ]($style)"
+conflicted = 'Cnf= $count'
+ahead = "Ahd $count "
+behind = "Beh $count "
+deleted = "Del $count " #
+diverged = "Div $count " #
+renamed = "Ren $count "
+stashed = "Sta $count "
+modified = "Mod $count " #  
+staged = "Stg $count "
+untracked = "UnT $count " # 🤷󰙌
+up_to_date = 'Ok'
+
+[git_commit]
+disabled=true
+only_detached=false
+tag_disabled=false
+tag_symbol = 'T '
+# tag_max_candidates=1
+style = "fg:fg_1 bg:bg_1"
+format = "[| $symbol$hash$tag ]($style)"
+commit_hash_length = 4
+
+[git_state]
+disabled=false
+style = "fg:fg_1 bg:bg_1"
+format = '| \([$state( $progress_current/$progress_total)]($style)\) '
+cherry_pick = '[PICKING]'
+rebase = '[REBASING]'
+merge = '[MERGING]'
+bisect = '[BISECTING]'
+am = '[AM]'
+am_or_rebase = '[AM/REBASE]'
+revert = '[REVERTING]'
+#progress_divider = ' of '
+
+[git_metrics]
+added_style = "fg:fg_1 bg:bg_1"
+deleted_style = "fg:fg_1 bg:bg_1"
+format = '([+$added ]($added_style))([-$deleted ]($deleted_style))'
+disabled = false
+
+[fossil_branch]
+symbol = 'fos ' #󰘬
+style = "fg:fg_1 bg:bg_1"
+format = '[[ $symbol $branch ](fg:fg_1 bg:bg_1)]($style)'
+
+[fossil_metrics]
+added_style = "fg:fg_1 bg:bg_1"
+deleted_style = "fg:fg_1 bg:bg_1"
+format = '([+$added ]($added_style))([-$deleted ]($deleted_style))'
+
+[hg_branch]
+symbol = "hg "
+style = "fg:fg_1 bg:bg_1"
+format = '[[ $symbol $branch ](fg:fg_1 bg:bg_1)]($style)'
+
+[hg_state]
+style = "fg:fg_1 bg:bg_1"
+format = '[[ $symbol $branch ](fg:fg_1 bg:bg_1)]($style)'
+
+[pijul_channel]
+symbol = "pij "
+style = "fg:fg_1 bg:bg_1"
+format = '[[ $symbol $branch ](fg:fg_1 bg:bg_1)]($style)'
+
+[vcs]
+disabled=true
+
+[vcsh]
+symbol = 'vc'
+style = "fg:fg_1 bg:bg_1"
+format = '[[ $symbol $branch ](fg:fg_1 bg:bg_1)]($style)'
+
+# ========toolchains/packages==========
+
+# [ansible]
+# symbol = "Ⓐ "
+# style = "fg:fg_1 bg:bg_1"
+# format = '[| $symbol $version ]($style)'
+
+[buf]
+symbol = "buf "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[bun]
+symbol = 'bun'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[c]
+symbol = "c"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[cmake]
+symbol = 'cma'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[cobol]
+symbol = 'cob'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[conda]
+symbol = "con "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[crystal]
+symbol = 'cry'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[daml]
+symbol = 'dam'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[dart]
+symbol = "dar "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[deno]
+symbol = 'den' #🦕
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[dotnet]
+symbol = "dot " # 
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[elixir]
+symbol = "eli " #💧
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[elm]
+symbol = "elm " #🌳
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[erlang]
+symbol = 'erl'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[fennel]
+symbol = 'fen' #󰬍  󰬍
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[fortran]
+symbol = 'for ' # 
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[gleam]
+symbol = 'gleLEAM'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[golang]
+symbol = "gol " #🐹
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[gradle]
+symbol = "gra "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[haskell]
+symbol = "has " #λ
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[haxe]
+symbol = "hax " #
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[helm]
+symbol = 'hel'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[java]
+symbol = "jav "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[julia]
+symbol = "jul " #
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[kotlin]
+symbol = "kot "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[lua]
+symbol = "lua " #
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[maven]
+symbol = "mav " #🅼
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[meson]
+symbol = "mes " # M
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[mise]
+symbol = "mis "
+#health = 'ready'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[mojo]
+symbol = 'mojOJO'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[nats]
+symbol = "nat "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[nim]
+symbol = "nim " #👑
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[nix_shell]
+symbol = "nix "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[nodejs]
+symbol = "nod " #󰎙 🔷 
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[ocaml]
+symbol = "oca "# 
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[odin]
+symbol = 'odiDIN'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[opa]
+symbol = 'opa ' #   
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[package]
+symbol = "pac" #  📦
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+disabled=false
+
+[perl]
+symbol = "per " #
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[php]
+symbol = "php "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[pulumi]
+symbol = "pul "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[purescript]
+symbol = 'pur'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[python]
+symbol = "pyt "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[quarto]
+symbol = 'quaUARTO'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[raku]
+symbol = 'rak ' #
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[red]
+symbol = 'redED'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[rlang]
+symbol = "rla " # R
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[ruby]
+symbol = "rub "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[rust]
+symbol = "rus" #🦀
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[scala]
+symbol = "sca "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[spack]
+symbol = "spa " # S 🅢
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[swift]
+symbol = "swi "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[terraform]
+symbol = "ter "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[typst]
+symbol = 'typ'
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[vagrant]
+symbol = "vag"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[vlang]
+symbol = "vla"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[xmake]
+symbol = "xma " # 󰰲
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+[zig]
+symbol = "zig "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $version ]($style)'
+
+# ========containers==========
+
+[aws]
+symbol = "aws"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $context $path ]($style)'
+
+[azure]
+symbol = "azu" # 󰠅
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $context $path ]($style)'
+
+[container]
+symbol = "con"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $context $path ]($style)'
+
+[docker_context]
+symbol = "doc"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $context $path ]($style)'
+
+[gcloud]
+symbol = "gcl"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $context $path ]($style)'
+disabled = false
+
+[guix_shell]
+symbol = "gui"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $context $path ]($style)'
+disabled = false
+
+[kubernetes]
+symbol = "kub"
+format = '[| $symbol $context $namespace ]($style) '
+style = "fg:fg_1 bg:bg_1"
+disabled = false
+
+[netns]
+symbol = "net" #"🛜 "
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $name ]($style)'
+
+[openstack]
+symbol = "ope"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $context $path ]($style)'
+
+[pixi]
+symbol = "pix" # 󰰚
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $context $path ]($style)'
+
+[singularity]
+symbol = "sin"
+disabled = false
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol $context $namespace ]($style) ' #AppTainer
+
+# ========time/shell/shlvl/jobs/memory_usage==========
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format # %T for seconds
+style = "fg:fg_1 bg:bg_1"
+format = '[| $time ]($style)'
+
+[shlvl]
+disabled=false
+symbol="l"
+style = "fg:fg_1 bg:bg_1"
+format = '[| $symbol$shlvl ]($style)'
+
+[jobs]
+disabled = false
+symbol = 'j'
+number_threshold = 1
+symbol_threshold = 1
+style = "fg:fg_1 bg:bg_1"
+format="[| $symbol$number ]($style)"
+
+[shell]
+disabled=false
+bash_indicator = 'b'
+cmd_indicator = 'c ' #
+elvish_indicator = "e"
+fish_indicator='f' #🐟
+ion_indicator = 'i'
+nu_indicator = "n"
+powershell_indicator = 'p' # 
+tcsh_indicator = "t"
+xonsh_indicator = "x "  #"🐚" # seashell emoji
+zsh_indicator = "z"
+unknown_indicator = ' '
+style = "fg:fg_1 bg:bg_1"
+format="[| $indicator ]($style)" #space on right b/c double-width symbol
+
+[memory_usage]
+disabled=true
+symbol = " "
+style = "fg:fg_1 bg:bg_1"
+format = '[ $symbol ]($style)'
