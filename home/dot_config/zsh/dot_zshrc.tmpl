@@ -1,14 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Prevent p10k from running the configuration wizard every reload
-export POWERLEVEL9K_CONFIG_FILE="{{ .chezmoi.homeDir }}/.config/zsh/.p10k.zsh"
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="duellj"
 DISABLE_AUTO_UPDATE="true"
 OMZ_LAZY_LOAD=true
 
@@ -50,9 +40,6 @@ plugins=(
 
 # Load Oh My Zsh Core
 source $OMZSH/oh-my-zsh.sh
-
-# Load Powerlevel10k config file
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # Load modular conf.d fragments (aliases, eza config, compdef, functions)
 for _file in "${ZDOTDIR:-$HOME/.config/zsh}"/conf.d/*.zsh(N); do
