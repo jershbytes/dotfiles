@@ -37,7 +37,6 @@ alias ps='ps auxf'
 alias ping='ping -c 10'
 alias bye='shutdown -h now'
 alias flush-dns='sudo systemd-resolve --flush-caches'
-alias zsh-reload='source ~/.config/zsh/.zshrc'
 
 # Tools
 alias ff='fastfetch'
@@ -51,6 +50,13 @@ alias cze='chezmoi edit'
 alias czea='chezmoi edit --apply'
 alias czra='chezmoi re-add'
 alias czu='chezmoi update'
+
+# Hugo
+alias hsd='hugo server -D' # Basic dev server with drafts enabled
+alias hsdf='hugo server -D -F' # Dev server with drafts + future-dated posts
+alias hsdall='hugo server -D -F -E' # Complete dev server: drafts + future + expired posts
+alias hsdnc='hugo server -D --disableFastRender --ignoreCache' # No-cache server with drafts (disables Hugo's fast render memory cache & disk cache)
+alias hsdclean='rm -rf public/ && hugo server -D --disableFastRender --ignoreCache' # Clean render: deletes /public folder first, then runs no-cache server with drafts
 
 # Reuse ls completions for eza (avoids defining a separate completion function)
 compdef eza=ls
