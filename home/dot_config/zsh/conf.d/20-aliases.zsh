@@ -52,6 +52,7 @@ alias czra='chezmoi re-add'
 alias czu='chezmoi update'
 
 # Hugo
+alias hs='hugo server'    # Basic dev server with no drafts
 alias hsd='hugo server -D' # Basic dev server with drafts enabled
 alias hsdf='hugo server -D -F' # Dev server with drafts + future-dated posts
 alias hsdall='hugo server -D -F -E' # Complete dev server: drafts + future + expired posts
