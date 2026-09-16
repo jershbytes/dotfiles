@@ -40,6 +40,7 @@ alias flush-dns='sudo systemd-resolve --flush-caches'
 
 # Tools
 alias ff='fastfetch'
+alias fastfetch="pokego -n psyduck --no-title | fastfetch --file-raw -"
 
 # chezmoi
 alias cz='chezmoi'

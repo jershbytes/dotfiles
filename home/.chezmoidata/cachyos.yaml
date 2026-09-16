@@ -52,6 +52,7 @@ packages:
       - infisical-bin
       - konsave
       - visual-studio-code-bin
+      - pokego
     flatpak:
       - dev.aunetx.deezer
     woke_aur:
