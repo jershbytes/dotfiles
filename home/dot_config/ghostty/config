@@ -13,6 +13,7 @@ gtk-toolbar-style = flat
 clipboard-read = allow
 clipboard-write = allow
 copy-on-select = clipboard
+background-opacity  = 0.8
 
 # Cursor styling
 cursor-style = "block"
