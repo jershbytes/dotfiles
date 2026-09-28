@@ -44,12 +44,12 @@ packages:
       - imagemagick
       - lazydocker
       - neovim
+      - openbao
       - resvg
     system:
       - flatpak
       - rpi-imager
     aur:
-      - infisical-bin
       - konsave
       - visual-studio-code-bin
       - pokego
