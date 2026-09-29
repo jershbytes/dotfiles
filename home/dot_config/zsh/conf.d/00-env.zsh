@@ -26,21 +26,10 @@ export GPG_TTY=$(tty)
 export PROTON_PASS_KEY_PROVIDER=keyring
 export PROTON_PASS_LINUX_KEYRING=dbus
 
-# ---------- Infisical Config ----------
-export INFISICAL_DOMAIN="https://infisical.jershlabs.xyz"
-
 # ---------- PATH ----------
 # Personal binaries/scripts
 export PATH="$HOME/.local/bin:$PATH"
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
-
-# =========================================================
-# History
-# =========================================================
-
-HISTFILE="$XDG_STATE_HOME/zsh/history"
-HISTSIZE=100000
-SAVEHIST=100000
 
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY
