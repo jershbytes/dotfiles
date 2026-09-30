@@ -55,6 +55,7 @@ packages:
       - pokego
     flatpak:
       - dev.aunetx.deezer
+      - org.cockpit_project.CockpitClient
     woke_aur:
       - goxlr-utility-ui
       - input-remapper-git
