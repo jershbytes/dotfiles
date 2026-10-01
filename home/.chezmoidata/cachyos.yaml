@@ -28,9 +28,6 @@ packages:
       - ghostty
       - halloy
       - joplin-desktop
-      - plezy
-      - proton-mail-bin
-      - proton-pass
       - signal-desktop
       - solaar
       - ttf-jetbrains-mono-nerd
@@ -56,6 +53,7 @@ packages:
     flatpak:
       - dev.aunetx.deezer
       - org.cockpit_project.CockpitClient
+      - me.proton.Pass
     woke_aur:
       - goxlr-utility-ui
       - input-remapper-git
