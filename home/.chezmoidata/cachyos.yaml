@@ -54,6 +54,7 @@ packages:
       - dev.aunetx.deezer
       - org.cockpit_project.CockpitClient
       - me.proton.Pass
+      - me.proton.Mail
     woke_aur:
       - goxlr-utility-ui
       - input-remapper-git
