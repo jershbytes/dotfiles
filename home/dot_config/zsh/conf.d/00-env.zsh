@@ -30,7 +30,6 @@ export PROTON_PASS_LINUX_KEYRING=dbus
 # Personal binaries/scripts
 export PATH="$HOME/.local/bin:$PATH"
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
-export SOPS_AGE_KEY_FILE=$HOME/.sops/key.txt
 
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY

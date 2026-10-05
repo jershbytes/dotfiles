@@ -1,0 +1,23 @@
+# Global git ignore — applies to every repo on this machine.
+# Referenced by ~/.gitconfig -> core.excludesfile
+
+# Editor / IDE cruft
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Build / dependency dirs commonly left untracked
+node_modules/
+__pycache__/
+*.pyc
+
+# Secrets you never want to commit by accident
+*.pem
+*.key
+.env
