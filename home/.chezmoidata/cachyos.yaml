@@ -29,7 +29,6 @@ packages:
       - halloy
       - joplin-desktop
       - signal-desktop
-      - solaar
       - ttf-jetbrains-mono-nerd
       - ungoogled-chromium-bin
       - yubikey-personalization-gui
@@ -50,6 +49,7 @@ packages:
       - konsave
       - visual-studio-code-bin
       - pokego
+      - openlogi
     flatpak:
       - dev.aunetx.deezer
       - org.cockpit_project.CockpitClient
