@@ -39,6 +39,7 @@ packages:
       - hugo
       - imagemagick
       - lazydocker
+      - lazygit
       - neovim
       - openbao
       - resvg
