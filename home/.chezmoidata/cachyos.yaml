@@ -16,7 +16,7 @@ packages:
       - libfido2
       - mise
       - poppler
-      - parui
+      - parui-git
       - ripgrep
       - tree
       - vortix
