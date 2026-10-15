@@ -28,8 +28,7 @@ export PROTON_PASS_LINUX_KEYRING=dbus
 
 # ---------- PATH ----------
 # Personal binaries/scripts
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 
 setopt APPEND_HISTORY
