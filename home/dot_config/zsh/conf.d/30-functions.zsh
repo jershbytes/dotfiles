@@ -111,7 +111,7 @@ show-repo() {
         url="https://$normalized"
     elif [[ "$normalized" == *@*:* ]]; then
         normalized="${normalized#*@}"
-        normalized="${normalized/:/\/}"
+        normalized="${normalized%%:*}/${normalized#*:}"
         url="https://$normalized"
     else
         url="$normalized"
