@@ -95,6 +95,12 @@ show-repo() {
     # - ssh://git@host/org/repo(.git)
     # - git@host:org/repo(.git)
     local normalized="$url"
+    normalized=$(printf '%s' "$normalized" | tr '\\' '/')
+    if [[ "$normalized" == https//* ]]; then
+        normalized="https:${normalized#https}"
+    elif [[ "$normalized" == http//* ]]; then
+        normalized="http:${normalized#http}"
+    fi
     normalized="${normalized%.git}"
 
     if [[ "$normalized" == http://* || "$normalized" == https://* ]]; then
