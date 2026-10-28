@@ -20,4 +20,3 @@ __pycache__/
 # Secrets you never want to commit by accident
 *.pem
 *.key
-.env
