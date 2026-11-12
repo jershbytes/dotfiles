@@ -42,6 +42,7 @@ packages:
     - lazydocker
     - lazygit
     - neovim
+    - neovide
     - openbao
     - resvg
   system:
