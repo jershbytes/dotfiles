@@ -24,6 +24,7 @@ packages:
     - yazi
     - zoxide
   desktop:
+    - betterbird-bin
     - discord
     - element-desktop
     - ghostty
@@ -57,7 +58,6 @@ packages:
     - dev.aunetx.deezer
     - org.cockpit_project.CockpitClient
     - me.proton.Pass
-    - me.proton.Mail
   woke_aur:
     - goxlr-utility-ui
     - input-remapper-git
@@ -100,3 +100,4 @@ packages:
     - ungoogled-chromium
     - vesktop
     - visual-studio-code
+...

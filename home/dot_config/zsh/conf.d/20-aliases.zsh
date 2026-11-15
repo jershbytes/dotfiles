@@ -40,6 +40,7 @@ alias ps='ps auxf'
 alias ping='ping -c 10'
 alias bye='shutdown -h now'
 alias flush-dns='sudo systemd-resolve --flush-caches'
+alias show-ip='ip -br a'
 
 # Tools
 alias ff='fastfetch'
