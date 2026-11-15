@@ -19,8 +19,8 @@ alias mkdir='mkdir -p'
 alias rmd='/bin/rm --recursive --force --verbose'
 
 # Editor
-alias vi='neovide'
-alias vim='neovide'
+alias vi='nvim'
+alias vim='nvim'
 
 # Archives
 alias mktar='tar -cvf'
