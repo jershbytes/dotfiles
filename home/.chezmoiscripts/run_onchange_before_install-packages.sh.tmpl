@@ -1,12 +1,44 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
+{{ if or (eq .osid "cachyos") (eq .osid "arch") -}}
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
-{{ range .packages.brews -}}
-brew {{ . | quote }}
+# Ensure yay is installed
+if ! command -v yay &> /dev/null; then
+    echo "yay is not installed. Please install the yay binary before running this script."
+    exit 1
+fi
+
+# Install command line utilities
+sudo pacman -S --needed --noconfirm {{ range .packages.cli -}}
+{{ . | quote }} {{ end }}
+
+# Install desktop applications
+sudo pacman -S --needed --noconfirm {{ range .packages.desktop -}}
+{{ . | quote }} {{ end }}
+
+# Install development tools
+sudo pacman -S --needed --noconfirm {{ range .packages.dev -}}
+{{ . | quote }} {{ end }}
+
+# Install system utilities
+sudo pacman -S --needed --noconfirm {{ range .packages.system -}}
+{{ . | quote }} {{ end }}
+
+# Install packages using yay
+yay -S --needed --noconfirm {{ range .packages.aur -}}
+{{ . | quote }} {{ end }}
+
+# Install packages using flatpak
+flatpak install {{ range .packages.flatpak -}}
+{{ . | quote }} {{ end }}
+
+{{ if eq .chezmoi.hostname "bigwoke" -}} 
+# Install bigwoke specific applications
+sudo pacman -S --needed --noconfirm {{ range .packages.woke_pacman -}}
+{{ . | quote }} {{ end }}
+yay -S --needed --noconfirm {{ range .packages.woke_aur -}}
+{{ . | quote }} {{ end }}
+sudo systemctl enable --now input-remapper # enable input-remapper
+# End of install for bigwoke specific applications
+
 {{ end -}}
-{{ range .packages.casks -}}
-cask {{ . | quote }}
-{{ end -}}
-EOF
 {{ end -}}

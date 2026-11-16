@@ -3,13 +3,10 @@
 {{-   $osid = .chezmoi.osRelease.id -}}
 {{- end -}}
 
-{{- $ppEmail := protonPass "pass://lyJLrLkUukBTAmlCxZkSjgakUVfyqPkDTsJMnO7qZHaYIgBUmsagWtCTCbDYDB7l51jn0AaBhT94Tes4zEVZCw==/5bkehcgbO3hgPk_kGXUDcB8CTe62PrX1nWZbpgPRMvrYJiZZJ_8vbPHDHegjS5rFTU-nIvG_1hHr9mkrgv90jw==/email" | trim -}}
-
 encryption = "age"
 
 [data]
     osid = {{ $osid | quote }}
-    email = "{{ $ppEmail }}"
 
 [edit]
     command = "code"
@@ -18,9 +15,6 @@ encryption = "age"
 [git]
     autoCommit = true
     autoPush = true
-
-[proton_pass]
-    command = "pass-cli"
 
 [age]
     identity = "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt"
