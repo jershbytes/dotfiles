@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Call logger script
+. color-logger.bash
+
+info "Upgrading System..."
+yay -Syu --noconfirm
+
+info "Upgrading flatpaks..."
+flatpak upgrade
